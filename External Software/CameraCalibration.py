@@ -3,10 +3,10 @@ import numpy as np
 import os
 
 # Charuco Board's size parameters
-squaresX = 8
-squaresY = 11
-squareLength = 0.04
-markerLength = 0.025  
+squaresX = 9
+squaresY = 13
+squareLength = 0.02
+markerLength = 0.0147  
 all_object_points = []
 all_image_points = []
 SHOW_DEBUG = True
@@ -18,6 +18,7 @@ def main():
     detector_parameters = cv2.aruco.DetectorParameters()
     charuco_parameters = cv2.aruco.CharucoParameters()
     charuco_detector = cv2.aruco.CharucoDetector(board, charuco_parameters, detector_parameters)
+    detector = cv2.aruco.ArucoDetector(dictionary, params)
     imageSize = None
 
     cap = cv2.VideoCapture(0) 
@@ -33,8 +34,13 @@ def main():
         h, w = img.shape[:2]
         if imageSize is None:
             imageSize = (w, h)
+
+        img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        # charucoCorners, charucoIds, markerCorners, markerIds = charuco_detector.detectBoard(img_gray)
     
-        charucoCorners, charucoIds, markerCorners, markerIds = charuco_detector.detectBoard(img)
+
+        markerCorners, markerIds, rejectedCandidates = detector.detectMarkers(img_gray)
+        ret, charucoCorners, charucoIds = cv2.aruco.interpolateCornersCharuco(markerCorners, markerIds, img_gray, board)
 
         if SHOW_DEBUG:
             test = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -52,10 +58,8 @@ def main():
         
         # Space to calibrate camera with the current frame
         if key == ord(' '):
+            print("Pressed space")
 
-            if charucoIds is None or len(charucoCorners) < 4:
-                continue
-            
             objPoints, imgPoints = board.matchImagePoints(charucoCorners, charucoIds)  
 
             all_object_points.append(objPoints.astype(np.float32))
@@ -79,8 +83,9 @@ def main():
         distCoeffs=distCoeffs,
         ret=ret
     )
+    
+    print("CamMatrix = " + camMatrix)
+    print("distCoeffs = " + distCoeffs)
 
 if __name__ == "__main__":
-
     main()
-
