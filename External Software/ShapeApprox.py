@@ -9,7 +9,7 @@ import numpy as np
 
 # Import Frames
 gameFrame = cv2.imread("Test Images\\GameFrame.png")
-cameraFrame = cv2.imread("Test Images\\CameraFrame3.png")
+cameraFrame = cv2.imread("Test Images\\CameraFrame4.png")
 
 # Subtract Frames to Find Difference and Invert
 difference = cv2.bitwise_not(cv2.subtract(gameFrame, cameraFrame))
@@ -68,7 +68,7 @@ def locateAShadows():
     gray = cv2.cvtColor(difference, cv2.COLOR_BGR2GRAY)
     thresh = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)[1]
 
-    cnts = cv2.findContours(thresh.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     cnts = imutils.grab_contours(cnts)
 
     output = difference.copy()
