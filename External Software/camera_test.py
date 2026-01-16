@@ -1,7 +1,9 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(0)          # open default camera
+cap = cv2.VideoCapture(1)          # open default camera
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
 for _ in range(30):                # stable exposure
     ret, frame = cap.read()

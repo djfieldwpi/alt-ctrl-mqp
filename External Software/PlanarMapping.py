@@ -25,8 +25,6 @@ while True:
         H, mask = cv2.findHomography(np.array(corners), np.array(normalCorners), cv2.RANSAC, 5.0)
         warped_frame = cv2.warpPerspective(frame_copy, H, (1920, 1080))
         cv2.imshow("Warped Frame", warped_frame)
-
-    
    
     if cv2.waitKey(1) & 0xFF == 27:
         break
