@@ -76,20 +76,23 @@ while True:
         gray = cv2.cvtColor(warped_frame, cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, (3, 3), 0)
 
+        # Snaps colors to extre
         threshold = cv2.threshold(gray, 100, 255, cv2.THRESH_BINARY)[1]
 
-        cv2.imshow("Threshold", threshold)
-
+        # Finds difference between current frame and reference frame
+        # Results in white shapes where shadows are detected
         difference = cv2.subtract(gameFrame, threshold)
 
-        cv2.imshow("Difference", difference)
-
+        # Shadow detection through contour processing
         output = processShadowContours(difference)
 
+        # Current endpoint for testing
         cv2.imshow("Current", output)
 
+    # Exits on 'ESC' key press
     if cv2.waitKey(1) & 0xFF == 27:
         break
 
+# Clean up
 cap.release()
 cv2.destroyAllWindows()
