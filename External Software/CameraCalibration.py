@@ -41,7 +41,7 @@ def main():
             if markerIds is not None and len(markerIds) > 0:
                 cv2.aruco.drawDetectedMarkers(test, markerCorners, markerIds)
             if charucoIds is not None and len(charucoIds) > 0:
-                cv2.aruco.drawDetectedCornersCharuco(vis, charucoCorners, charucoIds)
+                cv2.aruco.drawDetectedCornersCharuco(test, charucoCorners, charucoIds)
             cv2.imshow("Detection debug (SPACE TO CAPTURE FRAME FOR CALIBRATION)", test)
 
         key = cv2.waitKey(1) & 0xFF
@@ -83,3 +83,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
