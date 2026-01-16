@@ -18,7 +18,6 @@ def main():
     detector_parameters = cv2.aruco.DetectorParameters()
     charuco_parameters = cv2.aruco.CharucoParameters()
     charuco_detector = cv2.aruco.CharucoDetector(board, charuco_parameters, detector_parameters)
-    detector = cv2.aruco.ArucoDetector(dictionary, params)
     imageSize = None
 
     cap = cv2.VideoCapture(0) 
@@ -36,11 +35,8 @@ def main():
             imageSize = (w, h)
 
         img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        # charucoCorners, charucoIds, markerCorners, markerIds = charuco_detector.detectBoard(img_gray)
     
-
-        markerCorners, markerIds, rejectedCandidates = detector.detectMarkers(img_gray)
-        ret, charucoCorners, charucoIds = cv2.aruco.interpolateCornersCharuco(markerCorners, markerIds, img_gray, board)
+        charucoCorners, charucoIds, markerCorners, markerIds = charuco_detector.detectBoard(img_gray)
 
         if SHOW_DEBUG:
             test = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
