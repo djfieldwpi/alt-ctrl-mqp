@@ -77,9 +77,9 @@ def main():
         "camera_calib.npz",
         camMatrix=camMatrix,
         distCoeffs=distCoeffs,
-        imageSize=imageSize,
         ret=ret
     )
 
 if __name__ == "__main__":
+
     main()
