@@ -3,8 +3,8 @@ import numpy as np
 import os
 
 # Charuco Board's size parameters
-squaresX = 9
-squaresY = 13
+squaresX = 13
+squaresY = 9
 squareLength = 0.02
 markerLength = 0.0147  
 all_object_points = []
@@ -56,6 +56,9 @@ def main():
         if key == ord(' '):
             print("Pressed space")
 
+            if charucoIds is None or len(charucoCorners) < 4:
+                continue
+
             objPoints, imgPoints = board.matchImagePoints(charucoCorners, charucoIds)  
 
             all_object_points.append(objPoints.astype(np.float32))
@@ -80,8 +83,9 @@ def main():
         ret=ret
     )
     
-    print("CamMatrix = " + camMatrix)
-    print("distCoeffs = " + distCoeffs)
+    print("RMS reprojection error (ret):", ret)
+    print("\ncamMatrix:\n", camMatrix)
+    print("\ndistCoeffs:\n", distCoeffs)
 
 if __name__ == "__main__":
     main()
