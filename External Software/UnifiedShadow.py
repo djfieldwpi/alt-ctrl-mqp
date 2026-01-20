@@ -77,7 +77,7 @@ while True:
         gray = cv2.GaussianBlur(gray, (3, 3), 0)
 
         # Snaps colors to extre
-        threshold = cv2.threshold(gray, 100, 255, cv2.THRESH_BINARY)[1]
+        threshold = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY)[1]
 
         # Finds difference between current frame and reference frame
         # Results in white shapes where shadows are detected
