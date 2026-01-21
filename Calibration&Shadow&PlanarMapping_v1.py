@@ -101,7 +101,6 @@ while True:
         break
     
 cv2.destroyAllWindows()
-cap.release()
 
 # Camera Calibration to then undistort the projector's screen when warping it
 ret, camMatrix, distCoeffs, rvecs, tvecs = cv2.calibrateCamera(
@@ -185,4 +184,5 @@ while True:
 
 # Clean up
 cap.release()
+
 cv2.destroyAllWindows()
