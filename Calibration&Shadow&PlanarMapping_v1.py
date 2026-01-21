@@ -101,6 +101,7 @@ while True:
         break
     
 cv2.destroyAllWindows()
+cap.release()
 
 # Camera Calibration to then undistort the projector's screen when warping it
 ret, camMatrix, distCoeffs, rvecs, tvecs = cv2.calibrateCamera(
@@ -147,6 +148,10 @@ warpPixelsY = WARP_H / boardHeight
 srcPoints = imgPoints2d_undist.astype(np.float32)
 dstPoints = np.column_stack ([objPoints2d[:, 0] * warpPixelsX, objPoints2d[:, 1] * warpPixelsY]).astype(np.float32)
 
+cap = cv2.VideoCapture(0)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+
 # Loop for shadow detection
 while True:
     ok, frame = cap.read()
@@ -186,3 +191,4 @@ while True:
 cap.release()
 
 cv2.destroyAllWindows()
+
