@@ -48,7 +48,7 @@ def processShadowContours(difference):
     text = "eps={:.4f}, num_pts={}".format(0.001, len(approx))
     cv2.putText(output, text, (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
     
-    return output
+    return output, approx
 
 # Testing frame for shadow detection
 gameFrame = cv2.cvtColor(cv2.imread("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GameFrame.png"), cv2.COLOR_BGR2GRAY)
@@ -84,7 +84,7 @@ while True:
         difference = cv2.subtract(gameFrame, threshold)
 
         # Shadow detection through contour processing
-        output = processShadowContours(difference)
+        output, approx = processShadowContours(difference)
 
         # Current endpoint for testing
         cv2.imshow("Current", output)
