@@ -51,7 +51,7 @@ def processShadowContours(difference):
     return output
 
 # Testing frame for shadow detection
-gameFrame = cv2.cvtColor(cv2.imread("Test Images\\GameFrame.png"), cv2.COLOR_BGR2GRAY)
+gameFrame = cv2.cvtColor(cv2.imread("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GameFrame.png"), cv2.COLOR_BGR2GRAY)
 
 # Main loop to process video capture
 while True:
