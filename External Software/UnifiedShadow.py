@@ -93,6 +93,10 @@ while True:
     if cv2.waitKey(1) & 0xFF == 27:
         break
 
+
+approx = '\n'.join([str(x).replace("[", "").replace("]", "") for x in approx])
+print(approx)
+
 # Clean up
 cap.release()
 cv2.destroyAllWindows()
