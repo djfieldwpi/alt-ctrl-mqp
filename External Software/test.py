@@ -1,15 +1,20 @@
 import time
+import cv2 
+import numpy as np
 
-while True:
-    with open("C:\\Users\\field\\Desktop\\College Documents\\MQP\\alt-ctrl-mqp\\signal.txt", 'r') as f:
-        if (f.readline().strip() == "GO"):
-            f.close()
-            with open("C:\\Users\\field\\Desktop\\College Documents\\MQP\\alt-ctrl-mqp\\signal.txt", 'w') as f:
-                vertices = [(0, 0), (200, 0), (200, 200), (0, 200)]
-                vertices_str = '\n'.join([f"{x} {y}" for x, y in vertices])
-                
-                f.write("DONE\n" + vertices_str)
-                print("DONE\n" + vertices_str)
-                f.close()
+dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_250)
+squares_horiz = 16
+squares_vert = 9
+square_length_meters = 0.02
+marker_length_meters = 0.015
 
-    time.sleep(1)
+board = cv2.aruco.CharucoBoard((squares_horiz, squares_vert), square_length_meters, marker_length_meters, dictionary)
+
+image_size = (1280, 720)
+
+board_image = board.generateImage(image_size)
+
+if board_image is not None:
+    cv2.imshow("Charuco Board", board_image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
