@@ -7,14 +7,14 @@ import os
 # 0: laptop webcam
 # 1: external camera
 cap = cv2.VideoCapture(1)
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
 # Charuco Board's size parameters
-squaresX = 13
+squaresX = 16
 squaresY = 9
 squareLength = 0.02
-markerLength = 0.0147  
+markerLength = 0.015  
 
 all_object_points = []
 all_image_points = []
@@ -88,6 +88,9 @@ while True:
     h, w = frame.shape[:2]
     if imageSize is None:
         imageSize = (w, h)
+        board_image = board.generateImage(imageSize)
+        if board_image is not None:
+            cv2.imshow("Charuco Board", board_image)
 
     if SHOW_DEBUG:
         test = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
