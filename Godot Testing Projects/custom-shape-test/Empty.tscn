@@ -124,6 +124,7 @@ color = Color(0, 0, 0, 1)
 unique_name_in_owner = true
 position = Vector2(400, 908)
 scale = Vector2(2.0195465, 2.0195465)
+safe_margin = 0.1
 script = ExtResource("2_ehts2")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
