@@ -56,7 +56,7 @@ def processShadowContours(difference):
 
     # draw the approximated contour on the image
     cv2.drawContours(output, [approx], -1, (0, 255, 0), 3)
-    text = "eps={:.4f}, num_pts={}".format(0.001, len(approx))
+    text = "eps={:.4f}, num_pts={}".format(0.002, len(approx))
     cv2.putText(output, text, (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
     
     return output, approx
@@ -90,6 +90,8 @@ while True:
         imageSize = (w, h)
         board_image = board.generateImage(imageSize)
         if board_image is not None:
+            cv2.namedWindow("Charuco Board", cv2.WINDOW_NORMAL)
+            cv2.setWindowProperty("Charuco Board", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
             cv2.imshow("Charuco Board", board_image)
 
     if SHOW_DEBUG:
@@ -201,7 +203,9 @@ while True:
     gray = cv2.GaussianBlur(gray, (3, 3), 0)
 
     # Snaps colors to extre
-    threshold = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY)[1]
+    threshold = cv2.threshold(gray, 210, 255, cv2.THRESH_BINARY)[1]
+
+    threshold = cv2.bitwise_not(threshold)
 
     # Finds difference between current frame and reference frame
     # Results in white shapes where shadows are detected
@@ -225,7 +229,6 @@ while True:
             with open("C:\\Users\\field\\Desktop\\College Documents\\MQP\\alt-ctrl-mqp\\signal.txt", 'w') as f:
                 
                 f.write("DONE\n" + approx)
-                print("DONE\n" + approx)
                 f.close()
 
 # Clean up

@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 	# Acts as the pause to change states to detecting shadows, "Detect Shadows" event would request the most recently detected shadow vertex array
 	
 func spawnShadow(vertices: Array[Vector2i]):
-	var timer := get_tree().create_timer(5.0)
+	var timer := get_tree().create_timer(0.5)
 	await timer.timeout
 	
 	var shadow := AnimatableBody2D.new()
@@ -67,7 +67,7 @@ func spawnShadow(vertices: Array[Vector2i]):
 	shadow.add_child(polygon)
 	shadow.add_child(collision_shape)
 	
-	shadow.position = get_node("%Camera2D").position
+	shadow.position.x = get_node("%Camera2D").position.x - 960
 	
 	playerShadow = shadow
 	add_child(playerShadow)

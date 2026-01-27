@@ -3,9 +3,9 @@ import numpy as np
 import imutils
 import os
 
-SIGNAL_PATH = "D:/MQP/alt-ctrl-mqp/signal.txt"
+SIGNAL_PATH = "C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt"
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
@@ -54,6 +54,8 @@ while True:
         imageSize = (frame.shape[1], frame.shape[0])
         board_image = board.generateImage(imageSize)
         if board_image is not None:
+            cv2.namedWindow("Charuco Board", cv2.WINDOW_NORMAL)
+            cv2.setWindowProperty("Charuco Board", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
             cv2.imshow("Charuco Board", board_image)
 
     debug = gray.copy()
@@ -178,6 +180,7 @@ while True:
                 approx = cv2.approxPolyDP(best_cnt, 4, True)
                 for p in approx:
                     x, y = p[0]
+                    print(f"{x} {y}")
                     f.write(f"{x} {y}\n")
 
     if best_cnt is not None:
