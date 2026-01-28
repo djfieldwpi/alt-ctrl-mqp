@@ -54,10 +54,13 @@ func spawnShadow(vertices: Array[Vector2]):
 	await timer.timeout
 	
 	var shadow := AnimatableBody2D.new()
-	
 	# Could Change to StaticBody2D.new()
 	
 	var convexVertices = Geometry2D.convex_hull(vertices)
+	# If this doesnt work, split into multiple convex parts
+	# using decompose_polygon_in_convex_parts(vertices)
+	# May require ensuring ordering is proper
+	# Loop below per part
 	
 	var collision_shape := CollisionShape2D.new()
 	var collision := ConvexPolygonShape2D.new()
