@@ -42,11 +42,13 @@ func _process(delta: float) -> void:
 		GlobalVariables.is_actors_locked = !GlobalVariables.is_actors_locked
 		if GlobalVariables.is_actors_locked:
 			print("Actors locked")
+			get_tree().root.get_viewport().canvas_cull_mask = 1
 			if playerShadow:
 				remove_child(playerShadow)
 			get_viewport().get_texture().get_image().save_png("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GodotFrame.png")
 		else:
 			print("Actors unlocked")
+			get_tree().root.get_viewport().canvas_cull_mask = -1
 	# Acts as the pause to change states to detecting shadows, "Detect Shadows" event would request the most recently detected shadow vertex array
 	
 func spawnShadow(vertices: Array[Vector2]):

@@ -122,6 +122,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
+visibility_layer = 2
 position = Vector2(400, 908)
 scale = Vector2(2.0195465, 2.0195465)
 safe_margin = 0.1
