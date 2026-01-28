@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	content = content.replace("\r", "").split("\n")
 	if content[0] == "DONE":
 		content.remove_at(0)
-		var points: Array[Vector2i] = []
+		var points: Array[Vector2] = []
 		for line in content:
 			line = line.strip_edges()
 			if line.is_empty():
@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 			var parts = line.split(" ", false)
 			var x := int(parts[0])
 			var y := int(parts[1])
-			points.append(Vector2i(x, y))
+			points.append(Vector2(x, y))
 		
 		spawnShadow(points)
 		trigger.close()
@@ -49,19 +49,23 @@ func _process(delta: float) -> void:
 			print("Actors unlocked")
 	# Acts as the pause to change states to detecting shadows, "Detect Shadows" event would request the most recently detected shadow vertex array
 	
-func spawnShadow(vertices: Array[Vector2i]):
+func spawnShadow(vertices: Array[Vector2]):
 	var timer := get_tree().create_timer(0.5)
 	await timer.timeout
 	
 	var shadow := AnimatableBody2D.new()
 	
+	# Could Change to StaticBody2D.new()
+	
+	var convexVertices = Geometry2D.convex_hull(vertices)
+	
 	var collision_shape := CollisionShape2D.new()
 	var collision := ConvexPolygonShape2D.new()
-	collision.set_points(vertices)
+	collision.set_points(convexVertices)
 	collision_shape.shape = collision
 	
 	var polygon := Polygon2D.new()
-	polygon.polygon = vertices
+	polygon.polygon = convexVertices
 	polygon.color = Color(0, 0, 0, 1) # Green for debugging
 	
 	shadow.add_child(polygon)
