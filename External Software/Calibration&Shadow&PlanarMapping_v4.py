@@ -3,16 +3,16 @@ import numpy as np
 import imutils
 import os
 
-SIGNAL_PATH = "D:/MQP/alt-ctrl-mqp/signal.txt"
+SIGNAL_PATH = "C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt"
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
-squaresX = 13
+squaresX = 16
 squaresY = 9
 squareLength = 0.02
-markerLength = 0.0147  
+markerLength = 0.015  
 
 WARP_W = 1920
 WARP_H = 1080
@@ -28,7 +28,7 @@ BG_ALPHA_RECOVER = 0.25  # fast background recovery after UNLOCK
 RECOVER_FRAMES = 45      # frames to use BG_ALPHA_RECOVER after UNLOCK/ 
 FORCE_CLEAR_DELTA = 12   # if old shadow region becomes brighter, force-clear residue/ reduce = intense
 
-LOCK_CMDS = {"GO", "LOCK", "LOCKED"}
+LOCK_CMDS = {"GO"}
 
 locked = False
 recovery_frames = 0
@@ -62,6 +62,11 @@ while True:
 
     if imageSize is None:
         imageSize = (frame.shape[1], frame.shape[0])
+        board_image = board.generateImage(imageSize)
+        if board_image is not None:
+            cv2.namedWindow("Charuco Board", cv2.WINDOW_NORMAL)
+            cv2.setWindowProperty("Charuco Board", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+            cv2.imshow("Charuco Board", board_image)
 
     debug = gray.copy()
     if markerIds is not None:
@@ -100,16 +105,18 @@ while True:
         except Exception:
             cmd = ""
 
-    cmd_u = cmd.upper()
-    # detect GO request
+    cmd_line = cmd.splitlines[0].strip().upper() if cmd else ""
+    
+    lock_event = (cmd_line in LOCK_CMDS)
 
-   # transition-based recovery trigger (GO -> DONE/anything else)
     prev_locked = locked
-    locked = lock_event
+    locked =  lock_event
 
-    # when we leave locked state, start fast recovery + residue cleanup window
-    if prev_locked and (not locked):
-      recovery_frames = RECOVER_FRAMES
+    lock_edge = (not prev_locked) and locked
+    unlock_event = prev_locked and (not locked)
+
+    if unlock_event:
+        recovery_frames = RECOVER_FRAMES
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     charucoCorners, charucoIds, markerCorners, markerIds = charuco_detector.detectBoard(gray)
@@ -208,7 +215,7 @@ while True:
             best_cnt = cnt
 
     # --- lock capture: freeze bg + send polygon (one-shot) ---
-    if lock_event:
+    if lock_edge:
         # remember where the last locked shadow was (to clear residue after UNLOCK)
         if best_cnt is not None:
             _lm = np.zeros_like(mask)
