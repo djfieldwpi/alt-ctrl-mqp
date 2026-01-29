@@ -2,7 +2,7 @@ extends Node2D
 
 var check = false;
 
-@onready var playerShadow
+@onready var playerShadow = []
 var trigger
 
 # Called when the node enters the scene tree for the first time.
@@ -43,8 +43,20 @@ func _process(delta: float) -> void:
 		if GlobalVariables.is_actors_locked:
 			print("Actors locked")
 			get_tree().root.get_viewport().canvas_cull_mask = 1
-			if playerShadow:
-				remove_child(playerShadow)
+			for i in range(playerShadow.size() - 1, -1, -1):
+				var shade = playerShadow[i]
+
+				if not is_instance_valid(shade):
+					playerShadow.remove_at(i)
+					continue
+
+				if shade.get_parent() == self:
+					remove_child(shade)
+
+				shade.queue_free()
+				playerShadow.remove_at(i)
+			var timer := get_tree().create_timer(0.5)
+			await timer.timeout
 			get_viewport().get_texture().get_image().save_png("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GodotFrame.png")
 		else:
 			print("Actors unlocked")
@@ -52,34 +64,39 @@ func _process(delta: float) -> void:
 	# Acts as the pause to change states to detecting shadows, "Detect Shadows" event would request the most recently detected shadow vertex array
 	
 func spawnShadow(vertices: Array[Vector2]):
+	playerShadow.clear()
+	
 	var timer := get_tree().create_timer(0.5)
 	await timer.timeout
 	
-	var shadow := AnimatableBody2D.new()
-	# Could Change to StaticBody2D.new()
-	
-	var convexVertices = Geometry2D.convex_hull(vertices)
+	# var convexVertices = Geometry2D.convex_hull(vertices)
+	var parts = Geometry2D.decompose_polygon_in_convex(vertices)
 	# If this doesnt work, split into multiple convex parts
 	# using decompose_polygon_in_convex_parts(vertices)
 	# May require ensuring ordering is proper
 	# Loop below per part
-	
-	var collision_shape := CollisionShape2D.new()
-	var collision := ConvexPolygonShape2D.new()
-	collision.set_points(convexVertices)
-	collision_shape.shape = collision
-	
-	var polygon := Polygon2D.new()
-	polygon.polygon = convexVertices
-	polygon.color = Color(0, 0, 0, 1) # Green for debugging
-	
-	shadow.add_child(polygon)
-	shadow.add_child(collision_shape)
-	
-	shadow.position.x = get_node("%Camera2D").position.x - 960
-	
-	playerShadow = shadow
-	add_child(playerShadow)
+	for part in parts:
+		var shadow := StaticBody2D.new()
+		# Could Change to StaticBody2D.new()
+		
+		var collision_shape := CollisionShape2D.new()
+		var collision := ConvexPolygonShape2D.new()
+		collision.set_points(part)
+		collision_shape.shape = collision
+		
+		var polygon := Polygon2D.new()
+		polygon.polygon = part
+		polygon.color = Color(0, 0, 0, 1) # Green for debugging
+		
+		shadow.add_child(polygon)
+		shadow.add_child(collision_shape)
+		
+		shadow.position.x = get_node("%Camera2D").position.x - 960
+		
+		add_child(shadow)
+		playerShadow.append(shadow)
+		
 	GlobalVariables.is_actors_locked = false
+	get_tree().root.get_viewport().canvas_cull_mask = -1
 	# Delay then unlock actors
 	
