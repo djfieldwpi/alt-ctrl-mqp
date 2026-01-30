@@ -131,14 +131,18 @@ while True:
     gray_w = cv2.GaussianBlur(gray_w, (5, 5), 0)
     gray_w = cv2.medianBlur(gray_w, 5)
 
-    if bg is None:
-        bg = gray_w.astype(np.float32)
-        continue
+    gray_w = cv2.threshold(gray_w, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
 
-    cv2.accumulateWeighted(gray_w, bg, BG_ALPHA)
+    bg = cv2.cvtColor(cv2.imread("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GodotFrame.png"), cv2.COLOR_BGR2GRAY).astype(np.float32)
+
     bg_u8 = cv2.convertScaleAbs(bg)
 
+    cv2.imshow("Background Model", bg_u8)
+    cv2.imshow("Warped Gray", gray_w)
+
     diff = cv2.absdiff(gray_w, bg_u8)
+
+    cv2.imshow("Difference", diff)
 
     mean = np.mean(diff)
     std = np.std(diff)
@@ -149,6 +153,8 @@ while True:
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel_open)
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel_close)
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel_open)
+
+    cv2.imshow("Shadow Mask Pre-Contour", mask)
 
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -189,8 +195,8 @@ while True:
         cy = int(y + h / 2)
         cv2.circle(warped, (cx, cy), 10, (0, 255, 0), -1)
 
-    cv2.imshow("Warped Frame", warped)
-    cv2.imshow("Shadow Mask", mask)
+    # cv2.imshow("Warped Frame", warped)
+    # cv2.imshow("Shadow Mask", mask)
 
     if cv2.waitKey(1) & 0xFF == 27:
         break
