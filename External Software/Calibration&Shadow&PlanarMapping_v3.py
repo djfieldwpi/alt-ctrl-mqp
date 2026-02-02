@@ -3,6 +3,8 @@ import numpy as np
 import imutils
 import os
 
+# File path for signal communication
+# TODO: Change this path to local path from absolute path
 SIGNAL_PATH = "C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt"
 
 cap = cv2.VideoCapture(1)
@@ -133,6 +135,8 @@ while True:
 
     gray_w = cv2.threshold(gray_w, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
 
+    # File path for background model
+    # TODO: Change this path to local path from absolute path
     bg = cv2.cvtColor(cv2.imread("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GodotFrame.png"), cv2.COLOR_BGR2GRAY).astype(np.float32)
 
     bg_u8 = cv2.convertScaleAbs(bg)
