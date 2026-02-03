@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bacu4o8maxm4v"]
 
 [ext_resource type="PackedScene" uid="uid://cbxchpta7g5ea" path="res://Objects/Static/surface.tscn" id="1_2b52f"]
+[ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="1_wi846"]
 
 [node name="Node2D" type="Node2D" unique_id=324805373]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
+script = ExtResource("1_wi846")
 
 [node name="Collision Surfaces" type="Node2D" parent="." unique_id=1734995268]
 
