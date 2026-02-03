@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 			
 			Could also include shadow removal:
 			for i in range(playerShadows.size() - 1, -1, -1):
-				var shadow = playerShadows[i]
+				var shadow: StaticBody2D = playerShadows[i]
 				
 				if not is_valid_instance(shadow):
 					playerShadows.remove_at(i)
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 				playerShdows.remove_at(i)
 			
 			Also can save reference frame here after a short delay
-			var timer = get_tree().create_timer(0.5)
+			var timer: SceneTreeTimer = get_tree().create_timer(0.5)
 			await timer.timeout
 			get_viewport().get_texture().get_image().save_png("File Path Here")
 		else:
@@ -47,7 +47,7 @@ func spawnShadow(vertices: Array[Vector2]):
 	# playerShadows.clear()
 	
 	# Creates necessary number of convex shape out of vertices
-	var parts = Geometry2D.decompose_polygon_in_convex(vertices)
+	var parts: Array[PackedVector2Array] = Geometry2D.decompose_polygon_in_convex(vertices)
 	
 	for part in parts:
 		var shadow := StaticBody2D.new()

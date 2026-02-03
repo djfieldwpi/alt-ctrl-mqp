@@ -1,6 +1,6 @@
 extends Camera2D
 
-var character_start_x = 0
+var character_start_x: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
