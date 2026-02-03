@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bacu4o8maxm4v"]
+
+[ext_resource type="PackedScene" uid="uid://cbxchpta7g5ea" path="res://Objects/Static/surface.tscn" id="1_2b52f"]
+
+[node name="Node2D" type="Node2D" unique_id=324805373]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
+
+[node name="Collision Surfaces" type="Node2D" parent="." unique_id=1734995268]
+
+[node name="Surface" parent="Collision Surfaces" unique_id=1330873477 instance=ExtResource("1_2b52f")]
+position = Vector2(0, 418)
+scale = Vector2(48.308537, 6.5411944)
+
+[node name="Surface2" parent="Collision Surfaces" unique_id=135425095 instance=ExtResource("1_2b52f")]
+position = Vector2(0, -479)
+scale = Vector2(48.307137, 2.9915648)
+
+[node name="Surface3" parent="Collision Surfaces" unique_id=210396714 instance=ExtResource("1_2b52f")]
+position = Vector2(369, -370)
+scale = Vector2(2.3927402, 2.5200007)
+
+[node name="Surface4" parent="Collision Surfaces" unique_id=2035820658 instance=ExtResource("1_2b52f")]
+position = Vector2(369, -139)
+scale = Vector2(2.4, 3.5999994)
+
+[node name="Surface5" parent="Collision Surfaces" unique_id=1524570820 instance=ExtResource("1_2b52f")]
+position = Vector2(369, 110.00001)
+scale = Vector2(0.5213458, 8.832654)
+
+[node name="Surface6" parent="Collision Surfaces" unique_id=702923778 instance=ExtResource("1_2b52f")]
+position = Vector2(-946, 23)
+scale = Vector2(1, 13.280001)
+
+[node name="Surface7" parent="Collision Surfaces" unique_id=1962165840 instance=ExtResource("1_2b52f")]
+position = Vector2(-946, -371)
+scale = Vector2(1.0148665, 2.4400005)
