@@ -13,7 +13,14 @@ size = Vector2(128, 128)
 [node name="Node2D" type="Node2D" unique_id=9163234]
 script = ExtResource("1_rtlb2")
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1802788593]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1760644299]
+unique_name_in_owner = true
+position = Vector2(200, 528)
+script = ExtResource("4_3btp6")
+
+[node name="CanvasLayer1" type="CanvasLayer" parent="." unique_id=1323816392]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer1" unique_id=1802788593]
 offset_left = -1098.0
 offset_top = -845.99994
 offset_right = -1058.4039
@@ -21,21 +28,24 @@ offset_bottom = -805.99994
 scale = Vector2(107.47161, 69.69972)
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1555780751]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer1" unique_id=1555780751]
 offset_left = -10.000004
 offset_top = 6.0
 offset_right = 29.596058
 offset_bottom = 46.0
 scale = Vector2(48.7882, 26.674467)
 
-[node name="StaticBody2D1" type="StaticBody2D" parent="." unique_id=448939243]
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1885289500]
+layer = 2
+
+[node name="StaticBody2D1" type="StaticBody2D" parent="CanvasLayer2" unique_id=448939243]
 position = Vector2(378, 1019)
 scale = Vector2(6.1984897, 1.1142262)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D1" unique_id=605752862]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/StaticBody2D1" unique_id=605752862]
 shape = SubResource("RectangleShape2D_ehts2")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D1/CollisionShape2D" unique_id=1773638122]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/StaticBody2D1/CollisionShape2D" unique_id=1773638122]
 offset_left = -64.0
 offset_top = -63.99994
 offset_right = -24.0
@@ -44,14 +54,14 @@ scale = Vector2(3.1998363, 3.1999965)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1212021800]
+[node name="StaticBody2D2" type="StaticBody2D" parent="CanvasLayer2" unique_id=1212021800]
 position = Vector2(1531, 1019)
 scale = Vector2(6.282187, 1.1142262)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=889295619]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/StaticBody2D2" unique_id=889295619]
 shape = SubResource("RectangleShape2D_ehts2")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2/CollisionShape2D" unique_id=538775711]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/StaticBody2D2/CollisionShape2D" unique_id=538775711]
 offset_left = -64.0
 offset_top = -63.99994
 offset_right = -24.0
@@ -60,14 +70,14 @@ scale = Vector2(3.1998363, 3.1999965)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1511356022]
+[node name="StaticBody2D3" type="StaticBody2D" parent="CanvasLayer2" unique_id=1511356022]
 position = Vector2(958, 16)
 scale = Vector2(15.260202, 0.3720482)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1254494576]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/StaticBody2D3" unique_id=1254494576]
 shape = SubResource("RectangleShape2D_ehts2")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/CollisionShape2D" unique_id=1014018515]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/StaticBody2D3/CollisionShape2D" unique_id=1014018515]
 offset_left = -64.0
 offset_top = -63.99994
 offset_right = -24.0
@@ -75,14 +85,14 @@ offset_bottom = -23.999939
 scale = Vector2(3.1998363, 3.1999965)
 color = Color(0, 0, 0, 1)
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=520122086]
+[node name="StaticBody2D4" type="StaticBody2D" parent="CanvasLayer2" unique_id=520122086]
 position = Vector2(1894, 491)
 scale = Vector2(0.6347389, 7.1751585)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1199408813]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/StaticBody2D4" unique_id=1199408813]
 shape = SubResource("RectangleShape2D_ehts2")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D4/CollisionShape2D" unique_id=1818022536]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/StaticBody2D4/CollisionShape2D" unique_id=1818022536]
 offset_left = -64.0
 offset_top = -63.99994
 offset_right = -24.0
@@ -90,14 +100,14 @@ offset_bottom = -23.999939
 scale = Vector2(3.1998363, 3.1999965)
 color = Color(0, 0, 0, 1)
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=200514683]
+[node name="StaticBody2D5" type="StaticBody2D" parent="CanvasLayer2" unique_id=200514683]
 position = Vector2(22, 491)
 scale = Vector2(0.63473886, 7.1751575)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1467739980]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/StaticBody2D5" unique_id=1467739980]
 shape = SubResource("RectangleShape2D_ehts2")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D5/CollisionShape2D" unique_id=1724343639]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/StaticBody2D5/CollisionShape2D" unique_id=1724343639]
 offset_left = -64.0
 offset_top = -63.99994
 offset_right = -24.0
@@ -105,14 +115,14 @@ offset_bottom = -23.999939
 scale = Vector2(3.1998363, 3.1999965)
 color = Color(0, 0, 0, 1)
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1509395379]
+[node name="StaticBody2D6" type="StaticBody2D" parent="CanvasLayer2" unique_id=1509395379]
 position = Vector2(951, 1066)
 scale = Vector2(2.7802112, 0.3720482)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=2075215791]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/StaticBody2D6" unique_id=2075215791]
 shape = SubResource("RectangleShape2D_ehts2")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D6/CollisionShape2D" unique_id=1903757357]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/StaticBody2D6/CollisionShape2D" unique_id=1903757357]
 offset_left = -64.0
 offset_top = -63.99994
 offset_right = -24.0
@@ -120,7 +130,10 @@ offset_bottom = -23.999939
 scale = Vector2(3.1998363, 3.1999965)
 color = Color(0, 0, 0, 1)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=608767919]
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=203219526]
+layer = 3
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer3" unique_id=608767919]
 unique_name_in_owner = true
 visibility_layer = 2
 position = Vector2(400, 908)
@@ -128,15 +141,10 @@ scale = Vector2(2.0195465, 2.0195465)
 safe_margin = 0.1
 script = ExtResource("2_ehts2")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=930976368]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer3/CharacterBody2D" unique_id=930976368]
 scale = Vector2(0.2799155, 0.2799155)
 texture = ExtResource("1_coydh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1117474713]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer3/CharacterBody2D" unique_id=1117474713]
 scale = Vector2(1.7847061, 1.7847061)
 shape = SubResource("RectangleShape2D_rtlb2")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1760644299]
-unique_name_in_owner = true
-position = Vector2(200, 528)
-script = ExtResource("4_3btp6")
