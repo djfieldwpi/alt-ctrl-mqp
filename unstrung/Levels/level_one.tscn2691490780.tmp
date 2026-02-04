@@ -6,11 +6,9 @@
 [node name="Node2D" type="Node2D" unique_id=324805373]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
-position = Vector2(10, 3)
 script = ExtResource("1_wi846")
 
 [node name="1" type="CanvasLayer" parent="." unique_id=2113155628]
-follow_viewport_enabled = true
 
 [node name="Surface" parent="1" unique_id=1330873477 instance=ExtResource("1_2b52f")]
 position = Vector2(0, 418)

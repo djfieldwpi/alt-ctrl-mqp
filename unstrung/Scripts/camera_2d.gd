@@ -11,8 +11,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if GlobalVariables.is_camera_follow:
-		pass
+	pass
+	# if GlobalVariables.is_camera_follow:
 		# Mid-screen tracking (right)
 		# if "CharacterBody2D".global_position.x > self.global_position.x:
 		#	self.global_position.x = "CharacterBody2D".global_position.x
