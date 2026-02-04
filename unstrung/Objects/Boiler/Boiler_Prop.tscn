@@ -12,6 +12,7 @@ viewport_path = NodePath("SubViewport")
 [node name="BoilerProp" type="Node2D" unique_id=41544662]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
+own_world_3d = true
 transparent_bg = true
 
 [node name="BoilerGlb" parent="SubViewport" unique_id=1133546131 instance=ExtResource("1_pw8m5")]

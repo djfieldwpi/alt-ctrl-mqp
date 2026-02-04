@@ -8,18 +8,18 @@ shader = ExtResource("2_ti2fi")
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="BoilerProp" type="Node2D" unique_id=41544662]
+[node name="prop_name" type="Node2D" unique_id=41544662]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 transparent_bg = true
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1042998650]
-transform = Transform3D(1, 0, 0, 0, 1.0886823, 0, 0, 0, 1, 0, 0.70307994, 2.571024)
+transform = Transform3D(1, 0, 0, 0, 1.0886823, 0, 0, 0, 1, 0, 0, 5)
 projection = 1
 size = 1.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7369472, 2.4221587)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 light_color = Color(0.47, 0.47, 0.47, 1)
 sky_mode = 1
 

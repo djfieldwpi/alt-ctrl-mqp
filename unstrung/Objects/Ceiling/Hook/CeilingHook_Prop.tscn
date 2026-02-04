@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b4wkqohe7logl"]
+
+[ext_resource type="PackedScene" uid="uid://c0el8srld5wsh" path="res://Objects/Ceiling/Hook/CeilingHook.glb" id="1_3f532"]
+[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="2_wr46o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wr46o"]
+shader = ExtResource("2_wr46o")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mic2g"]
+viewport_path = NodePath("SubViewport")
+
+[node name="CeilingHookProp" type="Node2D" unique_id=630610592]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=722746719]
+own_world_3d = true
+transparent_bg = true
+
+[node name="CeilingHook2" parent="SubViewport" unique_id=655813040 instance=ExtResource("1_3f532")]
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 0, 0.6454443, 0)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=782583732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+projection = 1
+size = 1.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1186638610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+light_color = Color(0.66931534, 0.6693154, 0.6693153, 1)
+sky_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=29666794]
+material = SubResource("ShaderMaterial_wr46o")
+offset_right = 512.0
+offset_bottom = 512.0
+texture = SubResource("ViewportTexture_mic2g")

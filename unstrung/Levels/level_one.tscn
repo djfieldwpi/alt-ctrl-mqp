@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cbxchpta7g5ea" path="res://Objects/surface.tscn" id="1_2b52f"]
 [ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="1_wi846"]
-[ext_resource type="PackedScene" uid="uid://cwo800esd4dpg" path="res://Objects/Boiler/Boiler_Prop.tscn" id="3_pvy0h"]
 
 [node name="Node2D" type="Node2D" unique_id=324805373]
 
@@ -43,6 +42,3 @@ scale = Vector2(1.0148665, 2.4400005)
 
 [node name="2" type="CanvasLayer" parent="." unique_id=1450568293]
 follow_viewport_enabled = true
-
-[node name="BoilerProp" parent="2" unique_id=41544662 instance=ExtResource("3_pvy0h")]
-position = Vector2(588, -209)
