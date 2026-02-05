@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Stool/Stool_Prop.tscn" id="6_ugpc4"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
-offsets = PackedFloat32Array(0, 0.652, 1)
+offsets = PackedFloat32Array(0, 0.624, 1)
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.8, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ya8ts"]
@@ -28,18 +28,18 @@ layer = -1
 follow_viewport_enabled = true
 
 [node name="ColorRect2" type="ColorRect" parent="-2" unique_id=601932387]
-offset_left = -2051.0
-offset_top = -1272.0
-offset_right = -2011.0
-offset_bottom = -1232.0
+offset_left = -2031.0
+offset_top = -1269.0001
+offset_right = -1991.0
+offset_bottom = -1229.0001
 scale = Vector2(104.2126, 67.69123)
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="-2" unique_id=1167009900]
-offset_left = -991.0
-offset_top = -507.0
-offset_right = -951.0
-offset_bottom = -467.0
+offset_left = -966.0
+offset_top = -539.0
+offset_right = -926.0
+offset_bottom = -499.0
 scale = Vector2(48.290867, 27.191841)
 color = Color(0.25, 0.25, 0.25, 1)
 
