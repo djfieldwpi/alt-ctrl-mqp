@@ -2,12 +2,75 @@
 
 [ext_resource type="PackedScene" uid="uid://cbxchpta7g5ea" path="res://Objects/surface.tscn" id="1_2b52f"]
 [ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="1_wi846"]
+[ext_resource type="PackedScene" uid="uid://1w6fmus6y2ch" path="res://Objects/Oval Window/Backdrop/OvalWindowBackdrop_Prop.tscn" id="2_cph7v"]
+[ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Crate/Crate_Prop.tscn" id="3_pvy0h"]
+[ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
+[ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Stool/Stool_Prop.tscn" id="6_ugpc4"]
+
+[sub_resource type="Gradient" id="Gradient_ugpc4"]
+offsets = PackedFloat32Array(0, 0.652, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.8, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ya8ts"]
+gradient = SubResource("Gradient_ugpc4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvy0h"]
+size = Vector2(20, 19.864637)
 
 [node name="Node2D" type="Node2D" unique_id=324805373]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 position = Vector2(10, 3)
 script = ExtResource("1_wi846")
+
+[node name="-2" type="CanvasLayer" parent="." unique_id=1682260525]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="ColorRect2" type="ColorRect" parent="-2" unique_id=601932387]
+offset_left = -2051.0
+offset_top = -1272.0
+offset_right = -2011.0
+offset_bottom = -1232.0
+scale = Vector2(104.2126, 67.69123)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="-2" unique_id=1167009900]
+offset_left = -991.0
+offset_top = -507.0
+offset_right = -951.0
+offset_bottom = -467.0
+scale = Vector2(48.290867, 27.191841)
+color = Color(0.25, 0.25, 0.25, 1)
+
+[node name="-1" type="CanvasLayer" parent="." unique_id=603412291]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="OvalWindowBackdrop_Prop" parent="-1" unique_id=41544662 instance=ExtResource("2_cph7v")]
+position = Vector2(-235, -242)
+scale = Vector2(0.64452004, 0.64452004)
+
+[node name="OvalWindow_Prop" parent="-1" unique_id=2021784567 instance=ExtResource("3_ugpc4")]
+position = Vector2(-235, -242)
+scale = Vector2(0.64452004, 0.64452004)
+
+[node name="Polygon2D" type="Polygon2D" parent="-1" unique_id=2130930551]
+clip_children = 1
+position = Vector2(-250, -76)
+color = Color(1, 1, 1, 0.526)
+polygon = PackedVector2Array(61, -11, 70, -45, 89, -76, 112, -98, 138, -113, 178, -121, 219, -114, 249, -99, 273, -75, 290.00223, -45.62387, 300, -11, 437, 363, -63, 360)
+uv = PackedVector2Array(59.000305, -5.3333282, 223.0003, -8, 293.667, 121.33334, -16.333008, 130)
+
+[node name="TextureRect" type="TextureRect" parent="-1/Polygon2D" unique_id=257474676]
+offset_left = -80.0
+offset_top = 367.0
+offset_right = 176.0
+offset_bottom = 407.0
+rotation = -1.5745367
+scale = Vector2(2.1232848, 13.569561)
+texture = SubResource("GradientTexture1D_ya8ts")
+metadata/_edit_use_anchors_ = true
 
 [node name="1" type="CanvasLayer" parent="." unique_id=2113155628]
 follow_viewport_enabled = true
@@ -44,5 +107,28 @@ scale = Vector2(1.0148665, 2.4400005)
 position = Vector2(-720, 223.00002)
 scale = Vector2(10.285662, -3.292248)
 
+[node name="Crate_Prop" parent="1" unique_id=175785902 instance=ExtResource("3_pvy0h")]
+position = Vector2(374, 95)
+scale = Vector2(0.39926553, 0.39926553)
+
+[node name="Area2D" type="Area2D" parent="1/Crate_Prop" unique_id=7364148]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1/Crate_Prop/Area2D" unique_id=486458265]
+position = Vector2(255.46912, 256.4443)
+scale = Vector2(23.19791, 22.596802)
+shape = SubResource("RectangleShape2D_pvy0h")
+
+[node name="Label" type="Label" parent="1" unique_id=559306047]
+offset_left = -883.0
+offset_top = 106.00001
+offset_right = -843.0
+offset_bottom = 129.0
+scale = Vector2(10.866655, 9.46121)
+text = "Bed"
+
 [node name="2" type="CanvasLayer" parent="." unique_id=1450568293]
 follow_viewport_enabled = true
+
+[node name="Stool_Prop" parent="2" unique_id=286168946 instance=ExtResource("6_ugpc4")]
+position = Vector2(-334, 182)
+scale = Vector2(0.23292482, 0.23292482)
