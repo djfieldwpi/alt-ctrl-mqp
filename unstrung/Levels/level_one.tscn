@@ -40,5 +40,9 @@ scale = Vector2(1, 13.280001)
 position = Vector2(-946, -371)
 scale = Vector2(1.0148665, 2.4400005)
 
+[node name="Surface8" parent="1" unique_id=1746030507 instance=ExtResource("1_2b52f")]
+position = Vector2(-720, 223.00002)
+scale = Vector2(10.285662, -3.292248)
+
 [node name="2" type="CanvasLayer" parent="." unique_id=1450568293]
 follow_viewport_enabled = true
