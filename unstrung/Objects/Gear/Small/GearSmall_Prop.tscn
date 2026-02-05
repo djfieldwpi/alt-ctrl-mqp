@@ -9,7 +9,7 @@ shader = ExtResource("1_yeafn")
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="prop_name" type="Node2D" unique_id=41544662]
+[node name="GearSmall_Prop" type="Node2D" unique_id=41544662]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true

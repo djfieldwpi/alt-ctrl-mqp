@@ -9,7 +9,7 @@ shader = ExtResource("2_wr46o")
 [sub_resource type="ViewportTexture" id="ViewportTexture_mic2g"]
 viewport_path = NodePath("SubViewport")
 
-[node name="CeilingHookProp" type="Node2D" unique_id=630610592]
+[node name="CeilingHook_Prop" type="Node2D" unique_id=630610592]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=722746719]
 own_world_3d = true
