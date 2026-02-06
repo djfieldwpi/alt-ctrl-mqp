@@ -2,25 +2,45 @@ extends Node
 
 
 @onready	 var playerShadows: Array[StaticBody2D] = []
+var trigger
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
+	
+	print(get_tree().root.get_viewport().canvas_cull_mask)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var content = trigger.get_as_text()
+	content = content.replace("\r", "").split("\n")
+	if content[0] == "DONE":
+		content.remove_at(0)
+		var points: Array[Vector2] = []
+		for line in content:
+			line = line.strip_edges()
+			if line.is_empty():
+				continue
+			var parts = line.split(" ", false)
+			var x := int(parts[0])
+			var y := int(parts[1])
+			points.append(Vector2(x, y))
+		
+		spawnShadow(points)
+		trigger.close()
+		trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)
 	if Input.is_action_just_pressed("Lock Actors"):
 		GlobalVariables.is_actors_locked = !GlobalVariables.is_actors_locked
-		"""
 		if GlobalVariables.is_actors_locked:
-			get_tree().root.get_viewport().canvas_cull_mask = (Only desired layers)
-			
-			Could also include shadow removal:
+			print("Actors Locked")
+			get_tree().root.get_viewport().canvas_cull_mask = 8
+			for node in get_tree().get_nodes_in_group("transparent"):
+				node.modulate.a = 0.2
+			# Could also include shadow removal:
 			for i in range(playerShadows.size() - 1, -1, -1):
 				var shadow: StaticBody2D = playerShadows[i]
 				
-				if not is_valid_instance(shadow):
+				if not is_instance_valid(shadow):
 					playerShadows.remove_at(i)
 					continue
 					
@@ -28,19 +48,28 @@ func _process(delta: float) -> void:
 					remove_child(shadow)
 					
 				shadow.queue_free()
-				playerShdows.remove_at(i)
+				playerShadows.remove_at(i)
 			
-			Also can save reference frame here after a short delay
+		# 	Also can save reference frame here after a short delay
 			var timer: SceneTreeTimer = get_tree().create_timer(0.5)
 			await timer.timeout
-			get_viewport().get_texture().get_image().save_png("File Path Here")
+			get_viewport().get_texture().get_image().save_png("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GodotFrame.png")
 		else:
+			print("Actors Unlocked")
 			get_tree().root.get_viewport().canvas_cull_mask = -1
-		"""
+			for node in get_tree().get_nodes_in_group("transparent"):
+				node.modulate.a = 1
+
 	if Input.is_action_just_pressed("Process Shadows"):
 		if GlobalVariables.is_actors_locked:
-			# Send signal here
-			pass
+			trigger.close()
+			trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)
+			trigger.store_string("GO")
+			trigger.close()
+			trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
+			print(trigger.get_line())
+		else:
+			print("Actors not locked")
 			
 func spawnShadow(vertices: Array[Vector2]):
 	# Also able to clear here
@@ -68,7 +97,8 @@ func spawnShadow(vertices: Array[Vector2]):
 		shadow.add_child(polygon)
 		
 		# Position (camera coordinates to global coordinates)
-		# shadow.position.x = %Camera2D.position.x - 960 # Half of window width
+		shadow.position.x -= 960 # Half of window width
+		shadow.position.y -= 540 # Half of window width
 		
 		# Adds shadow part to scene and array
 		add_child(shadow)
@@ -77,3 +107,5 @@ func spawnShadow(vertices: Array[Vector2]):
 	# Unlocks actors and resets culling mask
 	GlobalVariables.is_actors_locked = false
 	get_tree().root.get_viewport().canvas_cull_mask = -1
+	for node in get_tree().get_nodes_in_group("transparent"):
+				node.modulate.a = 1

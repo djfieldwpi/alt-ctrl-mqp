@@ -141,18 +141,18 @@ while True:
 
     bg_u8 = cv2.convertScaleAbs(bg)
 
-    cv2.imshow("Background Model", bg_u8)
-    cv2.imshow("Warped Gray", gray_w)
+    # cv2.imshow("Background Model", bg_u8)
+    # cv2.imshow("Warped Gray", gray_w)
 
     diff = cv2.absdiff(gray_w, bg_u8)
 
-    cv2.imshow("Difference", diff)
+    # cv2.imshow("Difference", diff)
 
     mean = np.mean(diff)
     std = np.std(diff)
     thresh_val = int(np.clip(mean + 0.8 * std, 12, 60))
 
-    _, mask = cv2.threshold(diff, thresh_val, 255, cv2.THRESH_BINARY)
+    _, mask = cv2.threshold(diff, 200, 255, cv2.THRESH_BINARY)
 
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel_open)
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel_close)
@@ -182,7 +182,7 @@ while True:
     if os.path.exists(SIGNAL_PATH):
         with open(SIGNAL_PATH, "r") as f:
             cmd = f.read().strip()
-
+    print(cmd)
     if cmd == "GO":
         with open(SIGNAL_PATH, "w") as f:
             f.write("DONE\n")

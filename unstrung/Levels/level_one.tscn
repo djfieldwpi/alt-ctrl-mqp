@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://bacu4o8maxm4v"]
 
 [ext_resource type="PackedScene" uid="uid://cbxchpta7g5ea" path="res://Objects/surface.tscn" id="1_2b52f"]
+[ext_resource type="Script" uid="uid://xilu12hpjx1l" path="res://Scripts/process_shadows.gd" id="1_2848f"]
 [ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="1_wi846"]
 [ext_resource type="PackedScene" uid="uid://1w6fmus6y2ch" path="res://Objects/Oval Window/Backdrop/OvalWindowBackdrop_Prop.tscn" id="2_cph7v"]
 [ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Crate/Crate_Prop.tscn" id="3_pvy0h"]
 [ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Stool/Stool_Prop.tscn" id="6_ugpc4"]
+[ext_resource type="Script" uid="uid://dgecg2rehne1f" path="res://Scripts/character_body_2d.gd" id="7_whtlt"]
+[ext_resource type="Texture2D" uid="uid://6qqcex7ugema" path="res://Sprites/icon.svg" id="7_ya8ts"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
 offsets = PackedFloat32Array(0, 0.624, 1)
@@ -17,17 +20,22 @@ gradient = SubResource("Gradient_ugpc4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvy0h"]
 size = Vector2(20, 19.864637)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whtlt"]
+
 [node name="Node2D" type="Node2D" unique_id=324805373]
+visibility_layer = 1023
+script = ExtResource("1_2848f")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
+unique_name_in_owner = true
 position = Vector2(10, 3)
 script = ExtResource("1_wi846")
 
-[node name="-2" type="CanvasLayer" parent="." unique_id=1682260525]
-layer = -1
-follow_viewport_enabled = true
+[node name="1" type="Node2D" parent="." unique_id=1465390576]
+visibility_layer = 9
 
-[node name="ColorRect2" type="ColorRect" parent="-2" unique_id=601932387]
+[node name="ColorRect2" type="ColorRect" parent="1" unique_id=601932387]
+visibility_layer = 9
 offset_left = -2031.0
 offset_top = -1269.0001
 offset_right = -1991.0
@@ -35,34 +43,33 @@ offset_bottom = -1229.0001
 scale = Vector2(104.2126, 67.69123)
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="-2" unique_id=1167009900]
+[node name="ColorRect" type="ColorRect" parent="1" unique_id=1167009900]
+visibility_layer = 9
 offset_left = -966.0
 offset_top = -539.0
 offset_right = -926.0
 offset_bottom = -499.0
 scale = Vector2(48.290867, 27.191841)
-color = Color(0.25, 0.25, 0.25, 1)
 
-[node name="-1" type="CanvasLayer" parent="." unique_id=603412291]
-layer = -1
-follow_viewport_enabled = true
+[node name="2" type="Node2D" parent="." unique_id=1848343906]
+visibility_layer = 2
 
-[node name="OvalWindowBackdrop_Prop" parent="-1" unique_id=41544662 instance=ExtResource("2_cph7v")]
+[node name="OvalWindowBackdrop_Prop" parent="2" unique_id=41544662 instance=ExtResource("2_cph7v")]
 position = Vector2(-235, -242)
 scale = Vector2(0.64452004, 0.64452004)
 
-[node name="OvalWindow_Prop" parent="-1" unique_id=2021784567 instance=ExtResource("3_ugpc4")]
+[node name="OvalWindow_Prop" parent="2" unique_id=2021784567 instance=ExtResource("3_ugpc4")]
 position = Vector2(-235, -242)
 scale = Vector2(0.64452004, 0.64452004)
 
-[node name="Polygon2D" type="Polygon2D" parent="-1" unique_id=2130930551]
+[node name="Polygon2D" type="Polygon2D" parent="2" unique_id=2130930551]
 clip_children = 1
 position = Vector2(-250, -76)
 color = Color(1, 1, 1, 0.526)
 polygon = PackedVector2Array(61, -11, 70, -45, 89, -76, 112, -98, 138, -113, 178, -121, 219, -114, 249, -99, 273, -75, 290.00223, -45.62387, 300, -11, 437, 363, -63, 360)
 uv = PackedVector2Array(59.000305, -5.3333282, 223.0003, -8, 293.667, 121.33334, -16.333008, 130)
 
-[node name="TextureRect" type="TextureRect" parent="-1/Polygon2D" unique_id=257474676]
+[node name="TextureRect" type="TextureRect" parent="2/Polygon2D" unique_id=257474676]
 offset_left = -80.0
 offset_top = 367.0
 offset_right = 176.0
@@ -72,53 +79,67 @@ scale = Vector2(2.1232848, 13.569561)
 texture = SubResource("GradientTexture1D_ya8ts")
 metadata/_edit_use_anchors_ = true
 
-[node name="1" type="CanvasLayer" parent="." unique_id=2113155628]
-follow_viewport_enabled = true
+[node name="3" type="Node2D" parent="." unique_id=1058070615]
+visibility_layer = 4
 
-[node name="Surface" parent="1" unique_id=1330873477 instance=ExtResource("1_2b52f")]
+[node name="4" type="Node2D" parent="." unique_id=420166214]
+light_mask = 0
+visibility_layer = 8
+
+[node name="Surface" parent="4" unique_id=1330873477 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(0, 418)
 scale = Vector2(48.308537, 6.5411944)
 
-[node name="Surface2" parent="1" unique_id=135425095 instance=ExtResource("1_2b52f")]
+[node name="Surface2" parent="4" unique_id=135425095 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(0, -479)
 scale = Vector2(48.307137, 2.9915648)
 
-[node name="Surface3" parent="1" unique_id=210396714 instance=ExtResource("1_2b52f")]
+[node name="Surface3" parent="4" unique_id=210396714 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(369, -370)
 scale = Vector2(2.3927402, 2.5200007)
 
-[node name="Surface4" parent="1" unique_id=2035820658 instance=ExtResource("1_2b52f")]
+[node name="Surface4" parent="4" unique_id=2035820658 groups=["transparent"] instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(369, -139)
 scale = Vector2(2.4, 3.5999994)
 
-[node name="Surface5" parent="1" unique_id=1524570820 instance=ExtResource("1_2b52f")]
+[node name="Surface5" parent="4" unique_id=1524570820 groups=["transparent"] instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(369, 110.00001)
 scale = Vector2(0.5213458, 8.832654)
 
-[node name="Surface6" parent="1" unique_id=702923778 instance=ExtResource("1_2b52f")]
+[node name="Surface6" parent="4" unique_id=702923778 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(-946, 23)
 scale = Vector2(1, 13.280001)
 
-[node name="Surface7" parent="1" unique_id=1962165840 instance=ExtResource("1_2b52f")]
+[node name="Surface7" parent="4" unique_id=1962165840 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(-946, -371)
 scale = Vector2(1.0148665, 2.4400005)
 
-[node name="Surface8" parent="1" unique_id=1746030507 instance=ExtResource("1_2b52f")]
+[node name="Surface8" parent="4" unique_id=1746030507 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
 position = Vector2(-720, 223.00002)
 scale = Vector2(10.285662, -3.292248)
 
-[node name="Crate_Prop" parent="1" unique_id=175785902 instance=ExtResource("3_pvy0h")]
-position = Vector2(374, 95)
+[node name="Crate_Prop" parent="4" unique_id=175785902 instance=ExtResource("3_pvy0h")]
+visibility_layer = 8
+position = Vector2(375, 95)
 scale = Vector2(0.39926553, 0.39926553)
 
-[node name="Area2D" type="Area2D" parent="1/Crate_Prop" unique_id=7364148]
+[node name="StaticBody2D" type="StaticBody2D" parent="4/Crate_Prop" unique_id=1753873199]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="1/Crate_Prop/Area2D" unique_id=486458265]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4/Crate_Prop/StaticBody2D" unique_id=486458265]
 position = Vector2(255.46912, 256.4443)
 scale = Vector2(23.19791, 22.596802)
 shape = SubResource("RectangleShape2D_pvy0h")
 
-[node name="Label" type="Label" parent="1" unique_id=559306047]
+[node name="Label" type="Label" parent="4" unique_id=559306047]
+light_mask = 9
 offset_left = -883.0
 offset_top = 106.00001
 offset_right = -843.0
@@ -126,9 +147,25 @@ offset_bottom = 129.0
 scale = Vector2(10.866655, 9.46121)
 text = "Bed"
 
-[node name="2" type="CanvasLayer" parent="." unique_id=1450568293]
-follow_viewport_enabled = true
+[node name="CharacterBody2D" type="CharacterBody2D" parent="4" unique_id=118429425 groups=["transparent"]]
+visibility_layer = 8
+position = Vector2(-877.9999, 111.99997)
+scale = Vector2(0.6122186, 0.6122186)
+script = ExtResource("7_whtlt")
 
-[node name="Stool_Prop" parent="2" unique_id=286168946 instance=ExtResource("6_ugpc4")]
+[node name="Sprite2D" type="Sprite2D" parent="4/CharacterBody2D" unique_id=1948017555]
+visibility_layer = 8
+texture = ExtResource("7_ya8ts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4/CharacterBody2D" unique_id=2035446873]
+visibility_layer = 8
+scale = Vector2(6.3737564, 6.3737564)
+shape = SubResource("RectangleShape2D_whtlt")
+
+[node name="5" type="Node2D" parent="." unique_id=74665362]
+light_mask = 0
+visibility_layer = 16
+
+[node name="Stool_Prop" parent="5" unique_id=286168946 instance=ExtResource("6_ugpc4")]
 position = Vector2(-334, 182)
 scale = Vector2(0.23292482, 0.23292482)
