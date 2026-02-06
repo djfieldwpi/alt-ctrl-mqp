@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcmgmpgprmy5l"
+path="res://.godot/imported/Button_Hover.mp3-a6eb36c1e410d7787f2545a8a6ffad3f.mp3str"
+
+[deps]
+
+source_file="res://UI Assets/SFX/Button_Hover.mp3"
+dest_files=["res://.godot/imported/Button_Hover.mp3-a6eb36c1e410d7787f2545a8a6ffad3f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
