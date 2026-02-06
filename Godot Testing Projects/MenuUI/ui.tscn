@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvw475sv2eiwn"]
+[gd_scene format=3 uid="uid://dvw475sv2eiwn"]
 
 [ext_resource type="Script" uid="uid://sfqkt2h7m5h7" path="res://vol_slider.gd" id="1_27fn8"]
 [ext_resource type="Script" uid="uid://cv3du811uwteb" path="res://ui.gd" id="1_nltto"]
@@ -35,7 +35,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="UI" type="Control"]
+[node name="UI" type="Control" unique_id=1425981083]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nltto")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=556713213]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,38 +52,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackgroundImage" type="Panel" parent="MarginContainer"]
+[node name="BackgroundImage" type="Panel" parent="MarginContainer" unique_id=1718752379]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ibotj")
 
-[node name="MainMenu" type="VBoxContainer" parent="MarginContainer"]
+[node name="MainMenu" type="VBoxContainer" parent="MarginContainer" unique_id=663795]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 
-[node name="StartButton" type="Button" parent="MarginContainer/MainMenu"]
+[node name="StartButton" type="Button" parent="MarginContainer/MainMenu" unique_id=714315414]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_n5ude")
 text = "Play"
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/MainMenu"]
+[node name="SettingsButton" type="Button" parent="MarginContainer/MainMenu" unique_id=1714280603]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_y4yjw")
 text = "Settings"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/MainMenu"]
+[node name="QuitButton" type="Button" parent="MarginContainer/MainMenu" unique_id=987371932]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_y4yjw")
 text = "Quit"
 
-[node name="Options" type="Panel" parent="MarginContainer"]
+[node name="Options" type="Panel" parent="MarginContainer" unique_id=2047966014]
 layout_mode = 2
 
-[node name="Audio" type="Label" parent="MarginContainer/Options"]
+[node name="Audio" type="Label" parent="MarginContainer/Options" unique_id=1554363418]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -95,7 +95,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 56
 text = "Audio"
 
-[node name="VBoxContainerAudio" type="VBoxContainer" parent="MarginContainer/Options"]
+[node name="VBoxContainerAudio" type="VBoxContainer" parent="MarginContainer/Options" unique_id=944091277]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -106,31 +106,31 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="MasterVolLabel" type="Label" parent="MarginContainer/Options/VBoxContainerAudio"]
+[node name="MasterVolLabel" type="Label" parent="MarginContainer/Options/VBoxContainerAudio" unique_id=1472551455]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Master volume"
 
-[node name="MasterVolSlider" type="HSlider" parent="MarginContainer/Options/VBoxContainerAudio"]
+[node name="MasterVolSlider" type="HSlider" parent="MarginContainer/Options/VBoxContainerAudio" unique_id=1859582355]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 script = ExtResource("1_27fn8")
 bus_name = "Master"
 
-[node name="MusicVolLabel" type="Label" parent="MarginContainer/Options/VBoxContainerAudio"]
+[node name="MusicVolLabel" type="Label" parent="MarginContainer/Options/VBoxContainerAudio" unique_id=962160145]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Music volume"
 
-[node name="MusicVolSlider" type="HSlider" parent="MarginContainer/Options/VBoxContainerAudio"]
+[node name="MusicVolSlider" type="HSlider" parent="MarginContainer/Options/VBoxContainerAudio" unique_id=1476857379]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 script = ExtResource("1_27fn8")
 bus_name = "Music"
 
-[node name="Window Mode" type="Label" parent="MarginContainer/Options"]
+[node name="Window Mode" type="Label" parent="MarginContainer/Options" unique_id=1518575519]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -147,7 +147,7 @@ theme_override_font_sizes/font_size = 56
 text = "Window Mode"
 horizontal_alignment = 1
 
-[node name="VBoxContainerWindow" type="VBoxContainer" parent="MarginContainer/Options"]
+[node name="VBoxContainerWindow" type="VBoxContainer" parent="MarginContainer/Options" unique_id=726648282]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -156,14 +156,14 @@ offset_top = 398.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CheckButton" type="CheckButton" parent="MarginContainer/Options/VBoxContainerWindow"]
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/Options/VBoxContainerWindow" unique_id=161424568]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 button_pressed = true
 text = "Fullscreen Mode"
 script = ExtResource("4_n5ude")
 
-[node name="BackButton" type="Button" parent="MarginContainer/Options"]
+[node name="BackButton" type="Button" parent="MarginContainer/Options" unique_id=241070953]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -180,10 +180,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_y4yjw")
 text = "Back
 "
 
-[node name="Node" parent="." instance=ExtResource("3_ibotj")]
+[node name="Node" parent="." unique_id=513779168 instance=ExtResource("3_ibotj")]
 root_path = NodePath("..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2125199421]
 stream = ExtResource("6_y4yjw")
 autoplay = true
 bus = &"Music"
