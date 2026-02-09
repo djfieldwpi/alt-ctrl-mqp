@@ -18,6 +18,7 @@ def socket_server():
         with connection:
             while True:
                 data = connection.recv(1024).decode('utf-8')
+                print(data)
                 if not data:
                     break
                 if data == "GET_ARRAY":
@@ -25,7 +26,8 @@ def socket_server():
                     while request_pending: 
                         pass
 
-                    packet = json.dumps(vertices)
+                    packet = json.dumps(vertices.tolist())
+                    print(vertices)
                     connection.sendall(packet.encode('utf-8'))
 
 
@@ -203,7 +205,7 @@ while True:
 
     
     if best_cnt is not None:
-        approx = cv2.approxPolyDP(best_cnt, 4, True)
+        vertices = cv2.approxPolyDP(best_cnt, 4, True)
         if request_pending:
             request_pending = False
 

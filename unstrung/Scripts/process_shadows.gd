@@ -45,13 +45,16 @@ func _process(_delta: float) -> void:
 		connected = true
 		if socket.get_available_bytes() > 0:
 			var data = socket.get_utf8_string(socket.get_available_bytes())
+			print("RAW DATA RECEIVED: ", data)
 			var json = JSON.new()
 			var error = json.parse(data)
 			if error == OK:
 				var vertices: Array[Vector2] = []
 				var data_array = json.data
-				for point in data_array:
+				for item in data_array:
+					var point = item[0]
 					vertices.append(Vector2(point[0], point[1]))
+				print(vertices)
 				spawnShadow(vertices)
 			else:
 				print("JSON parse error.")
