@@ -13,3 +13,9 @@ func _on_door_body_entered(body: Node2D) -> void:
 func _on_transition_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		print("Transition area entered")
+		
+# Animation flow (locking):
+#	GlobalVariables.is_actors_locked = true
+#	$AnimationPlayer.play("animation-name")
+#	await $AnimationPlayer.animation_finished
+#	GlobalVariables.is_actors_locked = false
