@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cb6gnmed0v6ac"]
 
+[ext_resource type="PackedScene" uid="uid://ckeccdq0equk2" path="res://Objects/Box/Box.glb" id="1_53sni"]
 [ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="2_ti2fi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
@@ -22,6 +23,9 @@ size = 1.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 light_color = Color(0.47, 0.47, 0.47, 1)
 sky_mode = 1
+
+[node name="Box2" parent="SubViewport" unique_id=1463134115 instance=ExtResource("1_53sni")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 material = SubResource("ShaderMaterial_nshul")
