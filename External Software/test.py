@@ -1,9 +1,21 @@
 import socket
 import struct
+import os
 import cv2
 import numpy as np
 
-HOST = '127.0.0.1'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+print(script_dir)
+image_path = os.path.join(script_dir, "Test Images", "GodotFrame.png")
+image = cv2.imread(image_path, cv2.IMREAD_UNCHANGED)
+
+if image is None:
+    print(f"Failed to load image at {image_path}")
+else:
+    cv2.imshow("Loaded Image", image)
+    cv2.waitKey(0)
+
+"""HOST = '127.0.0.1'
 PORT = 5000
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -47,4 +59,4 @@ try:
 finally:
     conn.close()
     server.close()
-    cv2.destroyAllWindows()
+    cv2.destroyAllWindows()"""

@@ -2,17 +2,27 @@ extends Node
 
 
 @onready	 var playerShadows: Array[StaticBody2D] = []
-var trigger
+# var trigger
+var socket: StreamPeerTCP = StreamPeerTCP.new()
+var connected: bool = false
+var file_path: String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
+	# trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
+	var error = socket.connect_to_host("127.0.0.1", 65432)
+	if error == OK:
+		print("Connecting to Python")
 	
-	print(get_tree().root.get_viewport().canvas_cull_mask)
+	if OS.has_feature("editor"):
+		file_path = ProjectSettings.globalize_path("res://")
+	else:
+		file_path = OS.get_executable_path().get_base_dir()
+	file_path = file_path.path_join("..").path_join("External Software/Test Images/GodotFrame.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	var content = trigger.get_as_text()
+func _process(_delta: float) -> void:
+	"""var content = trigger.get_as_text()
 	content = content.replace("\r", "").split("\n")
 	if content[0] == "DONE":
 		content.remove_at(0)
@@ -28,7 +38,24 @@ func _process(delta: float) -> void:
 		
 		spawnShadow(points)
 		trigger.close()
-		trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)
+		trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)"""
+	socket.poll()
+	var status = socket.get_status()
+	if status == StreamPeerTCP.STATUS_CONNECTED:
+		connected = true
+		if socket.get_available_bytes() > 0:
+			var data = socket.get_utf8_string(socket.get_available_bytes())
+			var json = JSON.new()
+			var error = json.parse(data)
+			if error == OK:
+				var vertices: Array[Vector2] = []
+				var data_array = json.data
+				for point in data_array:
+					vertices.append(Vector2(point[0], point[1]))
+				spawnShadow(vertices)
+			else:
+				print("JSON parse error.")
+	
 	if Input.is_action_just_pressed("Lock Actors"):
 		GlobalVariables.is_actors_locked = !GlobalVariables.is_actors_locked
 		if GlobalVariables.is_actors_locked:
@@ -53,7 +80,7 @@ func _process(delta: float) -> void:
 		# 	Also can save reference frame here after a short delay
 			var timer: SceneTreeTimer = get_tree().create_timer(0.5)
 			await timer.timeout
-			get_viewport().get_texture().get_image().save_png("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/External Software/Test Images/GodotFrame.png")
+			get_viewport().get_texture().get_image().save_png(file_path)
 		else:
 			print("Actors Unlocked")
 			get_tree().root.get_viewport().canvas_cull_mask = -1
@@ -62,12 +89,13 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Process Shadows"):
 		if GlobalVariables.is_actors_locked:
-			trigger.close()
+			"""trigger.close()
 			trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)
 			trigger.store_string("GO")
 			trigger.close()
 			trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
-			print(trigger.get_line())
+			print(trigger.get_line())"""
+			socket.put_data("GET_ARRAY".to_utf8_buffer())
 		else:
 			print("Actors not locked")
 			
