@@ -125,16 +125,6 @@ visibility_layer = 8
 position = Vector2(-720, 223.00002)
 scale = Vector2(10.285662, -3.292248)
 
-[node name="Surface9" parent="4" unique_id=890496982 instance=ExtResource("1_2b52f")]
-position = Vector2(-156, -5.9999948)
-rotation = -0.36697495
-scale = Vector2(26.159998, 0.99999994)
-
-[node name="Surface10" parent="4" unique_id=978882374 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(1866, 419.00003)
-scale = Vector2(48.308537, 6.5411944)
-
 [node name="Label" type="Label" parent="4" unique_id=559306047]
 light_mask = 9
 offset_left = -883.0
