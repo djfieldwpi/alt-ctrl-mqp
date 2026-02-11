@@ -6,9 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://1w6fmus6y2ch" path="res://Objects/Oval Window/Backdrop/OvalWindowBackdrop_Prop.tscn" id="2_cph7v"]
 [ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Crate/Crate_Prop.tscn" id="3_pvy0h"]
 [ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
+[ext_resource type="PackedScene" path="res://Player/player.tscn" id="6_2848f"]
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Stool/Stool_Prop.tscn" id="6_ugpc4"]
-[ext_resource type="Script" uid="uid://dgecg2rehne1f" path="res://Scripts/character_body_2d.gd" id="7_whtlt"]
-[ext_resource type="Texture2D" uid="uid://6qqcex7ugema" path="res://Sprites/icon.svg" id="7_ya8ts"]
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
@@ -17,8 +16,6 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.8, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ya8ts"]
 gradient = SubResource("Gradient_ugpc4")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_whtlt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvy0h"]
 size = Vector2(20, 19.864637)
@@ -138,20 +135,10 @@ offset_bottom = 129.0
 scale = Vector2(10.866655, 9.46121)
 text = "Bed"
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="4" unique_id=118429425 groups=["transparent"]]
+[node name="CharacterBody2D" parent="4" unique_id=2120166465 groups=["transparent"] instance=ExtResource("6_2848f")]
 visibility_layer = 8
-position = Vector2(-877.9999, 111.99997)
-scale = Vector2(0.6122186, 0.6122186)
-script = ExtResource("7_whtlt")
-
-[node name="Sprite2D" type="Sprite2D" parent="4/CharacterBody2D" unique_id=1948017555]
-visibility_layer = 8
-texture = ExtResource("7_ya8ts")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="4/CharacterBody2D" unique_id=2035446873]
-visibility_layer = 8
-scale = Vector2(6.3737564, 6.3737564)
-shape = SubResource("RectangleShape2D_whtlt")
+position = Vector2(-891, 123)
+scale = Vector2(0.5005167, 0.5005167)
 
 [node name="5" type="Node2D" parent="." unique_id=74665362]
 light_mask = 0
