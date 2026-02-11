@@ -59,7 +59,7 @@ func _process(_delta: float) -> void:
 			else:
 				print("JSON parse error.")
 	
-	if Input.is_action_just_pressed("Lock Actors"):
+	if Input.is_action_just_pressed("Lock Actors") and not GlobalVariables.is_system_lock:
 		GlobalVariables.is_actors_locked = !GlobalVariables.is_actors_locked
 		if GlobalVariables.is_actors_locked:
 			print("Actors Locked")
