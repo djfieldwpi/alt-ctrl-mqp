@@ -66,7 +66,7 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
-	if not GlobalVariables.is_actors_locked:
+	if not GlobalVariables.is_actors_locked and not GlobalVariables.is_system_lock:
 		if flip_cd > 0.0:
 			flip_cd -= delta
 
@@ -94,6 +94,9 @@ func _physics_process(delta: float) -> void:
 			handle_stand_check(delta)
 		else:
 			exit_crawl()
+	elif not is_on_floor() and GlobalVariables.is_system_lock:
+		velocity += get_gravity() * delta
+		move_and_slide()
 
 
 # =========================
