@@ -23,6 +23,10 @@ zoom = Vector2(0.2, 0.2)
 visibility_layer = 8
 shape = SubResource("RectangleShape2D_k51o0")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D" unique_id=1670393250]
+visibility_layer = 8
+shape = SubResource("RectangleShape2D_k51o0")
+
 [node name="GoalRayCast2D" type="RayCast2D" parent="." unique_id=386518375]
 visibility_layer = 8
 position = Vector2(0, -65.30612)
@@ -41,7 +45,8 @@ target_position = Vector2(100, 0)
 
 [node name="BodyRayCast2D" type="RayCast2D" parent="." unique_id=1117873917]
 visibility_layer = 8
-position = Vector2(24, 48)
+position = Vector2(63.5, 63.6)
+rotation = -0.9707022
 target_position = Vector2(100, 0)
 
 [node name="UpRayCast2D" type="RayCast2D" parent="." unique_id=613999557]
