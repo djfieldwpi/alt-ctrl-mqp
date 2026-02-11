@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 
 @onready	 var playerShadows: Array[StaticBody2D] = []
@@ -6,6 +6,8 @@ extends Node
 var socket: StreamPeerTCP = StreamPeerTCP.new()
 var connected: bool = false
 var file_path: String = ""
+
+var debug_drawn_vertices: Array[Vector2] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -102,6 +104,30 @@ func _process(_delta: float) -> void:
 		else:
 			print("Actors not locked")
 			
+	if Input.is_action_just_pressed("Draw Point") and GlobalVariables.debug_drawn_shadows:
+		if GlobalVariables.is_actors_locked:
+			var point = get_viewport().get_mouse_position()
+			if len(debug_drawn_vertices) > 2 and point.distance_to(debug_drawn_vertices[0]) < 10:
+				spawnShadow(debug_drawn_vertices)
+				debug_drawn_vertices.clear()
+				queue_redraw()
+			else:
+				debug_drawn_vertices.append(point)
+				queue_redraw()
+		else:
+			debug_drawn_vertices.clear()
+			queue_redraw()
+			print("Actors not locked")
+
+func _draw() -> void:
+	if GlobalVariables.is_actors_locked and len(debug_drawn_vertices) > 0:
+		for point in debug_drawn_vertices:
+			print(point)
+			var new_point = Vector2(point.x - 960 + %Camera2D.global_position.x, point.y - 540)
+			print(new_point)
+			draw_circle(new_point, 5, Color.GREEN)
+		
+		
 func spawnShadow(vertices: Array[Vector2]):
 	# Also able to clear here
 	# playerShadows.clear()

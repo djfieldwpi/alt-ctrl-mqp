@@ -31,6 +31,7 @@ unique_name_in_owner = true
 script = ExtResource("1_wi846")
 
 [node name="1" type="Node2D" parent="." unique_id=1465390576]
+visible = false
 visibility_layer = 9
 
 [node name="ColorRect2" type="ColorRect" parent="1" unique_id=601932387]
