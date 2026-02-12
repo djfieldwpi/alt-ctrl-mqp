@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b7tux06akpc7i"]
+[gd_scene format=3 uid="uid://dfn1724e8oa3n"]
 
 [ext_resource type="Script" uid="uid://dxgem2s75mpmh" path="res://Player/agent_FSM.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://6qqcex7ugema" path="res://Sprites/icon.svg" id="2_4ntmi"]
@@ -6,49 +6,45 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k51o0"]
 size = Vector2(128, 128)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1486835956]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1607984233]
 visibility_layer = 8
 scale = Vector2(0.305, 0.305)
 script = ExtResource("1_l8h54")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=975187246]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1926257725]
 visibility_layer = 8
 texture = ExtResource("2_4ntmi")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=690222619]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=743948091]
 visibility_layer = 8
 zoom = Vector2(0.2, 0.2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113032206]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521189674]
 visibility_layer = 8
 shape = SubResource("RectangleShape2D_k51o0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D" unique_id=1670393250]
-visibility_layer = 8
-shape = SubResource("RectangleShape2D_k51o0")
-
-[node name="GoalRayCast2D" type="RayCast2D" parent="." unique_id=386518375]
+[node name="GoalRayCast2D" type="RayCast2D" parent="." unique_id=375471125]
 visibility_layer = 8
 position = Vector2(0, -65.30612)
 scale = Vector2(2.335, 2.335)
 target_position = Vector2(464.77338, 1281.8737)
 
-[node name="CrackRayCast2D" type="RayCast2D" parent="." unique_id=352142377]
+[node name="CrackRayCast2D" type="RayCast2D" parent="." unique_id=1980273875]
 visibility_layer = 8
 scale = Vector2(2.05, 2.05)
 target_position = Vector2(41.58337, 83.16674)
 
-[node name="HeadRayCast2D" type="RayCast2D" parent="." unique_id=848740812]
+[node name="HeadRayCast2D" type="RayCast2D" parent="." unique_id=1671202257]
 visibility_layer = 8
-position = Vector2(24, -55)
-target_position = Vector2(100, 0)
+position = Vector2(49.18033, -55.737705)
+target_position = Vector2(52.459015, 0)
 
-[node name="BodyRayCast2D" type="RayCast2D" parent="." unique_id=1117873917]
+[node name="BodyRayCast2D" type="RayCast2D" parent="." unique_id=1383573079]
 visibility_layer = 8
-position = Vector2(63.5, 63.6)
-rotation = -0.9707022
-target_position = Vector2(100, 0)
+position = Vector2(62.295082, 62.295082)
+target_position = Vector2(42.622948, -36.065575)
 
-[node name="UpRayCast2D" type="RayCast2D" parent="." unique_id=613999557]
+[node name="UpRayCast2D" type="RayCast2D" parent="." unique_id=228728304]
 visibility_layer = 8
+scale = Vector2(4.9344273, 1)
 target_position = Vector2(0, -167.2131)

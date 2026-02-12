@@ -16,7 +16,7 @@ func _on_transition_body_entered(body: Node2D) -> void:
 		
 		GlobalVariables.is_system_lock = true
 		GlobalVariables.is_actors_locked = true
-		var timer: SceneTreeTimer = get_tree().create_timer(0.5)
+		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_system_lock = false
 		GlobalVariables.is_actors_locked = false

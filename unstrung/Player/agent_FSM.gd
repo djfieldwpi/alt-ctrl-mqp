@@ -66,7 +66,7 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
-	if not GlobalVariables.is_actors_locked and not GlobalVariables.is_system_lock:
+	if not GlobalVariables.is_actors_locked:
 		if flip_cd > 0.0:
 			flip_cd -= delta
 
@@ -94,9 +94,10 @@ func _physics_process(delta: float) -> void:
 			handle_stand_check(delta)
 		else:
 			exit_crawl()
-	elif not is_on_floor() and GlobalVariables.is_system_lock:
-		velocity += get_gravity() * delta
-		move_and_slide()
+	elif GlobalVariables.is_system_lock:
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+			move_and_slide()
 
 
 # =========================
@@ -206,11 +207,14 @@ func handle_stand_check(delta: float):
 func flip_direction():
 	dir *= -1
 
-	head_ray.target_position.x *= -1
-	body_ray.target_position.x *= -1
-	goal_ray.target_position.x *= -1
-	crack_ray.target_position.x *= -1
-	up_ray.target_position.x *= -1
+	var rays: Array[RayCast2D] = [head_ray, body_ray, goal_ray, crack_ray, ]
+
+	for r in rays:
+	
+		r.position.x = -r.position.x
+		r.target_position.x = -r.target_position.x
+		
+	# sprite.flip_h = (dir < 0)
 
 	stuck_timer = 0.0
 	flip_cd = FLIP_CD_TIME
