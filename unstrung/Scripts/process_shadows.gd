@@ -121,7 +121,7 @@ func _process(_delta: float) -> void:
 
 func _draw() -> void:
 	if GlobalVariables.is_actors_locked and len(debug_drawn_vertices) > 0:
-		var prev_point
+		var prev_point: Vector2
 		for point in debug_drawn_vertices:
 			print(point)
 			var new_point = Vector2(point.x - 960 + %Camera2D.global_position.x, point.y - 540)
