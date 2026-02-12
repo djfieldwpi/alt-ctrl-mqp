@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc30u6kn12e5x"
-path.s3tc="res://.godot/imported/BucketWithShovel_BaseColor_4.png-a7f2cde37bdae06ff8414f57d0db04de.s3tc.ctex"
+uid="uid://dlvsndewv3b6b"
+path.s3tc="res://.godot/imported/BucketWithShovel_Metalness-Roughness.png-a1331bec26d8a2a4ec14362dd68d8bfc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "4d31d17559bf0fc4543fe78b9691913a"
+"md5": "053d02cbe0bc2d82d35ac90c3de30fea"
 }
 
 [deps]
 
-source_file="res://Objects/Beach/Bucket/WithShovel/BucketWithShovel_BaseColor_4.png"
-dest_files=["res://.godot/imported/BucketWithShovel_BaseColor_4.png-a7f2cde37bdae06ff8414f57d0db04de.s3tc.ctex"]
+source_file="res://Objects/Beach/Bucket/With Shovel/BucketWithShovel_Metalness-Roughness.png"
+dest_files=["res://.godot/imported/BucketWithShovel_Metalness-Roughness.png-a1331bec26d8a2a4ec14362dd68d8bfc.s3tc.ctex"]
 
 [params]
 

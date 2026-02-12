@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://dta2g4ssq4yut"]
+[gd_scene format=3 uid="uid://dtk5krdy4tqmw"]
 
-[ext_resource type="PackedScene" uid="uid://na2ojub4bgan" path="res://Objects/Beach/Beach/Ball/BeachBall.glb" id="1_7a41d"]
-[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="2_li7mo"]
+[ext_resource type="PackedScene" uid="uid://dv624bagklr1x" path="res://Objects/Beach/Beach/Tube/BeachTube.glb" id="1_68r1c"]
+[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="1_h2oh2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
-shader = ExtResource("2_li7mo")
+shader = ExtResource("1_h2oh2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="BeachBall_Prop" type="Node2D" unique_id=41544662]
+[node name="BeachTube_Prop" type="Node2D" unique_id=41544662]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -26,8 +26,8 @@ light_color = Color(0.47, 0.47, 0.47, 1)
 light_specular = 0.0
 sky_mode = 1
 
-[node name="BeachBall2" parent="SubViewport" unique_id=1622757959 instance=ExtResource("1_7a41d")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.6649002, 0)
+[node name="BeachTube2" parent="SubViewport" unique_id=791226139 instance=ExtResource("1_68r1c")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.19998296, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 material = SubResource("ShaderMaterial_nshul")
