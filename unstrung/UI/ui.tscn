@@ -192,7 +192,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n5rqp")
 text = "Quit"
 
 [node name="Options" type="Panel" parent="MarginContainer" unique_id=61129687]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Options" unique_id=915628484]
