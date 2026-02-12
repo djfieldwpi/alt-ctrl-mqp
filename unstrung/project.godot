@@ -28,9 +28,17 @@ GlobalVariables="*uid://dbjylfeiq62e4"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[dotnet]
+
+project/assembly_name="Unstrung"
+
 [global_group]
 
 transparent=""
+
+[gui]
+
+theme/custom_font="uid://cos1tclwphh0r"
 
 [input]
 

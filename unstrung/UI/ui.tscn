@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://5pys53tkbsv4" path="res://Planes/House_Concept.jpg" id="2_3sbvi"]
 [ext_resource type="PackedScene" uid="uid://bpjrr32mrhecd" path="res://Audio/ui_sounds_node.tscn" id="3_ibotj"]
 [ext_resource type="FontFile" uid="uid://cos1tclwphh0r" path="res://UI/Fonts/SrirachaDisplay-Regular.otf" id="3_nm1m0"]
-[ext_resource type="AudioStream" uid="uid://8vx4ci0ugp74" path="res://Audio/SFX/BG_Music.mp3" id="6_y4yjw"]
+[ext_resource type="AudioStream" uid="uid://8vx4ci0ugp74" path="res://Audio/Music/BG_Music.mp3" id="6_y4yjw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibotj"]
 texture = ExtResource("2_3sbvi")
@@ -136,21 +136,20 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ibotj")
 
 [node name="MarginContainerMainMenu" type="MarginContainer" parent="MarginContainer" unique_id=414281576]
 layout_mode = 2
-theme_override_constants/margin_left = 50
+theme_override_constants/margin_left = 1500
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
 [node name="MainMenu" type="VBoxContainer" parent="MarginContainer/MarginContainerMainMenu" unique_id=934785559]
 layout_mode = 2
-size_flags_horizontal = 8
 size_flags_vertical = 0
-theme_override_constants/separation = 16
+theme_override_constants/separation = 20
 
 [node name="StartButton" type="Button" parent="MarginContainer/MarginContainerMainMenu/MainMenu" unique_id=718891492]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 62
 theme_override_styles/normal = SubResource("StyleBoxFlat_n5ude")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ibotj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_waa4j")
@@ -159,7 +158,7 @@ text = "Play"
 [node name="ControlsButton" type="Button" parent="MarginContainer/MarginContainerMainMenu/MainMenu" unique_id=1141858918]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 62
 theme_override_styles/normal = SubResource("StyleBoxFlat_n5ude")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ibotj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_waa4j")
@@ -168,7 +167,7 @@ text = "Controls"
 [node name="SettingsButton" type="Button" parent="MarginContainer/MarginContainerMainMenu/MainMenu" unique_id=447078401]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 62
 theme_override_styles/normal = SubResource("StyleBoxFlat_y4yjw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ok7cu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_irxef")
@@ -177,7 +176,7 @@ text = "Settings"
 [node name="CreditsButton" type="Button" parent="MarginContainer/MarginContainerMainMenu/MainMenu" unique_id=2056621191]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 62
 theme_override_styles/normal = SubResource("StyleBoxFlat_n5ude")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ibotj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_waa4j")
@@ -186,13 +185,14 @@ text = "Credits"
 [node name="QuitButton" type="Button" parent="MarginContainer/MarginContainerMainMenu/MainMenu" unique_id=1892055662]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 62
 theme_override_styles/normal = SubResource("StyleBoxFlat_y4yjw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e2l4f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n5rqp")
 text = "Quit"
 
 [node name="Options" type="Panel" parent="MarginContainer" unique_id=61129687]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Options" unique_id=915628484]
@@ -200,7 +200,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -881.0
+offset_bottom = -1000.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 10
@@ -219,12 +219,12 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -881.0
+offset_top = -997.0
 offset_bottom = -700.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_right = 640
+theme_override_constants/margin_right = 1200
 
 [node name="VBoxContainerAudio" type="VBoxContainer" parent="MarginContainer/Options/MarginContainerVolSliders" unique_id=1542380546]
 layout_mode = 2
@@ -233,7 +233,7 @@ theme_override_constants/separation = 20
 [node name="MasterVolLabel" type="Label" parent="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio" unique_id=2074000026]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 42
 text = "Master volume"
 
 [node name="MasterVolSlider" type="HSlider" parent="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio" unique_id=318108669]
@@ -246,7 +246,7 @@ bus_name = "Master"
 [node name="MusicVolLabel" type="Label" parent="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio" unique_id=995251790]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 42
 text = "Music volume"
 
 [node name="MusicVolSlider" type="HSlider" parent="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio" unique_id=435455804]
@@ -255,6 +255,19 @@ max_value = 1.0
 step = 0.001
 script = ExtResource("1_27fn8")
 bus_name = "Music"
+
+[node name="SFX_VolLabel" type="Label" parent="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio" unique_id=227303048]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nm1m0")
+theme_override_font_sizes/font_size = 42
+text = "SFX volume"
+
+[node name="SFX_VolSlider" type="HSlider" parent="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio" unique_id=72601355]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_27fn8")
+bus_name = "SFX"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/Options" unique_id=574694992]
 layout_mode = 1
@@ -277,11 +290,11 @@ horizontal_alignment = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/Options" unique_id=1713791562]
 layout_mode = 0
-offset_top = 508.0
+offset_top = 477.0
 offset_right = 1920.0
-offset_bottom = 983.0
+offset_bottom = 525.0
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_right = 1000
+theme_override_constants/margin_right = 1600
 
 [node name="VBoxContainerWindow" type="VBoxContainer" parent="MarginContainer/Options/MarginContainer3" unique_id=1579929420]
 layout_mode = 2
@@ -290,8 +303,7 @@ size_flags_vertical = 0
 [node name="CheckButton" type="CheckButton" parent="MarginContainer/Options/MarginContainer3/VBoxContainerWindow" unique_id=120499102]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_nm1m0")
-theme_override_font_sizes/font_size = 36
-button_pressed = true
+theme_override_font_sizes/font_size = 42
 text = "Fullscreen Mode"
 
 [node name="BackButton" type="Button" parent="MarginContainer/Options" unique_id=1980819163]
@@ -312,6 +324,7 @@ text = "Back
 "
 
 [node name="Credits" type="Panel" parent="MarginContainer" unique_id=896495150]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/Credits" unique_id=538933281]
@@ -334,12 +347,12 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 71.0
-offset_right = -778.0
-offset_bottom = -547.0
+offset_right = -1378.0
+offset_bottom = -615.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 20
 
@@ -353,8 +366,8 @@ theme_override_font_sizes/bold_font_size = 48
 theme_override_font_sizes/bold_italics_font_size = 44
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "[p][center] [b] MQP Team: [/b]
-Dennis Field 
+text = "[p][b] MQP Team: [/b]
+[p][center]Dennis Field 
 Han Saparuly
 Weilun Deng
 Peter Griffiths
@@ -368,9 +381,9 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -776.0
+offset_left = -1372.0
 offset_top = 72.0
-offset_bottom = -547.0
+offset_bottom = -618.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/margin_left = 40
@@ -387,7 +400,7 @@ theme_override_font_sizes/bold_font_size = 48
 theme_override_font_sizes/bold_italics_font_size = 44
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "[p][center] [b] Disciplines [/b]"
+text = "[p][center] [b] Disciplines and Roles [/b]"
 
 [node name="MarginContainer4099&More" type="MarginContainer" parent="MarginContainer/Credits" unique_id=346286422]
 layout_mode = 1
@@ -395,10 +408,11 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -547.0
+offset_top = -621.0
 offset_bottom = -77.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_left = 80
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/Credits/MarginContainer4099&More" unique_id=586733537]
 layout_mode = 2
@@ -408,6 +422,8 @@ theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_font_size = 48
 theme_override_font_sizes/bold_italics_font_size = 44
 theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "[b]4099 Team: [b]"
 
 [node name="BackButton2" type="Button" parent="MarginContainer/Credits" unique_id=1009201141]
 layout_mode = 1
@@ -427,7 +443,17 @@ text = "Back
 "
 
 [node name="Controls" type="Panel" parent="MarginContainer" unique_id=1721382689]
+visible = false
 layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Controls" unique_id=752358656]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 8.0
+offset_right = 1039.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 74
+text = "Controls"
 
 [node name="MarginContainerControls" type="MarginContainer" parent="MarginContainer/Controls" unique_id=243149628]
 layout_mode = 1
@@ -463,6 +489,7 @@ bus = &"Music"
 [connection signal="pressed" from="MarginContainer/MarginContainerMainMenu/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="value_changed" from="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio/MasterVolSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio/MusicVolSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/Options/MarginContainerVolSliders/VBoxContainerAudio/SFX_VolSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="toggled" from="MarginContainer/Options/MarginContainer3/VBoxContainerWindow/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="MarginContainer/Options/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="MarginContainer/Credits/BackButton2" to="." method="_on_back_button_2_pressed"]

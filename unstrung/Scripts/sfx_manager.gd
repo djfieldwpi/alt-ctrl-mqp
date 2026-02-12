@@ -10,7 +10,7 @@ extends Node
 func _ready() -> void:
 	for i in sounds.keys():
 		sounds[i].stream = load("res://Audio/SFX/" + str(i) + ".mp3")
-		sounds[i].bus = &"UI"
+		sounds[i].bus = &"SFX"
 		add_child(sounds[i])
 		
 	install_sounds(get_node(root_path))
