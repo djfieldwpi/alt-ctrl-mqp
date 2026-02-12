@@ -121,11 +121,15 @@ func _process(_delta: float) -> void:
 
 func _draw() -> void:
 	if GlobalVariables.is_actors_locked and len(debug_drawn_vertices) > 0:
+		var prev_point
 		for point in debug_drawn_vertices:
 			print(point)
 			var new_point = Vector2(point.x - 960 + %Camera2D.global_position.x, point.y - 540)
 			print(new_point)
 			draw_circle(new_point, 5, Color.GREEN)
+			if prev_point:
+				draw_line(prev_point, new_point, Color.GREEN, 5)
+			prev_point = new_point
 		
 		
 func spawnShadow(vertices: Array[Vector2]):
