@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cb6gnmed0v6ac"]
 
-[ext_resource type="PackedScene" uid="uid://ckeccdq0equk2" path="res://Objects/Box/Box.glb" id="1_53sni"]
+[ext_resource type="PackedScene" uid="uid://ckeccdq0equk2" path="res://Objects/Workshop/Box/Box.glb" id="1_53sni"]
 [ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="2_ti2fi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
