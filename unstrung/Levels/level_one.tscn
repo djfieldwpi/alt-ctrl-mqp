@@ -7,9 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Workshop/Crate/Crate_Prop.tscn" id="3_pvy0h"]
 [ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Workshop/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://dfn1724e8oa3n" path="res://Player/player.tscn" id="6_2848f"]
-[ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
 [ext_resource type="FontFile" uid="uid://d4ijk0au8f1ih" path="res://UI/Fonts/roboto_regular_font.tres" id="6_kmyb2"]
-[ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Stool/Stool_Prop.tscn" id="6_ugpc4"]
+[ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
