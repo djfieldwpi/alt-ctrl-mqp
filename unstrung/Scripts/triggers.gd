@@ -61,8 +61,10 @@ func _on_death_river_body_entered(body: Node2D) -> void:
 
 
 func _on_death_soldier_body_entered(body: Node2D) -> void:
-	GlobalVariables.is_near_soldier = true
+	if body is CharacterBody2D:
+		GlobalVariables.is_near_soldier = true
 
 
 func _on_death_soldier_body_exited(body: Node2D) -> void:
-	GlobalVariables.is_near_soldier = false
+	if body is CharacterBody2D:
+		GlobalVariables.is_near_soldier = false
