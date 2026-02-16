@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1w6fmus6y2ch" path="res://Objects/Workshop/Oval Window/Backdrop/OvalWindowBackdrop_Prop.tscn" id="2_cph7v"]
 [ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Workshop/Crate/Crate_Prop.tscn" id="3_pvy0h"]
 [ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Workshop/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
+[ext_resource type="PackedScene" uid="uid://yw4205367wwy" path="res://Objects/Beach/Palm Tree/Large/PalmTreeLarge_Prop.tscn" id="4_lhaxc"]
 [ext_resource type="PackedScene" uid="uid://dfn1724e8oa3n" path="res://Player/player.tscn" id="6_2848f"]
 [ext_resource type="FontFile" uid="uid://d4ijk0au8f1ih" path="res://UI/Fonts/roboto_regular_font.tres" id="6_kmyb2"]
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
@@ -27,6 +28,8 @@ size = Vector2(20, 19.864637)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2848f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhaxc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fkoe"]
 
 [node name="Node2D" type="Node2D" unique_id=324805373]
 visibility_layer = 1023
@@ -82,6 +85,14 @@ rotation = -1.5745367
 scale = Vector2(2.1232848, 13.569561)
 texture = SubResource("GradientTexture1D_ya8ts")
 metadata/_edit_use_anchors_ = true
+
+[node name="PalmTreeLarge_Prop" parent="2" unique_id=200076993 instance=ExtResource("4_lhaxc")]
+position = Vector2(4774.0005, -616)
+scale = Vector2(1.1849691, 1.1849691)
+
+[node name="PalmTreeLarge_Prop2" parent="2" unique_id=1392226460 instance=ExtResource("4_lhaxc")]
+position = Vector2(6177, -616)
+scale = Vector2(1.1796073, 1.1796073)
 
 [node name="3" type="Node2D" parent="." unique_id=1058070615]
 visibility_layer = 4
@@ -270,6 +281,14 @@ scale = Vector2(3.76, 1.6800001)
 scale = Vector2(30.223225, 3.5653598)
 shape = SubResource("RectangleShape2D_lhaxc")
 
+[node name="Death_Soldier" type="Area2D" parent="Triggers" unique_id=289551397]
+position = Vector2(6070, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Soldier" unique_id=1410040851]
+position = Vector2(42, 71)
+scale = Vector2(67.319756, 27.890444)
+shape = SubResource("RectangleShape2D_5fkoe")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
@@ -281,3 +300,5 @@ script = ExtResource("1_wi846")
 [connection signal="body_entered" from="Triggers/Death_Pit" to="Triggers" method="_on_death_pit_body_entered"]
 [connection signal="body_entered" from="Triggers/Death_Boiler" to="Triggers" method="_on_death_boiler_body_entered"]
 [connection signal="body_entered" from="Triggers/Death_River" to="Triggers" method="_on_death_river_body_entered"]
+[connection signal="body_entered" from="Triggers/Death_Soldier" to="Triggers" method="_on_death_soldier_body_entered"]
+[connection signal="body_exited" from="Triggers/Death_Soldier" to="Triggers" method="_on_death_soldier_body_exited"]

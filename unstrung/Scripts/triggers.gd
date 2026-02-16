@@ -57,3 +57,11 @@ func _on_death_river_body_entered(body: Node2D) -> void:
 		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_actors_locked = false
+
+
+func _on_death_soldier_body_entered(body: Node2D) -> void:
+	GlobalVariables.is_near_soldier = true
+
+
+func _on_death_soldier_body_exited(body: Node2D) -> void:
+	GlobalVariables.is_near_soldier = false
