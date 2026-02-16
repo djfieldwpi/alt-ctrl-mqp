@@ -19,6 +19,7 @@ func _on_transition_body_entered(body: Node2D) -> void:
 		
 		GlobalVariables.is_system_lock = true
 		GlobalVariables.is_actors_locked = true
+		%Camera2D.slide_to_position(Vector2(%CharacterBody2D.global_position.x, %Camera2D.global_position.y), 2)
 		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_system_lock = false

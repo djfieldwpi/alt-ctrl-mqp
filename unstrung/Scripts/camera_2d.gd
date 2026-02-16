@@ -11,7 +11,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
 	if GlobalVariables.is_camera_follow:
 		self.global_position.x = %CharacterBody2D.global_position.x
 		"""
@@ -21,3 +20,8 @@ func _process(delta: float) -> void:
 		# Starting position tracking (left)
 		elif self.global_position.x - %CharacterBody2D.global_position.x > -character_start_x:
 			self.global_position.x = %CharacterBody2D.global_position.x - character_start_x"""
+
+func slide_to_position(target_position: Vector2, duration: float):
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "global_position", target_position, duration)
+	
