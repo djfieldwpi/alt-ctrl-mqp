@@ -13,9 +13,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	if GlobalVariables.is_camera_follow:
+		self.global_position.x = %CharacterBody2D.global_position.x
+		"""
 		# Mid-screen tracking (right)
 		if %CharacterBody2D.global_position.x > self.global_position.x:
 			self.global_position.x = %CharacterBody2D.global_position.x
 		# Starting position tracking (left)
 		elif self.global_position.x - %CharacterBody2D.global_position.x > -character_start_x:
-			self.global_position.x = %CharacterBody2D.global_position.x - character_start_x
+			self.global_position.x = %CharacterBody2D.global_position.x - character_start_x"""
