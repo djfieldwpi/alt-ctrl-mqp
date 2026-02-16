@@ -8,6 +8,7 @@ var connected: bool = false
 var file_path: String = ""
 
 var debug_drawn_vertices: Array[Vector2] = []
+var debug_spawn_vertices: Array[Vector2] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -106,16 +107,20 @@ func _process(_delta: float) -> void:
 			
 	if Input.is_action_just_pressed("Draw Point") and GlobalVariables.debug_drawn_shadows:
 		if GlobalVariables.is_actors_locked:
-			var point = get_viewport().get_mouse_position()
-			if len(debug_drawn_vertices) > 2 and point.distance_to(debug_drawn_vertices[0]) < 10:
-				spawnShadow(debug_drawn_vertices)
+			var drawn_point = get_viewport().get_mouse_position()
+			var spawn_point = drawn_point + Vector2(%Camera2D.global_position.x, 0)
+			if len(debug_drawn_vertices) > 2 and drawn_point.distance_to(debug_drawn_vertices[0]) < 10:
+				spawnShadow(debug_spawn_vertices)
 				debug_drawn_vertices.clear()
+				debug_spawn_vertices.clear()
 				queue_redraw()
 			else:
-				debug_drawn_vertices.append(point)
+				debug_drawn_vertices.append(drawn_point)
+				debug_spawn_vertices.append(spawn_point)
 				queue_redraw()
 		else:
 			debug_drawn_vertices.clear()
+			debug_spawn_vertices.clear()
 			queue_redraw()
 			print("Actors not locked")
 

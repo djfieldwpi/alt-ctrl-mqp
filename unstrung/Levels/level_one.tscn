@@ -28,11 +28,6 @@ visibility_layer = 1023
 z_index = 1
 script = ExtResource("1_2848f")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
-unique_name_in_owner = true
-z_as_relative = false
-script = ExtResource("1_wi846")
-
 [node name="1" type="Node2D" parent="." unique_id=1465390576]
 visibility_layer = 9
 z_as_relative = false
@@ -43,7 +38,7 @@ offset_left = -2031.0
 offset_top = -1269.0001
 offset_right = -1991.0
 offset_bottom = -1229.0001
-scale = Vector2(104.2126, 67.69123)
+scale = Vector2(200.62395, 69.901535)
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="1" unique_id=1167009900]
@@ -52,7 +47,7 @@ offset_left = -966.0
 offset_top = -539.0
 offset_right = -926.0
 offset_bottom = -499.0
-scale = Vector2(48.290867, 27.191841)
+scale = Vector2(144.1426, 27.168089)
 
 [node name="2" type="Node2D" parent="." unique_id=1848343906]
 visibility_layer = 2
@@ -94,13 +89,13 @@ z_as_relative = false
 
 [node name="Surface" parent="4" unique_id=1330873477 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
-position = Vector2(0, 418)
-scale = Vector2(48.308537, 6.5411944)
+position = Vector2(302.00003, 418.00003)
+scale = Vector2(63.428535, 6.5411944)
 
 [node name="Surface2" parent="4" unique_id=135425095 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
-position = Vector2(0, -479)
-scale = Vector2(48.307137, 2.9915648)
+position = Vector2(1923.9999, -478.99997)
+scale = Vector2(144.42714, 2.9915648)
 
 [node name="Surface3" parent="4" unique_id=210396714 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
@@ -132,6 +127,11 @@ visibility_layer = 8
 position = Vector2(-720, 223.00002)
 scale = Vector2(10.285662, -3.292248)
 
+[node name="Surface9" parent="4" unique_id=310802932 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(3489, 418)
+scale = Vector2(65.708534, 6.5411944)
+
 [node name="Label" type="Label" parent="4" unique_id=559306047]
 light_mask = 9
 offset_left = -883.0
@@ -148,9 +148,24 @@ unique_name_in_owner = true
 position = Vector2(-891, 123)
 scale = Vector2(0.5005167, 0.5005167)
 
+[node name="Surface10" parent="4" unique_id=127780359 groups=["transparent"] instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(2831, -243)
+scale = Vector2(2.4, 8.759998)
+
+[node name="Surface11" parent="4" unique_id=681176395 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(4786.0005, -106.00001)
+scale = Vector2(1.4076318, 15.679034)
+
+[node name="Surface12" parent="4" unique_id=152613396 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(4166, 176)
+scale = Vector2(30.005672, -1.572248)
+
 [node name="5" type="Node2D" parent="." unique_id=74665362]
 light_mask = 0
-visibility_layer = 16
+visibility_layer = 24
 z_as_relative = false
 
 [node name="Crate_Prop" parent="5" unique_id=175785902 instance=ExtResource("3_pvy0h")]
@@ -168,6 +183,18 @@ shape = SubResource("RectangleShape2D_pvy0h")
 [node name="Stool_Prop" parent="5" unique_id=286168946 instance=ExtResource("6_ugpc4")]
 position = Vector2(-334, 182)
 scale = Vector2(0.23292482, 0.23292482)
+
+[node name="Crate_Prop2" parent="5" unique_id=717837111 groups=["transparent"] instance=ExtResource("3_pvy0h")]
+visibility_layer = 8
+position = Vector2(3250.0002, 142.00002)
+scale = Vector2(0.2902939, 0.30214518)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="5/Crate_Prop2" unique_id=207407142]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5/Crate_Prop2/StaticBody2D" unique_id=456231929]
+position = Vector2(255.46912, 256.4443)
+scale = Vector2(23.19791, 22.596802)
+shape = SubResource("RectangleShape2D_pvy0h")
 
 [node name="Triggers" type="Node2D" parent="." unique_id=1377482700]
 z_as_relative = false
@@ -195,6 +222,11 @@ scale = Vector2(1.3199995, 0.72)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Transition" unique_id=1142398395]
 scale = Vector2(15.48, 12.520002)
 shape = SubResource("RectangleShape2D_2848f")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
+unique_name_in_owner = true
+z_as_relative = false
+script = ExtResource("1_wi846")
 
 [connection signal="body_entered" from="Triggers/Bed" to="Triggers" method="_on_bed_body_entered"]
 [connection signal="body_entered" from="Triggers/Door" to="Triggers" method="_on_door_body_entered"]

@@ -5,7 +5,7 @@ var character_start_x: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.make_current()
-	character_start_x = %CharacterBody2D.global_position.x
+	character_start_x = %CharacterBody2D.global_position.x + 100
 	
 
 
