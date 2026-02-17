@@ -27,7 +27,7 @@ light_color = Color(0.47, 0.47, 0.47, 1)
 sky_mode = 1
 
 [node name="PalmTreeLarge2" parent="SubViewport" unique_id=1848303499 instance=ExtResource("1_3fksp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38259694, 0)
+transform = Transform3D(0.9392658, 0, 0.57252055, 0, 1.1, 0, -0.57252055, 0, 0.9392658, 0, -0.38259694, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 material = SubResource("ShaderMaterial_nshul")

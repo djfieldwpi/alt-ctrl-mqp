@@ -56,6 +56,8 @@ func _process(_delta: float) -> void:
 				var data_array = json.data
 				for item in data_array:
 					var point = item[0]
+					if GlobalVariables.is_camera_follow:
+						point[0] += %Camera2D.global_position.x
 					vertices.append(Vector2(point[0], point[1]))
 				print(vertices)
 				spawnShadow(vertices)
@@ -104,8 +106,22 @@ func _process(_delta: float) -> void:
 			socket.put_data("GET_ARRAY".to_utf8_buffer())
 		else:
 			print("Actors not locked")
-			
-	if Input.is_action_just_pressed("Draw Point") and GlobalVariables.debug_drawn_shadows:
+	if Input.is_action_just_pressed("Delete Shadow"):
+		for i in range(playerShadows.size() - 1, -1, -1):
+				var shadow: StaticBody2D = playerShadows[i]
+				
+				if not is_instance_valid(shadow):
+					playerShadows.remove_at(i)
+					continue
+					
+				if shadow.get_parent() == self:
+					remove_child(shadow)
+					
+				shadow.queue_free()
+				playerShadows.remove_at(i)
+	
+	# Debug Inputs
+	if GlobalVariables.debug_drawn_shadows and Input.is_action_just_pressed("Draw Point"):
 		if GlobalVariables.is_actors_locked:
 			var drawn_point = get_viewport().get_mouse_position()
 			var spawn_point = drawn_point + Vector2(%Camera2D.global_position.x, 0)
@@ -123,6 +139,19 @@ func _process(_delta: float) -> void:
 			debug_spawn_vertices.clear()
 			queue_redraw()
 			print("Actors not locked")
+	if GlobalVariables.debug_checkpoints and Input.is_action_just_pressed("Skip Checkpoints"):
+		if Input.is_physical_key_pressed(KEY_0):
+			%CharacterBody2D.global_position = %Triggers.checkpoints[0]
+			GlobalVariables.is_camera_follow = true
+		elif Input.is_physical_key_pressed(KEY_1):
+			%CharacterBody2D.global_position = %Triggers.checkpoints[1]
+			GlobalVariables.is_camera_follow = true
+		elif Input.is_physical_key_pressed(KEY_2):
+			%CharacterBody2D.global_position = %Triggers.checkpoints[2]
+			GlobalVariables.is_camera_follow = true
+		elif Input.is_physical_key_pressed(KEY_3):
+			%CharacterBody2D.global_position = %Triggers.checkpoints[3]
+			GlobalVariables.is_camera_follow = true
 
 func _draw() -> void:
 	if GlobalVariables.is_actors_locked and len(debug_drawn_vertices) > 0:

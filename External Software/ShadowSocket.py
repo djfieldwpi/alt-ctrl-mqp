@@ -193,6 +193,11 @@ while True:
     gray_w = cv2.threshold(gray_w, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
 
     # Loads the reference image from the relative path and converts it to grayscale
+    reference = cv2.imread(image_path)
+    if reference is None:
+        print(f"Error: Reference image not found at {image_path}")
+        continue
+
     bg = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2GRAY).astype(np.float32)
     bg_u8 = cv2.convertScaleAbs(bg)
 
