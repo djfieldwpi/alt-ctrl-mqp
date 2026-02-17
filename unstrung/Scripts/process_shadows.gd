@@ -48,7 +48,7 @@ func _process(_delta: float) -> void:
 		connected = true
 		if socket.get_available_bytes() > 0:
 			var data = socket.get_utf8_string(socket.get_available_bytes())
-			print("RAW DATA RECEIVED: ", data)
+			# print("RAW DATA RECEIVED: ", data)
 			var json = JSON.new()
 			var error = json.parse(data)
 			if error == OK:
@@ -59,7 +59,7 @@ func _process(_delta: float) -> void:
 					if GlobalVariables.is_camera_follow:
 						point[0] += %Camera2D.global_position.x
 					vertices.append(Vector2(point[0], point[1]))
-				print(vertices)
+				# print(vertices)
 				spawnShadow(vertices)
 			else:
 				print("JSON parse error.")
@@ -157,9 +157,7 @@ func _draw() -> void:
 	if GlobalVariables.is_actors_locked and len(debug_drawn_vertices) > 0:
 		var prev_point: Vector2
 		for point in debug_drawn_vertices:
-			print(point)
 			var new_point = Vector2(point.x - 960 + %Camera2D.global_position.x, point.y - 540)
-			print(new_point)
 			draw_circle(new_point, 5, Color.GREEN)
 			if prev_point:
 				draw_line(prev_point, new_point, Color.GREEN, 5)

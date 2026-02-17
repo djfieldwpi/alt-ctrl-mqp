@@ -36,6 +36,8 @@ size = Vector2(20, 19.864637)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fkoe"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4fe4"]
+
 [node name="Node2D" type="Node2D" unique_id=324805373]
 visibility_layer = 1023
 z_index = 1
@@ -239,22 +241,23 @@ position = Vector2(0, 40.588196)
 scale = Vector2(16.529434, -4.12941)
 shape = SubResource("RectangleShape2D_y30io")
 
-[node name="ChainLarge_Prop" parent="5" unique_id=9414082 instance=ExtResource("11_t50p6")]
-position = Vector2(7478, 132.99976)
-rotation = -0.6268762
-
-[node name="Area2D" type="Area2D" parent="5/ChainLarge_Prop" unique_id=1095307176]
-position = Vector2(257.584, 249.55257)
-scale = Vector2(0.4827345, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="5/ChainLarge_Prop/Area2D" unique_id=1464116023]
-scale = Vector2(3.1166794, 20.463505)
-shape = SubResource("RectangleShape2D_t50p6")
-
 [node name="Triggers" type="Node2D" parent="." unique_id=1377482700]
 unique_name_in_owner = true
 z_as_relative = false
 script = ExtResource("10_kmyb2")
+
+[node name="ChainLarge_Prop" parent="Triggers" unique_id=9414082 instance=ExtResource("11_t50p6")]
+position = Vector2(7478, 132.99976)
+rotation = -0.6268762
+
+[node name="Chain" type="Area2D" parent="Triggers/ChainLarge_Prop" unique_id=1095307176]
+unique_name_in_owner = true
+position = Vector2(257.584, 249.55257)
+scale = Vector2(0.4827345, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/ChainLarge_Prop/Chain" unique_id=1464116023]
+scale = Vector2(3.171823, 19.053186)
+shape = SubResource("RectangleShape2D_t50p6")
 
 [node name="Bed" type="Area2D" parent="Triggers" unique_id=1274395197]
 position = Vector2(-771, 35)
@@ -311,6 +314,14 @@ scale = Vector2(0.64, 1)
 position = Vector2(42, 71)
 scale = Vector2(67.319756, 27.890444)
 shape = SubResource("RectangleShape2D_5fkoe")
+
+[node name="Activate Chain" type="Area2D" parent="Triggers" unique_id=1862378159]
+position = Vector2(6553, 287)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Activate Chain" unique_id=421562764]
+position = Vector2(0, -385)
+scale = Vector2(1, 43.530003)
+shape = SubResource("RectangleShape2D_l4fe4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
