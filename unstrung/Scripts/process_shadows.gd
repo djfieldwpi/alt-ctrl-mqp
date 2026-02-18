@@ -1,22 +1,27 @@
 extends Node2D
 
-
+# Stores the parts of the currently spawned shadow for easy access and deletion
 @onready	 var playerShadows: Array[StaticBody2D] = []
-# var trigger
+
+# Setup for locally hosted data transfer
 var socket: StreamPeerTCP = StreamPeerTCP.new()
 var connected: bool = false
+
+# Stores absolute path of reference image after its found
 var file_path: String = ""
 
+# Storage for vertices drawn with debig mode
 var debug_drawn_vertices: Array[Vector2] = []
 var debug_spawn_vertices: Array[Vector2] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
+	# Opens connects server over local port for vertices collection from external python script
 	var error = socket.connect_to_host("127.0.0.1", 65432)
 	if error == OK:
 		print("Connecting to Python")
 	
+	# Finds the absolute path for the operating system for the reference image, used for comparison during shadow detection
 	if OS.has_feature("editor"):
 		file_path = ProjectSettings.globalize_path("res://")
 	else:
@@ -25,45 +30,52 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	"""var content = trigger.get_as_text()
-	content = content.replace("\r", "").split("\n")
-	if content[0] == "DONE":
-		content.remove_at(0)
-		var points: Array[Vector2] = []
-		for line in content:
-			line = line.strip_edges()
-			if line.is_empty():
-				continue
-			var parts = line.split(" ", false)
-			var x := int(parts[0])
-			var y := int(parts[1])
-			points.append(Vector2(x, y))
-		
-		spawnShadow(points)
-		trigger.close()
-		trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)"""
+	# Ensures local port connection doesn't drop
 	socket.poll()
+	
+	# Checks connection status
 	var status = socket.get_status()
 	if status == StreamPeerTCP.STATUS_CONNECTED:
 		connected = true
+		
+		# Checks for shadow vertices written to buffer by external python script
 		if socket.get_available_bytes() > 0:
+			# Converts data to understandable format (json)
 			var data = socket.get_utf8_string(socket.get_available_bytes())
-			# print("RAW DATA RECEIVED: ", data)
 			var json = JSON.new()
+			
+			# Ensures decryption was successful
 			var error = json.parse(data)
 			if error == OK:
+				# Reads vertices from json into Vector2 array
 				var vertices: Array[Vector2] = []
 				var data_array = json.data
 				for item in data_array:
 					var point = item[0]
+					
+					# Adds proper x offset depending on camera state and location
 					if GlobalVariables.is_camera_follow:
 						point[0] += %Camera2D.global_position.x
 					vertices.append(Vector2(point[0], point[1]))
-				# print(vertices)
+					
+				# Spawns shadow with read vertices
 				spawnShadow(vertices)
 			else:
 				print("JSON parse error.")
 	
+	###################################
+	# Start of input map action logic #
+	###################################
+	
+	# Swaps state to prime for shadow detection
+	# 	- Locks all actors, preventing movement
+	# 	- Deletes any active shadows
+	# 	- Hides certain objects 
+	# 	- Lowers the alpha of certain objects so they fall below the shadow threshold
+	# 	- Saves the modified viewport to a png for the external python script to use as reference
+	# Or
+	# 	- Unlocks all actors, continuing prior movement
+	# 	- Reverses changes to viewport and visible/semi-visisble objects
 	if Input.is_action_just_pressed("Lock Actors") and not GlobalVariables.is_system_lock:
 		GlobalVariables.is_actors_locked = !GlobalVariables.is_actors_locked
 		if GlobalVariables.is_actors_locked:
@@ -97,12 +109,6 @@ func _process(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("Process Shadows"):
 		if GlobalVariables.is_actors_locked:
-			"""trigger.close()
-			trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)
-			trigger.store_string("GO")
-			trigger.close()
-			trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
-			print(trigger.get_line())"""
 			socket.put_data("GET_ARRAY".to_utf8_buffer())
 		else:
 			print("Actors not locked")
@@ -217,3 +223,37 @@ func spawnShadow(vertices: Array[Vector2]):
 	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
 		%Chain.monitorable = false
 		%Chain.monitorable = true
+		
+"""
+	Enjoy my cardinal sin, this will remain as tribute to a darker time.
+	
+	Originally present at the top of _process(delta), this double file access is how I (Dennis)
+		sent signals between the external python script and Godot:
+	
+	var content = trigger.get_as_text()
+	content = content.replace("\r", "").split("\n")
+	if content[0] == "DONE":
+		content.remove_at(0)
+		var points: Array[Vector2] = []
+		for line in content:
+			line = line.strip_edges()
+			if line.is_empty():
+				continue
+			var parts = line.split(" ", false)
+			var x := int(parts[0])
+			var y := int(parts[1])
+			points.append(Vector2(x, y))
+		
+		spawnShadow(points)
+		trigger.close()
+		trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)
+	
+	Orginally present under the Input event "Detect Shadows":
+	
+	trigger.close()
+	trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.WRITE)
+	trigger.store_string("GO")
+	trigger.close()
+	trigger = FileAccess.open("C:/Users/field/Desktop/College Documents/MQP/alt-ctrl-mqp/signal.txt", FileAccess.READ_WRITE)
+	print(trigger.get_line())
+"""
