@@ -172,6 +172,15 @@ func spawnShadow(vertices: Array[Vector2]):
 	var parts: Array[PackedVector2Array] = Geometry2D.decompose_polygon_in_convex(vertices)
 	
 	for part in parts:
+		
+		var distance = Vector2.ZERO
+		for point in part:
+			distance += point
+		distance = distance / part.size()
+		
+		for i in range(part.size()):
+			part[i] -= distance
+		
 		var shadow := StaticBody2D.new()
 		
 		# Collisions
@@ -192,6 +201,8 @@ func spawnShadow(vertices: Array[Vector2]):
 		# Position (camera coordinates to global coordinates)
 		shadow.position.x -= 960 # Half of window width
 		shadow.position.y -= 540 # Half of window width
+		shadow.add_to_group("shadows")
+		shadow.position += distance
 		
 		# Adds shadow part to scene and array
 		add_child(shadow)
@@ -202,3 +213,6 @@ func spawnShadow(vertices: Array[Vector2]):
 	get_tree().root.get_viewport().canvas_cull_mask = -1
 	for node in get_tree().get_nodes_in_group("transparent"):
 				node.modulate.a = 1
+	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
+		%Chain.monitorable = false
+		%Chain.monitorable = true

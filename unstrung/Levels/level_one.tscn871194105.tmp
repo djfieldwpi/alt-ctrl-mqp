@@ -4,15 +4,12 @@
 [ext_resource type="Script" uid="uid://xilu12hpjx1l" path="res://Scripts/process_shadows.gd" id="1_2848f"]
 [ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="1_wi846"]
 [ext_resource type="PackedScene" uid="uid://1w6fmus6y2ch" path="res://Objects/Workshop/Oval Window/Backdrop/OvalWindowBackdrop_Prop.tscn" id="2_cph7v"]
-[ext_resource type="Texture2D" uid="uid://dg1a6450crvjl" path="res://Sprites/flamehazard.jpg" id="2_l4fe4"]
 [ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Workshop/Crate/Crate_Prop.tscn" id="3_pvy0h"]
 [ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Workshop/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://yw4205367wwy" path="res://Objects/Beach/Palm Tree/Large/PalmTreeLarge_Prop.tscn" id="4_lhaxc"]
 [ext_resource type="PackedScene" uid="uid://dfn1724e8oa3n" path="res://Player/player.tscn" id="6_2848f"]
-[ext_resource type="PackedScene" uid="uid://cwo800esd4dpg" path="res://Objects/Workshop/Boiler/Boiler_Prop.tscn" id="6_ce78g"]
 [ext_resource type="FontFile" uid="uid://d4ijk0au8f1ih" path="res://UI/Fonts/roboto_regular_font.tres" id="6_kmyb2"]
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
-[ext_resource type="PackedScene" uid="uid://b7iq3vou5de5c" path="res://Objects/Workshop/Engine/Engine_Prop.tscn" id="7_6836m"]
 [ext_resource type="Script" uid="uid://1gjlhgvwn70l" path="res://Levels/soldier.gd" id="8_2py18"]
 [ext_resource type="Texture2D" uid="uid://6qqcex7ugema" path="res://Sprites/icon.svg" id="9_t50p6"]
 [ext_resource type="PackedScene" uid="uid://btme1jiquhoye" path="res://Objects/Beach/Sailboat/Sailboat_Prop.tscn" id="9_y30io"]
@@ -41,8 +38,6 @@ size = Vector2(20, 19.864637)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4fe4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6836m"]
-
 [node name="Node2D" type="Node2D" unique_id=324805373]
 visibility_layer = 1023
 z_index = 1
@@ -68,45 +63,6 @@ offset_top = -539.0
 offset_right = -926.0
 offset_bottom = -499.0
 scale = Vector2(278.44986, 27.17638)
-
-[node name="ColorRect3" type="ColorRect" parent="1" unique_id=947946239]
-visibility_layer = 9
-offset_left = 1551.9999
-offset_top = 335.00003
-offset_right = 1591.9999
-offset_bottom = 375.00003
-scale = Vector2(16.038786, 12.860923)
-
-[node name="Line2D" type="Line2D" parent="1" unique_id=1359738964]
-position = Vector2(3754, 145.00002)
-points = PackedVector2Array(0, 0, 0, -150)
-default_color = Color(0, 0, 0, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="1/Line2D" unique_id=267392572]
-position = Vector2(0, -179.00002)
-scale = Vector2(0.263422, 0.263422)
-texture = ExtResource("2_l4fe4")
-
-[node name="Line2D2" type="Line2D" parent="1" unique_id=479417754]
-position = Vector2(4645, 145)
-points = PackedVector2Array(0, 0, 0, -150)
-default_color = Color(0, 0, 0, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="1/Line2D2" unique_id=18998056]
-position = Vector2(0, -179.00002)
-scale = Vector2(0.263422, 0.263422)
-texture = ExtResource("2_l4fe4")
-
-[node name="Label" type="Label" parent="1" unique_id=1037680081]
-unique_name_in_owner = true
-visible = false
-offset_left = 8359.0
-offset_top = 44.0
-offset_right = 8581.0
-offset_bottom = 192.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 160
-text = "FIN"
 
 [node name="2" type="Node2D" parent="." unique_id=1848343906]
 visibility_layer = 2
@@ -148,12 +104,6 @@ scale = Vector2(1.1796073, 1.1796073)
 [node name="PalmTreeLarge_Prop3" parent="2" unique_id=971682619 instance=ExtResource("4_lhaxc")]
 position = Vector2(7000.0005, -616)
 scale = Vector2(1.1796073, 1.1796073)
-
-[node name="Boiler_Prop" parent="2" unique_id=1187516386 instance=ExtResource("6_ce78g")]
-position = Vector2(3739, -352)
-
-[node name="Engine_Prop" parent="2" unique_id=289959632 instance=ExtResource("7_6836m")]
-position = Vector2(4092, -269)
 
 [node name="3" type="Node2D" parent="." unique_id=1058070615]
 visibility_layer = 4
@@ -341,8 +291,8 @@ scale = Vector2(30.223225, 3.5653598)
 shape = SubResource("RectangleShape2D_lhaxc")
 
 [node name="Death_Boiler" type="Area2D" parent="Triggers" unique_id=1511064053]
-position = Vector2(4226, 85)
-scale = Vector2(1.16, 1.6800001)
+position = Vector2(4194, 85)
+scale = Vector2(1, 1.6800001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Boiler" unique_id=44421055]
 scale = Vector2(30.223225, 3.5653598)
@@ -373,13 +323,6 @@ position = Vector2(0, -385)
 scale = Vector2(1, 43.530003)
 shape = SubResource("RectangleShape2D_l4fe4")
 
-[node name="Finish" type="Area2D" parent="Triggers" unique_id=1604144954]
-position = Vector2(8222.001, 289)
-scale = Vector2(25.077715, 5.0751534)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Finish" unique_id=1303758059]
-shape = SubResource("RectangleShape2D_6836m")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
@@ -398,16 +341,6 @@ texture = ExtResource("9_t50p6")
 [node name="RayCast2D" type="RayCast2D" parent="Soldier" unique_id=557383334]
 target_position = Vector2(1200, 0)
 
-[node name="Label" type="Label" parent="Soldier" unique_id=1463438450]
-offset_left = -215.93921
-offset_top = -146.7062
-offset_right = 250.06079
-offset_bottom = -54.706207
-theme_override_colors/font_color = Color(0.5176471, 0.5254902, 0.52156866, 1)
-theme_override_font_sizes/font_size = 100
-text = "Soldier with a Gun"
-
-[connection signal="body_entered" from="Triggers/ChainLarge_Prop/Chain" to="Triggers" method="_on_chain_body_entered"]
 [connection signal="body_entered" from="Triggers/Bed" to="Triggers" method="_on_bed_body_entered"]
 [connection signal="body_entered" from="Triggers/Door" to="Triggers" method="_on_door_body_entered"]
 [connection signal="body_entered" from="Triggers/Transition" to="Triggers" method="_on_transition_body_entered"]
@@ -416,5 +349,4 @@ text = "Soldier with a Gun"
 [connection signal="body_entered" from="Triggers/Death_River" to="Triggers" method="_on_death_river_body_entered"]
 [connection signal="body_entered" from="Triggers/Death_Soldier" to="Triggers" method="_on_death_soldier_body_entered"]
 [connection signal="body_exited" from="Triggers/Death_Soldier" to="Triggers" method="_on_death_soldier_body_exited"]
-[connection signal="body_entered" from="Triggers/Activate Chain" to="Triggers" method="_on_activate_chain_body_entered"]
-[connection signal="body_entered" from="Triggers/Finish" to="Triggers" method="_on_finish_body_entered"]
+[connection signal="area_shape_entered" from="Triggers/Activate Chain" to="Triggers" method="_on_activate_chain_area_shape_entered"]
