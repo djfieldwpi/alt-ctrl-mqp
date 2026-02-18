@@ -152,6 +152,7 @@ func _process(_delta: float) -> void:
 		elif Input.is_physical_key_pressed(KEY_3):
 			%CharacterBody2D.global_position = %Triggers.checkpoints[3]
 			GlobalVariables.is_camera_follow = true
+			GlobalVariables.is_chain_breakable = true
 
 func _draw() -> void:
 	if GlobalVariables.is_actors_locked and len(debug_drawn_vertices) > 0:
