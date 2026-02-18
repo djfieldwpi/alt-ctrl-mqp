@@ -1,10 +1,23 @@
 extends Node2D
 
+@onready var area: Area2D = %Chain
+
 var checkpoints: Array[Vector2] = [Vector2(960, 255),
 								  Vector2(960+1920, 255),
 								  Vector2(960+1920+1920, 255),
 								  Vector2(960+1920+1920+1920, 312)]
-
+								
+func _physics_process(delta: float) -> void:
+	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
+		var bodies = %Chain.get_overlapping_bodies()
+		if bodies:
+			for b in bodies:
+				print(b)
+				if b is not CharacterBody2D:
+					GlobalVariables.is_chain_broken = true
+					%Chain.get_parent().queue_free()
+					queue_redraw()
+		
 func _on_bed_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		print("Bed area entered")
@@ -68,3 +81,17 @@ func _on_death_soldier_body_entered(body: Node2D) -> void:
 func _on_death_soldier_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		GlobalVariables.is_near_soldier = false
+
+
+func _on_activate_chain_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		GlobalVariables.is_chain_breakable = true
+
+func _on_finish_body_entered(body: Node2D) -> void:
+	if GlobalVariables.is_chain_broken and body is CharacterBody2D:
+		GlobalVariables.is_actors_locked = true
+		GlobalVariables.is_system_lock = true
+		%Label.visible = true
+		var timer = get_tree().create_timer(3)
+		await timer.timeout
+		get_tree().change_scene_to_file("res://UI/ui.tscn")
