@@ -194,11 +194,11 @@ while True:
 
     # Loads the reference image from the relative path and converts it to grayscale
     reference = cv2.imread(image_path)
-    if reference is None:
+    if reference is None or reference.size == 0:
         print(f"Error: Reference image not found at {image_path}")
         continue
-
-    bg = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2GRAY).astype(np.float32)
+    bg = cv2.cvtColor(reference, cv2.COLOR_BGR2GRAY)
+    bg = bg.astype(np.float32)
     bg_u8 = cv2.convertScaleAbs(bg)
 
     # Finds the difference between the reference image and the current frame

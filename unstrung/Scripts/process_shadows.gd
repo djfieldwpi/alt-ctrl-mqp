@@ -101,6 +101,7 @@ func _process(_delta: float) -> void:
 			var timer: SceneTreeTimer = get_tree().create_timer(0.5)
 			await timer.timeout
 			get_viewport().get_texture().get_image().save_png(file_path)
+			
 		else:
 			print("Actors Unlocked")
 			get_tree().root.get_viewport().canvas_cull_mask = -1
