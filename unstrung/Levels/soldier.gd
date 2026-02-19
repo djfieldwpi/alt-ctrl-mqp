@@ -7,7 +7,7 @@ var dir
 @onready var ray: RayCast2D = $RayCast2D
 @onready var player: CharacterBody2D = %CharacterBody2D
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if GlobalVariables.is_near_soldier:
 		ray.target_position = ray.to_local(player.global_position)
 		
@@ -24,6 +24,8 @@ func _physics_process(delta: float) -> void:
 				GlobalVariables.is_actors_locked = false
 			else:
 				print("No player in sight.")
+
+# Could remove movement? 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

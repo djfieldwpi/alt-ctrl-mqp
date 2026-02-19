@@ -6,8 +6,9 @@ var checkpoints: Array[Vector2] = [Vector2(960, 255),
 								  Vector2(960+1920, 255),
 								  Vector2(960+1920+1920, 255),
 								  Vector2(960+1920+1920+1920, 312)]
+var check_beach:	 Array[Vector2] = [Vector2(-654.0, 2753.0)]
 								
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
 		var bodies = %Chain.get_overlapping_bodies()
 		if bodies:
@@ -92,6 +93,12 @@ func _on_finish_body_entered(body: Node2D) -> void:
 		GlobalVariables.is_actors_locked = true
 		GlobalVariables.is_system_lock = true
 		%Label.visible = true
-		var timer = get_tree().create_timer(3)
+		var timer = get_tree().create_timer(2)
 		await timer.timeout
-		get_tree().change_scene_to_file("res://UI/ui.tscn")
+		%CharacterBody2D.global_position = check_beach[0]
+		%Camera2D.global_position.y += 2500
+		timer = get_tree().create_timer(2)
+		await timer.timeout
+		GlobalVariables.is_actors_locked = false
+		GlobalVariables.is_system_lock = false
+		GlobalVariables.is_level_two = true

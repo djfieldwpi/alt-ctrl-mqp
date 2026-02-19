@@ -56,6 +56,8 @@ func _process(_delta: float) -> void:
 					# Adds proper x offset depending on camera state and location
 					if GlobalVariables.is_camera_follow:
 						point[0] += %Camera2D.global_position.x
+					if GlobalVariables.is_level_two:
+						point[1] += 2500
 					vertices.append(Vector2(point[0], point[1]))
 					
 				# Spawns shadow with read vertices
@@ -132,6 +134,9 @@ func _process(_delta: float) -> void:
 		if GlobalVariables.is_actors_locked:
 			var drawn_point = get_viewport().get_mouse_position()
 			var spawn_point = drawn_point + Vector2(%Camera2D.global_position.x, 0)
+			if GlobalVariables.is_level_two:
+				drawn_point.y += 2500
+				spawn_point.y += 2500
 			if len(debug_drawn_vertices) > 2 and drawn_point.distance_to(debug_drawn_vertices[0]) < 10:
 				spawnShadow(debug_spawn_vertices)
 				debug_drawn_vertices.clear()

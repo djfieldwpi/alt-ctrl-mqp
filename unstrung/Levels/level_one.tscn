@@ -113,9 +113,9 @@ text = "FIN"
 [node name="ColorRect4" type="ColorRect" parent="1" unique_id=691067066]
 visibility_layer = 9
 offset_left = -966.0
-offset_top = 2893.0
+offset_top = 1960.0
 offset_right = -926.0
-offset_bottom = 2933.0
+offset_bottom = 2000.0
 scale = Vector2(278.44986, 27.17638)
 
 [node name="2" type="Node2D" parent="." unique_id=1848343906]
@@ -152,7 +152,7 @@ position = Vector2(4892, -616)
 scale = Vector2(1.1849691, 1.1849691)
 
 [node name="PalmTreeLarge_Prop2" parent="2" unique_id=1392226460 instance=ExtResource("4_lhaxc")]
-position = Vector2(5902, -616)
+position = Vector2(5624.0005, -616)
 scale = Vector2(1.1796073, 1.1796073)
 
 [node name="PalmTreeLarge_Prop3" parent="2" unique_id=971682619 instance=ExtResource("4_lhaxc")]
@@ -178,6 +178,16 @@ z_as_relative = false
 visibility_layer = 8
 position = Vector2(302.00003, 418.00003)
 scale = Vector2(63.428535, 6.5411944)
+
+[node name="Surface14" parent="4" unique_id=1028313821 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(4602, 2917.0002)
+scale = Vector2(278.5085, 6.5411944)
+
+[node name="Surface15" parent="4" unique_id=1402166530 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(4602, 2020)
+scale = Vector2(278.509, 3)
 
 [node name="Surface2" parent="4" unique_id=135425095 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
@@ -367,8 +377,8 @@ scale = Vector2(30.223225, 3.5653598)
 shape = SubResource("RectangleShape2D_lhaxc")
 
 [node name="Death_Soldier" type="Area2D" parent="Triggers" unique_id=289551397]
-position = Vector2(6018, 4)
-scale = Vector2(0.64, 1)
+position = Vector2(5877, 4)
+scale = Vector2(0.5199902, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Soldier" unique_id=1410040851]
 position = Vector2(42, 71)
