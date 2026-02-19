@@ -59,7 +59,7 @@ visibility_layer = 9
 offset_left = -2031.0
 offset_top = -1269.0001
 offset_right = -1991.0
-offset_bottom = -1229.0001
+offset_bottom = -1108.3025
 scale = Vector2(318.17416, 70.41171)
 color = Color(0, 0, 0, 1)
 
@@ -109,6 +109,14 @@ offset_bottom = 192.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 160
 text = "FIN"
+
+[node name="ColorRect4" type="ColorRect" parent="1" unique_id=691067066]
+visibility_layer = 9
+offset_left = -966.0
+offset_top = 2893.0
+offset_right = -926.0
+offset_bottom = 2933.0
+scale = Vector2(278.44986, 27.17638)
 
 [node name="2" type="Node2D" parent="." unique_id=1848343906]
 visibility_layer = 2
