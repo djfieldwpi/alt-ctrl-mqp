@@ -60,7 +60,7 @@ offset_left = -2031.0
 offset_top = -1269.0001
 offset_right = -1991.0
 offset_bottom = -1108.3025
-scale = Vector2(318.17416, 70.41171)
+scale = Vector2(333.85785, 71.0593)
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="1" unique_id=1167009900]
