@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b4m5yd2yqcpig"]
+
+[node name="Rock Surface" type="StaticBody2D" unique_id=342106477]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=29572610]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(30, -100, 137, -36, 177, 67, 218, 293, -190, 293, -156.66638, 121.33334, -102.66638, 75.33334, -54.66638, 28.666672, -16, -52)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=523476609]
+polygon = PackedVector2Array(30, -100, 137, -36, 177, 67, 218, 293, -190, 293, -156.66638, 121.33334, -102.66638, 75.33334, -54.66638, 28.666672, -16, -52)
