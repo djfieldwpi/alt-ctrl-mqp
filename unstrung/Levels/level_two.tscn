@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bbvxcljfs5vu6"]
+
+[ext_resource type="Script" uid="uid://xilu12hpjx1l" path="res://Scripts/process_shadows.gd" id="1_qoue6"]
+[ext_resource type="PackedScene" uid="uid://dfn1724e8oa3n" path="res://Player/player.tscn" id="10_jen8k"]
+[ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="14_1m8p7"]
+[ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="16_prr5c"]
+[ext_resource type="AudioStream" uid="uid://8vx4ci0ugp74" path="res://Audio/Music/BG_Music.mp3" id="19_8g0ul"]
+[ext_resource type="Script" uid="uid://dtliwdlvv7o3y" path="res://Levels/temporary_loop_script.gd" id="20_efw0a"]
+
+[node name="Node2D" type="Node2D" unique_id=324805373]
+visibility_layer = 1023
+z_index = 1
+script = ExtResource("1_qoue6")
+
+[node name="1" type="Node2D" parent="." unique_id=1465390576]
+visibility_layer = 9
+z_as_relative = false
+
+[node name="ColorRect2" type="ColorRect" parent="1" unique_id=601932387]
+visibility_layer = 9
+offset_left = -2031.0
+offset_top = -1269.0001
+offset_right = -1991.0
+offset_bottom = -1229.0001
+scale = Vector2(318.17416, 70.41171)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="1" unique_id=1167009900]
+visibility_layer = 9
+offset_left = -966.0
+offset_top = -539.0
+offset_right = -926.0
+offset_bottom = -499.0
+scale = Vector2(278.44986, 27.17638)
+
+[node name="2" type="Node2D" parent="." unique_id=1848343906]
+visibility_layer = 2
+z_as_relative = false
+
+[node name="3" type="Node2D" parent="." unique_id=1058070615]
+visibility_layer = 4
+z_as_relative = false
+
+[node name="4" type="Node2D" parent="." unique_id=420166214]
+light_mask = 0
+visibility_layer = 8
+z_as_relative = false
+
+[node name="CharacterBody2D" parent="4" unique_id=2120166465 groups=["transparent"] instance=ExtResource("10_jen8k")]
+unique_name_in_owner = true
+position = Vector2(-891, 123)
+scale = Vector2(0.5005167, 0.5005167)
+
+[node name="5" type="Node2D" parent="." unique_id=74665362]
+light_mask = 0
+visibility_layer = 24
+z_as_relative = false
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1377482700]
+unique_name_in_owner = true
+z_as_relative = false
+script = ExtResource("14_1m8p7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
+unique_name_in_owner = true
+z_as_relative = false
+script = ExtResource("16_prr5c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1884874308]
+stream = ExtResource("19_8g0ul")
+autoplay = true
+bus = &"Music"
+script = ExtResource("20_efw0a")
