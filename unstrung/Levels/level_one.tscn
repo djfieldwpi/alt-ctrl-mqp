@@ -221,7 +221,7 @@ scale = Vector2(1.0148665, 2.4400005)
 
 [node name="Surface8" parent="4" unique_id=1746030507 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
-position = Vector2(-720, 223.00002)
+position = Vector2(-721, 223)
 scale = Vector2(10.285662, -3.292248)
 
 [node name="Surface9" parent="4" unique_id=310802932 instance=ExtResource("1_2b52f")]

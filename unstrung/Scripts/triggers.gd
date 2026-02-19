@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var area: Area2D = %Chain
 
-var checkpoints: Array[Vector2] = [Vector2(960, 255),
+var checkpoints: Array[Vector2] = [Vector2(-891.0, 123.0),
+								  Vector2(960, 255),
 								  Vector2(960+1920, 255),
 								  Vector2(960+1920+1920, 255),
 								  Vector2(960+1920+1920+1920, 312)]

@@ -152,17 +152,19 @@ func _process(_delta: float) -> void:
 			queue_redraw()
 			print("Actors not locked")
 	if GlobalVariables.debug_checkpoints and Input.is_action_just_pressed("Skip Checkpoints"):
-		if Input.is_physical_key_pressed(KEY_1):
+		if Input.is_physical_key_pressed(KEY_0):
 			%CharacterBody2D.global_position = %Triggers.checkpoints[0]
-			GlobalVariables.is_camera_follow = true
-		elif Input.is_physical_key_pressed(KEY_2):
+		elif Input.is_physical_key_pressed(KEY_1):
 			%CharacterBody2D.global_position = %Triggers.checkpoints[1]
 			GlobalVariables.is_camera_follow = true
-		elif Input.is_physical_key_pressed(KEY_3):
+		elif Input.is_physical_key_pressed(KEY_2):
 			%CharacterBody2D.global_position = %Triggers.checkpoints[2]
 			GlobalVariables.is_camera_follow = true
-		elif Input.is_physical_key_pressed(KEY_4):
+		elif Input.is_physical_key_pressed(KEY_3):
 			%CharacterBody2D.global_position = %Triggers.checkpoints[3]
+			GlobalVariables.is_camera_follow = true
+		elif Input.is_physical_key_pressed(KEY_4):
+			%CharacterBody2D.global_position = %Triggers.checkpoints[4]
 			GlobalVariables.is_camera_follow = true
 			GlobalVariables.is_chain_breakable = true
 		elif Input.is_physical_key_pressed(KEY_5):
@@ -171,6 +173,9 @@ func _process(_delta: float) -> void:
 			GlobalVariables.is_chain_breakable = true
 			GlobalVariables.is_chain_broken = true
 			GlobalVariables.is_level_two = true
+		if %CharacterBody2D.global_position.y < 1000 and %Camera2D.global_position.y > 1000:
+			%Camera2D.global_position.y -= 2500
+		elif %CharacterBody2D.global_position.y > 1000 and %Camera2D.global_position.y < 1000:
 			%Camera2D.global_position.y += 2500
 
 func _draw() -> void:
