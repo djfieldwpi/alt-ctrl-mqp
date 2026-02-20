@@ -493,7 +493,6 @@ shape = SubResource("RectangleShape2D_6836m")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
-position = Vector2(1920, 2500)
 script = ExtResource("1_wi846")
 
 [node name="Soldier" type="CharacterBody2D" parent="." unique_id=2050255916 groups=["transparent"]]
