@@ -250,10 +250,25 @@ visibility_layer = 8
 position = Vector2(4166, 176)
 scale = Vector2(30.005672, -1.572248)
 
+[node name="Sailboat_Prop3" parent="4" unique_id=1333654839 instance=ExtResource("9_y30io")]
+position = Vector2(2126, 2581)
+rotation = -0.7959424
+scale = Vector2(1.5739623, 1.5739623)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="4/Sailboat_Prop3" unique_id=1774553824]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="4/Sailboat_Prop3/StaticBody2D" unique_id=2094403074]
+polygon = PackedVector2Array(156.26807, 348.49023, 419.9884, 349.02466, 413.94482, 368.2798, 403.58887, 370.417, 384.80493, 447.49463, 355.91235, 460.66846, 234.12903, 463.42773, 116.32947, 344.0254)
+
 [node name="Surface13" parent="4" unique_id=2001504142 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(6350, 447)
 scale = Vector2(77.628525, 5.1011944)
+
+[node name="Surface14" parent="4" unique_id=532267896 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(2721, 2921.0002)
+scale = Vector2(21.548515, 6.3811946)
 
 [node name="Sailboat_Prop" parent="4" unique_id=54350352 instance=ExtResource("9_y30io")]
 visibility_layer = 8
@@ -308,7 +323,7 @@ scale = Vector2(-1, 1)
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
-uv = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -83.6662, -221.46487, -70.147644, -183.25206, -26.074097, -195.33482, 11.946045, -159.56061, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
+uv = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="4/Rock_Crash3" unique_id=1807338729]
 visibility_layer = 8
@@ -324,7 +339,7 @@ scale = Vector2(1, 0.52)
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
-uv = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -83.6662, -221.46487, -70.147644, -183.25206, -26.074097, -195.33482, 11.946045, -159.56061, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
+uv = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="4/Shore" unique_id=1202579446]
 visibility_layer = 8
@@ -380,7 +395,7 @@ position = Vector2(255.46912, 256.4443)
 scale = Vector2(23.19791, 22.596802)
 shape = SubResource("RectangleShape2D_pvy0h")
 
-[node name="ColorRect" type="ColorRect" parent="5" unique_id=443868994]
+[node name="Ocean2" type="ColorRect" parent="5" unique_id=443868994]
 offset_left = -966.0
 offset_top = 2857.0
 offset_right = -926.0
@@ -480,7 +495,7 @@ shape = SubResource("RectangleShape2D_6836m")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
-position = Vector2(0, 2500)
+position = Vector2(1920, 2500)
 script = ExtResource("1_wi846")
 
 [node name="Soldier" type="CharacterBody2D" parent="." unique_id=2050255916 groups=["transparent"]]
