@@ -16,8 +16,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func _on_value_changed(value: float) -> void:
-	var volume_db = linear_to_db(value)
+func _on_value_changed(valueA: float) -> void:
+	var volume_db = linear_to_db(valueA)
 	AudioServer.set_bus_volume_db(bus_index, volume_db)
 	
 	if bus_name == "Master":
