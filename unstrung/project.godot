@@ -22,6 +22,8 @@ buses/default_bus_layout="uid://b18lqjq34xf37"
 [autoload]
 
 GlobalVariables="*uid://dbjylfeiq62e4"
+GlobalAudio="*uid://dcgqtp0ug5ybn"
+UserSettings="*uid://d37rny2qcx25t"
 
 [display]
 

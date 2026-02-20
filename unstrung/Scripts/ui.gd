@@ -7,6 +7,8 @@ extends Control
 @onready var container: MarginContainer = $MarginContainer
 
 func _ready() -> void:
+	# Load and play music
+	GlobalAudio.play_music("res://Audio/Music/BG_Music.mp3")
 	main_menu.visible = true
 	options.visible = false
 	credits.visible = false

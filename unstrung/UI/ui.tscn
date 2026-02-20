@@ -7,7 +7,6 @@
 [ext_resource type="FontFile" uid="uid://cos1tclwphh0r" path="res://UI/Fonts/SrirachaDisplay-Regular.otf" id="3_nm1m0"]
 [ext_resource type="Texture2D" uid="uid://do5poselosc03" path="res://UI/Images/xbox-series_sheet_default.png" id="5_cbfhl"]
 [ext_resource type="FontFile" uid="uid://b26vq3b8b0wku" path="res://UI/Fonts/Roboto-ExtraBold.ttf" id="6_4fiuh"]
-[ext_resource type="AudioStream" uid="uid://8vx4ci0ugp74" path="res://Audio/Music/BG_Music.mp3" id="6_y4yjw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibotj"]
 texture = ExtResource("2_3sbvi")
@@ -628,11 +627,6 @@ scroll_active = false
 
 [node name="Node" parent="." unique_id=492601535 instance=ExtResource("3_ibotj")]
 root_path = NodePath("..")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=718328490]
-stream = ExtResource("6_y4yjw")
-autoplay = true
-bus = &"Music"
 
 [connection signal="mouse_entered" from="MarginContainer/MarginContainerMainMenu/MainMenu/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/MarginContainerMainMenu/MainMenu/StartButton" to="." method="_on_start_button_pressed"]

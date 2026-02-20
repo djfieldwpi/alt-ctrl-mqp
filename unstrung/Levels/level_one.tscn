@@ -19,8 +19,6 @@
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
 [ext_resource type="PackedScene" uid="uid://b4m5yd2yqcpig" path="res://Objects/polygon_surface.tscn" id="11_o5w1d"]
 [ext_resource type="PackedScene" uid="uid://dkghqjmbmfds2" path="res://Objects/Workshop/Chain/Large/ChainLarge_Prop.tscn" id="11_t50p6"]
-[ext_resource type="AudioStream" uid="uid://8vx4ci0ugp74" path="res://Audio/Music/BG_Music.mp3" id="16_ce78g"]
-[ext_resource type="Script" uid="uid://dtliwdlvv7o3y" path="res://Levels/temporary_loop_script.gd" id="17_6836m"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
 offsets = PackedFloat32Array(0, 0.624, 1)
@@ -421,12 +419,6 @@ texture = ExtResource("9_t50p6")
 
 [node name="RayCast2D" type="RayCast2D" parent="Soldier" unique_id=557383334]
 target_position = Vector2(1200, 0)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1884874308]
-stream = ExtResource("16_ce78g")
-autoplay = true
-bus = &"Music"
-script = ExtResource("17_6836m")
 
 [connection signal="body_entered" from="Triggers/Bed" to="Triggers" method="_on_bed_body_entered"]
 [connection signal="body_entered" from="Triggers/Door" to="Triggers" method="_on_door_body_entered"]

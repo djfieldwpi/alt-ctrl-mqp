@@ -17,4 +17,14 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value)) # Replace with function body.
+	var volume_db = linear_to_db(value)
+	AudioServer.set_bus_volume_db(bus_index, volume_db)
+	
+	if bus_name == "Master":
+		UserSettings.set_value("audio", "master_volume", volume_db)
+	elif bus_name == "Music":
+		UserSettings.set_value("audio", "music_volume", volume_db)
+	elif bus_name == "SFX":
+		UserSettings.set_value("audio", "sfx_volume", volume_db)
+
+	
