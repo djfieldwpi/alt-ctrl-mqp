@@ -175,6 +175,24 @@ func _process(_delta: float) -> void:
 			GlobalVariables.is_chain_breakable = true
 			GlobalVariables.is_chain_broken = true
 			GlobalVariables.is_level_two = true
+		elif Input.is_physical_key_pressed(KEY_6):
+			%CharacterBody2D.global_position = %Triggers.check_beach[1]
+			GlobalVariables.is_camera_follow = true
+			GlobalVariables.is_chain_breakable = true
+			GlobalVariables.is_chain_broken = true
+			GlobalVariables.is_level_two = true
+		elif Input.is_physical_key_pressed(KEY_7):
+			%CharacterBody2D.global_position = %Triggers.check_beach[2]
+			GlobalVariables.is_camera_follow = true
+			GlobalVariables.is_chain_breakable = true
+			GlobalVariables.is_chain_broken = true
+			GlobalVariables.is_level_two = true
+		elif Input.is_physical_key_pressed(KEY_8):
+			%CharacterBody2D.global_position = %Triggers.check_beach[3]
+			GlobalVariables.is_camera_follow = true
+			GlobalVariables.is_chain_breakable = true
+			GlobalVariables.is_chain_broken = true
+			GlobalVariables.is_level_two = true
 		if %CharacterBody2D.global_position.y < 1000 and %Camera2D.global_position.y > 1000:
 			%Camera2D.global_position.y -= 2500
 		elif %CharacterBody2D.global_position.y > 1000 and %Camera2D.global_position.y < 1000:

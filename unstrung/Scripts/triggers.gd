@@ -7,7 +7,10 @@ var checkpoints: Array[Vector2] = [Vector2(-891.0, 123.0),
 								  Vector2(960+1920, 255),
 								  Vector2(960+1920+1920, 255),
 								  Vector2(960+1920+1920+1920, 312)]
-var check_beach:	 Array[Vector2] = [Vector2(-654.0, 2753.0)]
+var check_beach:	 Array[Vector2] = [Vector2(-654, 2753),
+								  Vector2(3100, 2760),
+								  Vector2(4950, 2760),
+								  Vector2(6760, 2760)]
 								
 func _physics_process(_delta: float) -> void:
 	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
@@ -103,3 +106,21 @@ func _on_finish_body_entered(body: Node2D) -> void:
 		GlobalVariables.is_actors_locked = false
 		GlobalVariables.is_system_lock = false
 		GlobalVariables.is_level_two = true
+
+
+func _on_death_rocks_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		GlobalVariables.is_actors_locked = true
+		%CharacterBody2D.global_position = check_beach[0]
+		var timer: SceneTreeTimer = get_tree().create_timer(2)
+		await timer.timeout
+		GlobalVariables.is_actors_locked = false
+
+
+func _on_death_hand_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		GlobalVariables.is_actors_locked = true
+		%CharacterBody2D.global_position = check_beach[1]
+		var timer: SceneTreeTimer = get_tree().create_timer(2)
+		await timer.timeout
+		GlobalVariables.is_actors_locked = false
