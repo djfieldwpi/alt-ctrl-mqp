@@ -265,8 +265,18 @@ scale = Vector2(77.628525, 5.1011944)
 
 [node name="Surface14" parent="4" unique_id=532267896 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
-position = Vector2(2721, 2921.0002)
-scale = Vector2(21.548515, 6.3811946)
+position = Vector2(3233.0002, 2921.0002)
+scale = Vector2(46.948513, 6.3811946)
+
+[node name="Surface15" parent="4" unique_id=291234773 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(5395, 2921.0002)
+scale = Vector2(17.588512, 6.3811946)
+
+[node name="Surface16" parent="4" unique_id=1913139329 instance=ExtResource("1_2b52f")]
+visibility_layer = 8
+position = Vector2(8419, 2921)
+scale = Vector2(88.02852, 6.3811946)
 
 [node name="Sailboat_Prop" parent="4" unique_id=54350352 instance=ExtResource("9_y30io")]
 visibility_layer = 8
@@ -343,6 +353,35 @@ uv = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, 
 visibility_layer = 8
 position = Vector2(-2, 0)
 polygon = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
+
+[node name="Pit" type="StaticBody2D" parent="4" unique_id=57776880]
+visibility_layer = 8
+position = Vector2(3847, 3052)
+scale = Vector2(1, 0.52)
+
+[node name="Polygon2D" type="Polygon2D" parent="4/Pit" unique_id=731842270]
+visibility_layer = 8
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(375.90295, -441.41034, 418.35583, -101.53676, 481.1245, -33.06192, 597.15125, -27.355682, 686.54895, -33.06192, 753.1217, -84.418045, 810.756, -207.10535, 854.694, -353.56543, 913.27734, -470.73315, 1014.3667, -501.06, 1226.7563, -497.0055, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 239.10535, -497.70752, 347.24573, -497.72617)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="4/Pit" unique_id=2026868826]
+visibility_layer = 8
+position = Vector2(-6, 0)
+polygon = PackedVector2Array(375.90295, -441.41034, 418.35583, -101.53676, 481.1245, -33.06192, 597.15125, -27.355682, 686.54895, -33.06192, 753.1217, -84.418045, 810.756, -207.10535, 854.694, -353.56543, 913.27734, -470.73315, 1014.3667, -501.06, 1226.7563, -497.0055, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 239.10535, -497.70752, 347.24573, -497.72617)
+
+[node name="Puddle" type="StaticBody2D" parent="4" unique_id=1701525063]
+visibility_layer = 8
+position = Vector2(5496, 3052)
+scale = Vector2(1, 0.52)
+
+[node name="Polygon2D" type="Polygon2D" parent="4/Puddle" unique_id=687569837]
+visibility_layer = 8
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(425.3601, -472.40234, 492.81763, -452.30145, 573.3707, -445.3969, 653.1928, -438.73004, 739.07983, -438.49237, 805.8237, -443.0954, 872.30237, -448.17316, 953.1207, -463.80902, 1052.3652, -489.11063, 1128.4458, -501.19098, 1226.3594, -498.2488, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 238.02765, -497.7294, 347.19543, -499.08847)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="4/Puddle" unique_id=1916218751]
+visibility_layer = 8
+polygon = PackedVector2Array(425.3601, -472.40234, 492.81763, -452.30145, 573.3707, -445.3969, 653.1928, -438.73004, 739.07983, -438.49237, 805.8237, -443.0954, 872.30237, -448.17316, 953.1207, -463.80902, 1052.3652, -489.11063, 1128.4458, -501.19098, 1226.3594, -498.2488, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 238.02765, -497.7294, 347.19543, -499.08847)
 
 [node name="Sailboat_Prop2" parent="4" unique_id=211717476 instance=ExtResource("9_y30io")]
 visibility_layer = 8
@@ -493,6 +532,7 @@ shape = SubResource("RectangleShape2D_6836m")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
+position = Vector2(5760, 2500)
 script = ExtResource("1_wi846")
 
 [node name="Soldier" type="CharacterBody2D" parent="." unique_id=2050255916 groups=["transparent"]]
