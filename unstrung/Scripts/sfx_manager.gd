@@ -24,4 +24,7 @@ func install_sounds(node: Node):
 		install_sounds(i)
 		
 func ui_sfx_play(sound: StringName) -> void:
+	if not is_inside_tree():
+		return
+		
 	sounds[sound].play()
