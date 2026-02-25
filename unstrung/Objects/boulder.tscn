@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dji8vnnaj0cyf"]
+
+[ext_resource type="Script" uid="uid://dydhumgovn8xq" path="res://Scripts/boulder.gd" id="1_bs2ck"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dyg3e"]
+
+[node name="Boulder" type="Node2D" unique_id=1512472245 groups=["boulders", "transparent"]]
+visibility_layer = 8
+script = ExtResource("1_bs2ck")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1030430357]
+visibility_layer = 8
+contact_monitor = true
+max_contacts_reported = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=183005747]
+visibility_layer = 8
+scale = Vector2(9.360001, 9.360001)
+shape = SubResource("CircleShape2D_dyg3e")
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D" unique_id=511144013]
+visibility_layer = 8
+scale = Vector2(2.070796, 2.070796)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -46, 12, -44, 23, -39, 32, -32, 39, -23, 44, -12, 46, 0, 44, 12, 39, 23, 32, 32, 23, 39, 12, 44, 0, 46, -12, 44, -23, 39, -32, 32, -39, 23, -44, 12, -46, 0, -44, -12, -39, -23, -32, -32, -23, -39, -12, -44)
+uv = PackedVector2Array(0, -45.333336, 137.73303, -3.6046906, 135.25256, 28.577942, 115.24573, 57.15912, 69.51587, 54.300995, 42.36377, 51.4429, 3.7791748, 52.87195, -80.5354, 58.588196, -136.26868, 57.15912, -133.41058, 22.861694, -117.69092, 14.2873535, -101.97125, 7.142029, -79.10632, 4.2839355, -67.67383, -1.432312, -51.954163, -7.1485596, -40.52173, -14.293854, -36.23456, -21.439148, -44.8089, -41.445984, -54.812317, -74.31435, 12.353516, -82.8887)
+
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]

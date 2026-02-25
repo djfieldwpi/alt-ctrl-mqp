@@ -94,7 +94,7 @@ size = Vector2(20, 19.864637)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5w1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jd0dm"]
-size = Vector2(20, 21.438364)
+size = Vector2(16.525337, 21.438364)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3g6m8"]
 
@@ -647,7 +647,7 @@ shape = SubResource("RectangleShape2D_o5w1d")
 position = Vector2(8414, 2555)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Activate Rocks" unique_id=381971630]
-position = Vector2(519, -179.00024)
+position = Vector2(734.6572, -179.00024)
 scale = Vector2(124.131546, -38.902225)
 shape = SubResource("RectangleShape2D_jd0dm")
 

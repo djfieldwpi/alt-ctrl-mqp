@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var area: Area2D = %Chain
 
+const boulder: PackedScene = preload("res://Objects/boulder.tscn")
+
 var checkpoints: Array[Vector2] = [Vector2(-891.0, 96.0),
 								  Vector2(960, 226.0),
 								  Vector2(960+1920, 226.0),
@@ -150,7 +152,14 @@ func _on_death_sewage_body_entered(body: Node2D) -> void:
 
 
 func _on_activate_rocks_body_entered(body: Node2D) -> void:
-	print("Rockslide!")
+	if body is CharacterBody2D:
+		call_deferred("spawnBoulder")
+		
+func spawnBoulder():
+	var position = Vector2(9100.0, 1854.0)
+	var boulder_instance = boulder.instantiate()
+	boulder_instance.global_position = position
+	get_parent().add_child(boulder_instance)
 
 
 func _on_end_body_entered(body: Node2D) -> void:

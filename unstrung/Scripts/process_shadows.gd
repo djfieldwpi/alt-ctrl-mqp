@@ -87,6 +87,8 @@ func _process(_delta: float) -> void:
 			get_tree().root.get_viewport().canvas_cull_mask = 8
 			for node in get_tree().get_nodes_in_group("transparent"):
 				node.modulate.a = 0.2
+			for node in get_tree().get_nodes_in_group("boulders"):
+				node.freeze_body()
 			# Could also include shadow removal:
 			for i in range(playerShadows.size() - 1, -1, -1):
 				var shadow: StaticBody2D = playerShadows[i]
@@ -111,6 +113,8 @@ func _process(_delta: float) -> void:
 			get_tree().root.get_viewport().canvas_cull_mask = -1
 			for node in get_tree().get_nodes_in_group("transparent"):
 				node.modulate.a = 1
+			for node in get_tree().get_nodes_in_group("boulders"):
+				node.unfreeze_body()
 
 	if Input.is_action_just_pressed("Process Shadows"):
 		if GlobalVariables.is_actors_locked:
