@@ -2,15 +2,15 @@ extends Node2D
 
 @onready var area: Area2D = %Chain
 
-var checkpoints: Array[Vector2] = [Vector2(-891.0, 123.0),
-								  Vector2(960, 255),
-								  Vector2(960+1920, 255),
-								  Vector2(960+1920+1920, 255),
-								  Vector2(960+1920+1920+1920, 312)]
-var check_beach:	 Array[Vector2] = [Vector2(-654, 2753),
-								  Vector2(3100, 2760),
-								  Vector2(4950, 2760),
-								  Vector2(6760, 2760)]
+var checkpoints: Array[Vector2] = [Vector2(-891.0, 96.0),
+								  Vector2(960, 226.0),
+								  Vector2(960+1920, 226.0),
+								  Vector2(960+1920+1920, 226.0),
+								  Vector2(960+1920+1920+1920, 284.0)]
+var check_beach:	 Array[Vector2] = [Vector2(-654, 2759.0),
+								  Vector2(3100, 2732.0),
+								  Vector2(4950, 2732.0),
+								  Vector2(6760, 2732.0)]
 								
 func _physics_process(_delta: float) -> void:
 	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:

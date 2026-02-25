@@ -78,9 +78,9 @@ transform = Transform3D(-1.3113416e-06, 0, 30, 0, 30, 0, -30, 0, -1.3113416e-06,
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=420062728]
 offset_left = -414.77167
-offset_top = -160.65575
+offset_top = -157.37706
 offset_right = 1034.5491
-offset_bottom = 990.03125
+offset_bottom = 993.30994
 scale = Vector2(0.57766664, 0.2849331)
 texture = SubResource("ViewportTexture_btcbx")
 stretch_mode = 5

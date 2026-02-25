@@ -290,7 +290,7 @@ text = "Bed"
 
 [node name="CharacterBody2D" parent="4" unique_id=1592384400 groups=["transparent"] instance=ExtResource("6_2848f")]
 unique_name_in_owner = true
-position = Vector2(-815.99994, 94.99999)
+position = Vector2(-891, 96)
 scale = Vector2(0.4052424, 0.949358)
 collision_mask = 1
 
