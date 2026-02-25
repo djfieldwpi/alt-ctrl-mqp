@@ -20,7 +20,6 @@ func install_sounds(node: Node):
 		if i is Button:
 			i.mouse_entered.connect(ui_sfx_play.bind(&"Button_Hover"))
 			i.pressed.connect(ui_sfx_play.bind(&"Button_Click"))
-			
 		install_sounds(i)
 		
 func ui_sfx_play(sound: StringName) -> void:
