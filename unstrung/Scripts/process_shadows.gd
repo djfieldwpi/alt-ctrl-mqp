@@ -262,6 +262,8 @@ func spawnShadow(vertices: Array[Vector2]):
 	get_tree().root.get_viewport().canvas_cull_mask = -1
 	for node in get_tree().get_nodes_in_group("transparent"):
 				node.modulate.a = 1
+	for node in get_tree().get_nodes_in_group("boulders"):
+				node.unfreeze_body()
 	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
 		%Chain.monitorable = false
 		%Chain.monitorable = true

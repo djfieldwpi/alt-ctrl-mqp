@@ -175,6 +175,8 @@ func _on_end_body_entered(body: Node2D) -> void:
 		GlobalVariables.is_actors_locked = false
 		GlobalVariables.is_system_lock = false
 		GlobalVariables.is_level_two = false
+		GlobalVariables.is_chain_broken = false
+		GlobalVariables.is_chain_breakable = false
 		%Label.visible = false
 		%Label.global_position.y -= 2400
 		%Label.global_position.x -= 800
