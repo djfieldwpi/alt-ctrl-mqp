@@ -27,7 +27,7 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.8, 1, 1, 1, 1)
 gradient = SubResource("Gradient_ugpc4")
 
 [sub_resource type="Curve" id="Curve_o5w1d"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5045872, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3458506), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5045872, 1), 0.0, 0.0, 0, 0, Vector2(0.99388385, 0.48742026), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_jd0dm"]
@@ -222,7 +222,7 @@ polygon = PackedVector2Array(50, 0, 85, 15, 100, 50, 85, 85, 50, 100, 15, 85, 0,
 unique_name_in_owner = true
 position = Vector2(50, 50)
 amount = 800
-lifetime = 1.35
+lifetime = 1.5
 preprocess = 0.5
 visibility_rect = Rect2(-50, -50, 100, 800)
 process_material = SubResource("ParticleProcessMaterial_6836m")
