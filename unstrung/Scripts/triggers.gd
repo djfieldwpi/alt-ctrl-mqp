@@ -147,4 +147,26 @@ func _on_death_sewage_body_entered(body: Node2D) -> void:
 		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_actors_locked = false
-		
+
+
+func _on_activate_rocks_body_entered(body: Node2D) -> void:
+	print("Rockslide!")
+
+
+func _on_end_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		GlobalVariables.is_actors_locked = true
+		GlobalVariables.is_system_lock = true
+		%Label.visible = true
+		%Label.global_position.y += 2400
+		%Label.global_position.x += 800
+		%CharacterBody2D.visible = false
+		var timer = get_tree().create_timer(2)
+		await timer.timeout
+		GlobalVariables.is_actors_locked = false
+		GlobalVariables.is_system_lock = false
+		GlobalVariables.is_level_two = false
+		%Label.visible = false
+		%Label.global_position.y -= 2400
+		%Label.global_position.x -= 800
+		get_tree().change_scene_to_file("res://UI/ui.tscn")

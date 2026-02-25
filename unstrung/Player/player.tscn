@@ -77,6 +77,7 @@ size = 2.2822547
 transform = Transform3D(-1.3113416e-06, 0, 30, 0, 30, 0, -30, 0, -1.3113416e-06, 0, 0, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=420062728]
+visibility_layer = 8
 offset_left = -414.77167
 offset_top = -157.37706
 offset_right = 1034.5491

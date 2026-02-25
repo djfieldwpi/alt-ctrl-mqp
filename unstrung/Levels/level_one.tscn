@@ -93,6 +93,11 @@ size = Vector2(20, 19.864637)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5w1d"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd0dm"]
+size = Vector2(20, 21.438364)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3g6m8"]
+
 [node name="Node2D" type="Node2D" unique_id=324805373]
 visibility_layer = 1023
 z_index = 1
@@ -147,17 +152,6 @@ position = Vector2(0, -179.00002)
 scale = Vector2(0.263422, 0.263422)
 texture = ExtResource("2_l4fe4")
 
-[node name="Label" type="Label" parent="1" unique_id=1037680081]
-unique_name_in_owner = true
-visible = false
-offset_left = 8359.0
-offset_top = 44.0
-offset_right = 8581.0
-offset_bottom = 192.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 160
-text = "FIN"
-
 [node name="ColorRect4" type="ColorRect" parent="1" unique_id=691067066]
 visibility_layer = 9
 offset_left = -966.0
@@ -165,6 +159,35 @@ offset_top = 1960.0
 offset_right = -926.0
 offset_bottom = 2000.0
 scale = Vector2(278.44986, 27.17638)
+
+[node name="temp_cave" type="Polygon2D" parent="1" unique_id=651102888]
+position = Vector2(9335, 2539)
+scale = Vector2(3.7106085, 3.7106085)
+color = Color(0.760999, 0.76099914, 0.76099914, 1)
+polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 96.55947, -14.907181, 119.822655, 23.408623, 146.9487, 69.2532, 71.34399, 69.252884, 14.212395, 69.252884, -65.84026, 69.252884, -128.10342, 69.252884, -110.756386, 12.803352)
+uv = PackedVector2Array(-134.47585, -52.88624, -92.739, -109.67572, -45.186356, -111.386246, -4.47583, -104.20204, 24.94522, -83.67572, 39.31366, -54.596764, 48.550507, -19.702026, 54.708405, 6.297989, 22.550507, 24.087463, -36.97583, 24.429565, -115.31795, 19.297989, -175.18639, 15.1927185, -135.84427, -55.965187)
+
+[node name="Polygon2D2" type="Polygon2D" parent="1/temp_cave" unique_id=38769022]
+position = Vector2(-43.38921, 44.736584)
+scale = Vector2(0.34146622, 0.34146622)
+color = Color(0.5106015, 0.5106012, 0.5106012, 1)
+polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 96.55947, -14.907181, 119.822655, 23.408623, 146.9487, 69.2532, 71.34399, 69.252884, 14.212395, 69.252884, -65.84026, 69.252884, -128.10342, 69.252884, -110.756386, 12.803352)
+uv = PackedVector2Array(-134.47585, -52.88624, -92.739, -109.67572, -45.186356, -111.386246, -4.47583, -104.20204, 24.94522, -83.67572, 39.31366, -54.596764, 48.550507, -19.702026, 54.708405, 6.297989, 22.550507, 24.087463, -36.97583, 24.429565, -115.31795, 19.297989, -175.18639, 15.1927185, -135.84427, -55.965187)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="1/temp_cave" unique_id=807919446]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="1/temp_cave/StaticBody2D" unique_id=414033174]
+polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 74.65088, -37.460144)
+
+[node name="Label" type="Label" parent="." unique_id=1037680081]
+unique_name_in_owner = true
+offset_left = 8359.0
+offset_top = 44.0
+offset_right = 8581.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "FIN"
 
 [node name="2" type="Node2D" parent="." unique_id=1848343906]
 visibility_layer = 2
@@ -213,12 +236,12 @@ position = Vector2(3739, -352)
 [node name="Engine_Prop" parent="2" unique_id=289959632 instance=ExtResource("7_6836m")]
 position = Vector2(4092, -269)
 
-[node name="Polygon2D2" type="Polygon2D" parent="2" unique_id=1440596136]
+[node name="temp_pipe" type="Polygon2D" parent="2" unique_id=1440596136]
 position = Vector2(6163, 2155)
 color = Color(0.3647059, 0.3647059, 0.3647059, 0.58431375)
 polygon = PackedVector2Array(50, 0, 85, 15, 100, 50, 85, 85, 50, 100, 15, 85, 0, 50, 15, 15)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="2/Polygon2D2" unique_id=1654657190]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="2/temp_pipe" unique_id=1654657190]
 unique_name_in_owner = true
 position = Vector2(50, 50)
 amount = 800
@@ -620,6 +643,21 @@ scale = Vector2(2.000175, -28.827341)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Sewage" unique_id=1831096154]
 shape = SubResource("RectangleShape2D_o5w1d")
 
+[node name="Activate Rocks" type="Area2D" parent="Triggers" unique_id=529644079]
+position = Vector2(8414, 2555)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Activate Rocks" unique_id=381971630]
+position = Vector2(519, -179.00024)
+scale = Vector2(124.131546, -38.902225)
+shape = SubResource("RectangleShape2D_jd0dm")
+
+[node name="End" type="Area2D" parent="Triggers" unique_id=338641943]
+position = Vector2(9175, 2700.0002)
+scale = Vector2(15.720039, 9.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/End" unique_id=2135825476]
+shape = SubResource("RectangleShape2D_3g6m8")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
@@ -651,3 +689,5 @@ target_position = Vector2(1200, 0)
 [connection signal="body_entered" from="Triggers/Death_Rocks" to="Triggers" method="_on_death_rocks_body_entered"]
 [connection signal="body_entered" from="Triggers/Death_Hand" to="Triggers" method="_on_death_hand_body_entered"]
 [connection signal="body_entered" from="Triggers/Death_Sewage" to="Triggers" method="_on_death_sewage_body_entered"]
+[connection signal="body_entered" from="Triggers/Activate Rocks" to="Triggers" method="_on_activate_rocks_body_entered"]
+[connection signal="body_entered" from="Triggers/End" to="Triggers" method="_on_end_body_entered"]
