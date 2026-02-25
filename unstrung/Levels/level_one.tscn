@@ -58,10 +58,10 @@ z_as_relative = false
 
 [node name="ColorRect2" type="ColorRect" parent="1" unique_id=601932387]
 visibility_layer = 9
-offset_left = -2031.0
-offset_top = -1269.0001
-offset_right = -1991.0
-offset_bottom = -1108.3025
+offset_left = -1161.0
+offset_top = -1170.0
+offset_right = -1121.0
+offset_bottom = -1009.30237
 scale = Vector2(333.85785, 71.0593)
 color = Color(0, 0, 0, 1)
 
@@ -232,10 +232,10 @@ theme_override_fonts/font = ExtResource("6_kmyb2")
 theme_override_font_sizes/font_size = 13
 text = "Bed"
 
-[node name="CharacterBody2D" parent="4" unique_id=2120166465 groups=["transparent"] instance=ExtResource("6_2848f")]
+[node name="CharacterBody2D" parent="4" unique_id=1592384400 instance=ExtResource("6_2848f")]
 unique_name_in_owner = true
-position = Vector2(6760, 2760)
-scale = Vector2(0.5005167, 0.5005167)
+position = Vector2(-815.99994, 96)
+scale = Vector2(0.4052424, 0.949358)
 
 [node name="Surface10" parent="4" unique_id=127780359 groups=["transparent"] instance=ExtResource("1_2b52f")]
 visibility_layer = 8
@@ -284,7 +284,7 @@ scale = Vector2(88.02852, 6.3811946)
 
 [node name="Sailboat_Prop" parent="4" unique_id=54350352 instance=ExtResource("9_y30io")]
 visibility_layer = 8
-position = Vector2(8660.999, -253)
+position = Vector2(8615, -248.99998)
 rotation = 3.1415927
 scale = Vector2(1.7, -1.7)
 
@@ -450,8 +450,8 @@ z_as_relative = false
 script = ExtResource("10_kmyb2")
 
 [node name="ChainLarge_Prop" parent="Triggers" unique_id=9414082 instance=ExtResource("11_t50p6")]
-position = Vector2(7478, 132.99976)
-rotation = -0.6268762
+position = Vector2(7458, 109)
+rotation = -0.5805926
 
 [node name="Chain" type="Area2D" parent="Triggers/ChainLarge_Prop" unique_id=1095307176]
 unique_name_in_owner = true
@@ -527,7 +527,7 @@ scale = Vector2(1, 43.530003)
 shape = SubResource("RectangleShape2D_l4fe4")
 
 [node name="Finish" type="Area2D" parent="Triggers" unique_id=1604144954]
-position = Vector2(8222.001, 289)
+position = Vector2(8214.001, 297)
 scale = Vector2(25.077715, 5.0751534)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Finish" unique_id=1303758059]

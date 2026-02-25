@@ -1,50 +1,85 @@
 [gd_scene format=3 uid="uid://dfn1724e8oa3n"]
 
-[ext_resource type="Script" uid="uid://dxgem2s75mpmh" path="res://Player/agent_FSM.gd" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://6qqcex7ugema" path="res://Sprites/icon.svg" id="2_4ntmi"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="PackedScene" uid="uid://dnbjanlglb3to" path="res://Player/functional character.glb" id="2_4ntmi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k51o0"]
 size = Vector2(128, 128)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1607984233]
+[sub_resource type="ViewportTexture" id="ViewportTexture_btcbx"]
+viewport_path = NodePath("visual/SubViewport")
+
+[node name="new" type="CharacterBody2D" unique_id=681741966]
 visibility_layer = 8
-scale = Vector2(0.305, 0.305)
+scale = Vector2(0.13019212, 0.305)
 script = ExtResource("1_l8h54")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1926257725]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1442447289]
 visibility_layer = 8
-texture = ExtResource("2_4ntmi")
+zoom = Vector2(0.525, 0.525)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=743948091]
-visibility_layer = 8
-zoom = Vector2(0.2, 0.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521189674]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1732288223]
 visibility_layer = 8
 shape = SubResource("RectangleShape2D_k51o0")
 
-[node name="GoalRayCast2D" type="RayCast2D" parent="." unique_id=375471125]
+[node name="GoalRayCast2D" type="RayCast2D" parent="." unique_id=1494706365]
 visibility_layer = 8
 position = Vector2(0, -65.30612)
-scale = Vector2(2.335, 2.335)
-target_position = Vector2(464.77338, 1281.8737)
+scale = Vector2(2.3747902, 2.335)
+target_position = Vector2(700.6612, 972.9609)
 
-[node name="CrackRayCast2D" type="RayCast2D" parent="." unique_id=1980273875]
+[node name="CrackRayCast2D" type="RayCast2D" parent="." unique_id=1392073787]
 visibility_layer = 8
 scale = Vector2(2.05, 2.05)
-target_position = Vector2(41.58337, 83.16674)
+target_position = Vector2(86.17659, 87.96482)
 
-[node name="HeadRayCast2D" type="RayCast2D" parent="." unique_id=1671202257]
+[node name="HeadRayCast2D" type="RayCast2D" parent="." unique_id=813006460]
 visibility_layer = 8
-position = Vector2(49.18033, -55.737705)
-target_position = Vector2(52.459015, 0)
+position = Vector2(47.895, -64)
+scale = Vector2(1.307236, 1)
+target_position = Vector2(110, 0)
 
-[node name="BodyRayCast2D" type="RayCast2D" parent="." unique_id=1383573079]
+[node name="BodyRayCast2D" type="RayCast2D" parent="." unique_id=329300389]
 visibility_layer = 8
-position = Vector2(62.295082, 62.295082)
-target_position = Vector2(42.622948, -36.065575)
+position = Vector2(63.5, 63.5)
+scale = Vector2(1.3538957, 1.2914622)
+target_position = Vector2(111.948654, -46.630333)
 
-[node name="UpRayCast2D" type="RayCast2D" parent="." unique_id=228728304]
+[node name="UpRayCast2D" type="RayCast2D" parent="." unique_id=411012943]
 visibility_layer = 8
+position = Vector2(0, 6.7762636e-21)
 scale = Vector2(4.9344273, 1)
 target_position = Vector2(0, -167.2131)
+
+[node name="jump_check_ray" type="RayCast2D" parent="." unique_id=1009533926]
+position = Vector2(23.04287, -236.06558)
+scale = Vector2(1, 1.0000001)
+target_position = Vector2(606.7956, -65.57378)
+
+[node name="visual" type="Node2D" parent="." unique_id=860677579]
+
+[node name="SubViewport" type="SubViewport" parent="visual" unique_id=2052257986]
+transparent_bg = true
+size = Vector2i(1024, 1024)
+render_target_update_mode = 4
+
+[node name="World3D" type="Node3D" parent="visual/SubViewport" unique_id=2125776366]
+
+[node name="Camera3D" type="Camera3D" parent="visual/SubViewport/World3D" unique_id=2015472319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4073621, 1.9573067)
+projection = 1
+size = 2.2822547
+
+[node name="PuppetPivot" type="Node3D" parent="visual/SubViewport/World3D" unique_id=1943623549]
+
+[node name="functional character" parent="visual/SubViewport/World3D/PuppetPivot" unique_id=946041304 instance=ExtResource("2_4ntmi")]
+transform = Transform3D(-1.3113416e-06, 0, 30, 0, 30, 0, -30, 0, -1.3113416e-06, 0, 0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=420062728]
+offset_left = -414.77167
+offset_top = -160.65575
+offset_right = 1034.5491
+offset_bottom = 990.03125
+scale = Vector2(0.57766664, 0.2849331)
+texture = SubResource("ViewportTexture_btcbx")
+stretch_mode = 5
