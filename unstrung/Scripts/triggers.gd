@@ -22,6 +22,20 @@ func _physics_process(_delta: float) -> void:
 					GlobalVariables.is_chain_broken = true
 					%Chain.get_parent().queue_free()
 					queue_redraw()
+	var bodies = %Pipe.get_overlapping_bodies()
+	if bodies:
+		for b in bodies:
+			if b is not CharacterBody2D:
+				%GPUParticles2D.emitting = false
+				var timer = get_tree().create_timer(0.5)
+				await timer.timeout
+				GlobalVariables.is_pipe_blocked = true
+	else:
+		%GPUParticles2D.emitting = true
+		var timer = get_tree().create_timer(0.5)
+		await timer.timeout
+		GlobalVariables.is_pipe_blocked = false
+				
 		
 func _on_bed_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
@@ -124,3 +138,13 @@ func _on_death_hand_body_entered(body: Node2D) -> void:
 		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_actors_locked = false
+
+
+func _on_death_sewage_body_entered(body: Node2D) -> void:
+	if not GlobalVariables.is_pipe_blocked and body is CharacterBody2D:
+		GlobalVariables.is_actors_locked = true
+		%CharacterBody2D.global_position = check_beach[2]
+		var timer: SceneTreeTimer = get_tree().create_timer(2)
+		await timer.timeout
+		GlobalVariables.is_actors_locked = false
+		

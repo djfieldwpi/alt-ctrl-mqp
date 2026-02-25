@@ -26,6 +26,48 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.8, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ya8ts"]
 gradient = SubResource("Gradient_ugpc4")
 
+[sub_resource type="Curve" id="Curve_o5w1d"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5045872, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3458506), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jd0dm"]
+curve = SubResource("Curve_o5w1d")
+
+[sub_resource type="Gradient" id="Gradient_3g6m8"]
+colors = PackedColorArray(1, 1, 1, 0.078431375, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_afeaf"]
+gradient = SubResource("Gradient_3g6m8")
+
+[sub_resource type="Curve" id="Curve_6836m"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_lccb3"]
+_limits = [0.0, 20.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 49.657825, 0, 0, Vector2(1, 15.061958), 0.26027054, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_cjwru"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_o5w1d"]
+curve_x = SubResource("Curve_6836m")
+curve_y = SubResource("Curve_lccb3")
+curve_z = SubResource("Curve_cjwru")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6836m"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 50.0
+gravity = Vector3(0, 600, 0)
+scale_min = 0.19999999
+scale_over_velocity_curve = SubResource("CurveXYZTexture_o5w1d")
+color = Color(0.4718973, 0.4718973, 0.4718973, 0.9607843)
+color_initial_ramp = SubResource("GradientTexture1D_afeaf")
+alpha_curve = SubResource("CurveTexture_jd0dm")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y30io"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvy0h"]
@@ -46,6 +88,10 @@ size = Vector2(20, 19.864637)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lccb3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjwru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbsh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5w1d"]
 
 [node name="Node2D" type="Node2D" unique_id=324805373]
 visibility_layer = 1023
@@ -167,9 +213,19 @@ position = Vector2(3739, -352)
 [node name="Engine_Prop" parent="2" unique_id=289959632 instance=ExtResource("7_6836m")]
 position = Vector2(4092, -269)
 
-[node name="3" type="Node2D" parent="." unique_id=1058070615]
-visibility_layer = 4
-z_as_relative = false
+[node name="Polygon2D2" type="Polygon2D" parent="2" unique_id=1440596136]
+position = Vector2(6163, 2155)
+color = Color(0.3647059, 0.3647059, 0.3647059, 0.58431375)
+polygon = PackedVector2Array(50, 0, 85, 15, 100, 50, 85, 85, 50, 100, 15, 85, 0, 50, 15, 15)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="2/Polygon2D2" unique_id=1654657190]
+unique_name_in_owner = true
+position = Vector2(50, 50)
+amount = 800
+lifetime = 1.35
+preprocess = 0.5
+visibility_rect = Rect2(-50, -50, 100, 800)
+process_material = SubResource("ParticleProcessMaterial_6836m")
 
 [node name="4" type="Node2D" parent="." unique_id=420166214]
 light_mask = 0
@@ -232,10 +288,11 @@ theme_override_fonts/font = ExtResource("6_kmyb2")
 theme_override_font_sizes/font_size = 13
 text = "Bed"
 
-[node name="CharacterBody2D" parent="4" unique_id=1592384400 instance=ExtResource("6_2848f")]
+[node name="CharacterBody2D" parent="4" unique_id=1592384400 groups=["transparent"] instance=ExtResource("6_2848f")]
 unique_name_in_owner = true
-position = Vector2(-815.99994, 96)
+position = Vector2(-815.99994, 94.99999)
 scale = Vector2(0.4052424, 0.949358)
+collision_mask = 1
 
 [node name="Surface10" parent="4" unique_id=127780359 groups=["transparent"] instance=ExtResource("1_2b52f")]
 visibility_layer = 8
@@ -548,6 +605,21 @@ scale = Vector2(26.919981, 6.519991)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Hand" unique_id=1096695230]
 shape = SubResource("RectangleShape2D_cjwru")
 
+[node name="Pipe" type="Area2D" parent="Triggers" unique_id=1212056798]
+unique_name_in_owner = true
+position = Vector2(6213, 2205)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Pipe" unique_id=1184205883]
+scale = Vector2(2.1143696, 2.12619)
+shape = SubResource("RectangleShape2D_jbsh1")
+
+[node name="Death_Sewage" type="Area2D" parent="Triggers" unique_id=1562477610]
+position = Vector2(6213, 2535)
+scale = Vector2(2.000175, -28.827341)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Sewage" unique_id=1831096154]
+shape = SubResource("RectangleShape2D_o5w1d")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
@@ -578,3 +650,4 @@ target_position = Vector2(1200, 0)
 [connection signal="body_entered" from="Triggers/Finish" to="Triggers" method="_on_finish_body_entered"]
 [connection signal="body_entered" from="Triggers/Death_Rocks" to="Triggers" method="_on_death_rocks_body_entered"]
 [connection signal="body_entered" from="Triggers/Death_Hand" to="Triggers" method="_on_death_hand_body_entered"]
+[connection signal="body_entered" from="Triggers/Death_Sewage" to="Triggers" method="_on_death_sewage_body_entered"]

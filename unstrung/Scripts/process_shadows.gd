@@ -261,6 +261,8 @@ func spawnShadow(vertices: Array[Vector2]):
 	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
 		%Chain.monitorable = false
 		%Chain.monitorable = true
+	%Pipe.monitorable = false
+	%Pipe.monitorable = true
 		
 """
 	Enjoy my cardinal sin, this will remain as tribute to a darker time.

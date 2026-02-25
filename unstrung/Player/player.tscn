@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfn1724e8oa3n"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://b35wioaqw6xhf" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://dnbjanlglb3to" path="res://Player/functional character.glb" id="2_4ntmi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k51o0"]
@@ -12,6 +12,7 @@ viewport_path = NodePath("visual/SubViewport")
 [node name="new" type="CharacterBody2D" unique_id=681741966]
 visibility_layer = 8
 scale = Vector2(0.13019212, 0.305)
+collision_mask = 8
 script = ExtResource("1_l8h54")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1442447289]
@@ -52,7 +53,7 @@ scale = Vector2(4.9344273, 1)
 target_position = Vector2(0, -167.2131)
 
 [node name="jump_check_ray" type="RayCast2D" parent="." unique_id=1009533926]
-position = Vector2(23.04287, -236.06558)
+position = Vector2(7.680956, -236.06554)
 scale = Vector2(1, 1.0000001)
 target_position = Vector2(606.7956, -65.57378)
 
