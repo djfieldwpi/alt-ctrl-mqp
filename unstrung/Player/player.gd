@@ -97,6 +97,11 @@ func _physics_process(delta: float) -> void:
 			handle_stand_check(delta)
 		else:
 			exit_crawl()
+	elif GlobalVariables.is_system_lock:
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+			move_and_slide()
+
 
 
 func update_animation():
