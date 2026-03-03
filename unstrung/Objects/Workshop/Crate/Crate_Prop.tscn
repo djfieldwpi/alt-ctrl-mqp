@@ -24,10 +24,11 @@ size = 1.5
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 light_color = Color(0.47, 0.47, 0.47, 1)
+light_energy = 3.218
 sky_mode = 1
 
 [node name="Crate2" parent="SubViewport" unique_id=702141848 instance=ExtResource("1_2fgtx")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -0.6654723, 0)
+transform = Transform3D(-1.5242814, 0, 3.6981843, 0, 4, 0, -3.6981843, 0, -1.5242814, 0, -0.6654723, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 visibility_layer = 1023
