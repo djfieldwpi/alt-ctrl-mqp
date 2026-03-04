@@ -2,15 +2,51 @@
 
 [ext_resource type="Script" uid="uid://sfqkt2h7m5h7" path="res://Scripts/vol_slider.gd" id="1_27fn8"]
 [ext_resource type="Script" uid="uid://cv3du811uwteb" path="res://Scripts/ui.gd" id="1_nltto"]
-[ext_resource type="Texture2D" uid="uid://5pys53tkbsv4" path="res://Planes/House_Concept.jpg" id="2_3sbvi"]
+[ext_resource type="Script" uid="uid://dj4mh8vj08u7y" path="res://UI/background.gd" id="2_8gukh"]
+[ext_resource type="Texture2D" uid="uid://ben6yalkfkfer" path="res://Planes/Opening screen layers/House_Concept-1.png" id="2_o2t6a"]
+[ext_resource type="Texture2D" uid="uid://dei6vqr4lqft7" path="res://Planes/Opening screen layers/House_Concept-2.png" id="3_8gukh"]
 [ext_resource type="PackedScene" uid="uid://bpjrr32mrhecd" path="res://Audio/ui_sounds_node.tscn" id="3_ibotj"]
 [ext_resource type="FontFile" uid="uid://cos1tclwphh0r" path="res://UI/Fonts/SrirachaDisplay-Regular.otf" id="3_nm1m0"]
+[ext_resource type="Texture2D" uid="uid://b5xfrvockq2gx" path="res://Planes/Opening screen layers/House_Concept-3.png" id="4_8gkfd"]
+[ext_resource type="Texture2D" uid="uid://c8qyq2c7g8i7r" path="res://Planes/Opening screen layers/House_Concept-4.png" id="5_0tr35"]
 [ext_resource type="Texture2D" uid="uid://do5poselosc03" path="res://UI/Images/xbox-series_sheet_default.png" id="5_cbfhl"]
 [ext_resource type="FontFile" uid="uid://b26vq3b8b0wku" path="res://UI/Fonts/Roboto-ExtraBold.ttf" id="6_4fiuh"]
+[ext_resource type="Texture2D" uid="uid://eru0f8haavbe" path="res://Planes/Opening screen layers/House_Concept-5.png" id="6_7j5ik"]
+[ext_resource type="Texture2D" uid="uid://brcbr1b2vrbnp" path="res://Planes/Opening screen layers/House_Concept-6.png" id="7_i1yd8"]
+[ext_resource type="Texture2D" uid="uid://b62asxflnrej8" path="res://Planes/Opening screen layers/House_Concept-7.png" id="8_j5i65"]
+[ext_resource type="Texture2D" uid="uid://d2mp51qpoocyv" path="res://Planes/Opening screen layers/House_Concept-8.png" id="9_awqy2"]
+[ext_resource type="Texture2D" uid="uid://dwh0dynlc4hkj" path="res://Planes/Opening screen layers/House_Concept-9.png" id="10_8wcgx"]
+[ext_resource type="Texture2D" uid="uid://c1k0ywepg1v8e" path="res://Planes/Opening screen layers/House_Concept-10.png" id="11_duqhi"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibotj"]
-texture = ExtResource("2_3sbvi")
-modulate_color = Color(1, 1, 1, 0.5529412)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjmo3"]
+texture = ExtResource("2_o2t6a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_665m6"]
+texture = ExtResource("3_8gukh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k01bw"]
+texture = ExtResource("4_8gkfd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3bux6"]
+texture = ExtResource("5_0tr35")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebcl4"]
+texture = ExtResource("6_7j5ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mqn06"]
+texture = ExtResource("7_i1yd8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdkaj"]
+texture = ExtResource("8_j5i65")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bvpq0"]
+texture = ExtResource("9_awqy2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bp80h"]
+texture = ExtResource("10_8wcgx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oejq4"]
+texture = ExtResource("11_duqhi")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5ude"]
 bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
@@ -151,9 +187,99 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackgroundImage" type="Panel" parent="MarginContainer" unique_id=1731048874]
+[node name="Background" type="Control" parent="MarginContainer" unique_id=773668888]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ibotj")
+script = ExtResource("2_8gukh")
+
+[node name="Panel1" type="Panel" parent="MarginContainer/Background" unique_id=940927694]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tjmo3")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Background" unique_id=1213068142]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_665m6")
+
+[node name="Panel3" type="Panel" parent="MarginContainer/Background" unique_id=690672961]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_k01bw")
+
+[node name="Panel4" type="Panel" parent="MarginContainer/Background" unique_id=838482574]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_3bux6")
+
+[node name="Panel5" type="Panel" parent="MarginContainer/Background" unique_id=883541851]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_ebcl4")
+
+[node name="Panel6" type="Panel" parent="MarginContainer/Background" unique_id=510488316]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mqn06")
+
+[node name="Panel7" type="Panel" parent="MarginContainer/Background" unique_id=1949594762]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_sdkaj")
+
+[node name="Panel8" type="Panel" parent="MarginContainer/Background" unique_id=1570641617]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_bvpq0")
+
+[node name="Panel9" type="Panel" parent="MarginContainer/Background" unique_id=993779107]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_bp80h")
+
+[node name="Panel10" type="Panel" parent="MarginContainer/Background" unique_id=212587089]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_oejq4")
 
 [node name="MarginContainerMainMenu" type="MarginContainer" parent="MarginContainer" unique_id=414281576]
 layout_mode = 2
