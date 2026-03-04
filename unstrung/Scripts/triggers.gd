@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var area: Area2D = %Chain
 @onready var chain_break: AudioStreamPlayer = $"../ChainBreak"
+@onready var beach_ambience: AudioStreamPlayer2D = $"../BeachAmbience"
+@onready var beach_ambience_2: AudioStreamPlayer2D = $"../BeachAmbience2"
 
 const boulder: PackedScene = preload("res://Objects/boulder.tscn")
 
@@ -114,13 +116,15 @@ func _on_finish_body_entered(body: Node2D) -> void:
 	if GlobalVariables.is_chain_broken and body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
 		GlobalVariables.is_system_lock = true
-		%Label.visible = true
+		%FinishText.visible = true
 		var timer = get_tree().create_timer(2)
 		await timer.timeout
+		beach_ambience.stop()
 		%CharacterBody2D.global_position = check_beach[0]
 		%Camera2D.global_position.y += 2500
 		timer = get_tree().create_timer(2)
 		await timer.timeout
+		beach_ambience_2.play()
 		GlobalVariables.is_actors_locked = false
 		GlobalVariables.is_system_lock = false
 		GlobalVariables.is_level_two = true

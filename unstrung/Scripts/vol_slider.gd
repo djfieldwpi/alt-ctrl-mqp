@@ -26,5 +26,7 @@ func _on_value_changed(valueA: float) -> void:
 		UserSettings.set_value("audio", "music_volume", volume_db)
 	elif bus_name == "SFX":
 		UserSettings.set_value("audio", "sfx_volume", volume_db)
+	elif bus_name == "Ambience":
+		UserSettings.set_value("audio", "ambience_volume", volume_db)
 
 	

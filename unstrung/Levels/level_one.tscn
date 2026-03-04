@@ -809,7 +809,7 @@ position = Vector2(3993, -259)
 stream = ExtResource("21_o5w1d")
 autoplay = true
 max_distance = 500.0
-bus = &"Ambience"
+bus = &"SFX"
 parameters/looping = true
 
 [node name="ChainBreak" type="AudioStreamPlayer" parent="." unique_id=504511764]
