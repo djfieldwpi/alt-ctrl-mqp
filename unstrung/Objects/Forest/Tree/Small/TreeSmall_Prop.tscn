@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://csttx65s5u0ly"]
+
+[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="1_djcig"]
+[ext_resource type="PackedScene" uid="uid://crn33f3sg803u" path="res://Objects/Forest/Tree/Small/TreeSmall.glb" id="1_i1n2e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
+shader = ExtResource("1_djcig")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
+viewport_path = NodePath("SubViewport")
+
+[node name="TreeSmall_Prop" type="Node2D" unique_id=41544662]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
+own_world_3d = true
+transparent_bg = true
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1042998650]
+transform = Transform3D(1, 0, 0, 0, 1.0886823, 0, 0, 0, 1, 0, 0, 5)
+projection = 1
+size = 1.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+light_color = Color(0.47, 0.47, 0.47, 1)
+sky_mode = 1
+
+[node name="TreeSmall2" parent="SubViewport" unique_id=1562855271 instance=ExtResource("1_i1n2e")]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, -0.031526566, -0.26121917, 0)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+material = SubResource("ShaderMaterial_nshul")
+offset_right = 512.0
+offset_bottom = 512.0
+texture = SubResource("ViewportTexture_6678p")
