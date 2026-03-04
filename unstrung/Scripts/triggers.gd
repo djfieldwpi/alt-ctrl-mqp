@@ -138,9 +138,10 @@ func _on_death_rocks_body_entered(body: Node2D) -> void:
 func _on_death_hand_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
+		GlobalVariables.is_hand_sequence = true
+		await %Hand_Enemy.run_sequence()
 		%CharacterBody2D.global_position = check_beach[1]
-		var timer: SceneTreeTimer = get_tree().create_timer(2)
-		await timer.timeout
+		%CharacterBody2D.visible = true
 		GlobalVariables.is_actors_locked = false
 
 

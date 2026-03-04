@@ -609,6 +609,7 @@ color = Color(0.6901961, 0.6901961, 0.6901961, 0.53333336)
 
 [node name="Hand_Enemy" parent="Layer4_Closest/Level3_Beach" unique_id=945900204 instance=ExtResource("14_cjwru")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(3688.9998, 569.0001)
 scale = Vector2(0.7, 0.7)
 script = ExtResource("15_o5w1d")
