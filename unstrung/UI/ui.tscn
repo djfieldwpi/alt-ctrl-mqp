@@ -2,15 +2,10 @@
 
 [ext_resource type="Script" uid="uid://sfqkt2h7m5h7" path="res://Scripts/vol_slider.gd" id="1_27fn8"]
 [ext_resource type="Script" uid="uid://cv3du811uwteb" path="res://Scripts/ui.gd" id="1_nltto"]
-[ext_resource type="Texture2D" uid="uid://5pys53tkbsv4" path="res://Planes/House_Concept.jpg" id="2_3sbvi"]
 [ext_resource type="PackedScene" uid="uid://bpjrr32mrhecd" path="res://Audio/ui_sounds_node.tscn" id="3_ibotj"]
 [ext_resource type="FontFile" uid="uid://cos1tclwphh0r" path="res://UI/Fonts/SrirachaDisplay-Regular.otf" id="3_nm1m0"]
 [ext_resource type="Texture2D" uid="uid://do5poselosc03" path="res://UI/Images/xbox-series_sheet_default.png" id="5_cbfhl"]
 [ext_resource type="FontFile" uid="uid://b26vq3b8b0wku" path="res://UI/Fonts/Roboto-ExtraBold.ttf" id="6_4fiuh"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibotj"]
-texture = ExtResource("2_3sbvi")
-modulate_color = Color(1, 1, 1, 0.5529412)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5ude"]
 bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
@@ -150,10 +145,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="BackgroundImage" type="Panel" parent="MarginContainer" unique_id=1731048874]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ibotj")
 
 [node name="MarginContainerMainMenu" type="MarginContainer" parent="MarginContainer" unique_id=414281576]
 layout_mode = 2
