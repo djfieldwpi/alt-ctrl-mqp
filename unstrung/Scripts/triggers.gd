@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var area: Area2D = %Chain
+@onready var chain_break: AudioStreamPlayer = $"../ChainBreak"
 
 const boulder: PackedScene = preload("res://Objects/boulder.tscn")
 
@@ -22,6 +23,7 @@ func _physics_process(_delta: float) -> void:
 				print(b)
 				if b is not CharacterBody2D:
 					GlobalVariables.is_chain_broken = true
+					chain_break.play()
 					%Chain.get_parent().queue_free()
 					queue_redraw()
 	var bodies = %Pipe.get_overlapping_bodies()

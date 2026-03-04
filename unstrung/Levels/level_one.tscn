@@ -20,7 +20,13 @@
 [ext_resource type="PackedScene" uid="uid://dkghqjmbmfds2" path="res://Objects/Workshop/Chain/Large/ChainLarge_Prop.tscn" id="11_t50p6"]
 [ext_resource type="PackedScene" uid="uid://djgtfrl8a6q1y" path="res://Objects/Hand/Hand_Enemy.tscn" id="14_cjwru"]
 [ext_resource type="PackedScene" uid="uid://bofrcnjl1s20g" path="res://Objects/Workshop/Wood Ground/Long/WoodGroundLong_Prop.tscn" id="14_lccb3"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://brtktaid3a84e" path="res://Objects/Hand/hand_enemy.gd" id="15_o5w1d"]
+=======
+[ext_resource type="AudioStream" uid="uid://box3gmj1c5x1t" path="res://Audio/Music/Ambience_Beach.ogg" id="20_cjwru"]
+[ext_resource type="AudioStream" uid="uid://c7wrk87q7hppb" path="res://Audio/SFX/SteamVent.ogg" id="21_o5w1d"]
+[ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
 offsets = PackedFloat32Array(0, 0.624, 1)
@@ -783,6 +789,34 @@ unique_name_in_owner = true
 position = Vector2(-891, 96)
 scale = Vector2(0.4052424, 0.949358)
 collision_mask = 1
+
+[node name="BeachAmbience" type="AudioStreamPlayer2D" parent="." unique_id=1652652584]
+position = Vector2(7614, -3)
+stream = ExtResource("20_cjwru")
+autoplay = true
+max_distance = 2850.0
+attenuation = 1.3195089
+bus = &"Ambience"
+parameters/looping = true
+
+[node name="BeachAmbience2" type="AudioStreamPlayer2D" parent="." unique_id=458309932]
+position = Vector2(4681, 2451)
+stream = ExtResource("20_cjwru")
+max_distance = 5750.0
+bus = &"Ambience"
+parameters/looping = true
+
+[node name="SteamVent" type="AudioStreamPlayer2D" parent="." unique_id=1677071001]
+position = Vector2(3993, -259)
+stream = ExtResource("21_o5w1d")
+autoplay = true
+max_distance = 500.0
+bus = &"Ambience"
+parameters/looping = true
+
+[node name="ChainBreak" type="AudioStreamPlayer" parent="." unique_id=504511764]
+stream = ExtResource("22_jd0dm")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Triggers/Bed" to="Triggers" method="_on_bed_body_entered"]
 [connection signal="body_entered" from="Triggers/Door" to="Triggers" method="_on_door_body_entered"]

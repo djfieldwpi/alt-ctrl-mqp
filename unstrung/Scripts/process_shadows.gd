@@ -17,7 +17,7 @@ var debug_spawn_vertices: Array[Vector2] = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Load and play music
-	GlobalAudio.play_music("res://Audio/Music/BG_Music.mp3")
+	# GlobalAudio.play_music("res://Audio/Music/BG_Music.mp3")
 	# Opens connects server over local port for vertices collection from external python script
 	var error = socket.connect_to_host("127.0.0.1", 65432)
 	if error == OK:
