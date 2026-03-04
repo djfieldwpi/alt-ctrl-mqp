@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://co8ik3bqae2xd"]
+
+[ext_resource type="Texture2D" uid="uid://ben6yalkfkfer" path="res://Opening screen layers/House_Concept-1.png" id="1_d3xcb"]
+[ext_resource type="Script" uid="uid://d175mey00q17r" path="res://parallax.gd" id="1_j564j"]
+[ext_resource type="Texture2D" uid="uid://dei6vqr4lqft7" path="res://Opening screen layers/House_Concept-2.png" id="2_kkoi4"]
+[ext_resource type="Texture2D" uid="uid://b5xfrvockq2gx" path="res://Opening screen layers/House_Concept-3.png" id="3_j564j"]
+[ext_resource type="Texture2D" uid="uid://c8qyq2c7g8i7r" path="res://Opening screen layers/House_Concept-4.png" id="4_7ca2j"]
+[ext_resource type="Texture2D" uid="uid://eru0f8haavbe" path="res://Opening screen layers/House_Concept-5.png" id="5_62jok"]
+[ext_resource type="Texture2D" uid="uid://brcbr1b2vrbnp" path="res://Opening screen layers/House_Concept-6.png" id="6_1ajaj"]
+[ext_resource type="Texture2D" uid="uid://b62asxflnrej8" path="res://Opening screen layers/House_Concept-7.png" id="7_jbhw8"]
+[ext_resource type="Texture2D" uid="uid://d2mp51qpoocyv" path="res://Opening screen layers/House_Concept-8.png" id="8_omsi5"]
+[ext_resource type="Texture2D" uid="uid://dwh0dynlc4hkj" path="res://Opening screen layers/House_Concept-9.png" id="9_ji3l4"]
+[ext_resource type="Texture2D" uid="uid://c1k0ywepg1v8e" path="res://Opening screen layers/House_Concept-10.png" id="10_pkt37"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58ifr"]
+texture = ExtResource("1_d3xcb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4s31q"]
+texture = ExtResource("2_kkoi4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yomn"]
+texture = ExtResource("3_j564j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gonua"]
+texture = ExtResource("4_7ca2j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ynl8v"]
+texture = ExtResource("5_62jok")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d6hbv"]
+texture = ExtResource("6_1ajaj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4i4j4"]
+texture = ExtResource("7_jbhw8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmveb"]
+texture = ExtResource("8_omsi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xhm0"]
+texture = ExtResource("9_ji3l4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_buar1"]
+texture = ExtResource("10_pkt37")
+
+[node name="ParallexTest" type="Control" unique_id=143281042]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Control" parent="." unique_id=1617156582]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j564j")
+
+[node name="Panel1" type="Panel" parent="Background" unique_id=374786298]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_58ifr")
+
+[node name="Panel2" type="Panel" parent="Background" unique_id=938744867]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_4s31q")
+
+[node name="Panel3" type="Panel" parent="Background" unique_id=761764044]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_1yomn")
+
+[node name="Panel4" type="Panel" parent="Background" unique_id=2083965868]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_gonua")
+
+[node name="Panel5" type="Panel" parent="Background" unique_id=1361646518]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_ynl8v")
+
+[node name="Panel6" type="Panel" parent="Background" unique_id=1826560196]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_d6hbv")
+
+[node name="Panel7" type="Panel" parent="Background" unique_id=745456982]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_4i4j4")
+
+[node name="Panel8" type="Panel" parent="Background" unique_id=1375098026]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tmveb")
+
+[node name="Panel9" type="Panel" parent="Background" unique_id=2136332178]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_6xhm0")
+
+[node name="Panel10" type="Panel" parent="Background" unique_id=186187048]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -230.0
+offset_right = 1420.0
+offset_bottom = 850.0
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_buar1")
