@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ckbfkukhf01vk"]
+
+[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="1_6pkc7"]
+[ext_resource type="PackedScene" uid="uid://dcayi4vnj2njr" path="res://Objects/Contractor/Lumber Cart/Lumber_Cart.glb" id="1_lnfdq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
+shader = ExtResource("1_6pkc7")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
+viewport_path = NodePath("SubViewport")
+
+[node name="LumberCart_Prop" type="Node2D" unique_id=41544662]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
+own_world_3d = true
+transparent_bg = true
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1042998650]
+transform = Transform3D(1, 0, 0, 0, 1.0886823, 0, 0, 0, 1, 0, 0, 5)
+projection = 1
+size = 1.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+light_color = Color(0.47, 0.47, 0.47, 1)
+sky_mode = 1
+
+[node name="Lumber_Cart2" parent="SubViewport" unique_id=163941203 instance=ExtResource("1_lnfdq")]
+transform = Transform3D(18, 0, 0, 0, 18, 0, 0, 0, 18, 0.48815238, -0.20235384, 0)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+material = SubResource("ShaderMaterial_nshul")
+offset_right = 512.0
+offset_bottom = 512.0
+texture = SubResource("ViewportTexture_6678p")

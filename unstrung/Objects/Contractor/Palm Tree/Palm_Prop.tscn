@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cyibe4yimqi2a"]
+
+[ext_resource type="PackedScene" uid="uid://bpcsimcvbaf3c" path="res://Objects/Contractor/Palm Tree/Palm_Tree.glb" id="1_oj5or"]
+[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="1_qwai0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
+shader = ExtResource("1_qwai0")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Palm_Prop" type="Node2D" unique_id=41544662]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
+own_world_3d = true
+transparent_bg = true
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1042998650]
+transform = Transform3D(1, 0, 0, 0, 1.0886823, 0, 0, 0, 1, 0, 0, 5)
+projection = 1
+size = 1.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+light_color = Color(0.16685283, 0.16685286, 0.1668528, 1)
+sky_mode = 1
+
+[node name="Palm_Tree2" parent="SubViewport" unique_id=1480384114 instance=ExtResource("1_oj5or")]
+transform = Transform3D(9, 0, 0, 0, 9, 0, 0, 0, 9, 0.1752342, -0.7238838, 0)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+material = SubResource("ShaderMaterial_nshul")
+offset_right = 512.0
+offset_bottom = 512.0
+texture = SubResource("ViewportTexture_6678p")
