@@ -36,9 +36,9 @@ target_position = Vector2(86.17659, 87.96482)
 
 [node name="HeadRayCast2D" type="RayCast2D" parent="." unique_id=813006460]
 visibility_layer = 8
-position = Vector2(47.895, -64)
+position = Vector2(0, -64.3)
 scale = Vector2(1.307236, 1)
-target_position = Vector2(110, 0)
+target_position = Vector2(150, 0)
 
 [node name="BodyRayCast2D" type="RayCast2D" parent="." unique_id=329300389]
 visibility_layer = 8

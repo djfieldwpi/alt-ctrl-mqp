@@ -114,6 +114,7 @@ visibility_layer = 9
 z_as_relative = false
 
 [node name="Global" type="Node2D" parent="Layer1_Farthest" unique_id=319664317]
+visibility_layer = 8
 
 [node name="BlackBackdrop" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=601932387]
 visibility_layer = 9
@@ -124,10 +125,18 @@ offset_bottom = -1009.30237
 scale = Vector2(333.85785, 71.0593)
 color = Color(0, 0, 0, 1)
 
+[node name="WhiteBackdrop_1" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=1167009900]
+light_mask = 8
+visibility_layer = 9
+offset_left = -966.0
+offset_top = -539.0
+offset_right = -926.0
+offset_bottom = -499.0
+scale = Vector2(278.44986, 27.17638)
+
 [node name="Level1_Workshop" type="Node2D" parent="Layer1_Farthest" unique_id=443231305]
 
 [node name="HoleBackdrop1" type="ColorRect" parent="Layer1_Farthest/Level1_Workshop" unique_id=947946239]
-visible = false
 visibility_layer = 9
 offset_left = 1551.9999
 offset_top = 335.00003
@@ -179,15 +188,6 @@ uv = PackedVector2Array(-134.47585, -52.88624, -92.739, -109.67572, -45.186356, 
 polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 74.65088, -37.460144)
 
 [node name="Level4_Caverns" type="Node2D" parent="Layer1_Farthest" unique_id=1625799169]
-
-[node name="WhiteBackdrop_1" type="ColorRect" parent="Layer1_Farthest" unique_id=1167009900]
-light_mask = 8
-visibility_layer = 9
-offset_left = -966.0
-offset_top = -539.0
-offset_right = -926.0
-offset_bottom = -499.0
-scale = Vector2(278.44986, 27.17638)
 
 [node name="WhiteBackdrop_2" type="ColorRect" parent="Layer1_Farthest" unique_id=691067066]
 visibility_layer = 9
@@ -297,12 +297,12 @@ visibility_layer = 8
 position = Vector2(369, -370)
 scale = Vector2(2.3927402, 2.5200007)
 
-[node name="TopBox2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=2035820658 instance=ExtResource("1_2b52f")]
+[node name="TopBox2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=2035820658 groups=["transparent"] instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(369, -139)
 scale = Vector2(2.4, 3.5999994)
 
-[node name="TopBoxPillar" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1524570820 instance=ExtResource("1_2b52f")]
+[node name="TopBoxPillar" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1524570820 groups=["transparent"] instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(369, 110.00001)
 scale = Vector2(0.5213458, 8.832654)
@@ -744,6 +744,10 @@ visibility_layer = 8
 position = Vector2(5569.0005, -243.00002)
 scale = Vector2(0.6066545, 0.6066545)
 script = ExtResource("8_2py18")
+
+[node name="Line2D" type="Line2D" parent="Soldier" unique_id=1533413900]
+points = PackedVector2Array(0, 0, 0, 0)
+default_color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Soldier" unique_id=1136154403]
 visibility_layer = 8
