@@ -23,7 +23,8 @@ func _physics_process(_delta: float) -> void:
 				var timer: SceneTreeTimer = get_tree().create_timer(2)
 				await timer.timeout
 				GlobalVariables.is_near_soldier = false
-				player.global_position = %Triggers.checkpoints[2]
+				player.global_position = %Triggers.checkpoints[3]
+				line.points[1] = line.points[0]
 				timer = get_tree().create_timer(2)
 				await timer.timeout
 				GlobalVariables.is_actors_locked = false
