@@ -122,22 +122,6 @@ offset_bottom = -1009.30237
 scale = Vector2(333.85785, 71.0593)
 color = Color(0, 0, 0, 1)
 
-[node name="WhiteBackdrop_1" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=1167009900]
-visibility_layer = 9
-offset_left = -966.0
-offset_top = -539.0
-offset_right = -926.0
-offset_bottom = -499.0
-scale = Vector2(278.44986, 27.17638)
-
-[node name="WhiteBackdrop_2" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=691067066]
-visibility_layer = 9
-offset_left = -966.0
-offset_top = 1960.0
-offset_right = -926.0
-offset_bottom = 2000.0
-scale = Vector2(278.44986, 27.17638)
-
 [node name="Level1_Workshop" type="Node2D" parent="Layer1_Farthest" unique_id=443231305]
 
 [node name="HoleBackdrop1" type="ColorRect" parent="Layer1_Farthest/Level1_Workshop" unique_id=947946239]
@@ -193,6 +177,23 @@ uv = PackedVector2Array(-134.47585, -52.88624, -92.739, -109.67572, -45.186356, 
 polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 74.65088, -37.460144)
 
 [node name="Level4_Caverns" type="Node2D" parent="Layer1_Farthest" unique_id=1625799169]
+
+[node name="WhiteBackdrop_1" type="ColorRect" parent="Layer1_Farthest" unique_id=1167009900]
+light_mask = 8
+visibility_layer = 9
+offset_left = -966.0
+offset_top = -539.0
+offset_right = -926.0
+offset_bottom = -499.0
+scale = Vector2(278.44986, 27.17638)
+
+[node name="WhiteBackdrop_2" type="ColorRect" parent="Layer1_Farthest" unique_id=691067066]
+visibility_layer = 9
+offset_left = -1217.0
+offset_top = 1981.0
+offset_right = -1177.0
+offset_bottom = 2021.0
+scale = Vector2(278.44986, 27.17638)
 
 [node name="Layer2_Further" type="Node2D" parent="." unique_id=1848343906]
 visibility_layer = 2
@@ -271,16 +272,13 @@ visibility_layer = 8
 z_as_relative = false
 
 [node name="Global" type="Node2D" parent="Layer3_Closer" unique_id=122301367]
-
-[node name="MCPuppet" parent="Layer3_Closer/Global" unique_id=1592384400 groups=["transparent"] instance=ExtResource("6_2848f")]
-unique_name_in_owner = true
-position = Vector2(-891, 96)
-scale = Vector2(0.4052424, 0.949358)
-collision_mask = 1
+visibility_layer = 8
 
 [node name="Level1_Workshop" type="Node2D" parent="Layer3_Closer" unique_id=661318422]
+visibility_layer = 8
 
 [node name="ToBeReplaced" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=542802590]
+visibility_layer = 8
 
 [node name="Ground1" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1330873477 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
@@ -297,12 +295,12 @@ visibility_layer = 8
 position = Vector2(369, -370)
 scale = Vector2(2.3927402, 2.5200007)
 
-[node name="TopBox2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=2035820658 groups=["transparent"] instance=ExtResource("1_2b52f")]
+[node name="TopBox2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=2035820658 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(369, -139)
 scale = Vector2(2.4, 3.5999994)
 
-[node name="TopBoxPillar" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1524570820 groups=["transparent"] instance=ExtResource("1_2b52f")]
+[node name="TopBoxPillar" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1524570820 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(369, 110.00001)
 scale = Vector2(0.5213458, 8.832654)
@@ -338,7 +336,7 @@ theme_override_fonts/font = ExtResource("6_kmyb2")
 theme_override_font_sizes/font_size = 13
 text = "Bed"
 
-[node name="TopBox3" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=127780359 groups=["transparent"] instance=ExtResource("1_2b52f")]
+[node name="TopBox3" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=127780359 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(2831, -244.00002)
 scale = Vector2(2.4, 8.759998)
@@ -354,6 +352,7 @@ position = Vector2(4166, 176)
 scale = Vector2(30.005672, -1.572248)
 
 [node name="Level2_Forest" type="Node2D" parent="Layer3_Closer" unique_id=453509270]
+visibility_layer = 8
 
 [node name="SailboatForest" parent="Layer3_Closer/Level2_Forest" unique_id=54350352 instance=ExtResource("9_y30io")]
 visibility_layer = 8
@@ -370,25 +369,27 @@ scale = Vector2(16.529434, -4.12941)
 shape = SubResource("RectangleShape2D_y30io")
 
 [node name="Level3_Beach" type="Node2D" parent="Layer3_Closer" unique_id=1804223420]
+visibility_layer = 8
 
-[node name="To_Be_Replaced" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=1005150426]
+[node name="ToBeReplaced" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=1005150426]
+visibility_layer = 8
 
-[node name="Ground3" parent="Layer3_Closer/Level3_Beach/To_Be_Replaced" unique_id=2001504142 instance=ExtResource("1_2b52f")]
+[node name="Ground3" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=2001504142 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(6350, 447)
 scale = Vector2(77.628525, 5.1011944)
 
-[node name="Ground4" parent="Layer3_Closer/Level3_Beach/To_Be_Replaced" unique_id=532267896 instance=ExtResource("1_2b52f")]
+[node name="Ground4" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=532267896 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(3233.0002, 2921.0002)
 scale = Vector2(46.948513, 6.3811946)
 
-[node name="Ground5" parent="Layer3_Closer/Level3_Beach/To_Be_Replaced" unique_id=291234773 instance=ExtResource("1_2b52f")]
+[node name="Ground5" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=291234773 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(5395, 2921.0002)
 scale = Vector2(17.588512, 6.3811946)
 
-[node name="Ground6" parent="Layer3_Closer/Level3_Beach/To_Be_Replaced" unique_id=1913139329 instance=ExtResource("1_2b52f")]
+[node name="Ground6" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=1913139329 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(8419, 2921)
 scale = Vector2(88.02852, 6.3811946)
@@ -419,108 +420,112 @@ position = Vector2(0, 40.588196)
 scale = Vector2(16.529434, -4.12941)
 shape = SubResource("RectangleShape2D_y30io")
 
-[node name="Maybe_Replace_IDK" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=584877929]
+[node name="MaybeReplace" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=584877929]
 
-[node name="Rock1" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK" unique_id=1237586550]
+[node name="Rock1" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1237586550]
 visibility_layer = 8
 position = Vector2(-210, 3075)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Rock1" unique_id=1170116203]
+[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock1" unique_id=1170116203]
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748, -281.3327, 61.333252, -356.66602, 170.66663, -393.99936, 259.33325, -361.3327, 289.33325, -289.3327, 337.99994, -133.3327, 364.66663, -19.99936, 33.78766, -19.731842, -315.3334, -19.99936)
 uv = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748, -281.3327, 61.333252, -356.66602, 170.66663, -393.99936, 259.33325, -361.3327, 289.33325, -289.3327, 337.99994, -133.3327, 364.66663, -19.99936, 33.78766, -19.731842, -315.3334, -19.99936)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Rock1" unique_id=556097942]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock1" unique_id=556097942]
 visibility_layer = 8
 polygon = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748, -281.3327, 61.333252, -356.66602, 170.66663, -393.99936, 259.33325, -361.3327, 289.33325, -289.3327, 337.99994, -133.3327, 364.66663, -19.99936, 33.78766, -19.731842, -315.3334, -19.99936)
 
-[node name="Rock2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK" unique_id=1039975856]
+[node name="Rock2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1039975856]
 visibility_layer = 8
 position = Vector2(551, 3157)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Rock2" unique_id=1590617539]
+[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock2" unique_id=1590617539]
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.128723, -375.9592, -12.568726, -397.7392, 37.44458, -367.89252, 35.024597, -287.22586, 68.9046, -221.88585, 60.83795, -103.30585, 114.07794, -18.605835, -144.86209, -18.605835, -423.1621, -19.412506)
 uv = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.128723, -375.9592, -12.568726, -397.7392, 37.44458, -367.89252, 35.024597, -287.22586, 68.9046, -221.88585, 60.83795, -103.30585, 114.07794, -18.605835, -144.86209, -18.605835, -423.1621, -19.412506)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Rock2" unique_id=2050326648]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock2" unique_id=2050326648]
 visibility_layer = 8
 polygon = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.128723, -375.9592, -12.568726, -397.7392, 37.44458, -367.89252, 35.024597, -287.22586, 68.9046, -221.88585, 60.83795, -103.30585, 114.07794, -18.605835, -144.86209, -18.605835, -423.1621, -19.412506)
 
-[node name="Rock3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK" unique_id=1553403522]
+[node name="Rock3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1553403522]
 visibility_layer = 8
 position = Vector2(1216, 3130)
 rotation = 2.9665852
 scale = Vector2(1, -1)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Rock3" unique_id=1098961831]
+[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock3" unique_id=1098961831]
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
 uv = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Rock3" unique_id=1807338729]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock3" unique_id=1807338729]
 visibility_layer = 8
 position = Vector2(-2, 0)
 polygon = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
 
-[node name="Shore" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK" unique_id=1742865188]
+[node name="Shore" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1742865188]
 visibility_layer = 8
 position = Vector2(1084, 3052)
 scale = Vector2(1, 0.52)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Shore" unique_id=1028580352]
+[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Shore" unique_id=1028580352]
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
 uv = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Shore" unique_id=1202579446]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Shore" unique_id=1202579446]
 visibility_layer = 8
 position = Vector2(-2, 0)
 polygon = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
 
-[node name="Pit" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK" unique_id=57776880]
+[node name="Pit" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=57776880]
 visibility_layer = 8
 position = Vector2(3847, 3052)
 scale = Vector2(1, 0.52)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Pit" unique_id=731842270]
+[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Pit" unique_id=731842270]
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(375.90295, -441.41034, 418.35583, -101.53676, 481.1245, -33.06192, 597.15125, -27.355682, 686.54895, -33.06192, 753.1217, -84.418045, 810.756, -207.10535, 854.694, -353.56543, 913.27734, -470.73315, 1014.3667, -501.06, 1226.7563, -497.0055, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 239.10535, -497.70752, 347.24573, -497.72617)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Pit" unique_id=2026868826]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Pit" unique_id=2026868826]
 visibility_layer = 8
 position = Vector2(-6, 0)
 polygon = PackedVector2Array(375.90295, -441.41034, 418.35583, -101.53676, 481.1245, -33.06192, 597.15125, -27.355682, 686.54895, -33.06192, 753.1217, -84.418045, 810.756, -207.10535, 854.694, -353.56543, 913.27734, -470.73315, 1014.3667, -501.06, 1226.7563, -497.0055, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 239.10535, -497.70752, 347.24573, -497.72617)
 
-[node name="Puddle" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK" unique_id=1701525063]
+[node name="Puddle" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1701525063]
 visibility_layer = 8
 position = Vector2(5496, 3052)
 scale = Vector2(1, 0.52)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Puddle" unique_id=687569837]
+[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Puddle" unique_id=687569837]
 visibility_layer = 8
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(425.3601, -472.40234, 492.81763, -452.30145, 573.3707, -445.3969, 653.1928, -438.73004, 739.07983, -438.49237, 805.8237, -443.0954, 872.30237, -448.17316, 953.1207, -463.80902, 1052.3652, -489.11063, 1128.4458, -501.19098, 1226.3594, -498.2488, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 238.02765, -497.7294, 347.19543, -499.08847)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/Maybe_Replace_IDK/Puddle" unique_id=1916218751]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Puddle" unique_id=1916218751]
 visibility_layer = 8
 polygon = PackedVector2Array(425.3601, -472.40234, 492.81763, -452.30145, 573.3707, -445.3969, 653.1928, -438.73004, 739.07983, -438.49237, 805.8237, -443.0954, 872.30237, -448.17316, 953.1207, -463.80902, 1052.3652, -489.11063, 1128.4458, -501.19098, 1226.3594, -498.2488, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 238.02765, -497.7294, 347.19543, -499.08847)
 
 [node name="Level4_Caverns" type="Node2D" parent="Layer3_Closer" unique_id=492727382]
+visibility_layer = 8
 
 [node name="Layer4_Closest" type="Node2D" parent="." unique_id=74665362]
 light_mask = 0
 visibility_layer = 24
 z_as_relative = false
 
+[node name="Global" type="Node2D" parent="Layer4_Closest" unique_id=1796059948]
+
 [node name="Level1_Workshop" type="Node2D" parent="Layer4_Closest" unique_id=490286907]
+visibility_layer = 9
 
 [node name="Crate" parent="Layer4_Closest/Level1_Workshop" unique_id=175785902 instance=ExtResource("3_pvy0h")]
 visibility_layer = 8
@@ -571,8 +576,6 @@ position = Vector2(546, -216)
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")
-
-[node name="Global" type="Node2D" parent="Layer4_Closest" unique_id=1796059948]
 
 [node name="Level2_Forest" type="Node2D" parent="Layer4_Closest" unique_id=1756285345]
 
@@ -749,6 +752,12 @@ offset_bottom = 263.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 160
 text = "FIN"
+
+[node name="CharacterBody2D" parent="." unique_id=1592384400 groups=["transparent"] instance=ExtResource("6_2848f")]
+unique_name_in_owner = true
+position = Vector2(-891, 96)
+scale = Vector2(0.4052424, 0.949358)
+collision_mask = 1
 
 [connection signal="body_entered" from="Triggers/Bed" to="Triggers" method="_on_bed_body_entered"]
 [connection signal="body_entered" from="Triggers/Door" to="Triggers" method="_on_door_body_entered"]
