@@ -20,13 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://dkghqjmbmfds2" path="res://Objects/Workshop/Chain/Large/ChainLarge_Prop.tscn" id="11_t50p6"]
 [ext_resource type="PackedScene" uid="uid://djgtfrl8a6q1y" path="res://Objects/Hand/Hand_Enemy.tscn" id="14_cjwru"]
 [ext_resource type="PackedScene" uid="uid://bofrcnjl1s20g" path="res://Objects/Workshop/Wood Ground/Long/WoodGroundLong_Prop.tscn" id="14_lccb3"]
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://brtktaid3a84e" path="res://Objects/Hand/hand_enemy.gd" id="15_o5w1d"]
-=======
 [ext_resource type="AudioStream" uid="uid://box3gmj1c5x1t" path="res://Audio/Music/Ambience_Beach.ogg" id="20_cjwru"]
 [ext_resource type="AudioStream" uid="uid://c7wrk87q7hppb" path="res://Audio/SFX/SteamVent.ogg" id="21_o5w1d"]
 [ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
->>>>>>> Stashed changes
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
 offsets = PackedFloat32Array(0, 0.624, 1)
@@ -197,10 +194,10 @@ polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.3
 
 [node name="WhiteBackdrop_2" type="ColorRect" parent="Layer1_Farthest" unique_id=691067066]
 visibility_layer = 9
-offset_left = -1217.0
-offset_top = 1981.0
-offset_right = -1177.0
-offset_bottom = 2021.0
+offset_left = -966.0
+offset_top = 1964.0
+offset_right = -926.0
+offset_bottom = 2004.0
 scale = Vector2(278.44986, 27.17638)
 
 [node name="Layer2_Further" type="Node2D" parent="." unique_id=1848343906]
