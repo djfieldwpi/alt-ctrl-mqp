@@ -79,7 +79,7 @@ func _on_death_pit_body_entered(body: Node2D) -> void:
 func _on_death_boiler_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
-		%CharacterBody2D.global_position = checkpoints[1]
+		%CharacterBody2D.global_position = checkpoints[2]
 		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_actors_locked = false

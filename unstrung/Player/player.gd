@@ -12,7 +12,7 @@ extends CharacterBody2D
 $visual/SubViewport/World3D/PuppetPivot.get_child(0).get_node("AnimationPlayer")
 @onready var body_shape: CollisionShape2D = $CollisionShape2D
 
-const SPEED := 9500.0
+const SPEED := 11500.0
 const CRAWL_SPEED_MULT := 0.4
 const JUMP_VELOCITY := -510.0
 

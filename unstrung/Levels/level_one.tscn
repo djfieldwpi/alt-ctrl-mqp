@@ -542,6 +542,18 @@ position = Vector2(255.46906, 256.44434)
 scale = Vector2(23.19791, 22.596802)
 shape = SubResource("RectangleShape2D_pvy0h")
 
+[node name="Crate2" parent="Layer4_Closest/Level1_Workshop" unique_id=2048652954 instance=ExtResource("3_pvy0h")]
+visibility_layer = 8
+position = Vector2(3226.0002, 145)
+scale = Vector2(0.29320395, 0.29320395)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate2" unique_id=2016700209]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Crate2/StaticBody2D" unique_id=659154688]
+position = Vector2(255.46906, 256.44434)
+scale = Vector2(23.19791, 22.596802)
+shape = SubResource("RectangleShape2D_pvy0h")
+
 [node name="Stool" parent="Layer4_Closest/Level1_Workshop" unique_id=286168946 instance=ExtResource("6_ugpc4")]
 position = Vector2(-334, 182)
 scale = Vector2(0.23292482, 0.23292482)
