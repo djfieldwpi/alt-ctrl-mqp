@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://sfqkt2h7m5h7" path="res://Scripts/vol_slider.gd" id="1_27fn8"]
 [ext_resource type="Script" uid="uid://cv3du811uwteb" path="res://Scripts/ui.gd" id="1_nltto"]
+[ext_resource type="Script" uid="uid://dj4mh8vj08u7y" path="res://UI/background.gd" id="2_8gukh"]
+[ext_resource type="Texture2D" uid="uid://ben6yalkfkfer" path="res://Planes/Opening screen layers/House_Concept-1.png" id="2_o2t6a"]
+[ext_resource type="Texture2D" uid="uid://dei6vqr4lqft7" path="res://Planes/Opening screen layers/House_Concept-2.png" id="3_8gukh"]
 [ext_resource type="PackedScene" uid="uid://bpjrr32mrhecd" path="res://Audio/ui_sounds_node.tscn" id="3_ibotj"]
 [ext_resource type="FontFile" uid="uid://cos1tclwphh0r" path="res://UI/Fonts/SrirachaDisplay-Regular.otf" id="3_nm1m0"]
 [ext_resource type="Texture2D" uid="uid://b5xfrvockq2gx" path="res://Planes/Opening screen layers/House_Concept-3.png" id="4_8gkfd"]
