@@ -92,7 +92,7 @@ func _on_death_boiler_body_entered(body: Node2D) -> void:
 func _on_death_river_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
-		%CharacterBody2D.global_position = checkpoints[3]
+		%CharacterBody2D.global_position = checkpoints[4]
 		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_actors_locked = false
@@ -173,9 +173,9 @@ func _on_end_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
 		GlobalVariables.is_system_lock = true
-		%Label.visible = true
-		%Label.global_position.y += 2400
-		%Label.global_position.x += 800
+		%FinishText.visible = true
+		%FinishText.global_position.y += 2400
+		%FinishText.global_position.x += 800
 		%CharacterBody2D.visible = false
 		var timer = get_tree().create_timer(2)
 		await timer.timeout
@@ -184,7 +184,7 @@ func _on_end_body_entered(body: Node2D) -> void:
 		GlobalVariables.is_level_two = false
 		GlobalVariables.is_chain_broken = false
 		GlobalVariables.is_chain_breakable = false
-		%Label.visible = false
-		%Label.global_position.y -= 2400
-		%Label.global_position.x -= 800
+		%FinishText.visible = false
+		%FinishText.global_position.y -= 2400
+		%FinishText.global_position.x -= 800
 		get_tree().change_scene_to_file("res://UI/ui.tscn")
