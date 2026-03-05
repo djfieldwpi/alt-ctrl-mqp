@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://b7iq3vou5de5c" path="res://Objects/Workshop/Engine/Engine_Prop.tscn" id="7_6836m"]
 [ext_resource type="Script" uid="uid://1gjlhgvwn70l" path="res://Levels/soldier.gd" id="8_2py18"]
-[ext_resource type="Texture2D" uid="uid://6qqcex7ugema" path="res://Sprites/icon.svg" id="9_t50p6"]
 [ext_resource type="PackedScene" uid="uid://btme1jiquhoye" path="res://Objects/Beach/Sailboat/Sailboat_Prop.tscn" id="9_y30io"]
 [ext_resource type="PackedScene" uid="uid://brxawk5uvjfsj" path="res://Objects/smoke.tscn" id="10_jbsh1"]
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
@@ -23,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bofrcnjl1s20g" path="res://Objects/Workshop/Wood Ground/Long/WoodGroundLong_Prop.tscn" id="14_lccb3"]
 [ext_resource type="Script" uid="uid://brtktaid3a84e" path="res://Objects/Hand/hand_enemy.gd" id="15_o5w1d"]
 [ext_resource type="AudioStream" uid="uid://box3gmj1c5x1t" path="res://Audio/Music/Ambience_Beach.ogg" id="20_cjwru"]
+[ext_resource type="PackedScene" uid="uid://osg2kfxqxa0h" path="res://Objects/Soldier/soldier.tscn" id="21_jbsh1"]
 [ext_resource type="AudioStream" uid="uid://c7wrk87q7hppb" path="res://Audio/SFX/SteamVent.ogg" id="21_o5w1d"]
 [ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
 
@@ -770,12 +770,12 @@ script = ExtResource("8_2py18")
 points = PackedVector2Array(0, 0, 0, 0)
 default_color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Soldier" unique_id=1136154403]
-visibility_layer = 8
-texture = ExtResource("9_t50p6")
-
 [node name="RayCast2D" type="RayCast2D" parent="Soldier" unique_id=557383334]
 target_position = Vector2(1200, 0)
+
+[node name="soldier_visual" parent="Soldier" unique_id=2132058842 instance=ExtResource("21_jbsh1")]
+position = Vector2(-8.242738, 11.53871)
+scale = Vector2(0.36755076, 0.36755076)
 
 [node name="FinishText" type="Label" parent="." unique_id=1037680081]
 unique_name_in_owner = true

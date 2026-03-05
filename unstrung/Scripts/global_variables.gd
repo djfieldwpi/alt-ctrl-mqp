@@ -9,6 +9,7 @@ var is_chain_broken: 	bool = false
 var is_level_two: 		bool = false
 var is_pipe_blocked:	bool = false
 var is_hand_sequence:	bool = false
+var is_soldier_kill:	bool = false
 
 var debug_drawn_shadows: bool = true
 var debug_checkpoints:   bool = true
