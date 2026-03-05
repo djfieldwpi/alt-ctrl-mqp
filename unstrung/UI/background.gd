@@ -10,7 +10,7 @@ func _ready() -> void:
 	print(panels)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var mouse_location = get_global_mouse_position()
 	var percent_displacement = Vector2((mouse_location.x - 960.0)/960.0, (mouse_location.y - 540.0)/540.0)
 	var shift_mouse = shift_control * percent_displacement

@@ -18,8 +18,9 @@ var check_beach:	 Array[Vector2] = [Vector2(-654, 2759.0),
 								  Vector2(6760, 2732.0)]
 								
 func _physics_process(_delta: float) -> void:
+	var bodies
 	if not GlobalVariables.is_chain_broken and GlobalVariables.is_chain_breakable:
-		var bodies = %Chain.get_overlapping_bodies()
+		bodies = %Chain.get_overlapping_bodies()
 		if bodies:
 			for b in bodies:
 				print(b)
@@ -28,7 +29,7 @@ func _physics_process(_delta: float) -> void:
 					chain_break.play()
 					%Chain.get_parent().queue_free()
 					queue_redraw()
-	var bodies = %Pipe.get_overlapping_bodies()
+	bodies = %Pipe.get_overlapping_bodies()
 	if bodies:
 		for b in bodies:
 			if b is not CharacterBody2D:
@@ -163,7 +164,7 @@ func _on_activate_rocks_body_entered(body: Node2D) -> void:
 		call_deferred("spawnBoulder")
 		
 func spawnBoulder():
-	var position = Vector2(9100.0, 1854.0)
+	var spawn_position = Vector2(9100.0, 1854.0)
 	var boulder_instance = boulder.instantiate()
 	boulder_instance.global_position = position
 	get_parent().add_child(boulder_instance)
