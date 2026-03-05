@@ -10,7 +10,7 @@ const boulder: PackedScene = preload("res://Objects/boulder.tscn")
 var checkpoints: Array[Vector2] = [Vector2(-891.0, 96.0),
 								  Vector2(960, 226.0),
 								  Vector2(960+1920, 226.0),
-								  Vector2(960+1920+1920, 226.0),
+								  Vector2(4834.0, 283.0),
 								  Vector2(960+1920+1920+1920, 284.0)]
 var check_beach:	 Array[Vector2] = [Vector2(-654, 2759.0),
 								  Vector2(3100, 2732.0),
