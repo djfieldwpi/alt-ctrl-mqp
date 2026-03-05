@@ -14,7 +14,9 @@ func _ready() -> void:
 	animPlayer.play("walkLoop")
 
 func _physics_process(_delta: float) -> void:
-	if GlobalVariables.is_near_soldier:
+	if GlobalVariables.is_near_soldier and not GlobalVariables.is_actors_locked:
+		var timer : SceneTreeTimer = get_tree().create_timer(0.1)
+		await timer.timeout
 		ray.target_position = ray.to_local(player.global_position)
 		line.points[1] = to_local(player.global_position)
 		line.visible = true
@@ -22,7 +24,7 @@ func _physics_process(_delta: float) -> void:
 		if ray.is_colliding():
 			var collider = ray.get_collider()
 			
-			if collider == player:
+			if collider == player and not GlobalVariables.is_actors_locked:
 				if not GlobalVariables.is_soldier_kill:
 					GlobalVariables.is_soldier_kill = true
 					print("I see the player!")
@@ -36,7 +38,7 @@ func _physics_process(_delta: float) -> void:
 						flipped = true
 					animPlayer.play("AimRifle")
 					await animPlayer.animation_finished
-					var timer: SceneTreeTimer = get_tree().create_timer(0.5)
+					timer = get_tree().create_timer(0.5)
 					await timer.timeout
 					GlobalVariables.is_near_soldier = false
 					player.global_position = %Triggers.checkpoints[3]
@@ -57,7 +59,7 @@ func _physics_process(_delta: float) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not GlobalVariables.is_actors_locked:
-		if right and global_position.x > 6515 and not turning:
+		if right and global_position.x > 6268 and not turning:
 			right = false
 			animPlayer.play("Turn1")
 			turning = true
