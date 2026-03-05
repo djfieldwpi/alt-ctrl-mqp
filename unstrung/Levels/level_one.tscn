@@ -370,7 +370,7 @@ position = Vector2(8615, -248.99998)
 rotation = -3.1415925
 scale = Vector2(1.7, -1.7)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/SailboatForest" unique_id=391285959]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/SailboatForest" unique_id=391285959 groups=["wood"]]
 position = Vector2(253.52884, 349.41177)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/SailboatForest/StaticBody2D" unique_id=750260833]
@@ -409,7 +409,7 @@ position = Vector2(2126, 2581)
 rotation = -0.7959424
 scale = Vector2(1.5739623, 1.5739623)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/RotatedSailboat" unique_id=1774553824]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/RotatedSailboat" unique_id=1774553824 groups=["wood"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/RotatedSailboat/StaticBody2D" unique_id=2094403074]
 polygon = PackedVector2Array(156.26807, 348.49023, 419.9884, 349.02466, 413.94482, 368.2798, 403.58887, 370.417, 384.80493, 447.49463, 355.91235, 460.66846, 234.12903, 463.42773, 116.32947, 344.0254)
@@ -420,7 +420,7 @@ position = Vector2(-172.00003, 2227)
 rotation = -3.1415925
 scale = Vector2(1.7, -1.7)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SailboatBeach" unique_id=1937124936]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SailboatBeach" unique_id=1937124936 groups=["wood"]]
 visibility_layer = 8
 position = Vector2(253.52884, 349.41177)
 
@@ -433,7 +433,7 @@ shape = SubResource("RectangleShape2D_y30io")
 [node name="MaybeReplace" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=584877929]
 visibility_layer = 9
 
-[node name="Rock1" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1237586550]
+[node name="Rock1" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1237586550 groups=["stone"]]
 visibility_layer = 8
 position = Vector2(-210, 3075)
 
@@ -447,7 +447,7 @@ uv = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748
 visibility_layer = 8
 polygon = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748, -281.3327, 61.333252, -356.66602, 170.66663, -393.99936, 259.33325, -361.3327, 289.33325, -289.3327, 337.99994, -133.3327, 364.66663, -19.99936, 33.78766, -19.731842, -315.3334, -19.99936)
 
-[node name="Rock2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1039975856]
+[node name="Rock2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1039975856 groups=["stone"]]
 visibility_layer = 8
 position = Vector2(551, 3157)
 rotation = 3.1415927
@@ -463,7 +463,7 @@ uv = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.1287
 visibility_layer = 8
 polygon = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.128723, -375.9592, -12.568726, -397.7392, 37.44458, -367.89252, 35.024597, -287.22586, 68.9046, -221.88585, 60.83795, -103.30585, 114.07794, -18.605835, -144.86209, -18.605835, -423.1621, -19.412506)
 
-[node name="Rock3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1553403522]
+[node name="Rock3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1553403522 groups=["stone"]]
 visibility_layer = 8
 position = Vector2(1216, 3130)
 rotation = 2.9665852
@@ -480,7 +480,7 @@ visibility_layer = 8
 position = Vector2(-2, 0)
 polygon = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
 
-[node name="Shore" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1742865188]
+[node name="Shore" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1742865188 groups=["dirt"]]
 visibility_layer = 8
 position = Vector2(1084, 3052)
 scale = Vector2(1, 0.52)
@@ -543,7 +543,7 @@ visibility_layer = 8
 position = Vector2(379, 97)
 scale = Vector2(0.39926553, 0.39926553)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate" unique_id=1753873199]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate" unique_id=1753873199 groups=["wood"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Crate/StaticBody2D" unique_id=486458265]
 position = Vector2(255.46906, 256.44434)
@@ -555,7 +555,7 @@ visibility_layer = 8
 position = Vector2(3226.0002, 145)
 scale = Vector2(0.29320395, 0.29320395)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate2" unique_id=2016700209]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate2" unique_id=2016700209 groups=["wood"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Crate2/StaticBody2D" unique_id=659154688]
 position = Vector2(255.46906, 256.44434)
@@ -573,7 +573,7 @@ scale = Vector2(0.23292482, 0.23292482)
 [node name="WoodGroundLong1_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=1171187394 instance=ExtResource("14_lccb3")]
 position = Vector2(-1502, -216)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1_Prop" unique_id=323699730]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1_Prop" unique_id=323699730 groups=["wood"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1_Prop/StaticBody2D" unique_id=1134585431]
 position = Vector2(512, 512)
@@ -583,9 +583,9 @@ shape = SubResource("RectangleShape2D_afeaf")
 [node name="WoodGroundLong2_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=2000360854 instance=ExtResource("14_lccb3")]
 position = Vector2(-478, -216)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop" unique_id=1979684704]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop" unique_id=1979684704 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop/StaticBody2D" unique_id=1523984183]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop/StaticBody2D" unique_id=1523984183 groups=["wood"]]
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")
@@ -593,9 +593,9 @@ shape = SubResource("RectangleShape2D_afeaf")
 [node name="WoodGroundLong3_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=454216945 instance=ExtResource("14_lccb3")]
 position = Vector2(546, -216)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop" unique_id=202798119]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop" unique_id=202798119 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop/StaticBody2D" unique_id=1749269825]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop/StaticBody2D" unique_id=1749269825 groups=["wood"]]
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")

@@ -5,12 +5,41 @@ extends CharacterBody2D
 @onready var up_ray: RayCast2D   = $UpRayCast2D
 @onready var goal_ray: RayCast2D = $GoalRayCast2D
 @onready var crack_ray: RayCast2D = $CrackRayCast2D
+@onready var foot_ray: RayCast2D = $FootRayCast2D
 @onready var jump_check_ray: RayCast2D = $jump_check_ray
 
 @onready var pivot: Node3D = $visual/SubViewport/World3D/PuppetPivot
 @onready var anim: AnimationPlayer = \
 $visual/SubViewport/World3D/PuppetPivot.get_child(0).get_node("AnimationPlayer")
 @onready var body_shape: CollisionShape2D = $CollisionShape2D
+
+@onready var foot_step: AudioStreamPlayer2D = $FootStep
+
+const WOOD_STEPS: Array[AudioStream] = [
+	preload("res://Audio/SFX/FootstepSFX/WoodFootsteps1.wav"),
+	preload("res://Audio/SFX/FootstepSFX/WoodFootsteps2.wav"),
+	preload("res://Audio/SFX/FootstepSFX/WoodFootsteps3.wav"),
+	preload("res://Audio/SFX/FootstepSFX/WoodFootsteps4.wav")
+]
+const DIRT_STEPS: Array[AudioStream] = [
+	preload("res://Audio/SFX/FootstepSFX/DirtFootsteps1.wav"),
+	preload("res://Audio/SFX/FootstepSFX/DirtFootsteps2.wav"),
+	preload("res://Audio/SFX/FootstepSFX/DirtFootsteps3.wav"),
+	preload("res://Audio/SFX/FootstepSFX/DirtFootsteps4.wav")
+]
+const SHADOW_STEPS: Array[AudioStream] = [
+	preload("res://Audio/SFX/FootstepSFX/CloudFootsteps1.wav"),
+	preload("res://Audio/SFX/FootstepSFX/CloudFootsteps2.wav"),
+	preload("res://Audio/SFX/FootstepSFX/CloudFootsteps3.wav"),
+	preload("res://Audio/SFX/FootstepSFX/CloudFootsteps4.wav")
+	]
+	
+const STONE_STEPS: Array[AudioStream] = [
+	preload("res://Audio/SFX/FootstepSFX/StoneFootsteps1.wav"),
+	preload("res://Audio/SFX/FootstepSFX/StoneFootsteps2.wav"),
+	preload("res://Audio/SFX/FootstepSFX/StoneFootsteps3.wav"),
+	preload("res://Audio/SFX/FootstepSFX/StoneFootsteps4.wav")
+	]
 
 const SPEED := 11500.0
 const CRAWL_SPEED_MULT := 0.4
@@ -80,6 +109,12 @@ func _physics_process(delta: float) -> void:
 			velocity += get_gravity() * delta
 
 		move_and_slide()
+		
+		if is_on_floor():
+			foot_ray.enabled = true
+			foot_ray.force_raycast_update()  # Immediate detect
+		else:
+			foot_ray.enabled = false
 
 		update_animation()
 
@@ -221,7 +256,7 @@ func start_turn():
 
 	dir *= -1
 
-	var rays: Array[RayCast2D] = [head_ray, body_ray, goal_ray, crack_ray, jump_check_ray]
+	var rays: Array[RayCast2D] = [head_ray, body_ray, goal_ray, crack_ray, jump_check_ray, foot_ray]
 	for r in rays:
 		r.position.x = -r.position.x
 		r.target_position.x = -r.target_position.x
@@ -263,3 +298,28 @@ func handle_stand_check(delta: float):
 			stand_clear_timer = 0.0
 	else:
 		stand_clear_timer = 0.0
+
+func get_surface_type() -> String:
+	if foot_ray.is_colliding():
+		var collider = foot_ray.get_collider()
+		if collider.is_in_group("shadows"): return "shadow"
+		if collider.is_in_group("wood"): return "wood"
+		if collider.is_in_group("dirt"): return "dirt"
+		if collider.is_in_group("stone"): return "stone"
+	return "none"
+
+func play_step_sound():
+	if not is_on_floor():
+		return
+	var type = get_surface_type()
+	var sounds: Array[AudioStream]
+	match type:
+		"wood": sounds = WOOD_STEPS
+		"dirt": sounds = DIRT_STEPS
+		"shadow": sounds = SHADOW_STEPS
+		"stone": sounds = STONE_STEPS
+		_: return 
+	var stream = sounds[randi() % sounds.size()]
+	foot_step.stream = stream
+	foot_step.pitch_scale = randf_range(0.85, 1.1)
+	foot_step.play()
