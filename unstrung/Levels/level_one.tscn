@@ -156,14 +156,41 @@ size = Vector2(2048, 68.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4hqf"]
 size = Vector2(1295.0007, 110.00006)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tht63"]
-height = 40.142517
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkx0"]
+size = Vector2(18.436243, 34.973953)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odeua"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lk5ox"]
+size = Vector2(36.242275, 20)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rsbyu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akd0e"]
+size = Vector2(71, 128.31488)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjune"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv67t"]
+size = Vector2(20, 57.617386)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnkuv"]
+size = Vector2(10.640099, 11.890709)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tht63"]
+size = Vector2(17.035507, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsbyu"]
+size = Vector2(20, 34.57019)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjune"]
+size = Vector2(20.504883, 21.022034)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnmno"]
+size = Vector2(20, 25.711334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yty8"]
+size = Vector2(17.66288, 19.923965)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d87ph"]
+size = Vector2(80.6091, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjpje"]
+size = Vector2(117.604996, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odeua"]
 size = Vector2(2047.5, 410)
@@ -180,13 +207,17 @@ size = Vector2(512, 272)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cflg"]
 size = Vector2(308, 400)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qnkuv"]
-radius = 13.701172
-height = 31.08612
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjs4p"]
+size = Vector2(27.480225, 19.900887)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uqkx0"]
-radius = 55.168945
-height = 110.78882
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w5v5"]
+size = Vector2(20, 62.24507)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_als28"]
+size = Vector2(20.890808, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3c8du"]
+size = Vector2(47.311462, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t50p6"]
 size = Vector2(46.14453, 35.665497)
@@ -1010,11 +1041,37 @@ position = Vector2(4272, 1540)
 position = Vector2(-359, 2597)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1" unique_id=1347516318]
+position = Vector2(29, 74)
+rotation = -0.32411742
+scale = Vector2(0.43525884, 0.6161723)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1/StaticBody2D" unique_id=818005247]
-position = Vector2(254, 271)
-scale = Vector2(20.437931, 10.607894)
-shape = SubResource("CapsuleShape2D_tht63")
+position = Vector2(269.60083, 270.50146)
+scale = Vector2(20.437927, 10.607894)
+shape = SubResource("RectangleShape2D_uqkx0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1" unique_id=2060575898]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1/StaticBody2D2" unique_id=739752547]
+position = Vector2(322, 121)
+rotation = 0.17125306
+scale = Vector2(5.2211704, 4.300016)
+shape = SubResource("RectangleShape2D_lk5ox")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1" unique_id=726958019]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1/StaticBody2D3" unique_id=1140442955]
+position = Vector2(96.88278, 183.1001)
+rotation = 0.2556649
+shape = SubResource("RectangleShape2D_akd0e")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1" unique_id=1741259986]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1/StaticBody2D4" unique_id=171041369]
+position = Vector2(413.7325, 185.1206)
+rotation = -0.20110017
+scale = Vector2(2.4740376, 2.939288)
+shape = SubResource("RectangleShape2D_qv67t")
 
 [node name="RockLarge2" parent="Layer3_Closer/Level3_Beach/Rocks" unique_id=1654125207 instance=ExtResource("84_3rsbe")]
 position = Vector2(1137, 2686)
@@ -1023,9 +1080,34 @@ scale = Vector2(0.6, 0.9)
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2" unique_id=906817849]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2/StaticBody2D" unique_id=542598850]
-position = Vector2(256.66666, 258.8889)
-scale = Vector2(22.37712, 13.472558)
-shape = SubResource("CapsuleShape2D_odeua")
+position = Vector2(179.99995, 158.88889)
+rotation = -0.3247657
+scale = Vector2(15.418592, 12.676701)
+shape = SubResource("RectangleShape2D_qnkuv")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2" unique_id=705610632]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2/StaticBody2D2" unique_id=1465031905]
+position = Vector2(318.53418, 129.21436)
+rotation = 0.17264056
+scale = Vector2(11.078544, 5.1183257)
+shape = SubResource("RectangleShape2D_tht63")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2" unique_id=989209984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2/StaticBody2D3" unique_id=1026799057]
+position = Vector2(111.666626, 173.3333)
+rotation = 0.26975095
+scale = Vector2(4.9606175, 2.8037672)
+shape = SubResource("RectangleShape2D_rsbyu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2" unique_id=379809645]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2/StaticBody2D4" unique_id=390534433]
+position = Vector2(373.33325, 163.33328)
+rotation = -0.18322918
+scale = Vector2(5.8793273, 5.446926)
+shape = SubResource("RectangleShape2D_kjune")
 
 [node name="RockMedium2" parent="Layer3_Closer/Level3_Beach/Rocks" unique_id=1448109466 instance=ExtResource("85_opp81")]
 position = Vector2(-737.99994, 2653)
@@ -1034,9 +1116,10 @@ scale = Vector2(1.5, 1.2)
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockMedium2" unique_id=1309615652]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockMedium2/StaticBody2D" unique_id=1970181282]
-position = Vector2(253.99997, 254.16666)
-scale = Vector2(8.11855, 7.637792)
-shape = SubResource("CapsuleShape2D_rsbyu")
+position = Vector2(270.6666, 259.99997)
+rotation = -0.6894465
+scale = Vector2(8.11855, 7.6377916)
+shape = SubResource("RectangleShape2D_qnmno")
 
 [node name="RockSmall1" parent="Layer3_Closer/Level3_Beach/Rocks" unique_id=8612316 instance=ExtResource("86_ruas5")]
 position = Vector2(-189, 2149)
@@ -1045,9 +1128,25 @@ scale = Vector2(1.6, 1.6)
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1" unique_id=1295135044]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1/StaticBody2D" unique_id=2006982963]
-position = Vector2(520, 496.24997)
-scale = Vector2(11.570885, 6.6127734)
-shape = SubResource("CapsuleShape2D_kjune")
+position = Vector2(525.9373, 487.7511)
+scale = Vector2(11.570882, 6.6127715)
+shape = SubResource("RectangleShape2D_6yty8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1" unique_id=630077390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1/StaticBody2D2" unique_id=1895354822]
+position = Vector2(479.3676, 415.00317)
+rotation = -0.4122775
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_d87ph")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1" unique_id=1794577061]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1/StaticBody2D3" unique_id=1413193151]
+position = Vector2(566.3705, 415.84473)
+rotation = 0.27874464
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_mjpje")
 
 [node name="Starfish" parent="Layer3_Closer/Level3_Beach" unique_id=1366923937 instance=ExtResource("50_uqkx0")]
 position = Vector2(-569.99994, 2841.9998)
@@ -1758,10 +1857,10 @@ rotation = 2.913391
 scale = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble4/StaticBody2D" unique_id=176146415]
-position = Vector2(484.6667, 220.66667)
-rotation = 0.36564147
-scale = Vector2(10.91703, 6.835329)
-shape = SubResource("CapsuleShape2D_qnkuv")
+position = Vector2(484.9287, 213.11047)
+rotation = 0.28491762
+scale = Vector2(10.91703, 6.83533)
+shape = SubResource("RectangleShape2D_sjs4p")
 
 [node name="Rubble5" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects" unique_id=1638162520 instance=ExtResource("38_uw1cm")]
 position = Vector2(6593, 2333)
@@ -1772,10 +1871,25 @@ position = Vector2(-4395.3335, -1555.3337)
 scale = Vector2(0.6666667, 0.6666667)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble5/StaticBody2D" unique_id=710379631]
-position = Vector2(6971.001, 2744)
-rotation = -1.9645985
-scale = Vector2(2.1959753, -3.334691)
-shape = SubResource("CapsuleShape2D_uqkx0")
+position = Vector2(6853.1416, 2710.0652)
+rotation = -2.7127395
+scale = Vector2(2.1959755, -3.3346908)
+shape = SubResource("RectangleShape2D_3w5v5")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble5" unique_id=1431858742]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble5/StaticBody2D2" unique_id=646169866]
+position = Vector2(257.2417, 210.66663)
+scale = Vector2(4.28496, 1.7475362)
+shape = SubResource("RectangleShape2D_als28")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble5" unique_id=1314902014]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble5/StaticBody2D3" unique_id=682673809]
+position = Vector2(353.46436, 261.35828)
+rotation = 0.782456
+scale = Vector2(3.5427864, 1.1623594)
+shape = SubResource("RectangleShape2D_3c8du")
 
 [node name="Level4_Caverns" type="Node2D" parent="Layer4_Closest" unique_id=1514651304]
 
