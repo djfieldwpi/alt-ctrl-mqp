@@ -130,7 +130,7 @@ threading.Thread(target=socket_server, daemon=True).start()
 # Gets the relative path to the reference image for shadow detection
 script_dir = os.path.dirname(os.path.abspath(__file__))
 print(script_dir)
-image_path = os.path.join(script_dir, "Test Images", "GodotFrame.png")
+image_path = os.path.join(script_dir, "GodotFrame.png")
 
 # Main loop for shadow detection and shape approximation
 while True:

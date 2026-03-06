@@ -28,10 +28,10 @@ func _ready() -> void:
 	# Finds the absolute path for the operating system for the reference image, used for comparison during shadow detection
 	if OS.has_feature("editor"):
 		file_path = ProjectSettings.globalize_path("res://")
-		file_path = file_path.path_join("..").path_join("External Software/Test Images/GodotFrame.png")
+		file_path = file_path.path_join("..").path_join("External Software/GodotFrame.png")
 	else:
 		file_path = OS.get_executable_path().get_base_dir()
-		file_path = file_path.path_join("External Software/Test Images/GodotFrame.png")
+		file_path = file_path.path_join("External Software/GodotFrame.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
