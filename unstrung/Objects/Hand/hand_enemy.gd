@@ -2,6 +2,8 @@ extends Node2D
 
 # 3689.0, 1851.0
 
+@onready var hand_jumpscare: AudioStreamPlayer = $"../../../HandJumpscare"
+
 var start_position : Vector2
 var move_distance := 1350
 var move_time := 3.0
@@ -22,6 +24,7 @@ func run_sequence() -> void:
 	
 func move_down() -> void:
 	animPlayer.play("ArmatureAction")
+	hand_jumpscare.play()
 
 	var tween = create_tween()
 	tween.tween_property(

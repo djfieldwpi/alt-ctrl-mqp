@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://osg2kfxqxa0h" path="res://Objects/Soldier/soldier.tscn" id="21_jbsh1"]
 [ext_resource type="AudioStream" uid="uid://c7wrk87q7hppb" path="res://Audio/SFX/SteamVent.ogg" id="21_o5w1d"]
 [ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
+[ext_resource type="AudioStream" uid="uid://bckbj27ay0xxi" path="res://Audio/SFX/WaterRushing.wav" id="26_nph2v"]
+[ext_resource type="AudioStream" uid="uid://42l5wxwrvtw" path="res://Audio/SFX/HandJumpScare.ogg" id="27_cp88c"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
 offsets = PackedFloat32Array(0, 0.624, 1)
@@ -820,6 +822,18 @@ parameters/looping = true
 
 [node name="ChainBreak" type="AudioStreamPlayer" parent="." unique_id=504511764]
 stream = ExtResource("22_jd0dm")
+bus = &"SFX"
+
+[node name="RushingWater" type="AudioStreamPlayer2D" parent="." unique_id=1418441477]
+position = Vector2(6213, 2459)
+stream = ExtResource("26_nph2v")
+autoplay = true
+max_distance = 750.0
+attenuation = 1.3195082
+bus = &"SFX"
+
+[node name="HandJumpscare" type="AudioStreamPlayer" parent="." unique_id=485696437]
+stream = ExtResource("27_cp88c")
 bus = &"SFX"
 
 [connection signal="body_entered" from="Triggers/Bed" to="Triggers" method="_on_bed_body_entered"]
