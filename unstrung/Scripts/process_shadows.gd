@@ -204,6 +204,11 @@ func _process(_delta: float) -> void:
 		elif %CharacterBody2D.global_position.y > 1000 and %Camera2D.global_position.y < 1000:
 			%Camera2D.global_position.y += 2500
 
+func _input(event):
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_Q:
+			get_tree().change_scene_to_file("res://UI/ui.tscn")
+
 func _draw() -> void:
 	if GlobalVariables.is_actors_locked and len(debug_drawn_vertices) > 0:
 		var prev_point: Vector2
