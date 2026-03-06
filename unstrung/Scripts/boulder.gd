@@ -19,7 +19,9 @@ func unfreeze_body():
 func _on_rigid_body_2d_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
-		body.global_position = body.get_parent().get_parent().find_child("Triggers").check_beach[3]
+		await get_tree().process_frame
+		var value = get_parent().find_child("Triggers").check_beach[3]
+		get_parent().find_child("CharacterBody2D").global_position = value
 		var timer: SceneTreeTimer = get_tree().create_timer(2)
 		await timer.timeout
 		GlobalVariables.is_actors_locked = false
