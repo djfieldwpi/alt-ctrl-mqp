@@ -16,6 +16,7 @@ var debug_spawn_vertices: Array[Vector2] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_viewport().size = Vector2i(1920, 1080)
 	# Load and play music
 	# GlobalAudio.play_music("res://Audio/Music/BG_Music.mp3")
 	
@@ -27,9 +28,10 @@ func _ready() -> void:
 	# Finds the absolute path for the operating system for the reference image, used for comparison during shadow detection
 	if OS.has_feature("editor"):
 		file_path = ProjectSettings.globalize_path("res://")
+		file_path = file_path.path_join("..").path_join("External Software/Test Images/GodotFrame.png")
 	else:
 		file_path = OS.get_executable_path().get_base_dir()
-	file_path = file_path.path_join("..").path_join("External Software/Test Images/GodotFrame.png")
+		file_path = file_path.path_join("External Software/Test Images/GodotFrame.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -125,7 +127,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Delete Shadow"):
 		for i in range(playerShadows.size() - 1, -1, -1):
 				var shadow: StaticBody2D = playerShadows[i]
-				
 				if not is_instance_valid(shadow):
 					playerShadows.remove_at(i)
 					continue
