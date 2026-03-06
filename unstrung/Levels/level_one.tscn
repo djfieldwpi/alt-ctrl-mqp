@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://osg2kfxqxa0h" path="res://Objects/Soldier/soldier.tscn" id="21_jbsh1"]
 [ext_resource type="AudioStream" uid="uid://c7wrk87q7hppb" path="res://Audio/SFX/SteamVent.ogg" id="21_o5w1d"]
 [ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
-[ext_resource type="AudioStream" uid="uid://bckbj27ay0xxi" path="res://Audio/SFX/WaterRushing.wav" id="26_nph2v"]
+[ext_resource type="AudioStream" uid="uid://bmrhsf045665b" path="res://Audio/SFX/WaterRushing.ogg" id="26_nph2v"]
 [ext_resource type="AudioStream" uid="uid://42l5wxwrvtw" path="res://Audio/SFX/HandJumpScare.ogg" id="27_cp88c"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
@@ -498,7 +498,7 @@ visibility_layer = 8
 position = Vector2(-2, 0)
 polygon = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
 
-[node name="Pit" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=57776880]
+[node name="Pit" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=57776880 groups=["dirt"]]
 visibility_layer = 8
 position = Vector2(3847, 3052)
 scale = Vector2(1, 0.52)
@@ -513,7 +513,7 @@ visibility_layer = 8
 position = Vector2(-6, 0)
 polygon = PackedVector2Array(375.90295, -441.41034, 418.35583, -101.53676, 481.1245, -33.06192, 597.15125, -27.355682, 686.54895, -33.06192, 753.1217, -84.418045, 810.756, -207.10535, 854.694, -353.56543, 913.27734, -470.73315, 1014.3667, -501.06, 1226.7563, -497.0055, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 239.10535, -497.70752, 347.24573, -497.72617)
 
-[node name="Puddle" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1701525063]
+[node name="Puddle" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1701525063 groups=["dirt"]]
 visibility_layer = 8
 position = Vector2(5496, 3052)
 scale = Vector2(1, 0.52)
@@ -587,7 +587,7 @@ position = Vector2(-478, -216)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop" unique_id=1979684704 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop/StaticBody2D" unique_id=1523984183 groups=["wood"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop/StaticBody2D" unique_id=1523984183]
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")
@@ -597,7 +597,7 @@ position = Vector2(546, -216)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop" unique_id=202798119 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop/StaticBody2D" unique_id=1749269825 groups=["wood"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop/StaticBody2D" unique_id=1749269825]
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")
@@ -827,10 +827,12 @@ bus = &"SFX"
 [node name="RushingWater" type="AudioStreamPlayer2D" parent="." unique_id=1418441477]
 position = Vector2(6213, 2459)
 stream = ExtResource("26_nph2v")
+volume_db = 5.0
 autoplay = true
 max_distance = 750.0
-attenuation = 1.3195082
+attenuation = 1.1
 bus = &"SFX"
+parameters/looping = true
 
 [node name="HandJumpscare" type="AudioStreamPlayer" parent="." unique_id=485696437]
 stream = ExtResource("27_cp88c")
