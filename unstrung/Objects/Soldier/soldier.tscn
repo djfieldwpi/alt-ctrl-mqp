@@ -22,7 +22,7 @@ size = 1.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-light_color = Color(0.123473026, 0.123473056, 0.123472996, 1)
+light_color = Color(0.4480669, 0.448067, 0.44806683, 1)
 sky_mode = 1
 
 [node name="Soldier animation 2" parent="SubViewport" unique_id=1833165150 instance=ExtResource("1_xmejw")]

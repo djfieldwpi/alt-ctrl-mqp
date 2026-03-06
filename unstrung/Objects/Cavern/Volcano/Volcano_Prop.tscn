@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bygomy1q84it6"]
+
+[ext_resource type="PackedScene" uid="uid://ctnn85wxfk5d8" path="res://Objects/Cavern/Volcano/Volcano.glb" id="1_kkfig"]
+[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="1_nvdi0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
+shader = ExtResource("1_nvdi0")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Volcano_Prop" type="Node2D" unique_id=41544662]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
+transparent_bg = true
+size = Vector2i(2048, 2048)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1042998650]
+transform = Transform3D(1, 0, 0, 0, 1.0886823, 0, 0, 0, 1, 0, 0, 5)
+projection = 1
+size = 3.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+light_color = Color(0.47, 0.47, 0.47, 1)
+sky_mode = 1
+
+[node name="Volcano2" parent="SubViewport" unique_id=1547113321 instance=ExtResource("1_kkfig")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, -0.5103967, 0)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+material = SubResource("ShaderMaterial_nshul")
+offset_right = 512.0
+offset_bottom = 512.0
+texture = SubResource("ViewportTexture_6678p")

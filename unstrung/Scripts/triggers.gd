@@ -166,7 +166,7 @@ func _on_activate_rocks_body_entered(body: Node2D) -> void:
 func spawnBoulder():
 	var spawn_position = Vector2(9100.0, 1854.0)
 	var boulder_instance = boulder.instantiate()
-	boulder_instance.global_position = position
+	boulder_instance.global_position = spawn_position
 	get_parent().add_child(boulder_instance)
 
 
@@ -174,6 +174,7 @@ func _on_end_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
 		GlobalVariables.is_system_lock = true
+		
 		%FinishText.visible = true
 		%FinishText.global_position.y += 2400
 		%FinishText.global_position.x += 800
