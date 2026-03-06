@@ -16,7 +16,7 @@ own_world_3d = true
 transparent_bg = true
 
 [node name="Box2" parent="SubViewport" unique_id=1463134115 instance=ExtResource("1_2rn04")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.5510504, 0)
+transform = Transform3D(3, 0, 0, 0, 2.9743347, -0.3915786, 0, 0.3915786, 2.9743347, 0, -0.5510504, 0)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1042998650]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)

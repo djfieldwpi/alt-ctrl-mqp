@@ -22,7 +22,9 @@ size = 1.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-light_color = Color(0.47, 0.47, 0.47, 1)
+light_color = Color(0.45470184, 0.43103892, 0.6997022, 1)
+light_energy = 5.0
+light_specular = 0.0
 sky_mode = 1
 
 [node name="SkyWallLong2" parent="SubViewport" unique_id=1319225398 instance=ExtResource("1_lamaq")]

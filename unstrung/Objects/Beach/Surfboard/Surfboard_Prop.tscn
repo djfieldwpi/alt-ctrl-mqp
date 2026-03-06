@@ -26,6 +26,7 @@ light_color = Color(0.47, 0.47, 0.47, 1)
 sky_mode = 1
 
 [node name="Surfboard2" parent="SubViewport" unique_id=1448199328 instance=ExtResource("1_pq77o")]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 0, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 material = SubResource("ShaderMaterial_nshul")

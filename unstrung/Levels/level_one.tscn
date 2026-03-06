@@ -1,16 +1,15 @@
 [gd_scene format=3 uid="uid://bacu4o8maxm4v"]
 
-[ext_resource type="PackedScene" uid="uid://cbxchpta7g5ea" path="res://Objects/surface.tscn" id="1_2b52f"]
 [ext_resource type="Script" uid="uid://xilu12hpjx1l" path="res://Scripts/process_shadows.gd" id="1_2848f"]
 [ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="1_wi846"]
 [ext_resource type="PackedScene" uid="uid://1w6fmus6y2ch" path="res://Objects/Workshop/Oval Window/Backdrop/OvalWindowBackdrop_Prop.tscn" id="2_cph7v"]
 [ext_resource type="Texture2D" uid="uid://dg1a6450crvjl" path="res://Sprites/flamehazard.jpg" id="2_l4fe4"]
+[ext_resource type="PackedScene" uid="uid://cokkkwn7mpoaa" path="res://Objects/Workshop/LightWoodBackground/LightWoodBackground_Prop.tscn" id="3_2kr7s"]
 [ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Workshop/Crate/Crate_Prop.tscn" id="3_pvy0h"]
 [ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Workshop/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://yw4205367wwy" path="res://Objects/Beach/Palm Tree/Large/PalmTreeLarge_Prop.tscn" id="4_lhaxc"]
 [ext_resource type="PackedScene" uid="uid://dfn1724e8oa3n" path="res://Player/player.tscn" id="6_2848f"]
 [ext_resource type="PackedScene" uid="uid://cwo800esd4dpg" path="res://Objects/Workshop/Boiler/Boiler_Prop.tscn" id="6_ce78g"]
-[ext_resource type="FontFile" uid="uid://d4ijk0au8f1ih" path="res://UI/Fonts/roboto_regular_font.tres" id="6_kmyb2"]
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://b7iq3vou5de5c" path="res://Objects/Workshop/Engine/Engine_Prop.tscn" id="7_6836m"]
 [ext_resource type="Script" uid="uid://1gjlhgvwn70l" path="res://Levels/soldier.gd" id="8_2py18"]
@@ -18,13 +17,81 @@
 [ext_resource type="PackedScene" uid="uid://brxawk5uvjfsj" path="res://Objects/smoke.tscn" id="10_jbsh1"]
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
 [ext_resource type="PackedScene" uid="uid://dkghqjmbmfds2" path="res://Objects/Workshop/Chain/Large/ChainLarge_Prop.tscn" id="11_t50p6"]
+[ext_resource type="PackedScene" uid="uid://dtl3lsjoa64jr" path="res://Objects/Workshop/Ceiling/Lamp/Cord/CeilingLampCord_Prop.tscn" id="12_6a7d4"]
+[ext_resource type="PackedScene" uid="uid://clkcghn3pcihj" path="res://Objects/Cavern/Dark Rock Ground/Long/DarkRockGroundLong_Prop.tscn" id="12_cp88c"]
+[ext_resource type="PackedScene" uid="uid://bnt5wbhqixhen" path="res://Objects/Workshop/Box/Box_Prop.tscn" id="13_p2v6c"]
+[ext_resource type="PackedScene" uid="uid://bar4ps3fn60in" path="res://Objects/Cavern/Light Rock Ground/Long/LightRockGroundLong_Prop.tscn" id="13_wepyk"]
 [ext_resource type="PackedScene" uid="uid://djgtfrl8a6q1y" path="res://Objects/Hand/Hand_Enemy.tscn" id="14_cjwru"]
 [ext_resource type="PackedScene" uid="uid://bofrcnjl1s20g" path="res://Objects/Workshop/Wood Ground/Long/WoodGroundLong_Prop.tscn" id="14_lccb3"]
+[ext_resource type="PackedScene" uid="uid://lskjynn0igw4" path="res://Objects/Cavern/Catwalk/Catwalk_Prop.tscn" id="15_23fag"]
 [ext_resource type="Script" uid="uid://brtktaid3a84e" path="res://Objects/Hand/hand_enemy.gd" id="15_o5w1d"]
+[ext_resource type="PackedScene" uid="uid://ctpf0fnvvtncp" path="res://Objects/Workshop/Chain/Medium/ChainMedium_Prop.tscn" id="15_q1nax"]
+[ext_resource type="PackedScene" uid="uid://cy2omvngcn0r4" path="res://Objects/Workshop/Chain/Small/ChainSmall_Prop.tscn" id="16_w6h7a"]
+[ext_resource type="PackedScene" uid="uid://f504uqsqbwm1" path="res://Objects/Workshop/Gear/Large/GearLarge_Prop.tscn" id="20_13xmu"]
 [ext_resource type="AudioStream" uid="uid://box3gmj1c5x1t" path="res://Audio/Music/Ambience_Beach.ogg" id="20_cjwru"]
+[ext_resource type="PackedScene" uid="uid://cmi5eq0a85hjl" path="res://Objects/Workshop/Gear/Small/GearSmall_Prop.tscn" id="21_8b4co"]
 [ext_resource type="PackedScene" uid="uid://osg2kfxqxa0h" path="res://Objects/Soldier/soldier.tscn" id="21_jbsh1"]
 [ext_resource type="AudioStream" uid="uid://c7wrk87q7hppb" path="res://Audio/SFX/SteamVent.ogg" id="21_o5w1d"]
+[ext_resource type="PackedScene" uid="uid://divh7xpby7rk3" path="res://Objects/Workshop/Gear/Tiny/GearTiny_Prop.tscn" id="22_0rjyv"]
 [ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
+[ext_resource type="PackedScene" uid="uid://hc512sjigujh" path="res://Objects/Workshop/Metal/Pipe/Small/Part/MetalPipeSmallPart_Prop.tscn" id="23_l2s3v"]
+[ext_resource type="PackedScene" uid="uid://cpujsc2jxt30t" path="res://Objects/Forest/Lake/Deep/LakeDeep_Prop.tscn" id="24_7cflg"]
+[ext_resource type="PackedScene" uid="uid://ogj4likabcog" path="res://Objects/Workshop/Metal/Pipe/Small/Corner/MetalPipeSmallCorner_Prop.tscn" id="24_lggn2"]
+[ext_resource type="PackedScene" uid="uid://muod4mav4vqv" path="res://Objects/Workshop/Ceiling/Hook/Cord/CeilingHookCord_Prop.tscn" id="26_nr3vf"]
+[ext_resource type="PackedScene" uid="uid://ciai6mfpkrdut" path="res://Objects/Workshop/Cobble Ground/Long/CobbleGroundLong_Prop.tscn" id="27_w6h7a"]
+[ext_resource type="PackedScene" uid="uid://bhgqwt8y2kfmd" path="res://Objects/Workshop/Metal/Fence/Straight/MetalFenceStraight_Prop.tscn" id="28_oc6y0"]
+[ext_resource type="PackedScene" uid="uid://bygomy1q84it6" path="res://Objects/Cavern/Volcano/Volcano_Prop.tscn" id="28_y2ssv"]
+[ext_resource type="PackedScene" uid="uid://de10540ydq4f6" path="res://Objects/Forest/Grass/Ground/Long/GrassGroundLong_Prop.tscn" id="29_m4hqf"]
+[ext_resource type="PackedScene" uid="uid://cf1lx72o1a1bd" path="res://Objects/Workshop/Metal/Fence/Pole/MetalFencePole_Prop.tscn" id="29_nsj7h"]
+[ext_resource type="PackedScene" uid="uid://doly4t6p7sr5c" path="res://Objects/Cavern/Rock/Background/RockBackground_Prop.tscn" id="29_wepyk"]
+[ext_resource type="PackedScene" uid="uid://20mbqinrpnfq" path="res://Objects/Forest/Tree/Large/TreeLarge_Prop.tscn" id="30_m11ba"]
+[ext_resource type="PackedScene" uid="uid://dkwc3mkpjyaq6" path="res://Objects/Forest/Dirt Ground/Long/DirtGroundLong_Prop.tscn" id="30_n67ls"]
+[ext_resource type="PackedScene" uid="uid://f647tfk7npn1" path="res://Objects/Workshop/Ceiling/CeilingWood/LightWoodBackground3_Prop.tscn" id="30_nsj7h"]
+[ext_resource type="PackedScene" uid="uid://upoxkh5xjey1" path="res://Objects/Cavern/Lava/Vat/LavaVat_Prop.tscn" id="31_23fag"]
+[ext_resource type="PackedScene" uid="uid://k2e0xdjyo6iq" path="res://Objects/Beach/Ocean/Ocean_Prop.tscn" id="31_knwns"]
+[ext_resource type="PackedScene" uid="uid://cdyt0kws714fu" path="res://Objects/Cavern/Lava/Lake/LavaLake_Prop.tscn" id="31_xymjv"]
+[ext_resource type="PackedScene" uid="uid://b4wkqohe7logl" path="res://Objects/Workshop/Ceiling/Hook/CeilingHook_Prop.tscn" id="32_eibiv"]
+[ext_resource type="PackedScene" uid="uid://dfcgsljkuia3d" path="res://Objects/Workshop/Ceiling/Lamp/CeilingLamp_Prop.tscn" id="33_6a7d4"]
+[ext_resource type="PackedScene" uid="uid://bkur4mhjm6vuu" path="res://Objects/Workshop/Bed/prop_empty_bed.tscn" id="34_6a7d4"]
+[ext_resource type="PackedScene" uid="uid://dsptpcri07v52" path="res://Objects/Workshop/Floorboard/Broken/FloorboardBroken_Prop.tscn" id="35_pjf3e"]
+[ext_resource type="PackedScene" uid="uid://qo0mhlvx8we" path="res://Objects/Beach/Rubble/Medium/RubbleMedium_Prop.tscn" id="36_hvf66"]
+[ext_resource type="PackedScene" uid="uid://btjaufq3x61k4" path="res://Objects/Workshop/Desk/Long/DeskLong_Prop.tscn" id="37_8rkx5"]
+[ext_resource type="PackedScene" uid="uid://dxtswina2yuu5" path="res://Objects/Beach/Rubble/Large/RubbleLarge_Prop.tscn" id="37_d55dd"]
+[ext_resource type="PackedScene" uid="uid://csttx65s5u0ly" path="res://Objects/Forest/Tree/Small/TreeSmall_Prop.tscn" id="38_3pb5v"]
+[ext_resource type="PackedScene" uid="uid://dr7jjsn0b43w1" path="res://Objects/Workshop/Water Tank/WaterTank_Prop.tscn" id="38_l2s3v"]
+[ext_resource type="PackedScene" uid="uid://c6iy6bt8crb3l" path="res://Objects/Beach/Rubble/Small/RubbleSmall_Prop.tscn" id="38_uw1cm"]
+[ext_resource type="PackedScene" uid="uid://jyhgpvlbx0ge" path="res://Objects/Beach/Sky Wall/Long/SkyWallLong_Prop.tscn" id="39_l70lb"]
+[ext_resource type="PackedScene" uid="uid://ons2jyc2wg4r" path="res://Objects/Cavern/Metal Cage Pillar/MetalCagePillar_Prop.tscn" id="39_rlfmv"]
+[ext_resource type="PackedScene" uid="uid://cay7boi61hmra" path="res://Objects/Forest/Log Cabin/LogCabin_Prop.tscn" id="41_avyml"]
+[ext_resource type="PackedScene" uid="uid://cgg4ng31iw28o" path="res://Objects/Forest/Bush/Small/BushSmall_Prop.tscn" id="42_3pvfp"]
+[ext_resource type="PackedScene" uid="uid://cqoqn0taorwgo" path="res://Objects/Workshop/PuppetStringHolder/PuppetStringHolder_Prop.tscn" id="43_1xag0"]
+[ext_resource type="PackedScene" uid="uid://bnfmxjucrm3kq" path="res://Objects/Forest/Water Wheel/WaterWheel_Prop.tscn" id="43_3pb5v"]
+[ext_resource type="PackedScene" uid="uid://djg3xmdi1jfy3" path="res://Objects/Workshop/Wall&Ceiling/LightWoodBackground2_Prop.tscn" id="43_nr3vf"]
+[ext_resource type="PackedScene" uid="uid://c6kdaidbvfdq2" path="res://Objects/Forest/Wooden/Ladder/WoodenLadder_Prop.tscn" id="44_quceh"]
+[ext_resource type="PackedScene" uid="uid://dfjen0gan7cv1" path="res://Objects/Forest/Wooden/Bridge/WoodenBridge_Prop.tscn" id="45_tolma"]
+[ext_resource type="PackedScene" uid="uid://o8oxmwqxii2t" path="res://Objects/Beach/Shovel/Shovel_Prop.tscn" id="48_57csw"]
+[ext_resource type="PackedScene" uid="uid://bsp7pgruqg570" path="res://Objects/Beach/Starfish/Starfish_Prop.tscn" id="50_uqkx0"]
+[ext_resource type="PackedScene" uid="uid://k0851qb70cmw" path="res://Objects/Beach/Umbrella/Umbrella_Prop.tscn" id="51_tht63"]
+[ext_resource type="PackedScene" uid="uid://botlcf7d3ey3h" path="res://Objects/Beach/Surfboard/Surfboard_Prop.tscn" id="60_qnkuv"]
+[ext_resource type="PackedScene" uid="uid://bkvfdj35vncoh" path="res://Objects/Beach/Tropical Drink/TropicalDrink_Prop.tscn" id="61_qnkuv"]
+[ext_resource type="PackedScene" uid="uid://c1qqhryixm43c" path="res://Objects/Forest/Tree/Medium/TreeMedium_Prop.tscn" id="63_skp3m"]
+[ext_resource type="PackedScene" uid="uid://8j4pn052ymc5" path="res://Objects/Forest/Tree/Stump/TreeStump_Prop.tscn" id="64_iy0sr"]
+[ext_resource type="PackedScene" uid="uid://dye4xv55g47q5" path="res://Objects/Forest/Axe/Axe_Prop.tscn" id="65_eocln"]
+[ext_resource type="PackedScene" uid="uid://dta2g4ssq4yut" path="res://Objects/Beach/Beach/Ball/BeachBall_Prop.tscn" id="67_oe84i"]
+[ext_resource type="PackedScene" uid="uid://c6tncysmaykpr" path="res://Objects/Cavern/CatwalkPole/CatwalkPole_Prop.tscn" id="68_7l8y2"]
+[ext_resource type="PackedScene" uid="uid://dtk5krdy4tqmw" path="res://Objects/Beach/Beach/Tube/BeachTube_Prop.tscn" id="68_youpk"]
+[ext_resource type="PackedScene" uid="uid://qy4ipj8bji2j" path="res://Objects/Forest/Sign Post/Right/SignPostRight_Prop.tscn" id="74_tolma"]
+[ext_resource type="PackedScene" uid="uid://bw63nhmbqp2pp" path="res://Objects/Forest/Sign Post/Left/SignPostLeft_Prop.tscn" id="75_esclk"]
+[ext_resource type="PackedScene" uid="uid://clokjnhrfajoy" path="res://Objects/Forest/Stacked Planks/StackedPlanks_Prop.tscn" id="76_esclk"]
+[ext_resource type="PackedScene" uid="uid://7kw0fege3kbt" path="res://Objects/Beach/Bucket/Bucket_Prop.tscn" id="80_sxc48"]
+[ext_resource type="PackedScene" uid="uid://f5iv314st2uk" path="res://Objects/Beach/Lounge/Chair/LoungeChair_Prop.tscn" id="81_ewngs"]
+[ext_resource type="PackedScene" uid="uid://ccdipn8vjh1w3" path="res://Objects/Beach/Lounge/Table/LoungeTable_Prop.tscn" id="82_nrnam"]
+[ext_resource type="PackedScene" uid="uid://quws1j6awmxq" path="res://Objects/Beach/Palm Tree/Small/PalmTreeSmall_Prop.tscn" id="83_3rsbe"]
+[ext_resource type="PackedScene" uid="uid://dleo1kk7nghbu" path="res://Objects/Beach/Rock/Large/RockLarge_Prop.tscn" id="84_3rsbe"]
+[ext_resource type="PackedScene" uid="uid://cfum8j06jnywl" path="res://Objects/Beach/Rock/Medium/RockMedium_Prop.tscn" id="85_opp81"]
+[ext_resource type="PackedScene" uid="uid://dwqu3wtany6ei" path="res://Objects/Beach/Rock/Small/RockSmall_Prop.tscn" id="86_ruas5"]
+[ext_resource type="PackedScene" uid="uid://cj1gffa3ypcgk" path="res://Objects/Beach/Sand Ground/Long/SandGroundLong_Prop.tscn" id="87_57csw"]
+[ext_resource type="PackedScene" uid="uid://dxxtbc74qjjmp" path="res://Objects/Beach/Sandcastle/Sandcastle_Prop.tscn" id="89_uqkx0"]
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
 offsets = PackedFloat32Array(0, 0.624, 1)
@@ -75,7 +142,31 @@ color = Color(0.4718973, 0.4718973, 0.4718973, 0.9607843)
 color_initial_ramp = SubResource("GradientTexture1D_afeaf")
 alpha_curve = SubResource("CurveTexture_jd0dm")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lggn2"]
+size = Vector2(239, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr3vf"]
+size = Vector2(34.091278, 511.81818)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsj7h"]
+size = Vector2(2048, 68.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y30io"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4hqf"]
+size = Vector2(1295.0007, 110.00006)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tht63"]
+height = 40.142517
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odeua"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rsbyu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjune"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odeua"]
+size = Vector2(2047.5, 410)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvy0h"]
 size = Vector2(22.025179, 19.864637)
@@ -83,21 +174,40 @@ size = Vector2(22.025179, 19.864637)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afeaf"]
 size = Vector2(1113.0432, 18)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrdj6"]
+size = Vector2(512, 272)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cflg"]
+size = Vector2(308, 400)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qnkuv"]
+radius = 13.701172
+height = 31.08612
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uqkx0"]
+radius = 55.168945
+height = 110.78882
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t50p6"]
+size = Vector2(46.14453, 35.665497)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2848f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhaxc"]
+size = Vector2(26.583797, 61.679634)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fkoe"]
+size = Vector2(17.860474, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4fe4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6836m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lccb3"]
+size = Vector2(20.960173, 28.363663)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjwru"]
+size = Vector2(20, 26.104301)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbsh1"]
 
@@ -146,6 +256,14 @@ offset_right = -926.0
 offset_bottom = 2004.0
 scale = Vector2(278.44986, 27.17638)
 
+[node name="WhiteBackdrop_3" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=288647674]
+visibility_layer = 9
+offset_left = -966.0
+offset_top = 4514.0
+offset_right = -926.0
+offset_bottom = 4554.0
+scale = Vector2(278.44986, 27.17638)
+
 [node name="Level1_Workshop" type="Node2D" parent="Layer1_Farthest" unique_id=443231305]
 
 [node name="HoleBackdrop1" type="ColorRect" parent="Layer1_Farthest/Level1_Workshop" unique_id=947946239]
@@ -156,8 +274,22 @@ offset_right = 1591.9999
 offset_bottom = 375.00003
 scale = Vector2(16.038786, 12.860923)
 
+[node name="LightWoodBG" type="Node2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=2060072714]
+
+[node name="LightWoodBackground1" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=41544662 instance=ExtResource("3_2kr7s")]
+position = Vector2(-966, -737)
+
+[node name="LightWoodBackground2" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=149204286 instance=ExtResource("3_2kr7s")]
+position = Vector2(1082, -737)
+
+[node name="LightWoodBackground3" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=1928591304 instance=ExtResource("3_2kr7s")]
+position = Vector2(3129, -737)
+
+[node name="LightWoodBackground4" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=1291769269 instance=ExtResource("3_2kr7s")]
+position = Vector2(1076, 286)
+
 [node name="DangerSign1" type="Line2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=1359738964]
-position = Vector2(3754, 145.00002)
+position = Vector2(3646, 168)
 points = PackedVector2Array(0, 0, 0, -150)
 default_color = Color(0, 0, 0, 1)
 
@@ -166,17 +298,21 @@ position = Vector2(0, -179.00002)
 scale = Vector2(0.263422, 0.263422)
 texture = ExtResource("2_l4fe4")
 
-[node name="DangerSign2" type="Line2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=479417754]
-position = Vector2(4645, 145)
-points = PackedVector2Array(0, 0, 0, -150)
-default_color = Color(0, 0, 0, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Layer1_Farthest/Level1_Workshop/DangerSign2" unique_id=18998056]
-position = Vector2(0, -179.00002)
-scale = Vector2(0.263422, 0.263422)
-texture = ExtResource("2_l4fe4")
-
 [node name="Level2_Forest" type="Node2D" parent="Layer1_Farthest" unique_id=1217037432]
+
+[node name="SkyWallForest" type="Node2D" parent="Layer1_Farthest/Level2_Forest" unique_id=1744881428]
+
+[node name="SkyWallLong1" parent="Layer1_Farthest/Level2_Forest/SkyWallForest" unique_id=241415247 instance=ExtResource("39_l70lb")]
+position = Vector2(4814, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong2" parent="Layer1_Farthest/Level2_Forest/SkyWallForest" unique_id=1523297583 instance=ExtResource("39_l70lb")]
+position = Vector2(6350, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong3" parent="Layer1_Farthest/Level2_Forest/SkyWallForest" unique_id=122445566 instance=ExtResource("39_l70lb")]
+position = Vector2(7886, -630)
+scale = Vector2(5, 3.333)
 
 [node name="Level3_Beach" type="Node2D" parent="Layer1_Farthest" unique_id=51140608]
 
@@ -199,6 +335,41 @@ uv = PackedVector2Array(-134.47585, -52.88624, -92.739, -109.67572, -45.186356, 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer1_Farthest/Level3_Beach/CaveTemp/StaticBody2D" unique_id=414033174]
 polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 74.65088, -37.460144)
 
+[node name="SkyWallBeach" type="Node2D" parent="Layer1_Farthest/Level3_Beach" unique_id=976316135]
+position = Vector2(-5780, 2594)
+
+[node name="SkyWallLong1" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=183949755 instance=ExtResource("39_l70lb")]
+position = Vector2(4814, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong2" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=557575200 instance=ExtResource("39_l70lb")]
+position = Vector2(6350, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong3" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=412049692 instance=ExtResource("39_l70lb")]
+position = Vector2(7886, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong4" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=711922102 instance=ExtResource("39_l70lb")]
+position = Vector2(9422, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong5" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=1878242415 instance=ExtResource("39_l70lb")]
+position = Vector2(10958, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong6" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=1892257093 instance=ExtResource("39_l70lb")]
+position = Vector2(12494, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong7" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=2128124726 instance=ExtResource("39_l70lb")]
+position = Vector2(14030, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong8" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=1969414602 instance=ExtResource("39_l70lb")]
+position = Vector2(15566, -630)
+scale = Vector2(3, 2)
+
 [node name="Level4_Caverns" type="Node2D" parent="Layer1_Farthest" unique_id=1625799169]
 
 [node name="Layer2_Further" type="Node2D" parent="." unique_id=1848343906]
@@ -209,7 +380,7 @@ z_as_relative = false
 
 [node name="Level1_Workshop" type="Node2D" parent="Layer2_Further" unique_id=376913224]
 
-[node name="OvalWindowBackdrop" parent="Layer2_Further/Level1_Workshop" unique_id=41544662 instance=ExtResource("2_cph7v")]
+[node name="OvalWindowBackdrop" parent="Layer2_Further/Level1_Workshop" unique_id=1207149538 instance=ExtResource("2_cph7v")]
 position = Vector2(-235, -242)
 scale = Vector2(0.64452004, 0.64452004)
 
@@ -235,26 +406,29 @@ texture = SubResource("GradientTexture1D_ya8ts")
 metadata/_edit_use_anchors_ = true
 
 [node name="Boiler" parent="Layer2_Further/Level1_Workshop" unique_id=1187516386 instance=ExtResource("6_ce78g")]
-position = Vector2(3739, -352)
+position = Vector2(3630, -330)
 
 [node name="Engine" parent="Layer2_Further/Level1_Workshop" unique_id=289959632 instance=ExtResource("7_6836m")]
-position = Vector2(4092, -269)
+position = Vector2(3995, -247)
+
+[node name="WaterTank" parent="Layer2_Further/Level1_Workshop" unique_id=1232553043 instance=ExtResource("38_l2s3v")]
+position = Vector2(4359, -285)
 
 [node name="Level2_Forest" type="Node2D" parent="Layer2_Further" unique_id=465715497]
 
 [node name="Level3_Beach" type="Node2D" parent="Layer2_Further" unique_id=1488651930]
 
 [node name="PalmTreeLarge1" parent="Layer2_Further/Level3_Beach" unique_id=200076993 instance=ExtResource("4_lhaxc")]
-position = Vector2(4892, -616)
+position = Vector2(1373, 1895)
 scale = Vector2(1.1849691, 1.1849691)
 
-[node name="PalmTreeLarge2" parent="Layer2_Further/Level3_Beach" unique_id=1392226460 instance=ExtResource("4_lhaxc")]
-position = Vector2(5624.0005, -616)
-scale = Vector2(1.1796073, 1.1796073)
+[node name="PalmTreeLarge2" parent="Layer2_Further/Level3_Beach" unique_id=958814573 instance=ExtResource("4_lhaxc")]
+position = Vector2(9294, 1895)
+scale = Vector2(1.1849691, 1.1849691)
 
-[node name="PalmTreeLarge3" parent="Layer2_Further/Level3_Beach" unique_id=971682619 instance=ExtResource("4_lhaxc")]
-position = Vector2(7000.0005, -616)
-scale = Vector2(1.1796073, 1.1796073)
+[node name="PalmTreeLarge3" parent="Layer2_Further/Level3_Beach" unique_id=39920333 instance=ExtResource("4_lhaxc")]
+position = Vector2(7803, 1895)
+scale = Vector2(1.1849691, 1.1849691)
 
 [node name="PipeTemp" type="Polygon2D" parent="Layer2_Further/Level3_Beach" unique_id=1440596136]
 position = Vector2(6163, 2155)
@@ -273,7 +447,6 @@ process_material = SubResource("ParticleProcessMaterial_6836m")
 [node name="Level4_Caverns" type="Node2D" parent="Layer2_Further" unique_id=945028229]
 
 [node name="Layer3_Closer" type="Node2D" parent="." unique_id=420166214]
-light_mask = 0
 visibility_layer = 8
 z_as_relative = false
 
@@ -283,83 +456,243 @@ visibility_layer = 8
 [node name="Level1_Workshop" type="Node2D" parent="Layer3_Closer" unique_id=661318422]
 visibility_layer = 8
 
-[node name="ToBeReplaced" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=542802590]
-visibility_layer = 8
-
-[node name="Ground1" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1330873477 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(302.00003, 418.00003)
-scale = Vector2(63.428535, 6.5411944)
-
-[node name="Ceiling" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=135425095 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(1923.9999, -478.99997)
-scale = Vector2(144.52504, 3.0526328)
-
-[node name="TopBox1" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=210396714 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(369, -370)
-scale = Vector2(2.3927402, 2.5200007)
-
-[node name="TopBox2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=2035820658 groups=["transparent"] instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(369, -139)
-scale = Vector2(2.4, 3.5999994)
-
-[node name="TopBoxPillar" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1524570820 groups=["transparent"] instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(369, 110.00001)
-scale = Vector2(0.5213458, 8.832654)
-
-[node name="LeftWall1" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=702923778 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(-946, 23)
-scale = Vector2(1, 13.280001)
-
-[node name="LeftWall2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1962165840 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(-946, -371)
-scale = Vector2(1.0148665, 2.4400005)
-
-[node name="BedBox" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1746030507 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(-721, 223)
-scale = Vector2(10.285662, -3.292248)
-
-[node name="Ground2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=310802932 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(3489, 418)
-scale = Vector2(65.708534, 6.5411944)
-
-[node name="BedText" type="Label" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=559306047]
-light_mask = 9
-offset_left = -883.0
-offset_top = 106.00001
-offset_right = -843.0
-offset_bottom = 129.0
-scale = Vector2(10.866655, 9.46121)
-theme_override_fonts/font = ExtResource("6_kmyb2")
-theme_override_font_sizes/font_size = 13
-text = "Bed"
-
-[node name="TopBox3" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=127780359 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(2831, -244.00002)
-scale = Vector2(2.4, 8.759998)
-
-[node name="RightWall1" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=681176395 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(4786.0005, -106.00001)
-scale = Vector2(1.4076318, 15.679034)
-
-[node name="TopBox4" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=152613396 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(4166, 176)
-scale = Vector2(30.005672, -1.572248)
-
-[node name="Smoke" parent="Layer3_Closer/Level1_Workshop" unique_id=460552790 instance=ExtResource("10_jbsh1")]
-position = Vector2(4039.9998, -317)
+[node name="Smoke1" parent="Layer3_Closer/Level1_Workshop" unique_id=460552790 instance=ExtResource("10_jbsh1")]
+position = Vector2(3933, -295)
 scale = Vector2(0.050804216, 0.050804216)
+
+[node name="Smoke2" parent="Layer3_Closer/Level1_Workshop" unique_id=1085907192 instance=ExtResource("10_jbsh1")]
+position = Vector2(3844, -296)
+scale = Vector2(0.050804216, 0.050804216)
+
+[node name="Bed" parent="Layer3_Closer/Level1_Workshop" unique_id=1792760753 instance=ExtResource("34_6a7d4")]
+position = Vector2(-959, -53)
+
+[node name="ChainLarge" parent="Layer3_Closer/Level1_Workshop" unique_id=651490417 instance=ExtResource("11_t50p6")]
+position = Vector2(953, -472)
+scale = Vector2(0.5, 0.5)
+
+[node name="ChainMedium" parent="Layer3_Closer/Level1_Workshop" unique_id=1342186569 instance=ExtResource("15_q1nax")]
+position = Vector2(655, -527)
+scale = Vector2(0.5, 0.5)
+
+[node name="ChainSmall" parent="Layer3_Closer/Level1_Workshop" unique_id=1136367428 instance=ExtResource("16_w6h7a")]
+position = Vector2(804, -581)
+
+[node name="PuppetStringHolder" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=2070830300]
+
+[node name="PuppetStringHolderActual" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=303206066 instance=ExtResource("43_1xag0")]
+visibility_layer = 8
+position = Vector2(-964, -645)
+scale = Vector2(0.25, 0.25)
+
+[node name="PuppetString1" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=484636274 instance=ExtResource("12_6a7d4")]
+position = Vector2(-757, -625)
+scale = Vector2(0.5, 0.5)
+
+[node name="PuppetString2" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1496345410 instance=ExtResource("12_6a7d4")]
+position = Vector2(-869, -635)
+scale = Vector2(0.5, 0.5)
+
+[node name="PuppetString3" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=2008137826 instance=ExtResource("12_6a7d4")]
+position = Vector2(-992, -624)
+scale = Vector2(0.5, 0.5)
+
+[node name="PuppetString4" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1539453321 instance=ExtResource("12_6a7d4")]
+position = Vector2(-803, -579)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalPipes" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=438493348]
+position = Vector2(-56, -2)
+
+[node name="MetalPipeSmallPart1" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=1360068631 instance=ExtResource("23_l2s3v")]
+position = Vector2(225, -451)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart2" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=736495585 instance=ExtResource("23_l2s3v")]
+position = Vector2(225, -399)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart3" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=856644154 instance=ExtResource("23_l2s3v")]
+position = Vector2(225, -347)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart4" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=627249308 instance=ExtResource("23_l2s3v")]
+position = Vector2(225, -295)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart5" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=2132728527 instance=ExtResource("23_l2s3v")]
+position = Vector2(402, -246)
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart11" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=2078974000 instance=ExtResource("23_l2s3v")]
+position = Vector2(454, -246)
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart12" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=923559134 instance=ExtResource("23_l2s3v")]
+position = Vector2(333, -118)
+rotation = 4.712389
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart6" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=1933890301 instance=ExtResource("23_l2s3v")]
+position = Vector2(385, -118)
+rotation = 4.712389
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart7" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=405797163 instance=ExtResource("23_l2s3v")]
+position = Vector2(434, -295)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart8" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=1145110973 instance=ExtResource("23_l2s3v")]
+position = Vector2(434, -347)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart9" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=1558697805 instance=ExtResource("23_l2s3v")]
+position = Vector2(434, -399)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallPart10" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=2076308410 instance=ExtResource("23_l2s3v")]
+position = Vector2(434, -451)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallCorner1" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=546157039 instance=ExtResource("24_lggn2")]
+position = Vector2(225, -246)
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalPipeSmallCorner2" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=461589617 instance=ExtResource("24_lggn2")]
+position = Vector2(434, -118)
+rotation = 4.712389
+scale = Vector2(0.25, 0.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/MetalPipes" unique_id=1456720742]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/MetalPipes/StaticBody2D" unique_id=187758803]
+position = Vector2(393.5, -293)
+shape = SubResource("RectangleShape2D_lggn2")
+
+[node name="CeilingLamp1" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=1340485045]
+
+[node name="CeilingLamp" parent="Layer3_Closer/Level1_Workshop/CeilingLamp1" unique_id=1701178512 instance=ExtResource("33_6a7d4")]
+position = Vector2(1757, -398)
+scale = Vector2(0.5, 0.5)
+
+[node name="CeilingLampCord" parent="Layer3_Closer/Level1_Workshop/CeilingLamp1" unique_id=1325563035 instance=ExtResource("12_6a7d4")]
+position = Vector2(1629, -786)
+
+[node name="CeilingLamp2" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=1063079517]
+position = Vector2(1424, 0)
+
+[node name="CeilingLamp" parent="Layer3_Closer/Level1_Workshop/CeilingLamp2" unique_id=1067862524 instance=ExtResource("33_6a7d4")]
+position = Vector2(1757, -398)
+scale = Vector2(0.5, 0.5)
+
+[node name="CeilingLampCord" parent="Layer3_Closer/Level1_Workshop/CeilingLamp2" unique_id=1212801496 instance=ExtResource("12_6a7d4")]
+position = Vector2(1629, -786)
+
+[node name="GearTiny" parent="Layer3_Closer/Level1_Workshop" unique_id=1142928283 instance=ExtResource("22_0rjyv")]
+position = Vector2(2078, -507)
+
+[node name="GearSmall" parent="Layer3_Closer/Level1_Workshop" unique_id=1772652391 instance=ExtResource("21_8b4co")]
+position = Vector2(2246, -463)
+
+[node name="DeathGears" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=1033698795]
+
+[node name="GearLarge" parent="Layer3_Closer/Level1_Workshop/DeathGears" unique_id=1762128992 instance=ExtResource("20_13xmu")]
+position = Vector2(1530, 263)
+
+[node name="GearSmall" parent="Layer3_Closer/Level1_Workshop/DeathGears" unique_id=99375965 instance=ExtResource("21_8b4co")]
+position = Vector2(1823, 186)
+
+[node name="CeilingHook" parent="Layer3_Closer/Level1_Workshop" unique_id=630610592 instance=ExtResource("32_eibiv")]
+position = Vector2(2674, -370)
+scale = Vector2(0.75, 0.75)
+
+[node name="CeilingHookCord" parent="Layer3_Closer/Level1_Workshop" unique_id=1465129323 instance=ExtResource("26_nr3vf")]
+position = Vector2(2675, -713)
+scale = Vector2(0.75, 0.75)
+
+[node name="Walls" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=256992376]
+
+[node name="LightWoodWall1" parent="Layer3_Closer/Level1_Workshop/Walls" unique_id=1109909635 instance=ExtResource("43_nr3vf")]
+position = Vector2(-1510, -276)
+scale = Vector2(1.1, 1.1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Walls/LightWoodWall1" unique_id=1270417640]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Walls/LightWoodWall1/StaticBody2D" unique_id=372225749]
+position = Vector2(512.04517, 255.90912)
+shape = SubResource("RectangleShape2D_nr3vf")
+
+[node name="LightWoodWall3" parent="Layer3_Closer/Level1_Workshop/Walls" unique_id=1021282658 instance=ExtResource("43_nr3vf")]
+position = Vector2(4163, -420.99997)
+scale = Vector2(1.23, 1.23)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Walls/LightWoodWall3" unique_id=1813824869]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Walls/LightWoodWall3/StaticBody2D" unique_id=679382957]
+position = Vector2(512.04517, 255.90912)
+shape = SubResource("RectangleShape2D_nr3vf")
+
+[node name="LightWoodWall2" parent="Layer3_Closer/Level1_Workshop/Walls" unique_id=203053651 instance=ExtResource("43_nr3vf")]
+position = Vector2(-1510, -931)
+scale = Vector2(1.1, 1.1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Walls/LightWoodWall2" unique_id=1904551042]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Walls/LightWoodWall2/StaticBody2D" unique_id=111368992]
+position = Vector2(512.04517, 255.90912)
+shape = SubResource("RectangleShape2D_nr3vf")
+
+[node name="MetalFences" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=2104620591]
+
+[node name="MetalFenceStraight" parent="Layer3_Closer/Level1_Workshop/MetalFences" unique_id=1914530940 instance=ExtResource("28_oc6y0")]
+position = Vector2(1300, 64)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalFencePole" parent="Layer3_Closer/Level1_Workshop/MetalFences" unique_id=847578951 instance=ExtResource("29_nsj7h")]
+position = Vector2(1424, 71)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalFenceStraight2" parent="Layer3_Closer/Level1_Workshop/MetalFences" unique_id=1511697265 instance=ExtResource("28_oc6y0")]
+position = Vector2(2077, 64)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalFencePole2" parent="Layer3_Closer/Level1_Workshop/MetalFences" unique_id=1001874251 instance=ExtResource("29_nsj7h")]
+position = Vector2(2201, 71)
+scale = Vector2(0.5, 0.5)
+
+[node name="Ceiling" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=1502456355]
+
+[node name="LightWoodCeiling1" parent="Layer3_Closer/Level1_Workshop/Ceiling" unique_id=339315684 instance=ExtResource("30_nsj7h")]
+position = Vector2(-967, -2534)
+scale = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Ceiling/LightWoodCeiling1" unique_id=323694548]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Ceiling/LightWoodCeiling1/StaticBody2D" unique_id=878628936]
+position = Vector2(1024, 1023.75)
+shape = SubResource("RectangleShape2D_nsj7h")
+
+[node name="LightWoodCeiling2" parent="Layer3_Closer/Level1_Workshop/Ceiling" unique_id=2004746123 instance=ExtResource("30_nsj7h")]
+position = Vector2(718, -2534)
+scale = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Ceiling/LightWoodCeiling2" unique_id=1780060180]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Ceiling/LightWoodCeiling2/StaticBody2D" unique_id=1450485261]
+position = Vector2(1024, 1023.75)
+shape = SubResource("RectangleShape2D_nsj7h")
+
+[node name="LightWoodCeiling3" parent="Layer3_Closer/Level1_Workshop/Ceiling" unique_id=403018540 instance=ExtResource("30_nsj7h")]
+position = Vector2(3543.0002, -426.00003)
+scale = Vector2(0.6, 0.6)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Ceiling/LightWoodCeiling3" unique_id=1959514512]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Ceiling/LightWoodCeiling3/StaticBody2D" unique_id=931720017]
+position = Vector2(1024, 1023.75)
+shape = SubResource("RectangleShape2D_nsj7h")
 
 [node name="Level2_Forest" type="Node2D" parent="Layer3_Closer" unique_id=453509270]
 visibility_layer = 8
@@ -378,45 +711,228 @@ position = Vector2(0, 40.588196)
 scale = Vector2(16.529434, -4.12941)
 shape = SubResource("RectangleShape2D_y30io")
 
+[node name="OceanForest" type="Node2D" parent="Layer3_Closer/Level2_Forest" unique_id=2063397852]
+
+[node name="Ocean1" parent="Layer3_Closer/Level2_Forest/OceanForest" unique_id=1845467235 instance=ExtResource("31_knwns")]
+position = Vector2(7902, 321)
+
+[node name="Ocean2" parent="Layer3_Closer/Level2_Forest/OceanForest" unique_id=1754864744 instance=ExtResource("31_knwns")]
+position = Vector2(8376, 321)
+
+[node name="Ocean3" parent="Layer3_Closer/Level2_Forest/OceanForest" unique_id=366136176 instance=ExtResource("31_knwns")]
+position = Vector2(8850, 321)
+
+[node name="Ocean4" parent="Layer3_Closer/Level2_Forest/OceanForest" unique_id=1166870025 instance=ExtResource("31_knwns")]
+position = Vector2(9324, 321)
+
+[node name="Ocean5" parent="Layer3_Closer/Level2_Forest/OceanForest" unique_id=1775766659 instance=ExtResource("31_knwns")]
+position = Vector2(9798, 321)
+
+[node name="GrassGround" type="Node2D" parent="Layer3_Closer/Level2_Forest" unique_id=559186228]
+
+[node name="GrassGround1" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=562381495 instance=ExtResource("29_m4hqf")]
+position = Vector2(4728, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround1" unique_id=1722672621]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround1/StaticBody2D" unique_id=78791844]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround2" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=1755467085 instance=ExtResource("29_m4hqf")]
+position = Vector2(4986, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround2" unique_id=502741728]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround2/StaticBody2D" unique_id=540300720]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround3" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=78202610 instance=ExtResource("29_m4hqf")]
+position = Vector2(5244, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround3" unique_id=1842444144]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround3/StaticBody2D" unique_id=1947961404]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround4" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=1056850995 instance=ExtResource("29_m4hqf")]
+position = Vector2(5502, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround4" unique_id=1456054398]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround4/StaticBody2D" unique_id=1546896074]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround5" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=941739012 instance=ExtResource("29_m4hqf")]
+position = Vector2(5760, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround5" unique_id=1512670691]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround5/StaticBody2D" unique_id=1237968856]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround6" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=457165055 instance=ExtResource("29_m4hqf")]
+position = Vector2(6018, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround6" unique_id=370080546]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround6/StaticBody2D" unique_id=1465441188]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround7" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=1634401367 instance=ExtResource("29_m4hqf")]
+position = Vector2(6276, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround7" unique_id=167785344]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround7/StaticBody2D" unique_id=223880663]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround8" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=539132740 instance=ExtResource("29_m4hqf")]
+position = Vector2(6534, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround8" unique_id=70196236]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround8/StaticBody2D" unique_id=1581006909]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround9" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=75377939 instance=ExtResource("29_m4hqf")]
+position = Vector2(6792, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround9" unique_id=213175697]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround9/StaticBody2D" unique_id=654803739]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround10" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=1162778643 instance=ExtResource("29_m4hqf")]
+position = Vector2(7051, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround10" unique_id=1247107877]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround10/StaticBody2D" unique_id=431250837]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround11" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=1220481254 instance=ExtResource("29_m4hqf")]
+position = Vector2(7310, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround11" unique_id=792869767]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround11/StaticBody2D" unique_id=1555018277]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="GrassGround12" parent="Layer3_Closer/Level2_Forest/GrassGround" unique_id=908665472 instance=ExtResource("29_m4hqf")]
+position = Vector2(7569, 150)
+scale = Vector2(0.2, 0.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround12" unique_id=1828303435]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level2_Forest/GrassGround/GrassGround12/StaticBody2D" unique_id=1292064806]
+position = Vector2(1022.5, 1025)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_m4hqf")
+
+[node name="DirtGround" type="Node2D" parent="Layer3_Closer/Level2_Forest" unique_id=966651823]
+
+[node name="DirtGroundLong1" parent="Layer3_Closer/Level2_Forest/DirtGround" unique_id=1875758916 instance=ExtResource("30_n67ls")]
+position = Vector2(4803, 51)
+scale = Vector2(1.025, 1.025)
+
+[node name="DirtGroundLong2" parent="Layer3_Closer/Level2_Forest/DirtGround" unique_id=1766928598 instance=ExtResource("30_n67ls")]
+position = Vector2(5842, 51)
+scale = Vector2(1.025, 1.025)
+
+[node name="DirtGroundLong3" parent="Layer3_Closer/Level2_Forest/DirtGround" unique_id=1856601375 instance=ExtResource("30_n67ls")]
+position = Vector2(6853, 51.000004)
+scale = Vector2(1.025, 1.025)
+
+[node name="LakeDeep" parent="Layer3_Closer/Level2_Forest" unique_id=837289426 instance=ExtResource("24_7cflg")]
+position = Vector2(6958, 176)
+
+[node name="TreeLarge" parent="Layer3_Closer/Level2_Forest" unique_id=627538021 instance=ExtResource("30_m11ba")]
+position = Vector2(7288, -392.00003)
+scale = Vector2(1.5, 1.5)
+
+[node name="TreeMedium" parent="Layer3_Closer/Level2_Forest" unique_id=730821313 instance=ExtResource("63_skp3m")]
+position = Vector2(4418, -782.00006)
+scale = Vector2(1.5, 1.5)
+
+[node name="TreeStump" parent="Layer3_Closer/Level2_Forest" unique_id=702801613 instance=ExtResource("64_iy0sr")]
+position = Vector2(6682, 263)
+scale = Vector2(0.25, 0.25)
+
+[node name="TreeSmall" parent="Layer3_Closer/Level2_Forest" unique_id=1044689493 instance=ExtResource("38_3pb5v")]
+position = Vector2(6046, -346)
+
+[node name="Axe" parent="Layer3_Closer/Level2_Forest" unique_id=987679814 instance=ExtResource("65_eocln")]
+position = Vector2(6817, 234)
+rotation = 2.073451
+scale = Vector2(0.25, 0.25)
+
+[node name="MetalCagePillar1" parent="Layer3_Closer/Level2_Forest" unique_id=1162683445 instance=ExtResource("39_rlfmv")]
+position = Vector2(5382, -156)
+
+[node name="MetalCagePillar2" parent="Layer3_Closer/Level2_Forest" unique_id=198239734 instance=ExtResource("39_rlfmv")]
+position = Vector2(5827, -156)
+
+[node name="LogCabin" parent="Layer3_Closer/Level2_Forest" unique_id=1178286961 instance=ExtResource("41_avyml")]
+position = Vector2(5729, -381)
+scale = Vector2(0.5, 0.5)
+
+[node name="BushSmall" parent="Layer3_Closer/Level2_Forest" unique_id=2072793227 instance=ExtResource("42_3pvfp")]
+position = Vector2(6071, 14)
+
+[node name="WaterWheel" parent="Layer3_Closer/Level2_Forest" unique_id=321389894 instance=ExtResource("43_3pb5v")]
+position = Vector2(8431, 86)
+
+[node name="WoodenBridge" parent="Layer3_Closer/Level2_Forest" unique_id=726333794 instance=ExtResource("45_tolma")]
+position = Vector2(6935, 20)
+scale = Vector2(1.1, 1.1)
+
+[node name="SignPostRight" parent="Layer3_Closer/Level2_Forest" unique_id=396118591 instance=ExtResource("74_tolma")]
+position = Vector2(7412, 90)
+scale = Vector2(0.25, 0.25)
+
+[node name="SignPostLeft" parent="Layer3_Closer/Level2_Forest" unique_id=1236168697 instance=ExtResource("75_esclk")]
+position = Vector2(6890, 88)
+scale = Vector2(0.25, 0.25)
+
 [node name="Level3_Beach" type="Node2D" parent="Layer3_Closer" unique_id=1804223420]
 visibility_layer = 8
 
-[node name="ToBeReplaced" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=1005150426]
-visibility_layer = 8
-
-[node name="Ground3" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=2001504142 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(6350, 447)
-scale = Vector2(77.628525, 5.1011944)
-
-[node name="Ground4" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=532267896 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(3233.0002, 2921.0002)
-scale = Vector2(46.948513, 6.3811946)
-
-[node name="Ground5" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=291234773 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(5395, 2921.0002)
-scale = Vector2(17.588512, 6.3811946)
-
-[node name="Ground6" parent="Layer3_Closer/Level3_Beach/ToBeReplaced" unique_id=1913139329 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(8419, 2921)
-scale = Vector2(88.02852, 6.3811946)
-
-[node name="RotatedSailboat" parent="Layer3_Closer/Level3_Beach" unique_id=1333654839 instance=ExtResource("9_y30io")]
-position = Vector2(2126, 2581)
-rotation = -0.7959424
-scale = Vector2(1.5739623, 1.5739623)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/RotatedSailboat" unique_id=1774553824 groups=["wood"]]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/RotatedSailboat/StaticBody2D" unique_id=2094403074]
-polygon = PackedVector2Array(156.26807, 348.49023, 419.9884, 349.02466, 413.94482, 368.2798, 403.58887, 370.417, 384.80493, 447.49463, 355.91235, 460.66846, 234.12903, 463.42773, 116.32947, 344.0254)
-
 [node name="SailboatBeach" parent="Layer3_Closer/Level3_Beach" unique_id=211717476 instance=ExtResource("9_y30io")]
 visibility_layer = 8
-position = Vector2(-172.00003, 2227)
+position = Vector2(-240, 2146)
 rotation = -3.1415925
 scale = Vector2(1.7, -1.7)
 
@@ -430,187 +946,785 @@ position = Vector2(0, 40.588196)
 scale = Vector2(16.529434, -4.12941)
 shape = SubResource("RectangleShape2D_y30io")
 
-[node name="MaybeReplace" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=584877929]
-visibility_layer = 9
+[node name="OceanBeach" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=2053501371]
+position = Vector2(-10763, 2476)
 
-[node name="Rock1" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1237586550 groups=["stone"]]
-visibility_layer = 8
-position = Vector2(-210, 3075)
+[node name="Ocean6" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=144527601 instance=ExtResource("31_knwns")]
+position = Vector2(9797, 241)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock1" unique_id=1170116203]
-visibility_layer = 8
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748, -281.3327, 61.333252, -356.66602, 170.66663, -393.99936, 259.33325, -361.3327, 289.33325, -289.3327, 337.99994, -133.3327, 364.66663, -19.99936, 33.78766, -19.731842, -315.3334, -19.99936)
-uv = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748, -281.3327, 61.333252, -356.66602, 170.66663, -393.99936, 259.33325, -361.3327, 289.33325, -289.3327, 337.99994, -133.3327, 364.66663, -19.99936, 33.78766, -19.731842, -315.3334, -19.99936)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock1" unique_id=556097942]
-visibility_layer = 8
-polygon = PackedVector2Array(-222.66638, -173.33368, -144.66638, -242.667, -28.666748, -281.3327, 61.333252, -356.66602, 170.66663, -393.99936, 259.33325, -361.3327, 289.33325, -289.3327, 337.99994, -133.3327, 364.66663, -19.99936, 33.78766, -19.731842, -315.3334, -19.99936)
-
-[node name="Rock2" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1039975856 groups=["stone"]]
-visibility_layer = 8
-position = Vector2(551, 3157)
+[node name="Ocean7" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=1746908753 instance=ExtResource("31_knwns")]
+position = Vector2(10309, 751)
 rotation = 3.1415927
-scale = Vector2(1, -1)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock2" unique_id=1590617539]
-visibility_layer = 8
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.128723, -375.9592, -12.568726, -397.7392, 37.44458, -367.89252, 35.024597, -287.22586, 68.9046, -221.88585, 60.83795, -103.30585, 114.07794, -18.605835, -144.86209, -18.605835, -423.1621, -19.412506)
-uv = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.128723, -375.9592, -12.568726, -397.7392, 37.44458, -367.89252, 35.024597, -287.22586, 68.9046, -221.88585, 60.83795, -103.30585, 114.07794, -18.605835, -144.86209, -18.605835, -423.1621, -19.412506)
+[node name="Ocean8" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=1094889556 instance=ExtResource("31_knwns")]
+position = Vector2(10271, 241)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock2" unique_id=2050326648]
-visibility_layer = 8
-polygon = PackedVector2Array(-237.62875, -193.65251, -155.34875, -305.77917, -56.128723, -375.9592, -12.568726, -397.7392, 37.44458, -367.89252, 35.024597, -287.22586, 68.9046, -221.88585, 60.83795, -103.30585, 114.07794, -18.605835, -144.86209, -18.605835, -423.1621, -19.412506)
+[node name="Ocean9" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=425952962 instance=ExtResource("31_knwns")]
+position = Vector2(10833, 241)
 
-[node name="Rock3" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1553403522 groups=["stone"]]
-visibility_layer = 8
-position = Vector2(1216, 3130)
-rotation = 2.9665852
-scale = Vector2(1, -1)
+[node name="Ocean10" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=617551146 instance=ExtResource("31_knwns")]
+position = Vector2(11315, 751)
+rotation = 3.1415927
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock3" unique_id=1098961831]
-visibility_layer = 8
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
-uv = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
+[node name="Ocean11" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=254907174 instance=ExtResource("31_knwns")]
+position = Vector2(11445, 241)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Rock3" unique_id=1807338729]
-visibility_layer = 8
-position = Vector2(-2, 0)
-polygon = PackedVector2Array(-381.77008, -90.8996, -316.98325, -160.07312, -224.46619, -241.26488, -129.13287, -328.53156, -102.73285, -332.93155, -53.599487, -302.86487, -48.466187, -282.33154, -67.39642, -232.24944, -49.2146, -205.80315, 0.92315674, -169.4395, 7.534729, -146.84998, -21.66278, -91.24103, 8.640259, -15.758942, -150.58844, -15.758942, -291.63528, -15.758942, -461.88324, -15.758942)
+[node name="Ocean12" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=1814489944 instance=ExtResource("31_knwns")]
+position = Vector2(11957, 751)
+rotation = 3.1415927
 
-[node name="Shore" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1742865188 groups=["dirt"]]
-visibility_layer = 8
-position = Vector2(1084, 3052)
-scale = Vector2(1, 0.52)
+[node name="Ocean13" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=1632147906 instance=ExtResource("31_knwns")]
+position = Vector2(11919, 241)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Shore" unique_id=1028580352]
-visibility_layer = 8
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
-uv = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
+[node name="Ocean14" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=2144891921 instance=ExtResource("31_knwns")]
+position = Vector2(12431, 751)
+rotation = 3.1415927
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Shore" unique_id=1202579446]
-visibility_layer = 8
-position = Vector2(-2, 0)
-polygon = PackedVector2Array(-306.1704, 7.470764, -140.86444, -18.382565, 52.237854, -67.98358, 165.41943, -129.29028, 269.1692, -198.45676, 360.34314, -281.77097, 454.6634, -355.65356, 575.70514, -424.82312, 776.9167, -475.12604, 1000.1359, -498.7055, 1224.927, -498.7055, 1224.8501, 82.33728, 730.3095, 82.33728, 164.50397, 82.339905, -485.1554, 82.164566, -485.30884, 27.187992)
+[node name="Shovel" parent="Layer3_Closer/Level3_Beach" unique_id=1492399742 instance=ExtResource("48_57csw")]
+position = Vector2(3123, 2644)
+scale = Vector2(0.25, 0.25)
 
-[node name="Pit" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=57776880]
-visibility_layer = 8
-position = Vector2(3847, 3052)
-scale = Vector2(1, 0.52)
+[node name="Bucket" parent="Layer3_Closer/Level3_Beach" unique_id=2074933227 instance=ExtResource("80_sxc48")]
+position = Vector2(3124, 2691)
+scale = Vector2(0.25, 0.25)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Pit" unique_id=731842270]
-visibility_layer = 8
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(375.90295, -441.41034, 418.35583, -101.53676, 481.1245, -33.06192, 597.15125, -27.355682, 686.54895, -33.06192, 753.1217, -84.418045, 810.756, -207.10535, 854.694, -353.56543, 913.27734, -470.73315, 1014.3667, -501.06, 1226.7563, -497.0055, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 239.10535, -497.70752, 347.24573, -497.72617)
+[node name="Umbrella" parent="Layer3_Closer/Level3_Beach" unique_id=259617502 instance=ExtResource("51_tht63")]
+position = Vector2(2715, 2341)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Pit" unique_id=2026868826]
-visibility_layer = 8
-position = Vector2(-6, 0)
-polygon = PackedVector2Array(375.90295, -441.41034, 418.35583, -101.53676, 481.1245, -33.06192, 597.15125, -27.355682, 686.54895, -33.06192, 753.1217, -84.418045, 810.756, -207.10535, 854.694, -353.56543, 913.27734, -470.73315, 1014.3667, -501.06, 1226.7563, -497.0055, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 239.10535, -497.70752, 347.24573, -497.72617)
+[node name="LoungeChair" parent="Layer3_Closer/Level3_Beach" unique_id=561885031 instance=ExtResource("81_ewngs")]
+position = Vector2(2550, 2426)
 
-[node name="Puddle" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace" unique_id=1701525063]
-visibility_layer = 8
-position = Vector2(5496, 3052)
-scale = Vector2(1, 0.52)
+[node name="LoungeTable" parent="Layer3_Closer/Level3_Beach" unique_id=2050512012 instance=ExtResource("82_nrnam")]
+position = Vector2(3286, 2594)
+scale = Vector2(0.5, 0.5)
 
-[node name="Polygon2D" type="Polygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Puddle" unique_id=687569837]
-visibility_layer = 8
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(425.3601, -472.40234, 492.81763, -452.30145, 573.3707, -445.3969, 653.1928, -438.73004, 739.07983, -438.49237, 805.8237, -443.0954, 872.30237, -448.17316, 953.1207, -463.80902, 1052.3652, -489.11063, 1128.4458, -501.19098, 1226.3594, -498.2488, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 238.02765, -497.7294, 347.19543, -499.08847)
+[node name="PalmTreeSmall1" parent="Layer3_Closer/Level3_Beach" unique_id=1860715018 instance=ExtResource("83_3rsbe")]
+position = Vector2(2681, 1540)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/MaybeReplace/Puddle" unique_id=1916218751]
-visibility_layer = 8
-polygon = PackedVector2Array(425.3601, -472.40234, 492.81763, -452.30145, 573.3707, -445.3969, 653.1928, -438.73004, 739.07983, -438.49237, 805.8237, -443.0954, 872.30237, -448.17316, 953.1207, -463.80902, 1052.3652, -489.11063, 1128.4458, -501.19098, 1226.3594, -498.2488, 1226.4097, 82.20485, 730.3095, 82.33728, 237.63916, 82.20256, 238.02765, -497.7294, 347.19543, -499.08847)
+[node name="PalmTreeSmall2" parent="Layer3_Closer/Level3_Beach" unique_id=753642981 instance=ExtResource("83_3rsbe")]
+position = Vector2(4272, 1540)
+
+[node name="Rocks" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=514153270]
+
+[node name="RockLarge1" parent="Layer3_Closer/Level3_Beach/Rocks" unique_id=96148533 instance=ExtResource("84_3rsbe")]
+position = Vector2(-359, 2597)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1" unique_id=1347516318]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge1/StaticBody2D" unique_id=818005247]
+position = Vector2(254, 271)
+scale = Vector2(20.437931, 10.607894)
+shape = SubResource("CapsuleShape2D_tht63")
+
+[node name="RockLarge2" parent="Layer3_Closer/Level3_Beach/Rocks" unique_id=1654125207 instance=ExtResource("84_3rsbe")]
+position = Vector2(1137, 2686)
+scale = Vector2(0.6, 0.9)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2" unique_id=906817849]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockLarge2/StaticBody2D" unique_id=542598850]
+position = Vector2(256.66666, 258.8889)
+scale = Vector2(22.37712, 13.472558)
+shape = SubResource("CapsuleShape2D_odeua")
+
+[node name="RockMedium2" parent="Layer3_Closer/Level3_Beach/Rocks" unique_id=1448109466 instance=ExtResource("85_opp81")]
+position = Vector2(-737.99994, 2653)
+scale = Vector2(1.5, 1.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockMedium2" unique_id=1309615652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockMedium2/StaticBody2D" unique_id=1970181282]
+position = Vector2(253.99997, 254.16666)
+scale = Vector2(8.11855, 7.637792)
+shape = SubResource("CapsuleShape2D_rsbyu")
+
+[node name="RockSmall1" parent="Layer3_Closer/Level3_Beach/Rocks" unique_id=8612316 instance=ExtResource("86_ruas5")]
+position = Vector2(-189, 2149)
+scale = Vector2(1.6, 1.6)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1" unique_id=1295135044]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/Rocks/RockSmall1/StaticBody2D" unique_id=2006982963]
+position = Vector2(520, 496.24997)
+scale = Vector2(11.570885, 6.6127734)
+shape = SubResource("CapsuleShape2D_kjune")
+
+[node name="Starfish" parent="Layer3_Closer/Level3_Beach" unique_id=1366923937 instance=ExtResource("50_uqkx0")]
+position = Vector2(-569.99994, 2841.9998)
+rotation = -0.58089757
+scale = Vector2(0.5, 0.5)
+
+[node name="Sandcastle" parent="Layer3_Closer/Level3_Beach" unique_id=640854327 instance=ExtResource("89_uqkx0")]
+position = Vector2(8919, 2318)
+
+[node name="TropicalDrink" parent="Layer3_Closer/Level3_Beach" unique_id=653046389 instance=ExtResource("61_qnkuv")]
+position = Vector2(3349, 2516)
+scale = Vector2(0.25, 0.25)
+
+[node name="SandGround" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=1725170307]
+
+[node name="SandGroundLong2" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=892610356 instance=ExtResource("87_57csw")]
+position = Vector2(5491, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong2" unique_id=392272021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong2/StaticBody2D" unique_id=2096725968]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong3" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=850303368 instance=ExtResource("87_57csw")]
+position = Vector2(5491, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong3" unique_id=70480952]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong3/StaticBody2D" unique_id=864570974]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong24" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=879938618 instance=ExtResource("87_57csw")]
+position = Vector2(3431, 2466)
+rotation = 0.04821852
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong24" unique_id=428552939]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong24/StaticBody2D" unique_id=1073291703]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong25" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=408386202 instance=ExtResource("87_57csw")]
+position = Vector2(3431, 2628)
+rotation = 0.04821852
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong25" unique_id=817127057]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong25/StaticBody2D" unique_id=274204386]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong18" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1982215889 instance=ExtResource("87_57csw")]
+position = Vector2(2596, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong18" unique_id=728277316]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong18/StaticBody2D" unique_id=506351855]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong19" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1605729891 instance=ExtResource("87_57csw")]
+position = Vector2(2596, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong19" unique_id=452070202]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong19/StaticBody2D" unique_id=87423911]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong20" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=476241561 instance=ExtResource("87_57csw")]
+position = Vector2(2135, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong20" unique_id=686835394]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong20/StaticBody2D" unique_id=959027511]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong21" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=139416256 instance=ExtResource("87_57csw")]
+position = Vector2(2135, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong21" unique_id=682766193]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong21/StaticBody2D" unique_id=2051140261]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong22" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=204051968 instance=ExtResource("87_57csw")]
+position = Vector2(1287, 2556)
+rotation = -0.10730283
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong22" unique_id=1809627477]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong22/StaticBody2D" unique_id=653691051]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong23" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=639291768 instance=ExtResource("87_57csw")]
+position = Vector2(1287, 2718)
+rotation = -0.10730283
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong23" unique_id=803418067]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong23/StaticBody2D" unique_id=1860683012]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong16" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=35965320 instance=ExtResource("87_57csw")]
+position = Vector2(4659, 2506)
+rotation = -0.048030045
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong16" unique_id=1214311455]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong16/StaticBody2D" unique_id=89982032]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong17" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=558793185 instance=ExtResource("87_57csw")]
+position = Vector2(4667, 2670.0002)
+rotation = -0.048030045
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong17" unique_id=1212232531]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong17/StaticBody2D" unique_id=1299394317]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong14" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1865117745 instance=ExtResource("87_57csw")]
+position = Vector2(5903, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong14" unique_id=430195777]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong14/StaticBody2D" unique_id=66087435]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong15" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1279147558 instance=ExtResource("87_57csw")]
+position = Vector2(5903, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong15" unique_id=908575734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong15/StaticBody2D" unique_id=379453558]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong4" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=510129296 instance=ExtResource("87_57csw")]
+position = Vector2(6722, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong4" unique_id=883295843]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong4/StaticBody2D" unique_id=1895949964]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong5" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1086277226 instance=ExtResource("87_57csw")]
+position = Vector2(6722, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong5" unique_id=1675532709]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong5/StaticBody2D" unique_id=1743153069]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong6" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1576013479 instance=ExtResource("87_57csw")]
+position = Vector2(7541, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong6" unique_id=690543026]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong6/StaticBody2D" unique_id=1128932820]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong7" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1134752485 instance=ExtResource("87_57csw")]
+position = Vector2(7541, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong7" unique_id=756170454]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong7/StaticBody2D" unique_id=1152970540]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong8" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1066562840 instance=ExtResource("87_57csw")]
+position = Vector2(8360, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong8" unique_id=407825799]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong8/StaticBody2D" unique_id=1479020536]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong9" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=674379637 instance=ExtResource("87_57csw")]
+position = Vector2(8360, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong9" unique_id=2028933966]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong9/StaticBody2D" unique_id=400960653]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong10" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=758041427 instance=ExtResource("87_57csw")]
+position = Vector2(9179, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong10" unique_id=1647341734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong10/StaticBody2D" unique_id=1224993716]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong11" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=891579661 instance=ExtResource("87_57csw")]
+position = Vector2(9179, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong11" unique_id=1244024747]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong11/StaticBody2D" unique_id=1186029813]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong12" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=1986236349 instance=ExtResource("87_57csw")]
+position = Vector2(9998, 2466)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong12" unique_id=1542878570]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong12/StaticBody2D" unique_id=962956440]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="SandGroundLong13" parent="Layer3_Closer/Level3_Beach/SandGround" unique_id=233628851 instance=ExtResource("87_57csw")]
+position = Vector2(9998, 2628)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong13" unique_id=1624790416]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level3_Beach/SandGround/SandGroundLong13/StaticBody2D" unique_id=1560200124]
+position = Vector2(1023.75, 1022.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_odeua")
+
+[node name="Floorboards" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=972097695]
+
+[node name="FloorboardBroken1" parent="Layer3_Closer/Level3_Beach/Floorboards" unique_id=1274584429 instance=ExtResource("35_pjf3e")]
+position = Vector2(3768.0002, 2599.9998)
+rotation = -0.15392606
 
 [node name="Level4_Caverns" type="Node2D" parent="Layer3_Closer" unique_id=492727382]
 visibility_layer = 8
 
+[node name="Ground" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=625540375]
+visibility_layer = 8
+
+[node name="DarkRockGroundLong_Prop1" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1358051366 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(-967, 5346)
+
+[node name="LightRockGroundLong_Prop1" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=511749450 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(-967, 5244)
+
+[node name="DarkRockGroundLong_Prop2" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1641904652 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(-455, 5346)
+
+[node name="LightRockGroundLong_Prop2" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1192420901 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(-455, 5244)
+
+[node name="DarkRockGroundLong_Prop3" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=2085052767 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(57, 5346)
+
+[node name="LightRockGroundLong_Prop3" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1536954419 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(57, 5244)
+
+[node name="DarkRockGroundLong_Prop4" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1030951514 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(569, 5346)
+
+[node name="LightRockGroundLong_Prop4" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=318621465 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(569, 5244)
+
+[node name="DarkRockGroundLong_Prop5" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=664039222 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(1081, 5346)
+
+[node name="LightRockGroundLong_Prop5" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1198251207 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(1081, 5244)
+
+[node name="DarkRockGroundLong_Prop6" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=2023675588 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(1593, 5346)
+
+[node name="LightRockGroundLong_Prop6" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1377948266 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(1593, 5244)
+
+[node name="DarkRockGroundLong_Prop7" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=639332552 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(2105, 5346)
+
+[node name="LightRockGroundLong_Prop7" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=11979343 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(2105, 5244)
+
+[node name="DarkRockGroundLong_Prop8" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=804759106 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(2617, 5346)
+
+[node name="LightRockGroundLong_Prop8" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1235963849 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(2617, 5244)
+
+[node name="DarkRockGroundLong_Prop9" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1861011123 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(3129, 5346)
+
+[node name="LightRockGroundLong_Prop9" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=84619362 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(3129, 5244)
+
+[node name="DarkRockGroundLong_Prop10" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1837067731 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(3641, 5346)
+
+[node name="LightRockGroundLong_Prop10" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1644191728 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(3641, 5244)
+
+[node name="DarkRockGroundLong_Prop11" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=438487566 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(4153, 5346)
+
+[node name="LightRockGroundLong_Prop11" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=269335652 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(4153, 5244)
+
+[node name="DarkRockGroundLong_Prop12" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1527564539 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(4665, 5346)
+
+[node name="LightRockGroundLong_Prop12" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1817559417 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(4665, 5244)
+
+[node name="DarkRockGroundLong_Prop13" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1880855695 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(5177, 5346)
+
+[node name="LightRockGroundLong_Prop13" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1795270748 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(5177, 5244)
+
+[node name="DarkRockGroundLong_Prop14" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=638716084 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(5689, 5346)
+
+[node name="LightRockGroundLong_Prop14" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1054862076 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(5689, 5244)
+
+[node name="DarkRockGroundLong_Prop15" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1488758905 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(6201, 5346)
+
+[node name="LightRockGroundLong_Prop15" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=570025056 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(6201, 5244)
+
+[node name="DarkRockGroundLong_Prop16" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1626644862 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(6713, 5346)
+
+[node name="LightRockGroundLong_Prop16" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1355134058 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(6713, 5244)
+
+[node name="DarkRockGroundLong_Prop17" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=926577705 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(7225, 5346)
+
+[node name="LightRockGroundLong_Prop17" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1313971378 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(7225, 5244)
+
+[node name="DarkRockGroundLong_Prop18" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=647272401 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(7737, 5346)
+
+[node name="LightRockGroundLong_Prop18" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=890108266 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(7737, 5244)
+
+[node name="DarkRockGroundLong_Prop19" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=150156463 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(8249, 5346)
+
+[node name="LightRockGroundLong_Prop19" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1971381674 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(8249, 5244)
+
+[node name="DarkRockGroundLong_Prop20" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1436298306 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(8761, 5346)
+
+[node name="LightRockGroundLong_Prop20" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1267329064 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(8761, 5244)
+
+[node name="DarkRockGroundLong_Prop21" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=937399457 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(9273, 5346)
+
+[node name="LightRockGroundLong_Prop21" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1516523794 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(9273, 5244)
+
+[node name="DarkRockGroundLong_Prop22" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=105167021 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(9785, 5346)
+
+[node name="LightRockGroundLong_Prop22" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=798754383 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(9785, 5244)
+
+[node name="DarkRockGroundLong_Prop23" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=203660484 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(10297, 5346)
+
+[node name="LightRockGroundLong_Prop23" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=849420672 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(10297, 5244)
+
+[node name="DarkRockGroundLong_Prop24" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1050942866 instance=ExtResource("12_cp88c")]
+visibility_layer = 8
+position = Vector2(10809, 5346)
+
+[node name="LightRockGroundLong_Prop24" parent="Layer3_Closer/Level4_Caverns/Ground" unique_id=1619306316 instance=ExtResource("13_wepyk")]
+visibility_layer = 8
+position = Vector2(10809, 5244)
+
+[node name="RockBackground" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=551751365]
+visibility_layer = 8
+
+[node name="RockBackground1" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=1859841723 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(-972, 4268)
+scale = Vector2(3.13, 3.13)
+
+[node name="RockBackground2" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=1256507261 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(589.00006, 4270)
+scale = Vector2(3.13, 3.13)
+
+[node name="RockBackground3" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=1097355523 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(2186, 4269)
+scale = Vector2(3.13, 3.13)
+
+[node name="RockBackground4" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=1340612301 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(3747, 4271)
+scale = Vector2(3.13, 3.13)
+
+[node name="RockBackground5" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=1736170666 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(5350, 4268)
+scale = Vector2(3.13, 3.13)
+
+[node name="RockBackground6" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=510806686 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(6911, 4270)
+scale = Vector2(3.13, 3.13)
+
+[node name="RockBackground7" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=860960768 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(8508.001, 4269)
+scale = Vector2(3.13, 3.13)
+
+[node name="RockBackground8" parent="Layer3_Closer/Level4_Caverns/RockBackground" unique_id=1706396084 instance=ExtResource("29_wepyk")]
+visibility_layer = 8
+position = Vector2(10069.001, 4271)
+scale = Vector2(3.13, 3.13)
+
+[node name="LavaLake" parent="Layer3_Closer/Level4_Caverns" unique_id=66742687 instance=ExtResource("31_xymjv")]
+visibility_layer = 8
+position = Vector2(2000.0001, 4938)
+scale = Vector2(1.5, 1.5)
+
+[node name="LavaVat" parent="Layer3_Closer/Level4_Caverns" unique_id=1067596273 instance=ExtResource("31_23fag")]
+visibility_layer = 8
+position = Vector2(1950, 4329)
+scale = Vector2(1.5, 1.5)
+
+[node name="CeilingHook" parent="Layer3_Closer/Level4_Caverns" unique_id=985530063 instance=ExtResource("32_eibiv")]
+visibility_layer = 8
+position = Vector2(2940, 4784)
+
 [node name="Layer4_Closest" type="Node2D" parent="." unique_id=74665362]
-light_mask = 0
 visibility_layer = 24
 z_as_relative = false
 
 [node name="Global" type="Node2D" parent="Layer4_Closest" unique_id=1796059948]
 
+[node name="Level2_Forest" type="Node2D" parent="Layer4_Closest" unique_id=1756285345]
+
 [node name="Level1_Workshop" type="Node2D" parent="Layer4_Closest" unique_id=490286907]
 visibility_layer = 9
 
-[node name="Crate" parent="Layer4_Closest/Level1_Workshop" unique_id=175785902 instance=ExtResource("3_pvy0h")]
+[node name="Crate1" parent="Layer4_Closest/Level1_Workshop" unique_id=175785902 instance=ExtResource("3_pvy0h")]
 visibility_layer = 8
-position = Vector2(379, 97)
-scale = Vector2(0.39926553, 0.39926553)
+position = Vector2(167, -28.000002)
+scale = Vector2(0.66, 0.66)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate" unique_id=1753873199 groups=["wood"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate1" unique_id=1753873199 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Crate/StaticBody2D" unique_id=486458265]
-position = Vector2(255.46906, 256.44434)
-scale = Vector2(23.19791, 22.596802)
-shape = SubResource("RectangleShape2D_pvy0h")
-
-[node name="Crate2" parent="Layer4_Closest/Level1_Workshop" unique_id=2048652954 instance=ExtResource("3_pvy0h")]
-visibility_layer = 8
-position = Vector2(3226.0002, 145)
-scale = Vector2(0.29320395, 0.29320395)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Crate2" unique_id=2016700209 groups=["wood"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Crate2/StaticBody2D" unique_id=659154688]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Crate1/StaticBody2D" unique_id=486458265]
 position = Vector2(255.46906, 256.44434)
 scale = Vector2(23.19791, 22.596802)
 shape = SubResource("RectangleShape2D_pvy0h")
 
 [node name="Stool" parent="Layer4_Closest/Level1_Workshop" unique_id=286168946 instance=ExtResource("6_ugpc4")]
-position = Vector2(-334, 182)
+position = Vector2(-428, 182.00002)
 scale = Vector2(0.23292482, 0.23292482)
 
-[node name="BedNeedsModelStill" type="Node2D" parent="Layer4_Closest/Level1_Workshop" unique_id=491370976]
-
 [node name="WoodGround" type="Node2D" parent="Layer4_Closest/Level1_Workshop" unique_id=847772485]
+visibility_layer = 8
 
-[node name="WoodGroundLong1_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=1171187394 instance=ExtResource("14_lccb3")]
-position = Vector2(-1502, -216)
+[node name="WoodGroundLong1" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=1171187394 instance=ExtResource("14_lccb3")]
+visibility_layer = 8
+position = Vector2(-1091, -216)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1_Prop" unique_id=323699730 groups=["wood"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1" unique_id=323699730 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1_Prop/StaticBody2D" unique_id=1134585431]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1/StaticBody2D" unique_id=1134585431]
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")
 
-[node name="WoodGroundLong2_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=2000360854 instance=ExtResource("14_lccb3")]
+[node name="WoodGroundLong2" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=2000360854 instance=ExtResource("14_lccb3")]
+visibility_layer = 8
 position = Vector2(-478, -216)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop" unique_id=1979684704 groups=["wood"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2" unique_id=1979684704 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2_Prop/StaticBody2D" unique_id=1523984183 groups=["wood"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong2/StaticBody2D" unique_id=1523984183 groups=["wood"]]
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")
 
-[node name="WoodGroundLong3_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=454216945 instance=ExtResource("14_lccb3")]
+[node name="WoodGroundLong3" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=454216945 instance=ExtResource("14_lccb3")]
+visibility_layer = 8
 position = Vector2(546, -216)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop" unique_id=202798119 groups=["wood"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3" unique_id=202798119 groups=["wood"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3_Prop/StaticBody2D" unique_id=1749269825 groups=["wood"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong3/StaticBody2D" unique_id=1749269825 groups=["wood"]]
 position = Vector2(512, 512)
 scale = Vector2(0.92000026, 1)
 shape = SubResource("RectangleShape2D_afeaf")
 
-[node name="Level2_Forest" type="Node2D" parent="Layer4_Closest" unique_id=1756285345]
+[node name="WoodGroundLong4" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=22150919 instance=ExtResource("14_lccb3")]
+visibility_layer = 8
+position = Vector2(2186, -216)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong4" unique_id=2128912044 groups=["wood"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong4/StaticBody2D" unique_id=504166773]
+position = Vector2(512, 512)
+scale = Vector2(0.92000026, 1)
+shape = SubResource("RectangleShape2D_afeaf")
+
+[node name="WoodGroundLong5" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=1139037740 instance=ExtResource("14_lccb3")]
+visibility_layer = 8
+position = Vector2(3210, -216)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong5" unique_id=1027019180 groups=["wood"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong5/StaticBody2D" unique_id=50930134 groups=["wood"]]
+position = Vector2(512, 512)
+scale = Vector2(0.92000026, 1)
+shape = SubResource("RectangleShape2D_afeaf")
+
+[node name="WoodGroundLong6" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=1362845316 instance=ExtResource("14_lccb3")]
+visibility_layer = 8
+position = Vector2(3790, -216)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong6" unique_id=1152217228 groups=["wood"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong6/StaticBody2D" unique_id=547422099 groups=["wood"]]
+position = Vector2(512, 512)
+scale = Vector2(0.92000026, 1)
+shape = SubResource("RectangleShape2D_afeaf")
+
+[node name="CobbleGround" type="Node2D" parent="Layer4_Closest/Level1_Workshop" unique_id=1159795798]
+visibility_layer = 8
+position = Vector2(1, 0)
+
+[node name="CobbleGroundLong1" parent="Layer4_Closest/Level1_Workshop/CobbleGround" unique_id=1435658444 instance=ExtResource("27_w6h7a")]
+visibility_layer = 8
+position = Vector2(-1092, -416)
+scale = Vector2(2.6, 2.6)
+
+[node name="CobbleGroundLong2" parent="Layer4_Closest/Level1_Workshop/CobbleGround" unique_id=484689348 instance=ExtResource("27_w6h7a")]
+visibility_layer = 8
+position = Vector2(2185, -402.99997)
+scale = Vector2(2.567, 2.567)
+
+[node name="DeskLong" parent="Layer4_Closest/Level1_Workshop" unique_id=1625910499 instance=ExtResource("37_8rkx5")]
+position = Vector2(-463, 94)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/DeskLong" unique_id=683065084]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/DeskLong/StaticBody2D" unique_id=2125166203]
+position = Vector2(256, 250)
+shape = SubResource("RectangleShape2D_xrdj6")
+
+[node name="Box" parent="Layer4_Closest/Level1_Workshop" unique_id=106808536 instance=ExtResource("13_p2v6c")]
+position = Vector2(473, 56)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Box" unique_id=539513728]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Box/StaticBody2D" unique_id=111840852]
+position = Vector2(256, 262)
+shape = SubResource("RectangleShape2D_7cflg")
 
 [node name="Level3_Beach" type="Node2D" parent="Layer4_Closest" unique_id=2122913877]
-
-[node name="OceanBeach" type="ColorRect" parent="Layer4_Closest/Level3_Beach" unique_id=443868994]
-offset_left = -966.0
-offset_top = 2857.0
-offset_right = -926.0
-offset_bottom = 2897.0
-scale = Vector2(74.055756, 4.8558693)
-color = Color(0.6901961, 0.6901961, 0.6901961, 0.53333336)
 
 [node name="Hand_Enemy" parent="Layer4_Closest/Level3_Beach" unique_id=945900204 instance=ExtResource("14_cjwru")]
 unique_name_in_owner = true
@@ -619,7 +1733,56 @@ position = Vector2(3688.9998, 569.0001)
 scale = Vector2(0.7, 0.7)
 script = ExtResource("15_o5w1d")
 
+[node name="Rubble" type="Node2D" parent="Layer4_Closest/Level3_Beach" unique_id=1906556440]
+
+[node name="Rubble1" parent="Layer4_Closest/Level3_Beach/Rubble" unique_id=1984068950 instance=ExtResource("36_hvf66")]
+position = Vector2(4129.0005, 2659)
+scale = Vector2(1.25, 1.25)
+
+[node name="Rubble2" parent="Layer4_Closest/Level3_Beach/Rubble" unique_id=1911562990 instance=ExtResource("37_d55dd")]
+position = Vector2(718, 2764)
+
+[node name="Rubble3" parent="Layer4_Closest/Level3_Beach/Rubble" unique_id=2084902275 instance=ExtResource("38_uw1cm")]
+position = Vector2(-129, 2603)
+scale = Vector2(1.5, 1.5)
+
+[node name="RubbleObjects" type="Node2D" parent="Layer4_Closest/Level3_Beach/Rubble" unique_id=28423257]
+
+[node name="Rubble4" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects" unique_id=1806052165 instance=ExtResource("37_d55dd")]
+position = Vector2(7520.999, 2977)
+rotation = -2.913391
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble4" unique_id=1819477172]
+position = Vector2(1049.6309, 417.36658)
+rotation = 2.913391
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble4/StaticBody2D" unique_id=176146415]
+position = Vector2(484.6667, 220.66667)
+rotation = 0.36564147
+scale = Vector2(10.91703, 6.835329)
+shape = SubResource("CapsuleShape2D_qnkuv")
+
+[node name="Rubble5" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects" unique_id=1638162520 instance=ExtResource("38_uw1cm")]
+position = Vector2(6593, 2333)
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble5" unique_id=453541200]
+position = Vector2(-4395.3335, -1555.3337)
+scale = Vector2(0.6666667, 0.6666667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level3_Beach/Rubble/RubbleObjects/Rubble5/StaticBody2D" unique_id=710379631]
+position = Vector2(6971.001, 2744)
+rotation = -1.9645985
+scale = Vector2(2.1959753, -3.334691)
+shape = SubResource("CapsuleShape2D_uqkx0")
+
 [node name="Level4_Caverns" type="Node2D" parent="Layer4_Closest" unique_id=1514651304]
+
+[node name="Volcano" parent="Layer4_Closest/Level4_Caverns" unique_id=638960272 instance=ExtResource("28_y2ssv")]
+visibility_layer = 8
+position = Vector2(8315, 3348)
+scale = Vector2(1.5, 1.5)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=1377482700]
 unique_name_in_owner = true
@@ -627,8 +1790,10 @@ z_as_relative = false
 script = ExtResource("10_kmyb2")
 
 [node name="ChainLarge_Prop" parent="Triggers" unique_id=9414082 instance=ExtResource("11_t50p6")]
-position = Vector2(7458, 109)
+visibility_layer = 8
+position = Vector2(7615.0005, 194.00023)
 rotation = -0.5805926
+scale = Vector2(0.35, 0.35)
 
 [node name="Chain" type="Area2D" parent="Triggers/ChainLarge_Prop" unique_id=1095307176]
 unique_name_in_owner = true
@@ -636,7 +1801,8 @@ position = Vector2(257.584, 249.55257)
 scale = Vector2(0.4827345, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/ChainLarge_Prop/Chain" unique_id=1464116023]
-scale = Vector2(3.171823, 19.053186)
+position = Vector2(522.03516, 254.17383)
+scale = Vector2(5.7092466, 23.330578)
 shape = SubResource("RectangleShape2D_t50p6")
 
 [node name="Bed" type="Area2D" parent="Triggers" unique_id=1274395197]
@@ -647,6 +1813,7 @@ scale = Vector2(15.48, 12.520002)
 shape = SubResource("RectangleShape2D_2848f")
 
 [node name="Door" type="Area2D" parent="Triggers" unique_id=1429329528]
+visible = false
 position = Vector2(299, 162)
 scale = Vector2(0.39999694, 1)
 
@@ -667,6 +1834,7 @@ position = Vector2(1872, 489)
 scale = Vector2(1, 1.6800001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Pit" unique_id=727818260]
+position = Vector2(8, 16.666672)
 scale = Vector2(30.223225, 3.5653598)
 shape = SubResource("RectangleShape2D_lhaxc")
 
@@ -675,7 +1843,8 @@ position = Vector2(4226, 85)
 scale = Vector2(1.16, 1.6800001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Boiler" unique_id=44421055]
-scale = Vector2(30.223225, 3.5653598)
+position = Vector2(21.551514, -56.11638)
+scale = Vector2(30.223236, 3.565361)
 shape = SubResource("RectangleShape2D_lhaxc")
 
 [node name="Death_River" type="Area2D" parent="Triggers" unique_id=1352100187]
@@ -691,7 +1860,7 @@ position = Vector2(5877, 4)
 scale = Vector2(0.5199902, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Soldier" unique_id=1410040851]
-position = Vector2(42, 71)
+position = Vector2(-30.016602, 71)
 scale = Vector2(67.319756, 27.890444)
 shape = SubResource("RectangleShape2D_5fkoe")
 
@@ -714,7 +1883,7 @@ shape = SubResource("RectangleShape2D_6836m")
 position = Vector2(0, 2862)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Rocks" unique_id=2077611461]
-position = Vector2(679, 131)
+position = Vector2(673, 98)
 scale = Vector2(56.583504, 7.2425528)
 shape = SubResource("RectangleShape2D_lccb3")
 
@@ -723,6 +1892,8 @@ position = Vector2(4453.0005, 2977)
 scale = Vector2(26.919981, 6.519991)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Hand" unique_id=1096695230]
+position = Vector2(0, -3.052185)
+scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_cjwru")
 
 [node name="Pipe" type="Area2D" parent="Triggers" unique_id=1212056798]
@@ -755,6 +1926,14 @@ scale = Vector2(15.720039, 9.2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/End" unique_id=2135825476]
 shape = SubResource("RectangleShape2D_3g6m8")
 
+[node name="BeachBall" parent="Triggers" unique_id=57626466 instance=ExtResource("67_oe84i")]
+position = Vector2(2084, 2555)
+scale = Vector2(0.5, 0.5)
+
+[node name="BeachTube" parent="Triggers" unique_id=1205446533 instance=ExtResource("68_youpk")]
+position = Vector2(1461, 2544.0002)
+rotation = -0.116937056
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134680663]
 unique_name_in_owner = true
 z_as_relative = false
@@ -771,22 +1950,11 @@ points = PackedVector2Array(0, 0, 0, 0)
 default_color = Color(0, 0, 0, 1)
 
 [node name="RayCast2D" type="RayCast2D" parent="Soldier" unique_id=557383334]
-target_position = Vector2(1200, 0)
+target_position = Vector2(960, 0)
 
 [node name="soldier_visual" parent="Soldier" unique_id=2132058842 instance=ExtResource("21_jbsh1")]
 position = Vector2(-8.242738, 11.53871)
-scale = Vector2(0.36755076, 0.36755076)
-
-[node name="FinishText" type="Label" parent="." unique_id=1037680081]
-unique_name_in_owner = true
-visible = false
-offset_left = 8359.0
-offset_top = 44.0
-offset_right = 8618.0
-offset_bottom = 263.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 160
-text = "FIN"
+scale = Vector2(0.5, 0.5)
 
 [node name="CharacterBody2D" parent="." unique_id=1592384400 groups=["transparent"] instance=ExtResource("6_2848f")]
 unique_name_in_owner = true
@@ -821,6 +1989,37 @@ parameters/looping = true
 [node name="ChainBreak" type="AudioStreamPlayer" parent="." unique_id=504511764]
 stream = ExtResource("22_jd0dm")
 bus = &"SFX"
+
+[node name="GuardPost" type="Node2D" parent="." unique_id=1320385327]
+
+[node name="Catwalk1" parent="GuardPost" unique_id=927703385 instance=ExtResource("15_23fag")]
+position = Vector2(5527, -322)
+scale = Vector2(0.5, 0.5)
+
+[node name="Catwalk2" parent="GuardPost" unique_id=634071696 instance=ExtResource("15_23fag")]
+position = Vector2(5732, -322)
+scale = Vector2(0.5, 0.5)
+
+[node name="Catwalk3" parent="GuardPost" unique_id=527908865 instance=ExtResource("15_23fag")]
+position = Vector2(5937, -322)
+scale = Vector2(0.5, 0.5)
+
+[node name="CatwalkPole" parent="GuardPost" unique_id=668031775 instance=ExtResource("68_7l8y2")]
+position = Vector2(6065, -257)
+scale = Vector2(0.4, 0.4)
+
+[node name="StackedPlanks" parent="." unique_id=400165639 instance=ExtResource("76_esclk")]
+position = Vector2(6010, -232)
+scale = Vector2(0.25, 0.25)
+
+[node name="WoodenLadder" parent="." unique_id=134842888 instance=ExtResource("44_quceh")]
+position = Vector2(5576, -184)
+scale = Vector2(1.1, 1.1)
+
+[node name="Surfboard" parent="." unique_id=1863866705 instance=ExtResource("60_qnkuv")]
+position = Vector2(4590, 2575.9998)
+rotation = -0.05785583
+scale = Vector2(0.99999994, 0.99999994)
 
 [connection signal="body_entered" from="Triggers/Bed" to="Triggers" method="_on_bed_body_entered"]
 [connection signal="body_entered" from="Triggers/Door" to="Triggers" method="_on_door_body_entered"]

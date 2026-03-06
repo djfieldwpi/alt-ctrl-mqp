@@ -26,7 +26,7 @@ light_color = Color(0.47, 0.47, 0.47, 1)
 sky_mode = 1
 
 [node name="StackedPlanks2" parent="SubViewport" unique_id=485197436 instance=ExtResource("1_aslqp")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.10809064, 0)
+transform = Transform3D(1.4871674, 0.025555633, 0.1941143, 0, 1.4871674, -0.1957893, -0.1957893, 0.1941143, 1.4744444, 0, -0.10809064, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 material = SubResource("ShaderMaterial_nshul")

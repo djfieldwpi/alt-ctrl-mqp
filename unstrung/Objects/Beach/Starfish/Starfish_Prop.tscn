@@ -26,7 +26,7 @@ light_color = Color(0.47, 0.47, 0.47, 1)
 sky_mode = 1
 
 [node name="Starfish2" parent="SubViewport" unique_id=1054007281 instance=ExtResource("1_0xrdl")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(2.980769, 0.10133804, 0.32364717, -0.3382773, 1.0926515, 2.7733886, -0.024194598, -2.7921045, 1.097074, 0, 0, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 material = SubResource("ShaderMaterial_nshul")
