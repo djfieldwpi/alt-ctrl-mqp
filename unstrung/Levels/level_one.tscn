@@ -5,19 +5,30 @@
 [ext_resource type="Script" uid="uid://cphmfce6vup6g" path="res://Scripts/camera_2d.gd" id="1_wi846"]
 [ext_resource type="PackedScene" uid="uid://1w6fmus6y2ch" path="res://Objects/Workshop/Oval Window/Backdrop/OvalWindowBackdrop_Prop.tscn" id="2_cph7v"]
 [ext_resource type="Texture2D" uid="uid://dg1a6450crvjl" path="res://Sprites/flamehazard.jpg" id="2_l4fe4"]
+[ext_resource type="Texture2D" uid="uid://cvtabsunwpsaa" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-1.png" id="2_w6h7a"]
+[ext_resource type="Texture2D" uid="uid://dss8m76jhvrb4" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-2.png" id="3_l70lb"]
 [ext_resource type="PackedScene" uid="uid://c4y74uix4re8o" path="res://Objects/Workshop/Crate/Crate_Prop.tscn" id="3_pvy0h"]
 [ext_resource type="PackedScene" uid="uid://bqj7liam3vc14" path="res://Objects/Workshop/Oval Window/OvalWindow_Prop.tscn" id="3_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://yw4205367wwy" path="res://Objects/Beach/Palm Tree/Large/PalmTreeLarge_Prop.tscn" id="4_lhaxc"]
+[ext_resource type="Texture2D" uid="uid://bkwsob2g48gh4" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-3.png" id="4_m4hqf"]
+[ext_resource type="Texture2D" uid="uid://cpomnegq8m3nh" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-4.png" id="5_n67ls"]
 [ext_resource type="PackedScene" uid="uid://dfn1724e8oa3n" path="res://Player/player.tscn" id="6_2848f"]
 [ext_resource type="PackedScene" uid="uid://cwo800esd4dpg" path="res://Objects/Workshop/Boiler/Boiler_Prop.tscn" id="6_ce78g"]
 [ext_resource type="FontFile" uid="uid://d4ijk0au8f1ih" path="res://UI/Fonts/roboto_regular_font.tres" id="6_kmyb2"]
+[ext_resource type="Texture2D" uid="uid://dh72q0mo3ab54" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-5.png" id="6_knwns"]
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
+[ext_resource type="Texture2D" uid="uid://dkad7s5rvfpbc" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-6.png" id="7_1xag0"]
 [ext_resource type="PackedScene" uid="uid://b7iq3vou5de5c" path="res://Objects/Workshop/Engine/Engine_Prop.tscn" id="7_6836m"]
 [ext_resource type="Script" uid="uid://1gjlhgvwn70l" path="res://Levels/soldier.gd" id="8_2py18"]
+[ext_resource type="Texture2D" uid="uid://dybagtllebci7" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-7.png" id="8_pjf3e"]
+[ext_resource type="Texture2D" uid="uid://b2sqt0iva5bts" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-8.png" id="9_hvf66"]
 [ext_resource type="PackedScene" uid="uid://btme1jiquhoye" path="res://Objects/Beach/Sailboat/Sailboat_Prop.tscn" id="9_y30io"]
+[ext_resource type="Texture2D" uid="uid://5gd6ruvsbtup" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-9.png" id="10_d55dd"]
 [ext_resource type="PackedScene" uid="uid://brxawk5uvjfsj" path="res://Objects/smoke.tscn" id="10_jbsh1"]
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
 [ext_resource type="PackedScene" uid="uid://dkghqjmbmfds2" path="res://Objects/Workshop/Chain/Large/ChainLarge_Prop.tscn" id="11_t50p6"]
+[ext_resource type="Texture2D" uid="uid://06njp37nogc8" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-10.png" id="11_uw1cm"]
+[ext_resource type="Texture2D" uid="uid://dv3bbji0vxgb0" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-11.png" id="12_2kr7s"]
 [ext_resource type="PackedScene" uid="uid://djgtfrl8a6q1y" path="res://Objects/Hand/Hand_Enemy.tscn" id="14_cjwru"]
 [ext_resource type="PackedScene" uid="uid://bofrcnjl1s20g" path="res://Objects/Workshop/Wood Ground/Long/WoodGroundLong_Prop.tscn" id="14_lccb3"]
 [ext_resource type="Script" uid="uid://brtktaid3a84e" path="res://Objects/Hand/hand_enemy.gd" id="15_o5w1d"]
@@ -27,6 +38,39 @@
 [ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
 [ext_resource type="AudioStream" uid="uid://bmrhsf045665b" path="res://Audio/SFX/WaterRushing.ogg" id="26_nph2v"]
 [ext_resource type="AudioStream" uid="uid://42l5wxwrvtw" path="res://Audio/SFX/HandJumpScare.ogg" id="27_cp88c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7cflg"]
+texture = ExtResource("2_w6h7a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13xmu"]
+texture = ExtResource("3_l70lb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8b4co"]
+texture = ExtResource("4_m4hqf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sthk"]
+texture = ExtResource("5_n67ls")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8rkx5"]
+texture = ExtResource("6_knwns")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l2s3v"]
+texture = ExtResource("7_1xag0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lggn2"]
+texture = ExtResource("8_pjf3e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xrdj6"]
+texture = ExtResource("9_hvf66")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rjyv"]
+texture = ExtResource("10_d55dd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nr3vf"]
+texture = ExtResource("11_uw1cm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22whe"]
+texture = ExtResource("12_2kr7s")
 
 [sub_resource type="Gradient" id="Gradient_ugpc4"]
 offsets = PackedFloat32Array(0, 0.624, 1)
@@ -147,6 +191,83 @@ offset_top = 1964.0
 offset_right = -926.0
 offset_bottom = 2004.0
 scale = Vector2(278.44986, 27.17638)
+
+[node name="Panel" type="Panel" parent="Layer1_Farthest/Global" unique_id=965353804]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7cflg")
+
+[node name="Panel2" type="Panel" parent="Layer1_Farthest/Global" unique_id=821956268]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_13xmu")
+
+[node name="Panel3" type="Panel" parent="Layer1_Farthest/Global" unique_id=1274848121]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8b4co")
+
+[node name="Panel4" type="Panel" parent="Layer1_Farthest/Global" unique_id=1151277912]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0sthk")
+
+[node name="Panel5" type="Panel" parent="Layer1_Farthest/Global" unique_id=331597843]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8rkx5")
+
+[node name="Panel6" type="Panel" parent="Layer1_Farthest/Global" unique_id=1903172083]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_l2s3v")
+
+[node name="Panel7" type="Panel" parent="Layer1_Farthest/Global" unique_id=770174640]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lggn2")
+
+[node name="Panel8" type="Panel" parent="Layer1_Farthest/Global" unique_id=428110452]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xrdj6")
+
+[node name="Panel9" type="Panel" parent="Layer1_Farthest/Global" unique_id=36583864]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0rjyv")
+
+[node name="Panel10" type="Panel" parent="Layer1_Farthest/Global" unique_id=25000523]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nr3vf")
+
+[node name="Panel11" type="Panel" parent="Layer1_Farthest/Global" unique_id=2098009418]
+offset_left = -1017.0
+offset_top = -540.0
+offset_right = 10183.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_22whe")
 
 [node name="Level1_Workshop" type="Node2D" parent="Layer1_Farthest" unique_id=443231305]
 
