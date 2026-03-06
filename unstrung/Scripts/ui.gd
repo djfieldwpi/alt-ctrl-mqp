@@ -14,6 +14,7 @@ func _ready() -> void:
 	credits.visible = false
 	controls.visible = false
 	container.modulate.a = 1.0
+	$MarginContainer/MarginContainerMainMenu/MainMenu/StartButton.grab_focus() 
 	
 func _fade_to_screen(target_screen: Control) -> void:
 	var tween = create_tween()
