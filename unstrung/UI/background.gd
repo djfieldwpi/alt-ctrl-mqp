@@ -7,7 +7,6 @@ var shift_control = Vector2(16.0, 9.0)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	panels = get_children()
-	print(panels)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
