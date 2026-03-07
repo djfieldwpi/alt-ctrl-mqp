@@ -40,3 +40,4 @@ For any inquiries reach out to us at:
 - Dennis Field (djfield@wpi.edu)
 - Peter Griffiths (plgriffiths@wpi.edu)
 - Weilun Deng (wdeng1@wpi.edu)
+- Lukas Gandras (lhgandras@wpi.edu)
