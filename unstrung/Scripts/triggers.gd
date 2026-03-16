@@ -174,9 +174,6 @@ func _on_end_body_entered(body: Node2D) -> void:
 		GlobalVariables.is_actors_locked = true
 		GlobalVariables.is_system_lock = true
 		
-		%FinishText.visible = true
-		%FinishText.global_position.y += 2400
-		%FinishText.global_position.x += 800
 		%CharacterBody2D.visible = false
 		var timer = get_tree().create_timer(2)
 		await timer.timeout
@@ -185,7 +182,4 @@ func _on_end_body_entered(body: Node2D) -> void:
 		GlobalVariables.is_level_two = false
 		GlobalVariables.is_chain_broken = false
 		GlobalVariables.is_chain_breakable = false
-		%FinishText.visible = false
-		%FinishText.global_position.y -= 2400
-		%FinishText.global_position.x -= 800
 		get_tree().change_scene_to_file("res://UI/ui.tscn")

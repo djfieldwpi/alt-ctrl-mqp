@@ -239,7 +239,7 @@ size = Vector2(20, 26.104301)
 size = Vector2(16.525337, 21.438364)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3g6m8"]
-size = Vector2(7.888031, 15.543518)
+size = Vector2(5.852318, 14.565247)
 
 [node name="Unstrung" type="Node2D" unique_id=324805373]
 visibility_layer = 1023
@@ -343,7 +343,7 @@ scale = Vector2(5, 3.333)
 [node name="Level3_Beach" type="Node2D" parent="Layer1_Farthest" unique_id=51140608]
 
 [node name="CaveTemp" type="Polygon2D" parent="Layer1_Farthest/Level3_Beach" unique_id=651102888]
-position = Vector2(9335, 2539)
+position = Vector2(9466, 2539)
 scale = Vector2(3.7106085, 3.7106085)
 color = Color(0.760999, 0.76099914, 0.76099914, 1)
 polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 96.55947, -14.907181, 119.822655, 23.408623, 146.9487, 69.2532, 71.34399, 69.252884, 14.212395, 69.252884, -65.84026, 69.252884, -128.10342, 69.252884, -110.756386, 12.803352)
@@ -2030,7 +2030,7 @@ position = Vector2(9175, 2700.0002)
 scale = Vector2(15.720039, 9.2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/End" unique_id=2135825476]
-position = Vector2(0.0635376, 2.228241)
+position = Vector2(0, 2.7173767)
 scale = Vector2(1, 0.99999976)
 shape = SubResource("RectangleShape2D_3g6m8")
 
