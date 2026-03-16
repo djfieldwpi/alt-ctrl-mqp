@@ -10,6 +10,7 @@ shader = ExtResource("1_taxxq")
 viewport_path = NodePath("SubViewport")
 
 [node name="ChainMedium_Prop" type="Node2D" unique_id=41544662]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -31,6 +32,7 @@ sky_mode = 1
 transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142135, 0, 0.44342488, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_nshul")
 offset_right = 512.0
 offset_bottom = 512.0

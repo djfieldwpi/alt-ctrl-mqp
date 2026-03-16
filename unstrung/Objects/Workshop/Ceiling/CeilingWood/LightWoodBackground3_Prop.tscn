@@ -10,6 +10,7 @@ shader = ExtResource("1_vhaqs")
 viewport_path = NodePath("SubViewport")
 
 [node name="LightWoodBackground3" type="Node2D" unique_id=41544662]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -30,6 +31,7 @@ sky_mode = 1
 transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 0, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_nshul")
 offset_right = 512.0
 offset_bottom = 512.0

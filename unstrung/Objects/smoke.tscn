@@ -258,6 +258,7 @@ animations = [{
 }]
 
 [node name="Smoke" type="Node2D" unique_id=460552790]
+visibility_layer = 9
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=392829270]
 sprite_frames = SubResource("SpriteFrames_cjb87")

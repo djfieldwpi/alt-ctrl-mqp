@@ -10,6 +10,7 @@ shader = ExtResource("2_wr46o")
 viewport_path = NodePath("SubViewport")
 
 [node name="CeilingHook_Prop" type="Node2D" unique_id=630610592]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=722746719]
 own_world_3d = true
@@ -29,6 +30,7 @@ light_color = Color(0.66931534, 0.6693154, 0.6693153, 1)
 sky_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=29666794]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_wr46o")
 offset_right = 512.0
 offset_bottom = 512.0

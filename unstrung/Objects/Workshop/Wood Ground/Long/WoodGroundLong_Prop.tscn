@@ -10,6 +10,7 @@ shader = ExtResource("1_i8jh6")
 viewport_path = NodePath("SubViewport")
 
 [node name="WoodGroundLong_Prop" type="Node2D" unique_id=41544662]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -37,6 +38,7 @@ transform = Transform3D(1.5975873e-15, 4.371139e-08, 1, 0.83613306, -4.371139e-0
 transform = Transform3D(1.5975873e-15, 4.371139e-08, 1, 0.83613306, -4.371139e-08, 0, 3.654854e-08, 1, -4.371139e-08, -8, 0, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_nshul")
 offset_right = 512.0
 offset_bottom = 512.0

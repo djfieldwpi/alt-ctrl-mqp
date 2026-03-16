@@ -117,7 +117,6 @@ func _on_finish_body_entered(body: Node2D) -> void:
 	if GlobalVariables.is_chain_broken and body is CharacterBody2D:
 		GlobalVariables.is_actors_locked = true
 		GlobalVariables.is_system_lock = true
-		%FinishText.visible = true
 		var timer = get_tree().create_timer(2)
 		await timer.timeout
 		beach_ambience.stop()
