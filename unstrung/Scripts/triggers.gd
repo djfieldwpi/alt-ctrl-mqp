@@ -12,10 +12,10 @@ var checkpoints: Array[Vector2] = [Vector2(-891.0, 96.0),
 								  Vector2(960+1920, 226.0),
 								  Vector2(4834.0, 283.0),
 								  Vector2(960+1920+1920+1920, 284.0)]
-var check_beach:	 Array[Vector2] = [Vector2(-654, 2759.0),
+var check_beach:	 Array[Vector2] = [Vector2(-654, 2669.0),
 								  Vector2(3100, 2732.0),
 								  Vector2(4950, 2732.0),
-								  Vector2(6760, 2732.0)]
+								  Vector2(6360, 2732.0)]
 								
 func _physics_process(_delta: float) -> void:
 	var bodies
@@ -24,7 +24,7 @@ func _physics_process(_delta: float) -> void:
 		if bodies:
 			for b in bodies:
 				print(b)
-				if b is not CharacterBody2D:
+				if b is not CharacterBody2D and b.is_in_group("shadows"):
 					GlobalVariables.is_chain_broken = true
 					chain_break.play()
 					%Chain.get_parent().queue_free()
