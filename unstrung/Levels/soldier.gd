@@ -59,7 +59,7 @@ func _physics_process(_delta: float) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not GlobalVariables.is_actors_locked:
-		if right and global_position.x > 6268 and not turning:
+		if right and global_position.x > 6150 and not turning:
 			right = false
 			animPlayer.play("Turn1")
 			turning = true
