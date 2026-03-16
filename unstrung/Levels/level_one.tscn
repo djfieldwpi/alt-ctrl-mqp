@@ -26,16 +26,20 @@
 [ext_resource type="Texture2D" uid="uid://5gd6ruvsbtup" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-9.png" id="10_d55dd"]
 [ext_resource type="PackedScene" uid="uid://brxawk5uvjfsj" path="res://Objects/smoke.tscn" id="10_jbsh1"]
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
+[ext_resource type="PackedScene" uid="uid://bkur4mhjm6vuu" path="res://Objects/Workshop/Bed/prop_empty_bed.tscn" id="11_cp88c"]
 [ext_resource type="PackedScene" uid="uid://dkghqjmbmfds2" path="res://Objects/Workshop/Chain/Large/ChainLarge_Prop.tscn" id="11_t50p6"]
 [ext_resource type="Texture2D" uid="uid://06njp37nogc8" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-10.png" id="11_uw1cm"]
 [ext_resource type="Texture2D" uid="uid://dv3bbji0vxgb0" path="res://Planes/Level 1 parralax layers/Full_Level_Background_-11.png" id="12_2kr7s"]
+[ext_resource type="PackedScene" uid="uid://b43p7hpt4s12u" path="res://Objects/Workshop/Puppet Holder/PuppetStringHolder_Prop.tscn" id="11_wepyk"]
 [ext_resource type="PackedScene" uid="uid://djgtfrl8a6q1y" path="res://Objects/Hand/Hand_Enemy.tscn" id="14_cjwru"]
 [ext_resource type="PackedScene" uid="uid://bofrcnjl1s20g" path="res://Objects/Workshop/Wood Ground/Long/WoodGroundLong_Prop.tscn" id="14_lccb3"]
 [ext_resource type="Script" uid="uid://brtktaid3a84e" path="res://Objects/Hand/hand_enemy.gd" id="15_o5w1d"]
 [ext_resource type="AudioStream" uid="uid://box3gmj1c5x1t" path="res://Audio/Music/Ambience_Beach.ogg" id="20_cjwru"]
+[ext_resource type="PackedScene" uid="uid://lskjynn0igw4" path="res://Objects/Cavern/Catwalk/Catwalk_Prop.tscn" id="20_wepyk"]
 [ext_resource type="PackedScene" uid="uid://osg2kfxqxa0h" path="res://Objects/Soldier/soldier.tscn" id="21_jbsh1"]
 [ext_resource type="AudioStream" uid="uid://c7wrk87q7hppb" path="res://Audio/SFX/SteamVent.ogg" id="21_o5w1d"]
 [ext_resource type="AudioStream" uid="uid://c1r1ey4khawnx" path="res://Audio/SFX/MetalThump.wav" id="22_jd0dm"]
+[ext_resource type="PackedScene" uid="uid://rreqy82vyxo8" path="res://Objects/Cavern/Catwalk Pole/CatwalkPole_Prop.tscn" id="22_y2ssv"]
 [ext_resource type="AudioStream" uid="uid://bmrhsf045665b" path="res://Audio/SFX/WaterRushing.ogg" id="26_nph2v"]
 [ext_resource type="AudioStream" uid="uid://42l5wxwrvtw" path="res://Audio/SFX/HandJumpScare.ogg" id="27_cp88c"]
 
@@ -120,6 +124,9 @@ scale_over_velocity_curve = SubResource("CurveXYZTexture_o5w1d")
 color = Color(0.4718973, 0.4718973, 0.4718973, 0.9607843)
 color_initial_ramp = SubResource("GradientTexture1D_afeaf")
 alpha_curve = SubResource("CurveTexture_jd0dm")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nph2v"]
+size = Vector2(674, 177.33334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y30io"]
 
@@ -280,7 +287,7 @@ offset_bottom = 375.00003
 scale = Vector2(16.038786, 12.860923)
 
 [node name="DangerSign1" type="Line2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=1359738964]
-position = Vector2(3754, 145.00002)
+position = Vector2(3676, 145)
 points = PackedVector2Array(0, 0, 0, -150)
 default_color = Color(0, 0, 0, 1)
 
@@ -290,7 +297,7 @@ scale = Vector2(0.263422, 0.263422)
 texture = ExtResource("2_l4fe4")
 
 [node name="DangerSign2" type="Line2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=479417754]
-position = Vector2(4645, 145)
+position = Vector2(4668, 145)
 points = PackedVector2Array(0, 0, 0, -150)
 default_color = Color(0, 0, 0, 1)
 
@@ -444,26 +451,10 @@ visibility_layer = 8
 position = Vector2(-946, -371)
 scale = Vector2(1.0148665, 2.4400005)
 
-[node name="BedBox" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1746030507 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(-721, 223)
-scale = Vector2(10.285662, -3.292248)
-
 [node name="Ground2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=310802932 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(3489, 418)
 scale = Vector2(65.708534, 6.5411944)
-
-[node name="BedText" type="Label" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=559306047]
-light_mask = 9
-offset_left = -883.0
-offset_top = 106.00001
-offset_right = -843.0
-offset_bottom = 129.0
-scale = Vector2(10.866655, 9.46121)
-theme_override_fonts/font = ExtResource("6_kmyb2")
-theme_override_font_sizes/font_size = 13
-text = "Bed"
 
 [node name="TopBox3" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=127780359 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
@@ -480,9 +471,28 @@ visibility_layer = 8
 position = Vector2(4166, 176)
 scale = Vector2(30.005672, -1.572248)
 
-[node name="Smoke" parent="Layer3_Closer/Level1_Workshop" unique_id=460552790 instance=ExtResource("10_jbsh1")]
+[node name="Smoke1" parent="Layer3_Closer/Level1_Workshop" unique_id=460552790 instance=ExtResource("10_jbsh1")]
 position = Vector2(4039.9998, -317)
 scale = Vector2(0.050804216, 0.050804216)
+
+[node name="Smoke2" parent="Layer3_Closer/Level1_Workshop" unique_id=1504267657 instance=ExtResource("10_jbsh1")]
+position = Vector2(3949.9995, -317)
+scale = Vector2(0.050804216, 0.050804216)
+
+[node name="Bed" parent="Layer3_Closer/Level1_Workshop" unique_id=1457648814 instance=ExtResource("11_cp88c")]
+visibility_layer = 8
+position = Vector2(-935, -2)
+scale = Vector2(0.75, 0.75)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Bed" unique_id=1813403300 groups=["transparent"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Bed/StaticBody2D" unique_id=946918257]
+position = Vector2(349.00037, 296.66666)
+shape = SubResource("RectangleShape2D_nph2v")
+
+[node name="PuppetStringHolder" parent="Layer3_Closer/Level1_Workshop" unique_id=512595938 instance=ExtResource("11_wepyk")]
+position = Vector2(-923, -467)
+scale = Vector2(0.6, 0.6)
 
 [node name="Level2_Forest" type="Node2D" parent="Layer3_Closer" unique_id=453509270]
 visibility_layer = 8
@@ -686,15 +696,15 @@ scale = Vector2(23.19791, 22.596802)
 shape = SubResource("RectangleShape2D_pvy0h")
 
 [node name="Stool" parent="Layer4_Closest/Level1_Workshop" unique_id=286168946 instance=ExtResource("6_ugpc4")]
+visibility_layer = 8
 position = Vector2(-334, 182)
 scale = Vector2(0.23292482, 0.23292482)
 
-[node name="BedNeedsModelStill" type="Node2D" parent="Layer4_Closest/Level1_Workshop" unique_id=491370976]
-
 [node name="WoodGround" type="Node2D" parent="Layer4_Closest/Level1_Workshop" unique_id=847772485]
+visible = false
 
 [node name="WoodGroundLong1_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=1171187394 instance=ExtResource("14_lccb3")]
-position = Vector2(-1502, -216)
+position = Vector2(-966, -216)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1_Prop" unique_id=323699730 groups=["wood"]]
 
@@ -814,7 +824,7 @@ position = Vector2(5877, 4)
 scale = Vector2(0.5199902, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Soldier" unique_id=1410040851]
-position = Vector2(42, 71)
+position = Vector2(69.23252, 71)
 scale = Vector2(67.319756, 27.890444)
 shape = SubResource("RectangleShape2D_5fkoe")
 
@@ -883,6 +893,34 @@ unique_name_in_owner = true
 z_as_relative = false
 script = ExtResource("1_wi846")
 
+[node name="Catwalks" type="Node2D" parent="." unique_id=1970905879]
+visibility_layer = 8
+position = Vector2(6, 0)
+
+[node name="Catwalk1" parent="Catwalks" unique_id=2032585516 instance=ExtResource("20_wepyk")]
+position = Vector2(5531, -300)
+scale = Vector2(0.35, 0.35)
+
+[node name="Catwalk2" parent="Catwalks" unique_id=940187552 instance=ExtResource("20_wepyk")]
+position = Vector2(5674, -300)
+scale = Vector2(0.35, 0.35)
+
+[node name="Catwalk3" parent="Catwalks" unique_id=794259077 instance=ExtResource("20_wepyk")]
+position = Vector2(5817, -300)
+scale = Vector2(0.35, 0.35)
+
+[node name="Catwalk4" parent="Catwalks" unique_id=1235734603 instance=ExtResource("20_wepyk")]
+position = Vector2(5960, -300)
+scale = Vector2(0.35, 0.35)
+
+[node name="Catwalk5" parent="Catwalks" unique_id=1824326991 instance=ExtResource("20_wepyk")]
+position = Vector2(6103.0005, -300)
+scale = Vector2(0.35, 0.35)
+
+[node name="CatwalkPole" parent="Catwalks" unique_id=1453483495 instance=ExtResource("22_y2ssv")]
+position = Vector2(6213, -266)
+scale = Vector2(0.2, 0.2)
+
 [node name="Soldier" type="CharacterBody2D" parent="." unique_id=2050255916 groups=["transparent"]]
 visibility_layer = 8
 position = Vector2(5569.0005, -243.00002)
@@ -913,7 +951,7 @@ text = "FIN"
 
 [node name="CharacterBody2D" parent="." unique_id=1592384400 groups=["transparent"] instance=ExtResource("6_2848f")]
 unique_name_in_owner = true
-position = Vector2(-891, 96)
+position = Vector2(-891, 86)
 scale = Vector2(0.4052424, 0.949358)
 collision_mask = 1
 

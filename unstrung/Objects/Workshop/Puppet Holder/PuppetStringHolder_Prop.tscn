@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b43p7hpt4s12u"]
+
+[ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="1_do0il"]
+[ext_resource type="PackedScene" uid="uid://4itd6e8je6t6" path="res://Objects/Workshop/Puppet Holder/PuppetStringHolder.glb" id="1_qijtb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
+shader = ExtResource("1_do0il")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
+viewport_path = NodePath("SubViewport")
+
+[node name="PuppetStringHolder" type="Node2D" unique_id=41544662]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
+own_world_3d = true
+transparent_bg = true
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1042998650]
+transform = Transform3D(1, 0, 0, 0, 1.0886823, 0, 0, 0, 1, 0, 0, 5)
+projection = 1
+size = 1.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+light_color = Color(0.47, 0.47, 0.47, 1)
+sky_mode = 1
+
+[node name="PuppetStringHolderObj" parent="SubViewport" unique_id=1624358641 instance=ExtResource("1_qijtb")]
+transform = Transform3D(-1.9670124e-06, 0, 45, 0, 45, 0, -45, 0, -1.9670124e-06, 0.2245791, 0.4366191, 0)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+material = SubResource("ShaderMaterial_nshul")
+offset_right = 512.0
+offset_bottom = 512.0
+texture = SubResource("ViewportTexture_6678p")
