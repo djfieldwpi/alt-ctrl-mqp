@@ -10,14 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://yw4205367wwy" path="res://Objects/Beach/Palm Tree/Large/PalmTreeLarge_Prop.tscn" id="4_lhaxc"]
 [ext_resource type="PackedScene" uid="uid://dfn1724e8oa3n" path="res://Player/player.tscn" id="6_2848f"]
 [ext_resource type="PackedScene" uid="uid://cwo800esd4dpg" path="res://Objects/Workshop/Boiler/Boiler_Prop.tscn" id="6_ce78g"]
-[ext_resource type="FontFile" uid="uid://d4ijk0au8f1ih" path="res://UI/Fonts/roboto_regular_font.tres" id="6_kmyb2"]
 [ext_resource type="PackedScene" uid="uid://ds4o5v1nopolv" path="res://Objects/Workshop/Stool/Stool_Prop.tscn" id="6_ugpc4"]
 [ext_resource type="PackedScene" uid="uid://b7iq3vou5de5c" path="res://Objects/Workshop/Engine/Engine_Prop.tscn" id="7_6836m"]
 [ext_resource type="Script" uid="uid://1gjlhgvwn70l" path="res://Levels/soldier.gd" id="8_2py18"]
 [ext_resource type="PackedScene" uid="uid://btme1jiquhoye" path="res://Objects/Beach/Sailboat/Sailboat_Prop.tscn" id="9_y30io"]
 [ext_resource type="PackedScene" uid="uid://brxawk5uvjfsj" path="res://Objects/smoke.tscn" id="10_jbsh1"]
 [ext_resource type="Script" uid="uid://b77riv7pbkhm5" path="res://Scripts/triggers.gd" id="10_kmyb2"]
+[ext_resource type="PackedScene" uid="uid://bkur4mhjm6vuu" path="res://Objects/Workshop/Bed/prop_empty_bed.tscn" id="11_cp88c"]
 [ext_resource type="PackedScene" uid="uid://dkghqjmbmfds2" path="res://Objects/Workshop/Chain/Large/ChainLarge_Prop.tscn" id="11_t50p6"]
+[ext_resource type="PackedScene" uid="uid://b43p7hpt4s12u" path="res://Objects/Workshop/Puppet Holder/PuppetStringHolder_Prop.tscn" id="11_wepyk"]
 [ext_resource type="PackedScene" uid="uid://djgtfrl8a6q1y" path="res://Objects/Hand/Hand_Enemy.tscn" id="14_cjwru"]
 [ext_resource type="PackedScene" uid="uid://bofrcnjl1s20g" path="res://Objects/Workshop/Wood Ground/Long/WoodGroundLong_Prop.tscn" id="14_lccb3"]
 [ext_resource type="Script" uid="uid://brtktaid3a84e" path="res://Objects/Hand/hand_enemy.gd" id="15_o5w1d"]
@@ -76,6 +77,9 @@ scale_over_velocity_curve = SubResource("CurveXYZTexture_o5w1d")
 color = Color(0.4718973, 0.4718973, 0.4718973, 0.9607843)
 color_initial_ramp = SubResource("GradientTexture1D_afeaf")
 alpha_curve = SubResource("CurveTexture_jd0dm")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nph2v"]
+size = Vector2(674, 177.33334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y30io"]
 
@@ -323,26 +327,10 @@ visibility_layer = 8
 position = Vector2(-946, -371)
 scale = Vector2(1.0148665, 2.4400005)
 
-[node name="BedBox" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=1746030507 instance=ExtResource("1_2b52f")]
-visibility_layer = 8
-position = Vector2(-721, 223)
-scale = Vector2(10.285662, -3.292248)
-
 [node name="Ground2" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=310802932 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
 position = Vector2(3489, 418)
 scale = Vector2(65.708534, 6.5411944)
-
-[node name="BedText" type="Label" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=559306047]
-light_mask = 9
-offset_left = -883.0
-offset_top = 106.00001
-offset_right = -843.0
-offset_bottom = 129.0
-scale = Vector2(10.866655, 9.46121)
-theme_override_fonts/font = ExtResource("6_kmyb2")
-theme_override_font_sizes/font_size = 13
-text = "Bed"
 
 [node name="TopBox3" parent="Layer3_Closer/Level1_Workshop/ToBeReplaced" unique_id=127780359 instance=ExtResource("1_2b52f")]
 visibility_layer = 8
@@ -362,6 +350,20 @@ scale = Vector2(30.005672, -1.572248)
 [node name="Smoke" parent="Layer3_Closer/Level1_Workshop" unique_id=460552790 instance=ExtResource("10_jbsh1")]
 position = Vector2(4039.9998, -317)
 scale = Vector2(0.050804216, 0.050804216)
+
+[node name="Bed" parent="Layer3_Closer/Level1_Workshop" unique_id=1457648814 instance=ExtResource("11_cp88c")]
+position = Vector2(-935, -2)
+scale = Vector2(0.75, 0.75)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level1_Workshop/Bed" unique_id=1813403300]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level1_Workshop/Bed/StaticBody2D" unique_id=946918257]
+position = Vector2(349.00037, 296.66666)
+shape = SubResource("RectangleShape2D_nph2v")
+
+[node name="PuppetStringHolder" parent="Layer3_Closer/Level1_Workshop" unique_id=512595938 instance=ExtResource("11_wepyk")]
+position = Vector2(-923, -467)
+scale = Vector2(0.6, 0.6)
 
 [node name="Level2_Forest" type="Node2D" parent="Layer3_Closer" unique_id=453509270]
 visibility_layer = 8
@@ -568,12 +570,10 @@ shape = SubResource("RectangleShape2D_pvy0h")
 position = Vector2(-334, 182)
 scale = Vector2(0.23292482, 0.23292482)
 
-[node name="BedNeedsModelStill" type="Node2D" parent="Layer4_Closest/Level1_Workshop" unique_id=491370976]
-
 [node name="WoodGround" type="Node2D" parent="Layer4_Closest/Level1_Workshop" unique_id=847772485]
 
 [node name="WoodGroundLong1_Prop" parent="Layer4_Closest/Level1_Workshop/WoodGround" unique_id=1171187394 instance=ExtResource("14_lccb3")]
-position = Vector2(-1502, -216)
+position = Vector2(-966, -216)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/WoodGround/WoodGroundLong1_Prop" unique_id=323699730 groups=["wood"]]
 
@@ -792,7 +792,7 @@ text = "FIN"
 
 [node name="CharacterBody2D" parent="." unique_id=1592384400 groups=["transparent"] instance=ExtResource("6_2848f")]
 unique_name_in_owner = true
-position = Vector2(-891, 96)
+position = Vector2(-891, 86)
 scale = Vector2(0.4052424, 0.949358)
 collision_mask = 1
 
