@@ -89,6 +89,9 @@ func _process(_delta: float) -> void:
 			print("Actors Locked")
 			get_tree().root.get_viewport().canvas_cull_mask = 8
 			for node in get_tree().get_nodes_in_group("transparent"):
+				var visual : TextureRect = node.find_child("TextureRect")
+				if visual:
+					visual.material.set_shader_parameter("opacity", 0.15)
 				node.modulate.a = 0.2
 			for node in get_tree().get_nodes_in_group("boulders"):
 				node.freeze_body()
@@ -115,6 +118,9 @@ func _process(_delta: float) -> void:
 			print("Actors Unlocked")
 			get_tree().root.get_viewport().canvas_cull_mask = -1
 			for node in get_tree().get_nodes_in_group("transparent"):
+				var visual : TextureRect = node.find_child("TextureRect")
+				if visual:
+					visual.material.set_shader_parameter("opacity", 1.0)
 				node.modulate.a = 1
 			for node in get_tree().get_nodes_in_group("boulders"):
 				node.unfreeze_body()
@@ -263,6 +269,9 @@ func spawnShadow(vertices: Array[Vector2]):
 	GlobalVariables.is_actors_locked = false
 	get_tree().root.get_viewport().canvas_cull_mask = -1
 	for node in get_tree().get_nodes_in_group("transparent"):
+				var visual : TextureRect = node.find_child("TextureRect")
+				if visual:
+					visual.material.set_shader_parameter("opacity", 1.0)
 				node.modulate.a = 1
 	for node in get_tree().get_nodes_in_group("boulders"):
 				node.unfreeze_body()

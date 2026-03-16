@@ -508,24 +508,24 @@ position = Vector2(804, -581)
 [node name="PuppetStringHolder" type="Node2D" parent="Layer3_Closer/Level1_Workshop" unique_id=2070830300]
 visibility_layer = 9
 
-[node name="PuppetStringHolderActual" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=303206066 instance=ExtResource("43_1xag0")]
+[node name="PuppetStringHolderActual" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=303206066 groups=["transparent"] instance=ExtResource("43_1xag0")]
 visibility_layer = 8
 position = Vector2(-964, -645)
 scale = Vector2(0.25, 0.25)
 
-[node name="PuppetString1" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=484636274 instance=ExtResource("12_6a7d4")]
+[node name="PuppetString1" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=484636274 groups=["transparent"] instance=ExtResource("12_6a7d4")]
 position = Vector2(-757, -625)
 scale = Vector2(0.5, 0.5)
 
-[node name="PuppetString2" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1496345410 instance=ExtResource("12_6a7d4")]
+[node name="PuppetString2" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1496345410 groups=["transparent"] instance=ExtResource("12_6a7d4")]
 position = Vector2(-869, -635)
 scale = Vector2(0.5, 0.5)
 
-[node name="PuppetString3" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=2008137826 instance=ExtResource("12_6a7d4")]
+[node name="PuppetString3" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=2008137826 groups=["transparent"] instance=ExtResource("12_6a7d4")]
 position = Vector2(-992, -624)
 scale = Vector2(0.5, 0.5)
 
-[node name="PuppetString4" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1539453321 instance=ExtResource("12_6a7d4")]
+[node name="PuppetString4" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1539453321 groups=["transparent"] instance=ExtResource("12_6a7d4")]
 position = Vector2(-803, -579)
 scale = Vector2(0.5, 0.5)
 
@@ -2050,7 +2050,7 @@ unique_name_in_owner = true
 z_as_relative = false
 script = ExtResource("1_wi846")
 
-[node name="Soldier" type="CharacterBody2D" parent="." unique_id=2050255916 groups=["transparent"]]
+[node name="Soldier" type="CharacterBody2D" parent="." unique_id=2050255916]
 visibility_layer = 8
 position = Vector2(5569.0005, -243.00002)
 scale = Vector2(0.6066545, 0.6066545)
@@ -2063,7 +2063,7 @@ default_color = Color(0, 0, 0, 1)
 [node name="RayCast2D" type="RayCast2D" parent="Soldier" unique_id=557383334]
 target_position = Vector2(960, 0)
 
-[node name="soldier_visual" parent="Soldier" unique_id=2132058842 instance=ExtResource("21_jbsh1")]
+[node name="soldier_visual" parent="Soldier" unique_id=2132058842 groups=["transparent"] instance=ExtResource("21_jbsh1")]
 position = Vector2(-8.242738, 11.53871)
 scale = Vector2(0.5, 0.5)
 

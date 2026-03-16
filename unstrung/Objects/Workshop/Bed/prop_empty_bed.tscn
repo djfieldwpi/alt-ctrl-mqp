@@ -5,6 +5,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_scndy")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
