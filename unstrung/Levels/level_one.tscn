@@ -937,13 +937,13 @@ position = Vector2(6817, 234)
 rotation = 2.073451
 scale = Vector2(0.25, 0.25)
 
-[node name="MetalCagePillar1" parent="Layer3_Closer/Level2_Forest" unique_id=1162683445 instance=ExtResource("39_rlfmv")]
+[node name="MetalCagePillar1" parent="Layer3_Closer/Level2_Forest" unique_id=1162683445 groups=["transparent"] instance=ExtResource("39_rlfmv")]
 position = Vector2(5382, -156)
 
-[node name="MetalCagePillar2" parent="Layer3_Closer/Level2_Forest" unique_id=198239734 instance=ExtResource("39_rlfmv")]
+[node name="MetalCagePillar2" parent="Layer3_Closer/Level2_Forest" unique_id=198239734 groups=["transparent"] instance=ExtResource("39_rlfmv")]
 position = Vector2(5827, -156)
 
-[node name="LogCabin" parent="Layer3_Closer/Level2_Forest" unique_id=1178286961 instance=ExtResource("41_avyml")]
+[node name="LogCabin" parent="Layer3_Closer/Level2_Forest" unique_id=1178286961 groups=["transparent"] instance=ExtResource("41_avyml")]
 position = Vector2(5729, -381)
 scale = Vector2(0.5, 0.5)
 
@@ -2124,7 +2124,7 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(6010, -232)
 scale = Vector2(0.25, 0.25)
 
-[node name="WoodenLadder" parent="." unique_id=134842888 instance=ExtResource("44_quceh")]
+[node name="WoodenLadder" parent="." unique_id=134842888 groups=["transparent"] instance=ExtResource("44_quceh")]
 position = Vector2(5576, -184)
 scale = Vector2(1.1, 1.1)
 
