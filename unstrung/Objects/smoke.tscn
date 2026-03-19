@@ -257,7 +257,7 @@ animations = [{
 "speed": 30.0
 }]
 
-[node name="Smoke" type="Node2D" unique_id=460552790]
+[node name="Smoke" type="Node2D" unique_id=460552790 groups=["transparent"]]
 visibility_layer = 9
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=392829270]

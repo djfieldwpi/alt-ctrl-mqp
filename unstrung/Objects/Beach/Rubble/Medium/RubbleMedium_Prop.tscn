@@ -5,11 +5,12 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_jusmq")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="RubbleMedium_Prop" type="Node2D" unique_id=41544662]
+[node name="RubbleMedium_Prop" type="Node2D" unique_id=41544662 groups=["transparent"]]
 visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]

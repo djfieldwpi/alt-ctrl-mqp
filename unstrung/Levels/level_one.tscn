@@ -100,6 +100,9 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.8, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ya8ts"]
 gradient = SubResource("Gradient_ugpc4")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnkuv"]
+size = Vector2(20, 699.4697)
+
 [sub_resource type="Curve" id="Curve_o5w1d"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5045872, 1), 0.0, 0.0, 0, 0, Vector2(0.99388385, 0.48742026), 0.0, 0.0, 0, 0]
 point_count = 3
@@ -287,15 +290,8 @@ scale = Vector2(278.44986, 27.17638)
 [node name="Level1_Workshop" type="Node2D" parent="Layer1_Farthest" unique_id=443231305]
 visibility_layer = 9
 
-[node name="HoleBackdrop1" type="ColorRect" parent="Layer1_Farthest/Level1_Workshop" unique_id=947946239]
-visibility_layer = 9
-offset_left = 1551.9999
-offset_top = 335.00003
-offset_right = 1591.9999
-offset_bottom = 375.00003
-scale = Vector2(16.038786, 12.860923)
-
 [node name="LightWoodBG" type="Node2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=2060072714]
+visibility_layer = 9
 
 [node name="LightWoodBackground1" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=41544662 instance=ExtResource("3_2kr7s")]
 position = Vector2(-966, -737)
@@ -304,12 +300,15 @@ position = Vector2(-966, -737)
 position = Vector2(1082, -737)
 
 [node name="LightWoodBackground3" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=1928591304 instance=ExtResource("3_2kr7s")]
-position = Vector2(3129, -737)
+position = Vector2(2766, -737)
 
 [node name="LightWoodBackground4" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=1291769269 instance=ExtResource("3_2kr7s")]
 position = Vector2(1076, 286)
 
-[node name="DangerSign1" type="Line2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=1359738964]
+[node name="LightWoodBackground5" parent="Layer1_Farthest/Level1_Workshop/LightWoodBG" unique_id=1468854041 instance=ExtResource("3_2kr7s")]
+position = Vector2(2766, 286)
+
+[node name="DangerSign1" type="Line2D" parent="Layer1_Farthest/Level1_Workshop" unique_id=1359738964 groups=["transparent"]]
 visibility_layer = 9
 position = Vector2(3646, 168)
 points = PackedVector2Array(0, 0, 0, -150)
@@ -322,8 +321,10 @@ scale = Vector2(0.263422, 0.263422)
 texture = ExtResource("2_l4fe4")
 
 [node name="Level2_Forest" type="Node2D" parent="Layer1_Farthest" unique_id=1217037432]
+visibility_layer = 9
 
 [node name="SkyWallForest" type="Node2D" parent="Layer1_Farthest/Level2_Forest" unique_id=1744881428]
+visibility_layer = 9
 
 [node name="SkyWallLong1" parent="Layer1_Farthest/Level2_Forest/SkyWallForest" unique_id=241415247 instance=ExtResource("39_l70lb")]
 position = Vector2(4814, -630)
@@ -338,27 +339,10 @@ position = Vector2(7886, -630)
 scale = Vector2(5, 3.333)
 
 [node name="Level3_Beach" type="Node2D" parent="Layer1_Farthest" unique_id=51140608]
-
-[node name="CaveTemp" type="Polygon2D" parent="Layer1_Farthest/Level3_Beach" unique_id=651102888]
-position = Vector2(9466, 2539)
-scale = Vector2(3.7106085, 3.7106085)
-color = Color(0.760999, 0.76099914, 0.76099914, 1)
-polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 96.55947, -14.907181, 119.822655, 23.408623, 146.9487, 69.2532, 71.34399, 69.252884, 14.212395, 69.252884, -65.84026, 69.252884, -128.10342, 69.252884, -110.756386, 12.803352)
-uv = PackedVector2Array(-134.47585, -52.88624, -92.739, -109.67572, -45.186356, -111.386246, -4.47583, -104.20204, 24.94522, -83.67572, 39.31366, -54.596764, 48.550507, -19.702026, 54.708405, 6.297989, 22.550507, 24.087463, -36.97583, 24.429565, -115.31795, 19.297989, -175.18639, 15.1927185, -135.84427, -55.965187)
-
-[node name="Polygon2D2" type="Polygon2D" parent="Layer1_Farthest/Level3_Beach/CaveTemp" unique_id=38769022]
-position = Vector2(-43.38921, 44.736584)
-scale = Vector2(0.34146622, 0.34146622)
-color = Color(0.5106015, 0.5106012, 0.5106012, 1)
-polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 96.55947, -14.907181, 119.822655, 23.408623, 146.9487, 69.2532, 71.34399, 69.252884, 14.212395, 69.252884, -65.84026, 69.252884, -128.10342, 69.252884, -110.756386, 12.803352)
-uv = PackedVector2Array(-134.47585, -52.88624, -92.739, -109.67572, -45.186356, -111.386246, -4.47583, -104.20204, 24.94522, -83.67572, 39.31366, -54.596764, 48.550507, -19.702026, 54.708405, 6.297989, 22.550507, 24.087463, -36.97583, 24.429565, -115.31795, 19.297989, -175.18639, 15.1927185, -135.84427, -55.965187)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer1_Farthest/Level3_Beach/CaveTemp" unique_id=807919446]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer1_Farthest/Level3_Beach/CaveTemp/StaticBody2D" unique_id=414033174]
-polygon = PackedVector2Array(-88.17744, -37.486137, -52.598473, -69.64404, -16.335304, -79.5651, 28.822624, -75.45984, 64.40157, -48.77561, 74.65088, -37.460144)
+visibility_layer = 9
 
 [node name="SkyWallBeach" type="Node2D" parent="Layer1_Farthest/Level3_Beach" unique_id=976316135]
+visibility_layer = 9
 position = Vector2(-5780, 2594)
 
 [node name="SkyWallLong1" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=183949755 instance=ExtResource("39_l70lb")]
@@ -391,6 +375,10 @@ scale = Vector2(3, 2)
 
 [node name="SkyWallLong8" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=1969414602 instance=ExtResource("39_l70lb")]
 position = Vector2(15566, -630)
+scale = Vector2(3, 2)
+
+[node name="SkyWallLong9" parent="Layer1_Farthest/Level3_Beach/SkyWallBeach" unique_id=167525395 instance=ExtResource("39_l70lb")]
+position = Vector2(9422, 394)
 scale = Vector2(3, 2)
 
 [node name="Level4_Caverns" type="Node2D" parent="Layer1_Farthest" unique_id=1625799169]
@@ -451,11 +439,17 @@ scale = Vector2(1.1849691, 1.1849691)
 position = Vector2(9294, 1895)
 scale = Vector2(1.1849691, 1.1849691)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer2_Further/Level3_Beach/PalmTreeLarge2" unique_id=1758090066]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer2_Further/Level3_Beach/PalmTreeLarge2/StaticBody2D" unique_id=21015133]
+position = Vector2(559.50854, 407.60565)
+shape = SubResource("RectangleShape2D_qnkuv")
+
 [node name="PalmTreeLarge3" parent="Layer2_Further/Level3_Beach" unique_id=39920333 instance=ExtResource("4_lhaxc")]
 position = Vector2(7803, 1895)
 scale = Vector2(1.1849691, 1.1849691)
 
-[node name="PipeTemp" type="Polygon2D" parent="Layer2_Further/Level3_Beach" unique_id=1440596136]
+[node name="PipeTemp" type="Polygon2D" parent="Layer2_Further/Level3_Beach" unique_id=1440596136 groups=["transparent"]]
 visibility_layer = 9
 position = Vector2(6163, 2155)
 color = Color(0.3647059, 0.3647059, 0.3647059, 0.58431375)
@@ -513,19 +507,19 @@ visibility_layer = 8
 position = Vector2(-964, -645)
 scale = Vector2(0.25, 0.25)
 
-[node name="PuppetString1" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=484636274 groups=["transparent"] instance=ExtResource("12_6a7d4")]
+[node name="PuppetString1" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=484636274 instance=ExtResource("12_6a7d4")]
 position = Vector2(-757, -625)
 scale = Vector2(0.5, 0.5)
 
-[node name="PuppetString2" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1496345410 groups=["transparent"] instance=ExtResource("12_6a7d4")]
+[node name="PuppetString2" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1496345410 instance=ExtResource("12_6a7d4")]
 position = Vector2(-869, -635)
 scale = Vector2(0.5, 0.5)
 
-[node name="PuppetString3" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=2008137826 groups=["transparent"] instance=ExtResource("12_6a7d4")]
+[node name="PuppetString3" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=2008137826 instance=ExtResource("12_6a7d4")]
 position = Vector2(-992, -624)
 scale = Vector2(0.5, 0.5)
 
-[node name="PuppetString4" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1539453321 groups=["transparent"] instance=ExtResource("12_6a7d4")]
+[node name="PuppetString4" parent="Layer3_Closer/Level1_Workshop/PuppetStringHolder" unique_id=1539453321 instance=ExtResource("12_6a7d4")]
 position = Vector2(-803, -579)
 scale = Vector2(0.5, 0.5)
 
@@ -1019,6 +1013,13 @@ position = Vector2(11919, 241)
 position = Vector2(12431, 751)
 rotation = 3.1415927
 
+[node name="Ocean15" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=269943915 instance=ExtResource("31_knwns")]
+position = Vector2(21573, 241)
+
+[node name="Ocean16" parent="Layer3_Closer/Level3_Beach/OceanBeach" unique_id=304448881 instance=ExtResource("31_knwns")]
+position = Vector2(22085, 751)
+rotation = 3.1415927
+
 [node name="Shovel" parent="Layer3_Closer/Level3_Beach" unique_id=1492399742 instance=ExtResource("48_57csw")]
 position = Vector2(3123, 2644)
 scale = Vector2(0.25, 0.25)
@@ -1137,6 +1138,11 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sandcastle" parent="Layer3_Closer/Level3_Beach" unique_id=640854327 instance=ExtResource("89_uqkx0")]
 position = Vector2(8919, 2318)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level3_Beach/Sandcastle" unique_id=929271217]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level3_Beach/Sandcastle/StaticBody2D" unique_id=1933236447]
+polygon = PackedVector2Array(138, 247, 177, 247, 199, 138, 256, 30, 329, 69, 263, 103, 263, 138, 313, 138, 335, 246, 374, 246, 383, 274, 129, 274)
 
 [node name="TropicalDrink" parent="Layer3_Closer/Level3_Beach" unique_id=653046389 instance=ExtResource("61_qnkuv")]
 position = Vector2(3349, 2516)
@@ -1423,6 +1429,7 @@ scale = Vector2(0.35999966, 0.4000045)
 shape = SubResource("RectangleShape2D_odeua")
 
 [node name="Floorboards" type="Node2D" parent="Layer3_Closer/Level3_Beach" unique_id=972097695]
+visibility_layer = 9
 
 [node name="FloorboardBroken1" parent="Layer3_Closer/Level3_Beach/Floorboards" unique_id=1274584429 instance=ExtResource("35_pjf3e")]
 position = Vector2(3768.0002, 2599.9998)
@@ -1797,7 +1804,7 @@ scale = Vector2(2.567, 2.567)
 position = Vector2(-463, 94)
 scale = Vector2(0.5, 0.5)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/DeskLong" unique_id=683065084]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/DeskLong" unique_id=683065084 groups=["wood"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/DeskLong/StaticBody2D" unique_id=2125166203]
 position = Vector2(256, 250)
@@ -1807,7 +1814,7 @@ shape = SubResource("RectangleShape2D_xrdj6")
 position = Vector2(473, 56)
 scale = Vector2(0.5, 0.5)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Box" unique_id=539513728]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer4_Closest/Level1_Workshop/Box" unique_id=539513728 groups=["wood"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4_Closest/Level1_Workshop/Box/StaticBody2D" unique_id=111840852]
 position = Vector2(256, 262)
@@ -2024,7 +2031,7 @@ shape = SubResource("RectangleShape2D_o5w1d")
 position = Vector2(8414, 2555)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Activate Rocks" unique_id=381971630]
-position = Vector2(734.6572, -179.00024)
+position = Vector2(734, -180)
 scale = Vector2(124.131546, -38.902225)
 shape = SubResource("RectangleShape2D_jd0dm")
 

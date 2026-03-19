@@ -5,11 +5,13 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_a43wc")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="TropicalDrink_Prop" type="Node2D" unique_id=41544662]
+[node name="TropicalDrink_Prop" type="Node2D" unique_id=41544662 groups=["transparent"]]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -29,6 +31,7 @@ sky_mode = 1
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.6577101, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_nshul")
 offset_right = 512.0
 offset_bottom = 512.0
