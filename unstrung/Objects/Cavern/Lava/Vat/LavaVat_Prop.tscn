@@ -5,11 +5,13 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_6qqku")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
 [node name="LavaVat_Prop" type="Node2D" unique_id=41544662]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -23,13 +25,15 @@ size = 1.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-light_color = Color(0.47, 0.47, 0.47, 1)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.1
 sky_mode = 1
 
 [node name="LavaVat2" parent="SubViewport" unique_id=137718349 instance=ExtResource("1_fu2vi")]
 transform = Transform3D(-0.5908847, 0, -0.104188986, 0, 0.6, 0, 0.104188986, 0, -0.5908847, 0, -0.21236962, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_nshul")
 offset_right = 512.0
 offset_bottom = 512.0

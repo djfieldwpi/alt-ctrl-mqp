@@ -5,6 +5,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_yyy0q")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
@@ -26,7 +27,7 @@ light_color = Color(0.47, 0.47, 0.47, 1)
 sky_mode = 1
 
 [node name="MetalPipeLargeCorner2" parent="SubViewport" unique_id=1818536395 instance=ExtResource("1_f3fdj")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 4.7683716e-07, 0.5944989, 0)
+transform = Transform3D(-8.742278e-08, -2, 0, -8.742278e-08, 3.821371e-15, 2, -2, 8.742278e-08, -8.742278e-08, 4.7683716e-07, -0.45090318, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
 material = SubResource("ShaderMaterial_nshul")

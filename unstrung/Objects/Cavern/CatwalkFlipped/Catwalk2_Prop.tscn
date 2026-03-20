@@ -4,11 +4,12 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_vhaqs")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="prop_name" type="Node2D" unique_id=41544662]
+[node name="CatwalkFlipped" type="Node2D" unique_id=41544662]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 transparent_bg = true

@@ -5,6 +5,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_byqnb")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
@@ -23,6 +24,7 @@ size = 1.5
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 light_color = Color(0.47, 0.47, 0.47, 1)
+light_energy = 5.0
 sky_mode = 1
 
 [node name="StalactiteLarge2" parent="SubViewport" unique_id=1481395633 instance=ExtResource("1_vkv73")]
