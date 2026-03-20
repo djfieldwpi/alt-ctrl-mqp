@@ -88,8 +88,10 @@
 [ext_resource type="PackedScene" uid="uid://c6tncysmaykpr" path="res://Objects/Cavern/CatwalkPole/CatwalkPole_Prop.tscn" id="68_7l8y2"]
 [ext_resource type="PackedScene" uid="uid://duikj23gfgp8x" path="res://Objects/Cavern/Rusty Tank/RustyTank_Prop.tscn" id="68_odeua"]
 [ext_resource type="PackedScene" uid="uid://dtk5krdy4tqmw" path="res://Objects/Beach/Beach/Tube/BeachTube_Prop.tscn" id="68_youpk"]
+[ext_resource type="PackedScene" uid="uid://cpfsxa3fsf5ys" path="res://Objects/Cavern/Iron Beam/IronBeam_Prop.tscn" id="69_d87ph"]
 [ext_resource type="PackedScene" uid="uid://cso3t03542j6n" path="res://Objects/Workshop/Metal/Pipe/Large/Corner/MetalPipeLargeCorner_Prop.tscn" id="69_rsbyu"]
 [ext_resource type="PackedScene" uid="uid://8sq87id1jnin" path="res://Objects/Cavern/Fluorescent Light/FluorescentLight_Prop.tscn" id="73_mjpje"]
+[ext_resource type="PackedScene" uid="uid://b6nrba07mycf6" path="res://Objects/Cavern/Sky Lantern/SkyLantern_Prop.tscn" id="73_sjs4p"]
 [ext_resource type="PackedScene" uid="uid://qy4ipj8bji2j" path="res://Objects/Forest/Sign Post/Right/SignPostRight_Prop.tscn" id="74_tolma"]
 [ext_resource type="PackedScene" uid="uid://bw63nhmbqp2pp" path="res://Objects/Forest/Sign Post/Left/SignPostLeft_Prop.tscn" id="75_esclk"]
 [ext_resource type="PackedScene" uid="uid://clokjnhrfajoy" path="res://Objects/Forest/Stacked Planks/StackedPlanks_Prop.tscn" id="76_esclk"]
@@ -172,11 +174,20 @@ size = Vector2(1295.0007, 110.00006)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odeua"]
 size = Vector2(2047.5, 410)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjs4p"]
+size = Vector2(20, 640.6666)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgxu1"]
 size = Vector2(181.42871, 317.14276)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd3ep"]
 size = Vector2(182.85767, 491.33386)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d87ph"]
+size = Vector2(392, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjpje"]
+size = Vector2(392, 76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sq0ts"]
 size = Vector2(408, 42)
@@ -233,6 +244,15 @@ size = Vector2(20, 26.104301)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jd0dm"]
 size = Vector2(16.525337, 21.438364)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w5v5"]
+size = Vector2(2317, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_als28"]
+size = Vector2(2831, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3c8du"]
+size = Vector2(1706, 119)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3g6m8"]
 size = Vector2(5.852318, 14.565247)
 
@@ -258,6 +278,8 @@ scale = Vector2(500, 106.421)
 color = Color(0, 0, 0, 1)
 
 [node name="WhiteBackdrop1" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=1792346560]
+light_mask = 8
+visibility_layer = 9
 offset_left = -966.0
 offset_top = -630.0
 offset_right = -926.0
@@ -265,6 +287,8 @@ offset_bottom = -590.0
 scale = Vector2(285.30048, 26.21749)
 
 [node name="WhiteBackdrop2" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=675371628]
+light_mask = 8
+visibility_layer = 9
 offset_left = -966.0
 offset_top = 1964.0
 offset_right = -926.0
@@ -272,6 +296,8 @@ offset_bottom = 2004.0
 scale = Vector2(285.30048, 26.21749)
 
 [node name="WhiteBackdrop3" type="ColorRect" parent="Layer1_Farthest/Global" unique_id=907497820]
+light_mask = 9
+visibility_layer = 9
 offset_left = -966.0
 offset_top = 4511.0005
 offset_right = -926.0
@@ -922,10 +948,10 @@ position = Vector2(6817, 234)
 rotation = 2.073451
 scale = Vector2(0.25, 0.25)
 
-[node name="MetalCagePillar1" parent="Layer3_Closer/Level2_Forest" unique_id=1162683445 groups=["transparent"] instance=ExtResource("39_rlfmv")]
+[node name="MetalCagePillar1" parent="Layer3_Closer/Level2_Forest" unique_id=1162683445 instance=ExtResource("39_rlfmv")]
 position = Vector2(5382, -156)
 
-[node name="MetalCagePillar2" parent="Layer3_Closer/Level2_Forest" unique_id=198239734 groups=["transparent"] instance=ExtResource("39_rlfmv")]
+[node name="MetalCagePillar2" parent="Layer3_Closer/Level2_Forest" unique_id=198239734 instance=ExtResource("39_rlfmv")]
 position = Vector2(5827, -156)
 
 [node name="LogCabin" parent="Layer3_Closer/Level2_Forest" unique_id=1178286961 groups=["transparent"] instance=ExtResource("41_avyml")]
@@ -1433,16 +1459,19 @@ visibility_layer = 8
 position = Vector2(10069.001, 4271)
 scale = Vector2(3.13, 3.13)
 
-[node name="LavaPlatforms" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=31283924]
+[node name="Volcano" parent="Layer3_Closer/Level4_Caverns" unique_id=638960272 instance=ExtResource("28_y2ssv")]
+visibility_layer = 8
+position = Vector2(8467, 3342)
+scale = Vector2(1.5, 1.5)
 
-[node name="MoltenLavaPlatform1" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=263345094 instance=ExtResource("62_qv67t")]
-position = Vector2(1070, 5212)
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Volcano" unique_id=1546663845]
 
-[node name="MoltenLavaPlatform2" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=39181730 instance=ExtResource("62_qv67t")]
-position = Vector2(1582, 5212)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Volcano/StaticBody2D" unique_id=843005635]
+position = Vector2(1602, 1100.3335)
+shape = SubResource("RectangleShape2D_sjs4p")
 
 [node name="Craters" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=190935402]
-visibility_layer = 9
+visibility_layer = 8
 
 [node name="LavaCrater1" parent="Layer3_Closer/Level4_Caverns/Craters" unique_id=1718066095 instance=ExtResource("62_qnkuv")]
 position = Vector2(-647, 5246)
@@ -1454,12 +1483,140 @@ position = Vector2(113, 5263)
 position = Vector2(1244, 5217)
 
 [node name="LavaCrater3" parent="Layer3_Closer/Level4_Caverns/Craters" unique_id=1584119916 instance=ExtResource("62_qnkuv")]
-position = Vector2(3850, 5231)
+position = Vector2(3857, 5231)
 
-[node name="Lavafall1" parent="Layer3_Closer/Level4_Caverns" unique_id=1801126209 instance=ExtResource("67_tht63")]
+[node name="LavaCrater5" parent="Layer3_Closer/Level4_Caverns/Craters" unique_id=1008145770 instance=ExtResource("62_qnkuv")]
+position = Vector2(4427, 4996)
+scale = Vector2(2, 2)
+
+[node name="Lavafalls" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=1411414503]
+visibility_layer = 8
+
+[node name="Lavafall1" parent="Layer3_Closer/Level4_Caverns/Lavafalls" unique_id=1801126209 instance=ExtResource("67_tht63")]
 position = Vector2(-1024, 5023)
 
+[node name="Lavafall2" parent="Layer3_Closer/Level4_Caverns/Lavafalls" unique_id=440045136 instance=ExtResource("67_tht63")]
+position = Vector2(1180, 4571)
+scale = Vector2(2, 2)
+
+[node name="Lavafall3" parent="Layer3_Closer/Level4_Caverns/Lavafalls" unique_id=1016600662 instance=ExtResource("67_tht63")]
+position = Vector2(4442, 4478)
+scale = Vector2(2, 2)
+
+[node name="MetalCagePillar" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=301029250]
+visibility_layer = 8
+position = Vector2(409, 4467)
+scale = Vector2(2, 2)
+
+[node name="MetalCage1" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar" unique_id=850166867 instance=ExtResource("39_rlfmv")]
+position = Vector2(457.5, 389)
+scale = Vector2(0.35, 0.35)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage1" unique_id=2020180445]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage1/StaticBody2D" unique_id=236676427]
+position = Vector2(255.71436, 169.99986)
+scale = Vector2(0.9999996, 0.9999996)
+shape = SubResource("RectangleShape2D_vgxu1")
+
+[node name="MetalCage2" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar" unique_id=1512516504 instance=ExtResource("39_rlfmv")]
+position = Vector2(646.5, 389)
+scale = Vector2(0.35, 0.35)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage2" unique_id=202383340]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage2/StaticBody2D" unique_id=757836036]
+position = Vector2(255.71428, 254.28557)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_dd3ep")
+
+[node name="MetalCage3" type="Node2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar" unique_id=873529938]
+visibility_layer = 9
+position = Vector2(558.5, 61.5)
+
+[node name="MetalCagePillar1" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage3" unique_id=580578555 instance=ExtResource("39_rlfmv")]
+position = Vector2(3894, 254)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalCagePillar2" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage3" unique_id=249880503 instance=ExtResource("39_rlfmv")]
+position = Vector2(3894, 90)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalCagePillar3" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage3" unique_id=1663169006 instance=ExtResource("39_rlfmv")]
+position = Vector2(3894, -73.5)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalCage4" type="Node2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar" unique_id=1169652482]
+visibility_layer = 9
+position = Vector2(985.5, 61.5)
+
+[node name="MetalCagePillar1" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage4" unique_id=1276579852 instance=ExtResource("39_rlfmv")]
+position = Vector2(3894, 254)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalCagePillar2" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage4" unique_id=114863441 instance=ExtResource("39_rlfmv")]
+position = Vector2(3894, 90)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalCagePillar3" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage4" unique_id=1644340697 instance=ExtResource("39_rlfmv")]
+position = Vector2(3894, -73.5)
+scale = Vector2(0.5, 0.5)
+
+[node name="MetalCage5" type="Node2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar" unique_id=275558397]
+visibility_layer = 9
+position = Vector2(0, 61.5)
+
+[node name="MetalCagePillar1" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage5" unique_id=599077261 instance=ExtResource("39_rlfmv")]
+position = Vector2(4538.5, -80.5)
+
+[node name="MetalCagePillar2" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage5" unique_id=1712187063 instance=ExtResource("39_rlfmv")]
+position = Vector2(4538.5, 246)
+
+[node name="MetalCagePillar3" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar/MetalCage5" unique_id=534413664 instance=ExtResource("39_rlfmv")]
+position = Vector2(4538.5, -408)
+
+[node name="LavaPlatforms" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=31283924]
+visibility_layer = 8
+
+[node name="MoltenLavaPlatform1" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=263345094 instance=ExtResource("62_qv67t")]
+position = Vector2(1132, 5212)
+
+[node name="MoltenLavaPlatform2" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=39181730 instance=ExtResource("62_qv67t")]
+position = Vector2(1513, 5212)
+
+[node name="MoltenLavaPlatform10" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=72483085 instance=ExtResource("62_qv67t")]
+position = Vector2(1604, 5212)
+
+[node name="MoltenLavaPlatform3" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=224330614 instance=ExtResource("62_qv67t")]
+position = Vector2(6241, 5212)
+
+[node name="MoltenLavaPlatform11" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=1027893043 instance=ExtResource("62_qv67t")]
+position = Vector2(5788, 5212)
+
+[node name="MoltenLavaPlatform12" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=1119985641 instance=ExtResource("62_qv67t")]
+position = Vector2(5407, 5212)
+
+[node name="MoltenLavaPlatform4" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=252700048 instance=ExtResource("62_qv67t")]
+position = Vector2(6623, 5212)
+
+[node name="MoltenLavaPlatform5" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=959191324 instance=ExtResource("62_qv67t")]
+position = Vector2(7004, 5212)
+
+[node name="MoltenLavaPlatform6" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=1745418878 instance=ExtResource("62_qv67t")]
+position = Vector2(7386, 5212)
+
+[node name="MoltenLavaPlatform8" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=1624363335 instance=ExtResource("62_qv67t")]
+position = Vector2(7767, 5212)
+
+[node name="MoltenLavaPlatform9" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=1662017876 instance=ExtResource("62_qv67t")]
+position = Vector2(8149, 5212)
+
+[node name="MoltenLavaPlatform7" parent="Layer3_Closer/Level4_Caverns/LavaPlatforms" unique_id=537232151 instance=ExtResource("62_qv67t")]
+position = Vector2(8864.001, 4280.0005)
+scale = Vector2(4.55, 4.55)
+
 [node name="Stalactites" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=199674690]
+visibility_layer = 8
 
 [node name="StalactiteLarge1" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=595455272 instance=ExtResource("64_kjune")]
 position = Vector2(590, 5267)
@@ -1471,6 +1628,35 @@ scale = Vector2(1.5, 1.5)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteLarge1/StaticBody2D" unique_id=1528857731]
 polygon = PackedVector2Array(358.00006, 504.66675, 318.6667, 410, 304.6667, 378.66675, 267.33337, 221.3335, 248.66667, 10.666748, 242, 10.666748, 206.00002, 252.66675, 181.33337, 388, 154.00005, 504.66675)
 
+[node name="StalactiteLarge2" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=610203899 instance=ExtResource("64_kjune")]
+position = Vector2(4900, 6060.0005)
+rotation = 3.0121152
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteLarge2" unique_id=1619383623]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteLarge2/StaticBody2D" unique_id=1083081226]
+polygon = PackedVector2Array(358.00006, 504.66675, 318.6667, 410, 304.6667, 378.66675, 267.33337, 221.3335, 248.66667, 10.666748, 242, 10.666748, 206.00002, 252.66675, 181.33337, 388, 154.00005, 504.66675)
+
+[node name="StalactiteLarge3" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=1999765993 instance=ExtResource("64_kjune")]
+position = Vector2(4497.0005, 5007)
+rotation = 2.9058726
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteLarge3" unique_id=23270542]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteLarge3/StaticBody2D" unique_id=1723818905]
+polygon = PackedVector2Array(358.00006, 504.66675, 318.6667, 410, 304.6667, 378.66675, 267.33337, 221.3335, 248.66667, 10.666748, 242, 10.666748, 206.00002, 252.66675, 181.33337, 388, 154.00005, 504.66675)
+
+[node name="StalactiteLarge4" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=918651341 instance=ExtResource("64_kjune")]
+position = Vector2(6226, 4884)
+rotation = 2.9310439
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteLarge4" unique_id=1740547437]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteLarge4/StaticBody2D" unique_id=660597866]
+polygon = PackedVector2Array(358.00006, 504.66675, 318.6667, 410, 304.6667, 378.66675, 267.33337, 221.3335, 248.66667, 10.666748, 242, 10.666748, 206.00002, 252.66675, 181.33337, 388, 154.00005, 504.66675)
+
 [node name="StalactiteMedium1" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=1201591698 instance=ExtResource("65_qnmno")]
 position = Vector2(-283, 5083)
 
@@ -1479,8 +1665,19 @@ position = Vector2(-283, 5083)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteMedium1/StaticBody2D" unique_id=721828698]
 polygon = PackedVector2Array(149, 391, 212, 287, 243, 226, 304, 69, 309, 69, 335, 215, 341, 306, 360, 390)
 
+[node name="StalactiteMedium4" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=1799727556 instance=ExtResource("65_qnmno")]
+position = Vector2(4915, 5060)
+rotation = 3.1116147
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteMedium4" unique_id=589314448]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteMedium4/StaticBody2D" unique_id=1356542089]
+polygon = PackedVector2Array(149, 391, 212, 287, 243, 226, 304, 69, 309, 69, 335, 215, 341, 306, 360, 390)
+
 [node name="StalactiteMedium2" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=738597771 instance=ExtResource("65_qnmno")]
-position = Vector2(5877, 5006)
+position = Vector2(5934.0005, 5003)
+rotation = 0.10955741
 scale = Vector2(1.2, 1.2)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteMedium2" unique_id=1218267834]
@@ -1489,19 +1686,226 @@ scale = Vector2(1.2, 1.2)
 polygon = PackedVector2Array(149, 391, 212, 287, 243, 226, 304, 69, 309, 69, 335, 215, 341, 306, 360, 390)
 
 [node name="StalactiteSmall1" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=1017699145 instance=ExtResource("66_lk5ox")]
-position = Vector2(5689, 5123)
+position = Vector2(6104, 5850)
+rotation = 3.2905858
+scale = Vector2(1.5, 1.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall1" unique_id=133312518]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall1/StaticBody2D" unique_id=777981236]
 polygon = PackedVector2Array(196, 352, 208, 305, 243, 154, 249, 154, 267, 225, 274, 254, 316, 351)
 
-[node name="Volcano" parent="Layer3_Closer/Level4_Caverns" unique_id=638960272 instance=ExtResource("28_y2ssv")]
+[node name="StalactiteSmall4" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=1614278435 instance=ExtResource("66_lk5ox")]
+position = Vector2(5934.0005, 5425.0005)
+rotation = 3.401858
+scale = Vector2(2.5, 2.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall4" unique_id=1030401840]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall4/StaticBody2D" unique_id=1214527835]
+polygon = PackedVector2Array(196, 352, 208, 305, 243, 154, 249, 154, 267, 225, 274, 254, 316, 351)
+
+[node name="StalactiteSmall3" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=790073912 instance=ExtResource("66_lk5ox")]
+position = Vector2(5941.999, 5656)
+rotation = 2.7121644
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall3" unique_id=1608328791]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall3/StaticBody2D" unique_id=1113286781]
+polygon = PackedVector2Array(196, 352, 208, 305, 243, 154, 249, 154, 267, 225, 274, 254, 316, 351)
+
+[node name="StalactiteSmall2" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=2012366071 instance=ExtResource("66_lk5ox")]
+position = Vector2(6551.0005, 4986.0005)
+rotation = 0.085951604
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall2" unique_id=1890373101]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteSmall2/StaticBody2D" unique_id=1900498251]
+polygon = PackedVector2Array(196, 352, 208, 305, 243, 154, 249, 154, 267, 225, 274, 254, 316, 351)
+
+[node name="StalactiteMedium3" parent="Layer3_Closer/Level4_Caverns/Stalactites" unique_id=1088244483 instance=ExtResource("65_qnmno")]
+position = Vector2(7043.0005, 5122.001)
+rotation = -0.22628985
+scale = Vector2(1.2, 1.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteMedium3" unique_id=222577113]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/Stalactites/StalactiteMedium3/StaticBody2D" unique_id=2132051958]
+polygon = PackedVector2Array(149, 391, 212, 287, 243, 226, 304, 69, 309, 69, 335, 215, 341, 306, 360, 390)
+
+[node name="ChainLarge1" parent="Layer3_Closer/Level4_Caverns" unique_id=1554116520 instance=ExtResource("11_t50p6")]
 visibility_layer = 8
-position = Vector2(7966, 2636)
-scale = Vector2(2, 2)
+position = Vector2(35, 3999)
+
+[node name="ChainLarge2" parent="Layer3_Closer/Level4_Caverns" unique_id=1138691272 instance=ExtResource("11_t50p6")]
+visibility_layer = 8
+position = Vector2(-628, 4416.9995)
+scale = Vector2(0.65, 0.65)
+
+[node name="ChainLarge3" parent="Layer3_Closer/Level4_Caverns" unique_id=1163786123 instance=ExtResource("11_t50p6")]
+visibility_layer = 8
+position = Vector2(-924, 4295)
+scale = Vector2(0.65, 0.65)
+
+[node name="RockLarge1" parent="Layer3_Closer/Level4_Caverns" unique_id=621156155 instance=ExtResource("84_3rsbe")]
+visibility_layer = 8
+position = Vector2(8690, 5212)
+rotation = -0.16510363
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/RockLarge1" unique_id=662028535]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/RockLarge1/StaticBody2D" unique_id=1035813124]
+polygon = PackedVector2Array(37.987793, 270.92822, 78.42383, 113.43213, 232.95605, 62.132813, 419.05713, 95.16846, 464.60498, 302.47363, 458.35938, 339.95703)
+
+[node name="RockMedium1" parent="Layer3_Closer/Level4_Caverns" unique_id=398634810 instance=ExtResource("85_opp81")]
+visibility_layer = 8
+position = Vector2(8156.9995, 4981.0005)
+rotation = 0.23704657
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/RockMedium1" unique_id=1209811064]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/RockMedium1/StaticBody2D" unique_id=792181948]
+polygon = PackedVector2Array(173.7373, 296.14856, 160.56885, 264.35193, 161.03467, 246.40735, 189.3833, 199.09363, 272.05273, 132.48425, 320.6919, 197.54822, 303.99023, 264.68103, 174.54199, 296.64)
+
+[node name="RockSmall1" parent="Layer3_Closer/Level4_Caverns" unique_id=1645508839 instance=ExtResource("86_ruas5")]
+visibility_layer = 8
+position = Vector2(7884, 4751)
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/RockSmall1" unique_id=1057153558]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/RockSmall1/StaticBody2D" unique_id=1846179897]
+polygon = PackedVector2Array(434.667, 481.33325, 424, 422, 439.3335, 422, 510, 390.6665, 516.667, 390.6665, 628, 422, 618.667, 482)
+
+[node name="GearHazard" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=1479055107]
+visibility_layer = 8
+position = Vector2(8467, 3342)
+scale = Vector2(1.5, 1.5)
+
+[node name="GearLarge1" parent="Layer3_Closer/Level4_Caverns/GearHazard" unique_id=1227551313 instance=ExtResource("20_13xmu")]
+position = Vector2(-408.667, 857.3335)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="GearLarge4" parent="Layer3_Closer/Level4_Caverns/GearHazard" unique_id=1292092289 instance=ExtResource("20_13xmu")]
+position = Vector2(-1223.333, 796.66675)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="GearLarge2" parent="Layer3_Closer/Level4_Caverns/GearHazard" unique_id=1900874752 instance=ExtResource("20_13xmu")]
+position = Vector2(-278.667, 918.66675)
+scale = Vector2(0.23333333, 0.23333333)
+
+[node name="GearLarge3" parent="Layer3_Closer/Level4_Caverns/GearHazard" unique_id=881305919 instance=ExtResource("20_13xmu")]
+position = Vector2(-1309.3335, 823.3335)
+scale = Vector2(0.23333333, 0.23333333)
+
+[node name="MetalPoles" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=1439078742]
+visibility_layer = 8
+position = Vector2(8467, 3342)
+scale = Vector2(1.5, 1.5)
+
+[node name="ChainLarge3" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=225162567 instance=ExtResource("11_t50p6")]
+position = Vector2(-1476.667, 915.3335)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="ChainLarge4" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=527898567 instance=ExtResource("11_t50p6")]
+position = Vector2(-1252, 915.3335)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="IronBeam2" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=1349359170 instance=ExtResource("69_d87ph")]
+position = Vector2(-1362.667, 1018)
+scale = Vector2(0.6666667, 0.6666667)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam2" unique_id=1521829740]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam2/StaticBody2D" unique_id=939921061]
+position = Vector2(256, 256)
+shape = SubResource("RectangleShape2D_d87ph")
+
+[node name="ChainLarge1" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=188926776 instance=ExtResource("11_t50p6")]
+position = Vector2(-1476.667, 664.66675)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="ChainLarge2" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=463731031 instance=ExtResource("11_t50p6")]
+position = Vector2(-1252, 664.66675)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="IronBeam1" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=721817223 instance=ExtResource("69_d87ph")]
+position = Vector2(-1362.667, 775.3335)
+scale = Vector2(0.6666667, 0.6666667)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam1" unique_id=867504450]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam1/StaticBody2D" unique_id=984142329]
+position = Vector2(256, 256)
+shape = SubResource("RectangleShape2D_mjpje")
+
+[node name="ChainLarge5" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=1539723513 instance=ExtResource("11_t50p6")]
+position = Vector2(-560.667, 996.66675)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="ChainLarge6" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=100291010 instance=ExtResource("11_t50p6")]
+position = Vector2(-336, 996.66675)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="IronBeam4" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=1636841059 instance=ExtResource("69_d87ph")]
+position = Vector2(-446.667, 1099.3335)
+scale = Vector2(0.6666667, 0.6666667)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam4" unique_id=1441532806]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam4/StaticBody2D" unique_id=1951361532]
+position = Vector2(256, 256)
+shape = SubResource("RectangleShape2D_d87ph")
+
+[node name="ChainLarge7" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=849708530 instance=ExtResource("11_t50p6")]
+position = Vector2(-560.667, 746)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="ChainLarge8" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=1867592563 instance=ExtResource("11_t50p6")]
+position = Vector2(-336, 746)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="IronBeam3" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=1143308912 instance=ExtResource("69_d87ph")]
+position = Vector2(-446.667, 856.66675)
+scale = Vector2(0.6666667, 0.6666667)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam3" unique_id=1053350086]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam3/StaticBody2D" unique_id=963199703]
+position = Vector2(256, 256)
+shape = SubResource("RectangleShape2D_mjpje")
+
+[node name="ChainLarge9" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=354519187 instance=ExtResource("11_t50p6")]
+position = Vector2(-1020.66675, 810)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="ChainLarge10" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=1238423600 instance=ExtResource("11_t50p6")]
+position = Vector2(-796.00037, 810)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="IronBeam5" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=1707751078 instance=ExtResource("69_d87ph")]
+position = Vector2(-906.6669, 912.66675)
+scale = Vector2(0.6666667, 0.6666667)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam5" unique_id=60744363]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalPoles/IronBeam5/StaticBody2D" unique_id=1048936402]
+position = Vector2(256, 256)
+shape = SubResource("RectangleShape2D_d87ph")
+
+[node name="ChainLarge11" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=936145575 instance=ExtResource("11_t50p6")]
+position = Vector2(-1020.66675, 559.3335)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="ChainLarge12" parent="Layer3_Closer/Level4_Caverns/MetalPoles" unique_id=364504935 instance=ExtResource("11_t50p6")]
+position = Vector2(-796.00037, 559.3335)
+scale = Vector2(0.33333334, 0.33333334)
 
 [node name="RockPillar" parent="Layer3_Closer/Level4_Caverns" unique_id=2061858235 instance=ExtResource("67_akd0e")]
+visibility_layer = 8
 position = Vector2(409, 4467)
 scale = Vector2(2, 2)
 
@@ -1513,94 +1917,144 @@ polygon = PackedVector2Array(118, 503, 166, 429, 216, 329, 361.5, 330.5, 380, 43
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Layer3_Closer/Level4_Caverns/RockPillar/StaticBody2D" unique_id=206760137]
 polygon = PackedVector2Array(182.5, 12.5, 200, 62.5, 220, 117, 233, 166.5, 373, 167, 379, 107.5, 374.5, 12)
 
-[node name="MetalCagePillar1" parent="Layer3_Closer/Level4_Caverns" unique_id=850166867 instance=ExtResource("39_rlfmv")]
-position = Vector2(1324, 5245)
-scale = Vector2(0.7, 0.7)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar1" unique_id=2020180445]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar1/StaticBody2D" unique_id=236676427]
-position = Vector2(255.71436, 169.99986)
-scale = Vector2(0.9999996, 0.9999996)
-shape = SubResource("RectangleShape2D_vgxu1")
-
-[node name="MetalCagePillar2" parent="Layer3_Closer/Level4_Caverns" unique_id=1512516504 instance=ExtResource("39_rlfmv")]
-position = Vector2(1702, 5245)
-scale = Vector2(0.7, 0.7)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar2" unique_id=202383340]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar2/StaticBody2D" unique_id=757836036]
-position = Vector2(255.71411, 168.57129)
-scale = Vector2(0.9999994, 0.9999994)
-shape = SubResource("RectangleShape2D_dd3ep")
-
-[node name="MetalCagePillar3" parent="Layer3_Closer/Level4_Caverns" unique_id=580578555 instance=ExtResource("39_rlfmv")]
-position = Vector2(8939, 4725)
-scale = Vector2(1.5, 1.5)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar3" unique_id=650945374]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar3/StaticBody2D" unique_id=1513256151]
-position = Vector2(255.5, 254.3335)
-scale = Vector2(0.9999994, 0.9999994)
-shape = SubResource("RectangleShape2D_dd3ep")
-
-[node name="MetalCagePillar4" parent="Layer3_Closer/Level4_Caverns" unique_id=1761234752 instance=ExtResource("39_rlfmv")]
-position = Vector2(10314, 4725)
-scale = Vector2(1.5, 1.5)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar4" unique_id=497873184]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar4/StaticBody2D" unique_id=855413118]
-position = Vector2(255.5, 254.3335)
-scale = Vector2(0.9999994, 0.9999994)
-shape = SubResource("RectangleShape2D_dd3ep")
-
-[node name="MetalCagePillar5" parent="Layer3_Closer/Level4_Caverns" unique_id=599077261 instance=ExtResource("39_rlfmv")]
-position = Vector2(9486, 4474)
+[node name="Catwalks" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=1549291211]
+visibility_layer = 8
+position = Vector2(409, 4467)
 scale = Vector2(2, 2)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar5" unique_id=546253738]
+[node name="CatwalkFull1" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Catwalks" unique_id=519328108]
+visibility_layer = 9
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/MetalCagePillar5/StaticBody2D" unique_id=538804995]
-position = Vector2(255.5, 254.3335)
-scale = Vector2(0.9999994, 0.9999994)
-shape = SubResource("RectangleShape2D_dd3ep")
+[node name="Catwalk1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1" unique_id=1850097480 instance=ExtResource("15_23fag")]
+position = Vector2(478, 303.5)
+scale = Vector2(0.25, 0.25)
 
-[node name="Catwalk1" parent="Layer3_Closer/Level4_Caverns" unique_id=1850097480 instance=ExtResource("15_23fag")]
-position = Vector2(1365, 5074)
-scale = Vector2(0.5, 0.5)
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1/Catwalk1" unique_id=510507280]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalk1" unique_id=510507280]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalk1/StaticBody2D" unique_id=414316377]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1/Catwalk1/StaticBody2D" unique_id=414316377]
 position = Vector2(256, 335)
 shape = SubResource("RectangleShape2D_sq0ts")
 
-[node name="Catwalk2" parent="Layer3_Closer/Level4_Caverns" unique_id=1104368698 instance=ExtResource("15_23fag")]
-position = Vector2(1569, 5074)
-scale = Vector2(0.5, 0.5)
+[node name="Catwalk2" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1" unique_id=1104368698 instance=ExtResource("15_23fag")]
+position = Vector2(580, 303.5)
+scale = Vector2(0.25, 0.25)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalk2" unique_id=71338903]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1/Catwalk2" unique_id=71338903]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalk2/StaticBody2D" unique_id=1764711414]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1/Catwalk2/StaticBody2D" unique_id=1764711414]
 position = Vector2(255, 335)
 shape = SubResource("RectangleShape2D_mkl1f")
 
-[node name="Catwalk3" parent="Layer3_Closer/Level4_Caverns" unique_id=993784666 instance=ExtResource("15_23fag")]
-position = Vector2(1773, 5074)
-scale = Vector2(0.5, 0.5)
+[node name="Catwalk3" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1" unique_id=993784666 instance=ExtResource("15_23fag")]
+position = Vector2(682, 303.5)
+scale = Vector2(0.25, 0.25)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalk3" unique_id=1488683804]
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1/Catwalk3" unique_id=1488683804]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalk3/StaticBody2D" unique_id=84379121]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1/Catwalk3/StaticBody2D" unique_id=84379121]
 position = Vector2(256, 335)
 shape = SubResource("RectangleShape2D_xlqic")
 
-[node name="CatwalkPole1" parent="Layer3_Closer/Level4_Caverns" unique_id=1672641417 instance=ExtResource("68_7l8y2")]
-position = Vector2(1903.9999, 5142)
-scale = Vector2(0.39, 0.39)
+[node name="CatwalkPole1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull1" unique_id=1672641417 instance=ExtResource("68_7l8y2")]
+position = Vector2(747.49994, 337.5)
+scale = Vector2(0.195, 0.195)
+
+[node name="CatwalkFull2" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Catwalks" unique_id=1235836136]
+visibility_layer = 9
+position = Vector2(4038.5, 14.5)
+
+[node name="Catwalk1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull2" unique_id=1562811608 instance=ExtResource("15_23fag")]
+position = Vector2(478, 303.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull2/Catwalk1" unique_id=1282267816]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull2/Catwalk1/StaticBody2D" unique_id=1101316783]
+position = Vector2(256, 335)
+shape = SubResource("RectangleShape2D_sq0ts")
+
+[node name="CatwalkPole1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull2" unique_id=1305108080 instance=ExtResource("68_7l8y2")]
+position = Vector2(542.99994, 337.5)
+scale = Vector2(0.195, 0.195)
+
+[node name="CatwalkFull3" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Catwalks" unique_id=1725807379]
+visibility_layer = 9
+position = Vector2(4465.5, -149.5)
+
+[node name="Catwalk1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull3" unique_id=1381021221 instance=ExtResource("15_23fag")]
+position = Vector2(478, 303.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull3/Catwalk1" unique_id=983522313]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull3/Catwalk1/StaticBody2D" unique_id=1826645975]
+position = Vector2(256, 335)
+shape = SubResource("RectangleShape2D_sq0ts")
+
+[node name="CatwalkPole1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull3" unique_id=834233024 instance=ExtResource("68_7l8y2")]
+position = Vector2(542.99994, 337.5)
+scale = Vector2(0.195, 0.195)
+
+[node name="CatwalkFull4" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Catwalks" unique_id=788121865]
+visibility_layer = 9
+position = Vector2(4201.5, -69)
+
+[node name="Catwalk1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull4" unique_id=271731265 instance=ExtResource("15_23fag")]
+position = Vector2(478, 303.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull4/Catwalk1" unique_id=756907585]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull4/Catwalk1/StaticBody2D" unique_id=436952056]
+position = Vector2(256, 335)
+shape = SubResource("RectangleShape2D_sq0ts")
+
+[node name="Catwalk2" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull4" unique_id=1257872517 instance=ExtResource("15_23fag")]
+position = Vector2(580, 303.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull4/Catwalk2" unique_id=276459995]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull4/Catwalk2/StaticBody2D" unique_id=1444315464]
+position = Vector2(256, 335)
+shape = SubResource("RectangleShape2D_sq0ts")
+
+[node name="CatwalkPole1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull4" unique_id=1905723446 instance=ExtResource("68_7l8y2")]
+position = Vector2(644.99994, 337.5)
+scale = Vector2(0.195, 0.195)
+
+[node name="CatwalkFull5" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Catwalks" unique_id=1174797667]
+visibility_layer = 9
+position = Vector2(4201.5, -234)
+
+[node name="Catwalk1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull5" unique_id=1829272272 instance=ExtResource("15_23fag")]
+position = Vector2(478, 303.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull5/Catwalk1" unique_id=605067326]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull5/Catwalk1/StaticBody2D" unique_id=1407657010]
+position = Vector2(256, 335)
+shape = SubResource("RectangleShape2D_sq0ts")
+
+[node name="Catwalk2" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull5" unique_id=899716905 instance=ExtResource("15_23fag")]
+position = Vector2(580, 303.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull5/Catwalk2" unique_id=156165536]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull5/Catwalk2/StaticBody2D" unique_id=523590410]
+position = Vector2(256, 335)
+shape = SubResource("RectangleShape2D_sq0ts")
+
+[node name="CatwalkPole1" parent="Layer3_Closer/Level4_Caverns/Catwalks/CatwalkFull5" unique_id=931785133 instance=ExtResource("68_7l8y2")]
+position = Vector2(644.99994, 337.5)
+scale = Vector2(0.195, 0.195)
+
+[node name="SkyLantern1" parent="Layer3_Closer/Level4_Caverns" unique_id=2120026991 instance=ExtResource("73_sjs4p")]
+visibility_layer = 8
+position = Vector2(9868, 4516)
+scale = Vector2(0.5, 0.5)
 
 [node name="Ground" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=625540375]
 visibility_layer = 8
@@ -1913,11 +2367,64 @@ position = Vector2(11138, 5244)
 position = Vector2(256, 244)
 shape = SubResource("RectangleShape2D_rsbyu")
 
-[node name="FluorescentLight1" parent="Layer3_Closer/Level4_Caverns" unique_id=910586036 instance=ExtResource("73_mjpje")]
-position = Vector2(1436, 4520)
+[node name="Lights" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=1254822929]
+visibility_layer = 8
 
-[node name="FluorescentLight2" parent="Layer3_Closer/Level4_Caverns" unique_id=1214634944 instance=ExtResource("73_mjpje")]
-position = Vector2(5809, 4520)
+[node name="Light1" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Lights" unique_id=2094384532]
+visibility_layer = 9
+position = Vector2(3343, 2468)
+scale = Vector2(0.5, 0.5)
+
+[node name="FluorescentLight1" parent="Layer3_Closer/Level4_Caverns/Lights/Light1" unique_id=910586036 instance=ExtResource("73_mjpje")]
+position = Vector2(6414.001, 4638)
+
+[node name="FluorescentLightBeam1" type="Polygon2D" parent="Layer3_Closer/Level4_Caverns/Lights/Light1" unique_id=276113988 groups=["transparent"]]
+clip_children = 1
+visibility_layer = 9
+position = Vector2(6488.5005, 4927)
+color = Color(1, 1, 1, 0.526)
+polygon = PackedVector2Array(-82.50046, 310.82428, -15.799644, -10.60261, -15.77877, -54.79086, 376.572, -54.759716, 376.83517, -54.768436, 377.06955, -54.768436, 377.2883, -54.768436, 377.52267, -54.768436, 378.42792, -54.775124, 378.41473, -10.733421, 436.80298, 306.56644, 437.60312, 310.96365, -82.230194, 310.95938)
+uv = PackedVector2Array(59.000305, -5.3333282, 223.0003, -8, 293.667, 121.33334, -16.333008, 130)
+
+[node name="TextureRect" type="TextureRect" parent="Layer3_Closer/Level4_Caverns/Lights/Light1/FluorescentLightBeam1" unique_id=608924218]
+offset_left = -82.0
+offset_top = 489.0
+offset_right = 174.0
+offset_bottom = 529.0
+rotation = -1.5745367
+scale = Vector2(2.1232848, 13.569561)
+texture = SubResource("GradientTexture1D_ya8ts")
+metadata/_edit_use_anchors_ = true
+
+[node name="Light2" parent="Layer3_Closer/Level4_Caverns/Lights" unique_id=822975819 instance=ExtResource("73_mjpje")]
+position = Vector2(7234, 4628)
+scale = Vector2(0.5, 0.5)
+
+[node name="Light3" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Lights" unique_id=93097758]
+visibility_layer = 9
+position = Vector2(4718, 2590)
+scale = Vector2(0.5, 0.5)
+
+[node name="FluorescentLight1" parent="Layer3_Closer/Level4_Caverns/Lights/Light3" unique_id=829368157 instance=ExtResource("73_mjpje")]
+position = Vector2(6414.001, 4638)
+
+[node name="FluorescentLightBeam1" type="Polygon2D" parent="Layer3_Closer/Level4_Caverns/Lights/Light3" unique_id=211706028 groups=["transparent"]]
+clip_children = 1
+visibility_layer = 9
+position = Vector2(6488.5005, 4927)
+color = Color(1, 1, 1, 0.526)
+polygon = PackedVector2Array(-82.50046, 310.82428, -15.799644, -10.60261, -15.77877, -54.79086, 376.572, -54.759716, 376.83517, -54.768436, 377.06955, -54.768436, 377.2883, -54.768436, 377.52267, -54.768436, 378.42792, -54.775124, 378.41473, -10.733421, 436.80298, 306.56644, 437.60312, 310.96365, -82.230194, 310.95938)
+uv = PackedVector2Array(59.000305, -5.3333282, 223.0003, -8, 293.667, 121.33334, -16.333008, 130)
+
+[node name="TextureRect" type="TextureRect" parent="Layer3_Closer/Level4_Caverns/Lights/Light3/FluorescentLightBeam1" unique_id=2078088318]
+offset_left = -82.0
+offset_top = 489.0
+offset_right = 174.0
+offset_bottom = 529.0
+rotation = -1.5745367
+scale = Vector2(2.1232848, 13.569561)
+texture = SubResource("GradientTexture1D_ya8ts")
+metadata/_edit_use_anchors_ = true
 
 [node name="LavaLake" parent="Layer3_Closer/Level4_Caverns" unique_id=66742687 instance=ExtResource("31_xymjv")]
 visibility_layer = 8
@@ -1925,14 +2432,18 @@ position = Vector2(2000.0001, 4917)
 scale = Vector2(1.5, 1.5)
 
 [node name="Tanks" type="Node2D" parent="Layer3_Closer/Level4_Caverns" unique_id=1630119491]
+visibility_layer = 8
 
 [node name="Tank1" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Tanks" unique_id=1103827175]
+visibility_layer = 9
 
 [node name="RustyTank1" parent="Layer3_Closer/Level4_Caverns/Tanks/Tank1" unique_id=1195103823 instance=ExtResource("68_odeua")]
+visibility_layer = 9
 position = Vector2(3470, 5223)
 scale = Vector2(0.5, 0.5)
 
 [node name="MetalPipeLargeCorner1" parent="Layer3_Closer/Level4_Caverns/Tanks/Tank1" unique_id=375195815 instance=ExtResource("69_rsbyu")]
+visibility_layer = 9
 position = Vector2(3509, 5086)
 scale = Vector2(0.35, 0.35)
 
@@ -1942,13 +2453,16 @@ scale = Vector2(0.35, 0.35)
 polygon = PackedVector2Array(3506, 5477, 3506, 5280, 3551, 5229, 3645, 5229, 3690, 5280, 3690, 5477)
 
 [node name="Tank2" type="Node2D" parent="Layer3_Closer/Level4_Caverns/Tanks" unique_id=1877996697]
+visibility_layer = 9
 position = Vector2(212, 110)
 
 [node name="RustyTank1" parent="Layer3_Closer/Level4_Caverns/Tanks/Tank2" unique_id=1666261258 instance=ExtResource("68_odeua")]
+visibility_layer = 9
 position = Vector2(3470, 5223)
 scale = Vector2(0.5, 0.5)
 
 [node name="MetalPipeLargeCorner1" parent="Layer3_Closer/Level4_Caverns/Tanks/Tank2" unique_id=1711876577 instance=ExtResource("69_rsbyu")]
+visibility_layer = 9
 position = Vector2(3509, 5086)
 scale = Vector2(0.35, 0.35)
 
@@ -2300,6 +2814,24 @@ position = Vector2(8414, 2555)
 position = Vector2(734, -180)
 scale = Vector2(124.131546, -38.902225)
 shape = SubResource("RectangleShape2D_jd0dm")
+
+[node name="Death_Lava_1" type="Area2D" parent="Triggers" unique_id=889267968]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Lava_1" unique_id=130381867]
+position = Vector2(2349.5, 5462)
+shape = SubResource("RectangleShape2D_3w5v5")
+
+[node name="Death_Lava_2" type="Area2D" parent="Triggers" unique_id=686216873]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Lava_2" unique_id=413839761]
+position = Vector2(6897.5, 5463)
+shape = SubResource("RectangleShape2D_als28")
+
+[node name="Death_Lava_3" type="Area2D" parent="Triggers" unique_id=597581773]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death_Lava_3" unique_id=926828632]
+position = Vector2(10019, 5416.5)
+shape = SubResource("RectangleShape2D_3c8du")
 
 [node name="End" type="Area2D" parent="Triggers" unique_id=338641943]
 position = Vector2(9175, 2700.0002)

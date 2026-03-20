@@ -2,14 +2,31 @@
 
 [ext_resource type="PackedScene" uid="uid://rp0ig4vdmtu8" path="res://Objects/Cavern/Sky Lantern/SkyLantern.glb" id="1_f2v00"]
 [ext_resource type="Shader" uid="uid://bgmcukyqixhlt" path="res://Utility/grayscale.gdshader" id="1_oh2dx"]
+[ext_resource type="Texture2D" uid="uid://bi6pj532e5e27" path="res://Objects/Cavern/Sky Lantern/pngsmoke.png" id="2_7km5o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbhxv"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_7km5o")
+emission_enabled = true
+emission = Color(0.47843137, 0.17254902, 0.15686275, 1)
+emission_energy_multiplier = 2.0
+billboard_mode = 1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f2v00"]
+gravity = Vector3(0, 1, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_f2v00"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nshul"]
 shader = ExtResource("1_oh2dx")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="SkyLantern_Prop" type="Node2D" unique_id=41544662]
+[node name="SkyLantern_Prop" type="Node2D" unique_id=41544662 groups=["transparent"]]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -21,14 +38,24 @@ projection = 1
 size = 1.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-light_color = Color(0.47, 0.47, 0.47, 1)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 3)
+light_color = Color(0.9999626, 0.58202404, 0.5208099, 1)
+light_energy = 2.0
 sky_mode = 1
 
 [node name="SkyLantern2" parent="SubViewport" unique_id=1764384629 instance=ExtResource("1_f2v00")]
-transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, -0.6935818, 0)
+transform = Transform3D(-1.9, 0, -1.6610328e-07, 0, 1.9, 0, 1.6610328e-07, 0, -1.9, 0, -0.6935818, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="SubViewport/SkyLantern2" unique_id=1891371532]
+transform = Transform3D(-0.5263158, 0, 7.947148e-08, 0, 0.5263158, 0, -7.947148e-08, 0, -0.5263158, 0, 0.11541468, 0)
+material_override = SubResource("StandardMaterial3D_rbhxv")
+amount = 6
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_f2v00")
+draw_pass_1 = SubResource("QuadMesh_f2v00")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_nshul")
 offset_right = 512.0
 offset_bottom = 512.0

@@ -10,7 +10,8 @@ shader_parameter/opacity = 1.0
 [sub_resource type="ViewportTexture" id="ViewportTexture_6678p"]
 viewport_path = NodePath("SubViewport")
 
-[node name="Volcano_Prop" type="Node2D" unique_id=41544662]
+[node name="Volcano_Prop" type="Node2D" unique_id=41544662 groups=["transparent"]]
+visibility_layer = 9
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=886404454]
 own_world_3d = true
@@ -25,13 +26,14 @@ size = 3.0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1260049518]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 light_color = Color(0.47, 0.47, 0.47, 1)
-light_energy = 2.0
+light_energy = 0.5
 sky_mode = 1
 
 [node name="Volcano2" parent="SubViewport" unique_id=1547113321 instance=ExtResource("1_kkfig")]
 transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, -0.5103967, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1924865852]
+visibility_layer = 9
 material = SubResource("ShaderMaterial_nshul")
 offset_right = 512.0
 offset_bottom = 512.0
